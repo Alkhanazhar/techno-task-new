@@ -199,7 +199,7 @@ Less than 5% of customer calls are reviewed
                 This isn't just inefficient — it's expensive
               </h2>
 
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {problems.map((problem, index) => {
                   const Icon = problem.icon;
                   const isHovered = hoveredProblem === index;
