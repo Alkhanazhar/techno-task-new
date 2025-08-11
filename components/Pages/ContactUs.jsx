@@ -24,15 +24,6 @@ const ContactUs = ({ isCards = true }) => {
             // className="flex w-full gap-2"
             className="space-y-4 border border-neutral-400/50 bg-gray-200/90  backdrop-blur-sm  p-5 rounded-lg relative"
           >
-            <SparklesCore
-              id="tsparticles"
-              background="transparent"
-              minSize={0.6}
-              maxSize={1.4}
-              particleDensity={500}
-              className="absolute inset-0 top-0 h-24 w-full"
-              particleColor="#e60a64"
-            />
             <h2 className="text-2xl relative md:text-4xl font-semibold  bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text">
               Contact Us
             </h2>
