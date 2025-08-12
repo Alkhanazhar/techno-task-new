@@ -235,7 +235,7 @@ const TimelineJourney = () => {
           </div>
           <div ref={containerRef} className="relative my-20 ">
             {/* Main timeline container */}
-            <div className="relative h-[320px]">
+            <div className="relative h-[420px]">
               <svg
                 className="absolute inset-0 w-full h-full z-10"
                 viewBox="0 0 1000 400"
@@ -427,7 +427,7 @@ const TimelineJourney = () => {
                         transition={{ duration: 0.15 }}
                       >
                         <div
-                          className={`text-xs font-semibold mb-2 ${
+                          className={`text-sm font-semibold mb-2 ${
                             isActive
                               ? "text-purple-100"
                               : isPast
@@ -440,11 +440,11 @@ const TimelineJourney = () => {
                         </div>
                         <p
                           className={`text-xs leading-relaxed transition-1 ${
-                            isActive ? "text-white" : "text-gray-800"
+                            isActive ? "text-white" : "text-gray-700"
                           }`}
                         >
                           {step.content.map((point, idx) => (
-                            <li key={idx} className="list-none">{point}</li>
+                            <li key={idx} >{point}</li>
                           ))}
                         </p>
 
