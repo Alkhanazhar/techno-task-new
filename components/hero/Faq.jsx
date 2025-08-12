@@ -50,13 +50,13 @@ const Faq = () => {
             </span>
           </h2>
 
-          <button className="md:mt-4 mt-1 px-6 py-2 rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium text-sm">
+          <button className="md:mt-4 mt-1 px-6 py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium text-sm">
             View All Faqs
           </button>
         </div>
 
         {/* Right Column: FAQ Accordion */}
-        <div className="md:w-1/2 space-y-4 w-full">
+        <div className="md:w-1/2 space-y-2 md:space-y-4 w-full">
           {faqs.map((faq, index) => (
             <div
               key={index}
@@ -74,7 +74,7 @@ const Faq = () => {
                 )}
               </button>
               {openIndex === index && faq.answer && (
-                <p className="mt-3 text-sm text-gray-400 leading-relaxed">
+                <p className="mt-3 text-xs md:text-sm text-gray-400 leading-relaxed">
                   {faq.answer}
                 </p>
               )}

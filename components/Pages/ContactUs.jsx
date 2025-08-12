@@ -7,7 +7,7 @@ import { motion } from "framer-motion";
 const ContactUs = ({ isCards = true }) => {
   return (
     <div className="bg-gradient-to-tl to-[#21082b] from-[#27022e]">
-      <div className=" text-white max-w-7xl mx-auto px-4 md:px-16 py-12 space-y-12">
+      <div className=" text-white max-w-7xl mx-auto px-4 md:px-16 pt-12 space-y-12">
         <h1 className="text-2xl md:text-4xl  font-bold text-center text-white">
           <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
             Need a custom Solution?
@@ -22,7 +22,7 @@ const ContactUs = ({ isCards = true }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             // className="flex w-full gap-2"
-            className="space-y-4 border border-neutral-400/50 bg-gray-200/90  backdrop-blur-sm  p-5 rounded-lg relative"
+            className="space-y-4 border border-neutral-400/50 bg-gray-200/90  backdrop-blur-sm p-4 md:p-5 rounded-lg relative"
           >
             <h2 className="text-2xl relative md:text-4xl font-semibold  bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text">
               Contact Us
@@ -31,31 +31,32 @@ const ContactUs = ({ isCards = true }) => {
               <input
                 type="text"
                 placeholder="First Name"
-                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2  rounded-lg  placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-blue-500"
+                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-blue-500 text-xs md:text-base"
               />
               <input
                 type="text"
                 placeholder="Last Name"
-                className="bg-gray-200  text-black  border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600"
+                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
               />
               <input
                 required
                 type="text"
                 placeholder="Phone No."
-                className="bg-gray-200  text-black  border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600"
+                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
               />
               <input
                 type="email"
                 placeholder="Email Address"
-                className="bg-gray-200  text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600"
+                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
               />
             </div>
+
             <textarea
               rows="4"
               placeholder="Write Message..."
-              className="w-full bg-gray-200  text-black border border-neutral-400 px-4 py-3 rounded-lg resize-none placeholder:text-neutral-600"
+              className="w-full bg-gray-200 text-black border border-neutral-400 px-4 py-3 rounded-lg resize-none placeholder:text-neutral-600 text-xs md:text-base"
             ></textarea>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] py-2 px-4 cursor-pointer rounded-full text-xs md:text-sm text-white font-semibold hover:opacity-90 transition-all">
+            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] py-2 px-4 cursor-pointer rounded-full text-xs md:text-xs text-white font-semibold hover:opacity-90 transition-all">
               Submit Now
             </button>
           </motion.div>
@@ -82,7 +83,7 @@ const ContactUs = ({ isCards = true }) => {
                 <Phone className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-              <p className="text-sm">
+              <p className="text-xs">
                 (+00) 123-254-963
                 <br />
                 (+12) 761 852 339
@@ -95,7 +96,7 @@ const ContactUs = ({ isCards = true }) => {
                 <Mail className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Email Us</h3>
-              <p className="text-sm">
+              <p className="text-xs">
                 info@domainname.com
                 <br />
                 support@domain.com
@@ -108,7 +109,7 @@ const ContactUs = ({ isCards = true }) => {
                 <Clock className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Working Hours</h3>
-              <p className="text-sm">
+              <p className="text-xs">
                 Mon - Fri : 08AM - 10PM
                 <br />
                 Sat - Sun : Closed
@@ -121,7 +122,7 @@ const ContactUs = ({ isCards = true }) => {
                 <MapPin className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-sm">
+              <p className="text-xs">
                 2715 Ash San Jose, USA
                 <br />
                 2715 Ash San Jose, USA

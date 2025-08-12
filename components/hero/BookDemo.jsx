@@ -7,7 +7,7 @@ const BookDemo = () => {
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-700 blur-[120px] opacity-30 rounded-full -z-10"></div>
 
         {/* Heading */}
-        <h2 className="text-neutral-300 text-2xl md:text-4xl font-light leading-snug">
+        <h2 className="text-neutral-300 text-2xl md:text-4xl font-light md:leading-snug">
           <span className="font-semibold text-white">Don’t miss</span> what your
           customers <br className="hidden md:block" />
           are really saying
@@ -21,7 +21,7 @@ const BookDemo = () => {
         </div>
 
         {/* Subtext */}
-        <p className="mt-5 md:mt-10 text-sm text-gray-100">
+        <p className="mt-5 md:mt-10 text-xs md:text-sm text-gray-100">
           Includes a free call audit + personalized ROI report
         </p>
       </div>

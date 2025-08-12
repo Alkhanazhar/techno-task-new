@@ -46,12 +46,12 @@ export default function WhatCustomerSays() {
         <div className="relative bg-gradient-to-br from-[#0B0B1F] to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
           {/* Left Content */}
           <div className="flex-1 z-10">
-            <h3 className="text-xl md:text-3xl font-light leading-snug mb-3">
+            <h3 className="text-xl md:text-3xl font-light leading-snug ">
               Powering innovation with <br className="md:block hidden" />
               data-driven{" "}
               <span className="text-purple-500 font-semibold">design</span>
             </h3>
-            <p className="text-gray-400 md:mb-6 mb-4 text-sm md:text-base max-w-md">
+            <p className="text-gray-400 md:mb-6 mb-4 text-xs md:text-base max-w-md">
               Crafting intuitive, user-first interfaces by intelligence for
               smarter, faster, and more personalized digital artificial
               intelligence experiences.
@@ -81,7 +81,7 @@ export default function WhatCustomerSays() {
                 animate={{ opacity: 0.8, y: 0 }}
                 exit={{ opacity: 0, y: -10 }}
                 transition={{ duration: 0.5 }}
-                className="bg-gradient-to-br from-[#3F2AB2] md:ml-10 ml-0   via-[#9333ea] to-[#B462CE]  text-white p-6 rounded-xl max-w-sm z-10 shadow-xl"
+                className="bg-gradient-to-br from-[#3F2AB2] md:ml-10 ml-0   via-[#9333ea] to-[#B462CE]  text-white p-4 md:p-6 rounded-xl max-w-sm z-10 shadow-xl"
               >
                 <div className="flex items-center mb-4 gap-3">
                   <img
@@ -90,7 +90,7 @@ export default function WhatCustomerSays() {
                     className="w-10 h-10 rounded-full object-cover"
                   />
                   <div>
-                    <h5 className="font-semibold">
+                    <h5 className="font-semibold ">
                       {testimonials[index].name}
                     </h5>
                     <p className="text-sm">{testimonials[index].company}</p>
@@ -99,7 +99,7 @@ export default function WhatCustomerSays() {
                     <QuoteIcon />
                   </span>
                 </div>
-                <p className="text-sm mt-6 leading-relaxed">
+                <p className="text-xs md:text-sm mt-6 leading-relaxed ">
                   "{testimonials[index].quote}"
                 </p>
               </motion.div>

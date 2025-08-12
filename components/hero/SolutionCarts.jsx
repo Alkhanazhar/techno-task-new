@@ -40,7 +40,7 @@ export default function SolutionCarts() {
 
   return (
     <section className="bg-gradient-to-tl to-[#21082b] md:zoom-out from-[#27022e] text-black  px-4 md:px-10 md:py-24 py-8 space-y-8">
-      <div className="text-center space-y-8">
+      <div className="text-center space-y-4 md:space-y-8">
         <h2 className="text-2xl md:text-4xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           How{" "}
           <span className=" !font-light md:text-4xl text-xl text-neutral-50">
@@ -48,14 +48,14 @@ export default function SolutionCarts() {
             Convoze Works
           </span>
         </h2>
-        <p className="text-gray-100 font-light text-base md:text-xl max-w-4xl mx-auto">
+        <p className="text-gray-100 font-light text-sm md:text-xl max-w-4xl mx-auto">
           Convoze doesn’t just “listen” — it understands, evaluates, and guides
           your team at every moment, without interrupting their workflow.
         </p>
 
         {/* CTA Button */}
         <div className="">
-          <button className="bg-gradient-to-r cursor-pointer text-sm md:text-base from-purple-500 to-blue-500 text-white md:px-6 md:py-3 px-3 py-1.5 rounded-full font-medium hover:opacity-90 transition duration-300">
+          <button className="bg-gradient-to-r text-xs sm:text-base cursor-pointer text-sm md:text-base from-purple-500 to-blue-500 text-white md:px-6 md:py-3 px-3 py-1.5 rounded-full font-medium hover:opacity-90 transition duration-300">
             Try it yourself
           </button>
         </div>

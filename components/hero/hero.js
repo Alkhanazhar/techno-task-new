@@ -79,7 +79,7 @@ const Hero = () => {
         <div className="absolute inset-0 backdrop-brightness-100 bg-black/75 z-10" />
 
         {/* Text Content */}
-        <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-2 md:px-7">
+        <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-4 md:px-7">
           <h1 className="text-lg drop-shadow-2xl md:mt-24 mt-12 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
             97% of customer support conversations{" "}
             <br className="hidden md:block" />{" "}
@@ -89,7 +89,7 @@ const Hero = () => {
             Only 3% get reviewed
           </h1>
 
-          <p className="text-gray-200 text-xs md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
+          <p className="text-gray-200 text-[10px] md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
             Convoze AI analyses 100% of calls, flags compliance risks & delivers
             actionable insights to CX, QA & compliance teams reducing churn,
             cutting review time <br className="md:block hidden" /> & driving
@@ -108,23 +108,23 @@ const Hero = () => {
             <h2 className="text-gray-200 md:text-xl text-sm mb-6 font-medium tracking-wide">
               Our numbers speak for themselves
             </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-7 gap-4 max-w-5xl md:mx-auto">
+            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-7 gap-2 max-w-5xl md:mx-auto">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.03 }}
-                  className="relative  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl md:px-6 md:py-8 p-4 text-center transition duration-300 shadow-lg hover:shadow-purple-500/10"
+                  className="relative  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl md:px-6 md:py-8 p-3 text-center transition duration-300 shadow-lg hover:shadow-purple-500/10"
                 >
-                  <div className="absolute top-4 right-4">
-                    <div className="md:w-17 md:h-17 w-14 h-14 rounded-full bg-none flex items-center justify-center shadow-md">
-                      <item.icon className="md:w-10 md:h-10 w-8 h-8 text-white" />
+                  <div className="absolute top-2 right-4">
+                    <div className="md:w-17 md:h-17 w-12 h-12 rounded-full bg-none  flex items-center justify-center shadow-xl">
+                      <item.icon className="md:w-10 md:h-10 w-6 h-6 text-white" />
                     </div>
                   </div>
 
-                  <div className="md:text-3xl text-xl text-start font-normal text-white mb-2">
+                  <div className="md:text-3xl text-lg text-start font-normal text-white mb-2">
                     {item.value}
                   </div>
-                  <div className="text-sm mt-4 text-start text-gray-300">
+                  <div className="text-xs mt-4 text-start text-gray-300">
                     {item.label}
                   </div>
                 </motion.div>

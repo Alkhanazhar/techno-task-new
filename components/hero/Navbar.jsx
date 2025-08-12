@@ -1,12 +1,21 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { X, Menu } from "lucide-react";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
+  const [isScrolled, setIsScrolled] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10); // trigger after 10px scroll
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const menuItems = [
     { name: "Home", route: "/" },
@@ -22,17 +31,19 @@ const Navbar = () => {
   };
 
   return (
-    <div className="pb-8 py-3">
-      <nav className="w-full fixed px-4 z-50 md:px-10 flex items-center justify-between">
-
-        <div className="flex items-center gap-2 cursor-pointer" onClick={() => router.push("/")}>
-          <div>
-          <img src="/logo.png" alt="logo" className="h-9" />
-            {/* <h1 className="text-white font-bold text-lg leading-tight">Convoze</h1> */}
-            {/* <p className="text-[10px] text-gray-300 tracking-wide uppercase font-medium">
-              A Speech Analytics Platform
-            </p> */}
-          </div>
+    <div className="py-3">
+      <nav
+        className={`w-full fixed -mt-3 py-2 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "bg-[#1a1a1a]/60 backdrop-blur-md border-b border-white/10 shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
+        <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
+          <img src="/logo.png" alt="logo" className="md:h-9 h-6" />
         </div>
 
         <div className="hidden md:flex bg-[#1a1a1a]/60 backdrop-blur-sm border border-gray-50/10 rounded-full px-12 py-3 space-x-8 text-sm">
@@ -56,9 +67,9 @@ const Navbar = () => {
 
         <button
           onClick={() => setIsOpen(true)}
-          className="md:hidden text-white text-2xl"
+          className="md:hidden text-white text-xl md:text-2xl"
         >
-          <Menu />
+          <Menu className="h-6 w-6"/>
         </button>
       </nav>
 

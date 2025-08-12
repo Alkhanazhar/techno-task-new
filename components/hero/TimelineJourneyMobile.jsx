@@ -229,7 +229,7 @@ const TimelineJourneyMobile = () => {
       >
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center md:-mt-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-b ">
+            <h2 className="text-2xl font-bold text-gray-800 mb-b ">
               Our Journey
             </h2>
           </div>
@@ -346,7 +346,7 @@ const TimelineJourneyMobile = () => {
                 return (
                   <div
                     key={index}
-                    className="absolute z-20 scale-90  ml-4"
+                    className="absolute z-20 scale-80  ml-4"
                     style={{
                       left: position.x,
                       top: position.y,

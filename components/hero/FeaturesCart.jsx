@@ -24,7 +24,7 @@ const features = [
 const FeaturesCart = () => {
   return (
     <section className="w-full zoom-out text-white md:px-4 px-3 md:py-24 py-12 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
-      <div className="md:max-w-6xl max-w-7xl mx-auto text-center mb-6 md:mb-12">
+      <div className="md:max-w-6xl max-w-7xl mx-auto text-center mb-6 md:mb-12 px-6">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-4 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           What is <span className=" font-normal text-white"> Convoze?</span>
         </h2>
@@ -32,7 +32,7 @@ const FeaturesCart = () => {
           Your AI Assistant for <br className="md:hidden block" /> Every
           Customer Conversation
         </p>
-        <p className="text-gray-400 font-light text-sm md:text-base md:max-w-6xl max-w-7xl mx-auto">
+        <p className="text-gray-400 font-light text-xs sm:text-sm md:text-base md:max-w-6xl max-w-7xl mx-auto">
           Convoze is an AI-powered voice intelligence platform that helps you
           monitor, understand, and act on every one of your customers' calls —
           instantly and at scale. It’s not just another QA tool. It’s your
@@ -66,12 +66,12 @@ const FeaturesCart = () => {
           <motion.div
             key={idx}
             whileHover={{ scale: 1.03 }}
-            className="rounded-2xl p-6 min-h-[180px] bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  relative text-left border border-gray-800 transition duration-300 hover:shadow-[0_0_30px_#9333ea]/20"
+            className="rounded-2xl p-4 md:p-6 min-h-[180px] bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  relative text-left border border-gray-800 transition duration-300 hover:shadow-[0_0_30px_#9333ea]/20"
           >
-            <h3 className="text-white font-semibold text-[16px] mb-2">
+            <h3 className="text-white font-semibold text-sm md:text-[16px] mb-2">
               {item.title}
             </h3>
-            <p className="text-gray-400 text-sm">{item.desc}</p>
+            <p className="text-gray-400 text-xs sm:text-sm">{item.desc}</p>
           </motion.div>
         ))}
       </div>

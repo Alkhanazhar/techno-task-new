@@ -162,10 +162,10 @@ Less than 5% of customer calls are reviewed
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-lg font-bold text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+                        <span className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
                           {stat.percentage}
                         </span>
-                        <span className="text-xsfont-medium text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+                        <span className="text-xs font-medium text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
                           {stat.label}
                         </span>
                       </div>
@@ -194,7 +194,7 @@ Less than 5% of customer calls are reviewed
               </div>
             </div> */}
 
-            <div className="  p-4 rounded-2xl">
+            <div className="p-4 rounded-2xl">
               <h2 className="text-2xl font-medium text-white mb-6">
                 This isn't just inefficient — it's expensive
               </h2>
@@ -224,7 +224,7 @@ Less than 5% of customer calls are reviewed
                       `}
                       >
                         <div className="flex items-start gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2] p-2 flex-shrink-0">
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl  my-auto md:my-0 to-[#B462CE] from-[#3F2AB2] p-2 flex-shrink-0">
                             <Icon className="w-full h-full text-white" />
                           </div>
                           <div>

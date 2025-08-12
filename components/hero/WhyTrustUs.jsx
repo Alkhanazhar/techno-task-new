@@ -33,7 +33,7 @@ const trustData = [
 
 export default function WhyTrustUs() {
   return (
-    <section className="bg-gray-50 md:-mt-0  md:py-20  text-black px-4 py-6">
+    <section className="bg-gray-50 md:-mt-0  md:py-20  text-black  py-6">
       <div className="max-w-6xl mx-auto text-center mb-6 md:mb-12">
         <h2 className="text-2xl md:text-4xl font-light">
           Engineered for{" "}
@@ -44,20 +44,20 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 md:gap-6 gap-4 max-w-6xl md:mx-auto mx-8">
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 md:gap-6 gap-4 max-w-6xl md:mx-auto mx-4 md:mx-8">
         {trustData.map((item, idx) => (
           <div
             key={idx}
-            className="rounded-2xl p-6 bg-gradient-to-br from-[#0c0c2d] to-[#1b012a] hover:scale-105 transform transition-all duration-300"
+            className="rounded-2xl p-6 bg-gradient-to-br from-[#0c0c2d] w-full to-[#1b012a] hover:scale-105 transform transition-all duration-300"
           >
-            <h4 className="text-white font-semibold text-[15px] mb-4">
+            <h4 className="text-white font-semibold text-sm md:text-[15px] mb-4">
               {item.title}
             </h4>
             {/* <div className="text-purple-400 text-3xl font-bold mb-1">
               {item.value}
             </div>
             <div className="text-gray-300 text-sm mb-4">{item.subtitle}</div> */}
-            <div className="bg-black/40 p-4 rounded-xl text-sm text-gray-400 leading-relaxed">
+            <div className=" rounded-xl text-xs text-gray-400 leading-relaxed">
               {item.description}
             </div>
           </div>
