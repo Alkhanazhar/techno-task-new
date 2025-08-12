@@ -7,7 +7,7 @@ const BookDemo = () => {
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-700 blur-[120px] opacity-30 rounded-full -z-10"></div>
 
         {/* Heading */}
-        <h2 className="text-neutral-300 text-2xl md:text-4xl font-light md:leading-snug">
+        <h2 className="text-neutral-300 text-xl md:text-4xl font-light md:leading-snug">
           <span className="font-semibold text-white">Don’t miss</span> what your
           customers <br className="hidden md:block" />
           are really saying
@@ -15,7 +15,7 @@ const BookDemo = () => {
 
         {/* Button */}
         <div className="md:mt-10 mt-5">
-          <button className="px-6 py-2 rounded-full text-white font-medium text-sm md:text-base bg-gradient-to-r from-[#a855f7] to-[#6366f1] hover:from-[#9333ea] hover:to-[#3b82f6] transition-all duration-300">
+          <button className="px-6 py-2 rounded-full  text-white font-medium text-xs md:text-base bg-gradient-to-r from-[#a855f7] to-[#6366f1] hover:from-[#9333ea] hover:to-[#3b82f6] transition-all duration-300">
             Book A Free Demo
           </button>
         </div>

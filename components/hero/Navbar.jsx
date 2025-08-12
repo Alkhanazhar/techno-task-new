@@ -33,7 +33,7 @@ const Navbar = () => {
   return (
     <div className="py-3">
       <nav
-        className={`w-full fixed -mt-3 py-2 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+        className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
             ? "bg-[#1a1a1a]/60 backdrop-blur-md border-b border-white/10 shadow-sm"
             : "bg-transparent"
@@ -69,7 +69,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(true)}
           className="md:hidden text-white text-xl md:text-2xl"
         >
-          <Menu className="h-6 w-6"/>
+          <Menu />
         </button>
       </nav>
 

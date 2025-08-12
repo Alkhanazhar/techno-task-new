@@ -435,7 +435,7 @@ const TimelineJourney = () => {
                               : "text-gray-600"
                           }`}
                         >
-                          web
+                          
                           {step.stepLabel}
                         </div>
                         <p

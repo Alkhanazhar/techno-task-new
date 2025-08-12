@@ -46,7 +46,7 @@ export function Industries() {
           by fast-moving teams using call center quality assurance software in:
         </p>
       </div>
-      <div className="w-screen h-full overflow-hidden !-mb-32 md:mb-0">
+      <div className="w-screen h-full overflow-hidden !-mb-20 md:mb-0">
 
       <Carousel slides={slideData} />
       </div>

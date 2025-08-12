@@ -39,7 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative -mt-12 zoom-out">
+    <div className="relative md:-mt-12 -mt-6 zoom-out ">
       {/* Top gradient (light to transparent) */}
       <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" />
 
@@ -57,7 +57,7 @@ const Hero = () => {
       {/* Half Circle Overlay with mask */}
 
       {/* Orb + Hero Content */}
-      <div className="w-full  relative flex items-start justify-between gap-4 ">
+      <div className="w-full relative flex items-start justify-between gap-4 ">
         {/* Orb */}
 
         {/* Video with Overlay */}
@@ -80,7 +80,7 @@ const Hero = () => {
 
         {/* Text Content */}
         <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-4 md:px-7">
-          <h1 className="text-lg drop-shadow-2xl md:mt-24 mt-12 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
+          <h1 className="text-[18px] drop-shadow-2xl md:mt-24 mt-12 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
             97% of customer support conversations{" "}
             <br className="hidden md:block" />{" "}
             <span className=" bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#3F2AB2] text-transparent bg-clip-text">

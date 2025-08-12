@@ -225,17 +225,17 @@ const TimelineJourneyMobile = () => {
       </div>
       <motion.div
         ref={timelineRef}
-        className="sticky  top-0 left-0 w-full h-screen px-4 z-30 border py-12 md:py-20 border-black "
+        className="sticky  top-0 left-0 w-full h-screen px-4 z-30  py-12 md:py-20 "
       >
         <div className="max-w-6xl mx-auto relative">
-          <div className="text-center md:-mt-8">
-            <h2 className="text-2xl font-bold text-gray-800 mb-b ">
+          <div className="text-center ">
+            <h2 className="text-2xl font-bold text-gray-800 ">
               Our Journey
             </h2>
           </div>
           <div ref={containerRef} className="relative  ">
             {/* Main timeline container */}
-            <div className="relative h-[420px]">
+            <div className="relative h-[380px] md:h-[500px] -mt-12">
               <svg
                 className="absolute inset-0 w-full h-full z-10 my-20 "
                 viewBox="0 60 1000 1000"
@@ -355,7 +355,7 @@ const TimelineJourneyMobile = () => {
                   >
                     {/* Step indicator dot - HIDDEN */}
                     <motion.div
-                      className="w-4 h-4 rounded-full border-2 z-30 opacity-0"
+                      className="w-4 h-4 rounded-full  z-30 opacity-0"
                       style={{ visibility: "hidden" }}
                     />
 
@@ -363,7 +363,7 @@ const TimelineJourneyMobile = () => {
                     <motion.div
                       className={`
                         absolute left-1/2 transform -translate-x-1/2
-                        w-72 z-30
+                        md:w-80 w-[75vw] ml-[1vw] z-30
                       `}
                       initial={{
                         opacity: 0,
@@ -397,7 +397,7 @@ const TimelineJourneyMobile = () => {
                         }}
                         transition={{ duration: 0.15 }}
                       >
-                        <div className="text-xs font-semibold mb-2 text-purple-100">
+                        <div className="font-semibold mb-2 text-purple-100">
                           {step.stepLabel}
                         </div>
                         <p className="text-xs leading-relaxed transition-1 text-white">

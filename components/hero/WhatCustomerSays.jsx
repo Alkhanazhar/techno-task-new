@@ -61,13 +61,13 @@ export default function WhatCustomerSays() {
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
                   200+
                 </h4>
-                <p className="text-sm text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Projects Successfully</p>
               </div>
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
                   600+
                 </h4>
-                <p className="text-sm text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Projects Successfully</p>
               </div>
             </div>
           </div>
@@ -93,13 +93,13 @@ export default function WhatCustomerSays() {
                     <h5 className="font-semibold ">
                       {testimonials[index].name}
                     </h5>
-                    <p className="text-sm">{testimonials[index].company}</p>
+                    <p className="text-xs">{testimonials[index].company}</p>
                   </div>
                   <span className="ml-auto text-lg font-bold">
                     <QuoteIcon />
                   </span>
                 </div>
-                <p className="text-xs md:text-sm mt-6 leading-relaxed ">
+                <p className="text-xs md:text-xs mt-6 leading-relaxed ">
                   "{testimonials[index].quote}"
                 </p>
               </motion.div>
