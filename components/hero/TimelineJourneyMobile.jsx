@@ -212,7 +212,7 @@ const TimelineJourneyMobile = () => {
   return (
     <motion.div
       ref={containerRef}
-      className=" md:hidden relative h-[400vh]   bg-slate-200"
+      className=" md:hidden relative h-[420vh]   bg-slate-200"
     >
       {" "}
       {/* Sticky timeline */}
@@ -235,7 +235,7 @@ const TimelineJourneyMobile = () => {
           </div>
           <div ref={containerRef} className="relative  ">
             {/* Main timeline container */}
-            <div className="relative h-[380px] md:h-[500px] -mt-12">
+            <div className="relative h-[420px] md:h-[500px] -mt-12">
               <svg
                 className="absolute inset-0 w-full h-full z-10 my-20 "
                 viewBox="0 60 1000 1000"
