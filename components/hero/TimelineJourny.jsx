@@ -444,7 +444,7 @@ const TimelineJourney = () => {
                           }`}
                         >
                           {step.content.map((point, idx) => (
-                            <li key={idx}>{point}</li>
+                            <li key={idx} className="list-none">{point}</li>
                           ))}
                         </p>
 
