@@ -12,7 +12,7 @@ const Hero = () => {
   const stats = [
     {
       value: "100%",
-      label: "Call Reviews",
+      label: "100% of conversation's audited",
       icon: BarChart,
     },
     {
@@ -39,7 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative md:-mt-12 -mt-6 zoom-out ">
+    <div className="relative md:-mt-6 -mt-6 zoom-out ">
       {/* Top gradient (light to transparent) */}
       <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" />
 
@@ -81,7 +81,7 @@ const Hero = () => {
         {/* Text Content */}
         <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-4 md:px-7">
           <h1 className="text-[18px] drop-shadow-2xl md:mt-24 -mt-4 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
-            97% of customer support conversations{" "}
+            97% of customer conversations{" "}
             <br className="hidden md:block" />{" "}
             <span className=" bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#3F2AB2] text-transparent bg-clip-text">
               go unheard.{" "}
@@ -90,7 +90,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-gray-200 text-[10px] md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
-            Convoze AI analyses 100% of calls, flags compliance risks & delivers
+            Convoze AI audit 100% of conversations, flags compliance risks & delivers
             actionable insights to CX, QA & compliance teams reducing churn,
             cutting review time <br className="md:block hidden" /> & driving
             smarter decisions in real time.

@@ -44,7 +44,7 @@ const WhyConvoze = () => {
     },
     {
       percentage: "<5%",
-      label: "Calls Reviewed",
+      label: "conversation's Reviewed",
       description: "Through manual QA coverage",
       icon: Phone,
     },
@@ -88,7 +88,7 @@ const WhyConvoze = () => {
       icon: DollarSign,
       title: "Missed Compliance",
       description: "Breaches cost millions",
-      impact: "Zero ROI on calls",
+      impact: "Zero ROI on conversation's",
       delay: 0.3,
     },
   ];
@@ -124,7 +124,7 @@ const WhyConvoze = () => {
           </h1>
           <p className="text-gray-800 mb-6">
             In traditional contact center setups, 95% of Conversations Are
-            Wasted. Less than 5% of customer calls are reviewed
+            Wasted. Less than 5% of customer conversation's are reviewed
           </p>
         </div>
 
@@ -139,7 +139,7 @@ const WhyConvoze = () => {
           </h1>
               <p className="text-gray-400 mb-6">
                 In traditional contact center setups, 95% of Conversations Are Wasted.
-Less than 5% of customer calls are reviewed
+Less than 5% of customer conversation are reviewed
 
               </p>
               <button className="text-purple-400 hover:text-purple-300 flex items-center">
