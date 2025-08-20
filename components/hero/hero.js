@@ -39,7 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative md:-mt-12 -mt-6 zoom-out ">
+    <div className="relative md:-mt-6 -mt-6 zoom-out ">
       {/* Top gradient (light to transparent) */}
       <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" />
 
@@ -90,7 +90,7 @@ const Hero = () => {
           </h1>
 
           <p className="text-gray-200 text-[10px] md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
-            Convoze AI analyses 100% of conversations, flags compliance risks & delivers
+            Convoze AI audit 100% of conversations, flags compliance risks & delivers
             actionable insights to CX, QA & compliance teams reducing churn,
             cutting review time <br className="md:block hidden" /> & driving
             smarter decisions in real time.
