@@ -227,7 +227,7 @@ const TimelineJourney = () => {
         ref={timelineRef}
         className="sticky top-0 left-0 w-full h-screen px-4 z-30 "
       >
-        <div className="max-w-6xl mx-auto relative">
+        <div className="max-w-6xl mx-auto relative zoom-out">
           <div className="text-center md:-mt-8">
             <h2 className="text-3xl font-bold text-gray-800 mb-b pb-16 pt-10">
               Our Journey
