@@ -32,9 +32,9 @@ export function Timelinecomp() {
           <div className="bg-zinc-900 border border-zinc-700 rounded-xl shadow-lg p-6 md:p-8 space-y-4">
             <ul className="list-disc text-white list-inside space-y-2">
               <li>Supported sound uploads, cross-language reviews</li>
-              <li>Only 2-5% of conversation's could be reviewed manually</li>
+              <li>Only 2-5% of conversations could be reviewed manually</li>
               <li>Inconsistent subjective evaluations</li>
-              <li>Zero visibility on long conversation's and gaps in coaching</li>
+              <li>Zero visibility on long conversations and gaps in coaching</li>
               <li>
                 Coaching was call-independent & Real-time missed compliance risk
               </li>
@@ -65,7 +65,7 @@ export function Timelinecomp() {
             <ul className="list-disc text-white list-inside space-y-2">
               <li>
                 Introduced the capabilities of real-time transcription and
-                analyzing AI conversation's
+                analyzing AI conversations
               </li>
               <li>Added talk ratio, silence and emotional recognition</li>
               <li>Introduced call summary and compliance risk detection</li>
@@ -100,7 +100,7 @@ export function Timelinecomp() {
                 </span>{" "}
                 Convoze 2.0
               </li>
-              <li>A 100 percent analysis of conversation's done automatically</li>
+              <li>A 100 percent analysis of conversations done automatically</li>
               <li>Individualized coaching checkups for each agent</li>
               <li>QA, CX, and compliance leader real-time alerts</li>
               <li>Plug-and-play compatibility with CRMs and dialers</li>

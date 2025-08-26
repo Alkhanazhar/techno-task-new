@@ -22,7 +22,7 @@ const TimelineJourney = () => {
     {
       stepLabel: "2022 – Manual Quality Auditing Systems",
       content: [
-        "Manual QA tools used to review conversation's",
+        "Manual QA tools used to review conversations",
         "Experienced inefficiencies in traditional call center QA",
         // "No automation or transcription - audits were not uniform",
         // "Realized the need for scalable QA automation and better call quality monitoring"
@@ -32,7 +32,7 @@ const TimelineJourney = () => {
       stepLabel: "2023 – Quality Management System",
       content: [
         "Built a simple multilingual QA system allowing sound uploads",
-        "Could review only 2-5% of support conversation's manually",
+        "Could review only 2-5% of support conversations manually",
         // "Did not provide real-time tracking and benchmarking of agents",
         "It emphasized the importance of AI-powered call review tools",
       ],
