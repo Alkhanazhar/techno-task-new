@@ -81,12 +81,11 @@ const Hero = () => {
         {/* Text Content */}
         <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-4 md:px-7">
           <h1 className="text-[18px] drop-shadow-2xl md:mt-24 -mt-4 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
-            97% of customer conversations{" "}
+            97% of customer conversations are lost.
             <br className="hidden md:block" />{" "}
             <span className=" bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#3F2AB2] text-transparent bg-clip-text">
-              go unheard.{" "}
+              Only 3% get audited
             </span>{" "}
-            Only 3% get reviewed
           </h1>
 
           <p className="text-gray-200 text-[10px] md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
