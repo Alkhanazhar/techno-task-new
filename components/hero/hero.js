@@ -12,7 +12,7 @@ const Hero = () => {
   const stats = [
     {
       value: "100%",
-      label: "100% of conversations audited",
+      label: "conversations audited",
       icon: BarChart,
     },
     {
@@ -22,14 +22,14 @@ const Hero = () => {
     },
     {
       value: "35%",
-      label: "Increase in CSAT",
+      label: "increase in CSAT",
       icon: TrendingUp,
     },
-    {
-      value: "2X",
-      label: "Coaching Efficiency",
-      icon: LineChart,
-    },
+    // {
+    //   value: "2X",
+    //   label: "coaching efficiency",
+    //   icon: LineChart,
+    // },
   ];
 
   useEffect(() => {
@@ -57,82 +57,74 @@ const Hero = () => {
       {/* Half Circle Overlay with mask */}
 
       {/* Orb + Hero Content */}
-      <div className="w-full relative flex items-start justify-between gap-4 ">
-        {/* Orb */}
-
-        {/* Video with Overlay */}
+      <div className="w-full relative flex items-start justify-between gap-4">
         <div className="relative w-full h-full">
           <video
             ref={videoRef}
-            className="w-full  object-cover  h-[115vh]"
+            className="w-full object-cover h-[115vh]"
             autoPlay
             muted
             loop
             playsInline
           >
-            <source src="/demo-video.mp4" type="video/mp4" />
+            <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
           </video>
-
-          {/* Blur Overlay */}
         </div>
-        <div className="absolute inset-0 backdrop-brightness-100 bg-black/75 z-10" />
 
-        {/* Text Content */}
-        <div className="absolute z-20 text-center  inset-0 h-full flex justify-center flex-col w-full px-4 md:px-7">
-          <h1 className="text-[18px] drop-shadow-2xl md:mt-24 -mt-4 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
+        <div className="absolute inset-0 backdrop-brightness-100 bg-black/20 z-10" />
+
+        <div className="absolute z-20 text-left inset-0 h-full flex justify-start flex-col w-full px-4 md:px-7 mt-6">
+          <h1 className="text-[18px] drop-shadow-2xl mt-16 md:mt-32 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
             97% of customer conversations are lost.
-            <br className="hidden md:block" />{" "}
-            <span className=" bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#3F2AB2] text-transparent bg-clip-text">
+            <br className="hidden md:block" />
+            <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
               Only 3% get audited
-            </span>{" "}
+            </span>
           </h1>
-
-          <p className="text-gray-200 text-[10px] md:text-[16px] mt-8 font-normal max-w-[650px] mx-auto">
-            100% conversations audited, flags compliance risks & delivers
-            actionable insights to CX, QA & compliance teams reducing churn,
-            cutting review time <br className="md:block hidden" /> & driving
-            smarter decisions in real time.
-          </p>
-
-          <div className="md:mt-4 mt-6 font-light md:text-[15px] text-xs flex flex-row justify-center items-center gap-2 md:gap-4">
-            <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 md:px-3.5 px-3 md:py-2.5 py-2 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
-              Book a Demo
-            </button>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF]  cursor-pointer text-white md:px-4 px-3 md:py-3 py-2 rounded-full font-normal hover:opacity-90 transition-all duration-300">
-              See How It Works
-            </button>
-          </div>
-          <section className="w-full md:mt-20 mt-4 pt-2 pb-8 text-white text-center">
-            <h2 className="text-gray-200 md:text-xl text-sm mb-6 font-medium tracking-wide">
+          <section className="w-full mt-12 pt-2 pb-8 text-white text-left">
+            {/* <h2 className="text-gray-200 md:text-xl text-sm mb-6 font-medium tracking-wide">
               Our numbers speak for themselves
-            </h2>
-            <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-7 gap-2 max-w-5xl md:mx-auto">
+            </h2> */}
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-12 max-w-xl">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
                   whileHover={{ scale: 1.03 }}
-                  className="relative  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl md:px-6 md:py-8 p-3 text-center transition duration-300 shadow-lg hover:shadow-purple-500/10"
+                  className="w-50 relative max-w-md rounded-2xl md:px-6 md:py-8 p-4 text-left 
+               transition duration-300 shadow-lg hover:shadow-purple-500/20
+               bg-white/10 backdrop-blur-sm border border-white/15"
                 >
                   <div className="absolute top-2 right-4">
-                    <div className="md:w-17 md:h-17 w-12 h-12 rounded-full bg-none  flex items-center justify-center shadow-xl">
-                      <item.icon className="md:w-10 md:h-10 w-6 h-6 text-white" />
+                    <div className="md:w-10 md:h-10 w-8 h-8 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
+                      <item.icon className="md:w-5 md:h-5 w-3 h-3 text-white" />
                     </div>
                   </div>
 
-                  <div className="md:text-3xl text-lg text-start font-normal text-white mb-2">
+                  <div className="md:text-3xl text-lg font-normal text-white mb-2">
                     {item.value}
                   </div>
-                  <div className="text-xs mt-4 text-start text-gray-300">
-                    {item.label}
-                  </div>
+                  <div className="text-xs mt-4 text-gray-300">{item.label}</div>
                 </motion.div>
               ))}
             </div>
           </section>
-          {/* <div className="w-full mt-8 md:mt-6 px-4 md:px-7 z-20">
-            <Customers />
-          </div> */}
+          <p className="text-gray-200 text-[10px] md:text-[16px] mt-6 font-normal max-w-[650px]">
+            100% conversations audited, flags compliance risks & delivers
+            actionable insights to CX, QA & compliance teams reducing churn,
+            cutting review time
+            <br className="md:block hidden" /> & driving smarter decisions in
+            real time.
+          </p>
+
+          <div className="mt-6 font-light md:text-[15px] text-xs flex flex-row justify-start items-center gap-2 md:gap-4">
+            <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 md:px-3.5 px-3 md:py-2.5 py-2 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
+              Book a Demo
+            </button>
+            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white md:px-4 px-3 md:py-3 py-2 rounded-full font-normal hover:opacity-90 transition-all duration-300">
+              See How It Works
+            </button>
+          </div>
         </div>
       </div>
     </div>
