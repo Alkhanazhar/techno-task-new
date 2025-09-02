@@ -5,6 +5,7 @@ import { cn } from "./lib/utils";
 import Customers from "./Customers";
 import { BarChart, Cpu, LineChart, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
+import CardSwap, { Card } from "./CardSwap";
 
 const Hero = () => {
   const videoRef = useRef(null);
@@ -41,25 +42,26 @@ const Hero = () => {
   return (
     <div className="relative md:-mt-12 -mt-6 zoom-out ">
       {/* Top gradient (light to transparent) */}
-      <div className="absolute top-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" />
+      {/* <div className="absolute top÷-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" /> */}
+      <img src="hero-bg.jpg" className="absolute inset-0 w-full h-full" />
 
       {/* Bottom gradient (light to transparent) */}
       {/* <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" /> */}
 
       {/* Grid Background */}
-      <div
+      {/* <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:50px_50px] select-none opacity-70",
           "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
         )}
-      />
+      /> */}
 
       {/* Half Circle Overlay with mask */}
 
       {/* Orb + Hero Content */}
       <div className="w-full relative flex items-start justify-between gap-4">
-        <div className="relative w-full h-full">
-          <video
+        <div className="relative w-full  h-[115vh]">
+          {/* <video  
             ref={videoRef}
             className="w-full object-cover h-[115vh]"
             autoPlay
@@ -69,7 +71,7 @@ const Hero = () => {
           >
             <source src="/hero-video.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> */}
         </div>
 
         <div className="absolute inset-0 backdrop-brightness-100 bg-black/20 z-10" />
@@ -125,6 +127,30 @@ const Hero = () => {
               See How It Works
             </button>
           </div>
+        </div>
+        <div style={{ height: "600px", position: "relative" }}>
+          <CardSwap
+            cardDistance={60}
+            verticalDistance={70}
+            delay={5000}
+            pauseOnHover={false}
+          >
+             <Card>
+              <img src="hero-bg-1.png" className="h-full" />
+            </Card>
+         
+            <Card>
+              <img src="hero-bg-2.png" className="h-full" />
+            </Card>
+
+           
+            <Card>
+              <img src="hero-bg-3.png" className="h-full" />
+            </Card>
+               <Card>
+              <img src="hero-bg-2.png" className="h-full" />
+            </Card>
+          </CardSwap>
         </div>
       </div>
     </div>
