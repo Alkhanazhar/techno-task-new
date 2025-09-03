@@ -40,7 +40,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative md:-mt-12 -mt-6 zoom-out ">
+    <div className="relative md:-mt-12 -mt-6 overflow-x-hidden">
       {/* Top gradient (light to transparent) */}
       {/* <div className="absolute top÷-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" /> */}
       <img src="hero-bg.jpg" className="absolute inset-0 w-full h-full" />
@@ -135,19 +135,18 @@ const Hero = () => {
             delay={5000}
             pauseOnHover={false}
           >
-             <Card>
+            <Card>
               <img src="hero-bg-1.png" className="h-full" />
             </Card>
-         
+
             <Card>
               <img src="hero-bg-2.png" className="h-full" />
             </Card>
 
-           
             <Card>
               <img src="hero-bg-3.png" className="h-full" />
             </Card>
-               <Card>
+            <Card>
               <img src="hero-bg-2.png" className="h-full" />
             </Card>
           </CardSwap>
