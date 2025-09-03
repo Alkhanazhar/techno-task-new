@@ -40,7 +40,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative md:-mt-12 -mt-6 overflow-x-hidden" id="main-hero-section">
+    <div
+      className="relative md:-mt-12 -mt-6 overflow-x-hidden"
+      id="main-hero-section"
+    >
       {/* Top gradient (light to transparent) */}
       {/* <div className="absolute top÷-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" /> */}
       <img src="hero-bg.jpg" className="absolute inset-0 w-full h-full" />
@@ -60,7 +63,8 @@ const Hero = () => {
 
       {/* Orb + Hero Content */}
       <div className="w-full relative flex items-start justify-between gap-4">
-        <div className="relative w-full  h-[115vh]">
+       <div className="relative w-full h-auto md:h-[115vh]">
+
           {/* <video  
             ref={videoRef}
             className="w-full object-cover h-[115vh]"
@@ -130,7 +134,7 @@ const Hero = () => {
         </div> */}
         <div className="absolute z-20 text-left inset-0 h-full flex flex-col justify-start w-full px-4 md:px-7 mt-6">
           {/* Heading */}
-          <h1 className="text-[18px] drop-shadow-2xl mt-16 md:mt-32 md:text-[38px] font-medium text-white leading-tight">
+          <h1 className="text-[18px] drop-shadow-2xl mt-16 md:mt-42 md:text-[38px] font-medium text-white leading-tight">
             97% of customer conversations are lost.
             <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
@@ -159,10 +163,34 @@ const Hero = () => {
 
           {/* Stats Section */}
           <section className="w-full mt-12 text-white text-left">
-            <h2 className="text-gray-200 md:text-xl text-sm mb-6 font-medium tracking-wide">
+            <h2 className="text-gray-200 md:text-lg text-sm mb-6 font-medium tracking-wide">
               Our numbers speak for themselves
             </h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-2 max-w-2xl">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-3 max-w-xl">
+              {stats.map((item, index) => (
+                <motion.div
+                  key={index}
+                  whileHover={{ scale: 1.03 }}
+                  className="relative rounded-xl md:px-4 md:py-6 p-3 text-left 
+        transition duration-300 shadow-md hover:shadow-purple-500/20
+        bg-white/10 backdrop-blur-sm border border-white/10"
+                >
+                  <div className="absolute top-2 right-3">
+                    <div className="md:w-8 md:h-8 w-6 h-6 rounded-full flex items-center justify-center shadow-sm bg-white/10 backdrop-blur-sm border border-white/10">
+                      <item.icon className="md:w-4 md:h-4 w-3 h-3 text-white" />
+                    </div>
+                  </div>
+
+                  <div className="md:text-2xl text-base font-normal text-white mb-1">
+                    {item.value}
+                  </div>
+                  <div className="text-[10px] mt-2 text-gray-300">
+                    {item.label}
+                  </div>
+                </motion.div>
+              ))}
+            </div>
+            {/* <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-2 max-w-2xl">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
@@ -183,7 +211,7 @@ const Hero = () => {
                   <div className="text-xs mt-4 text-gray-300">{item.label}</div>
                 </motion.div>
               ))}
-            </div>
+            </div> */}
           </section>
         </div>
 
