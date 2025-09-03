@@ -16,17 +16,10 @@ const Navbar = () => {
       setIsMobile(window.innerWidth < 768); // Tailwind's md breakpoint
     };
 
-    // const handleScroll = () => {
-    //   setIsScrolled(window.scrollY > 10);
-    // };
-
-     const handleScroll = () => {
-      const heroSection = document.getElementById("main-hero-section");
-      if (heroSection) {
-        const heroBottom = heroSection.getBoundingClientRect().bottom;
-        setIsScrolled(heroBottom <= 0); // once hero section is scrolled past
-      }
+    const handleScroll = () => {
+      setIsScrolled(window.scrollY > 10);
     };
+
     handleResize(); // check initial size
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
@@ -59,13 +52,12 @@ const Navbar = () => {
         }`}
       > */}
       <nav
-  className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
-    isScrolled
-      ? "bg-black/60 backdrop-blur-md border-b border-white/10 shadow-sm"
-      : "bg-transparent"
-  }`}
->
-
+        className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "bg-black/60 backdrop-blur-md shadow-sm"
+            : "bg-transparent"
+        }`}
+      >
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => router.push("/")}
