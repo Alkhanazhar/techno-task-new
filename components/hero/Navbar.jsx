@@ -15,15 +15,22 @@ const Navbar = () => {
     const handleResize = () => {
       setIsMobile(window.innerWidth < 768); // Tailwind's md breakpoint
     };
-  
-    const handleScroll = () => {
-      setIsScrolled(window.scrollY > 10);
+
+    // const handleScroll = () => {
+    //   setIsScrolled(window.scrollY > 10);
+    // };
+
+     const handleScroll = () => {
+      const heroSection = document.getElementById("main-hero-section");
+      if (heroSection) {
+        const heroBottom = heroSection.getBoundingClientRect().bottom;
+        setIsScrolled(heroBottom <= 0); // once hero section is scrolled past
+      }
     };
-  
     handleResize(); // check initial size
     window.addEventListener("resize", handleResize);
     window.addEventListener("scroll", handleScroll);
-  
+
     return () => {
       window.removeEventListener("resize", handleResize);
       window.removeEventListener("scroll", handleScroll);
@@ -44,13 +51,21 @@ const Navbar = () => {
 
   return (
     <div className="py-3">
-     <nav
+      {/* <nav
+        className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+          isScrolled && isMobile
+            ? "bg-[#1a1a1a]/60 backdrop-blur-md border-b border-white/10 shadow-sm"
+            : "bg-transparent"
+        }`}
+      > */}
+      <nav
   className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
-    isScrolled && isMobile
-      ? "bg-[#1a1a1a]/60 backdrop-blur-md border-b border-white/10 shadow-sm"
+    isScrolled
+      ? "bg-black/60 backdrop-blur-md border-b border-white/10 shadow-sm"
       : "bg-transparent"
   }`}
 >
+
         <div
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => router.push("/")}
@@ -81,7 +96,7 @@ const Navbar = () => {
           onClick={() => setIsOpen(true)}
           className="md:hidden text-white text-xl md:text-2xl"
         >
-          <Menu className="h-6 w-6 text-neutral-100"/>
+          <Menu className="h-6 w-6 text-neutral-100" />
         </button>
       </nav>
 
