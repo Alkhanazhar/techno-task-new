@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative md:-mt-12 -mt-6 overflow-x-hidden"
+      className="relative md:-mt-12 -mt-6 overflow-hidden"
       id="main-hero-section"
     >
       {/* Top gradient (light to transparent) */}
@@ -63,8 +63,7 @@ const Hero = () => {
 
       {/* Orb + Hero Content */}
       <div className="w-full relative flex items-start justify-between gap-4">
-       <div className="relative w-full h-auto md:h-[115vh]">
-
+        <div className="relative w-full md:h-[115vh]">
           {/* <video  
             ref={videoRef}
             className="w-full object-cover h-[115vh]"
