@@ -161,7 +161,7 @@ const Hero = () => {
           </div>
 
           {/* Stats Section */}
-          <section className="w-full md:mt-12 mt-6 text-white text-left">
+          <section className="w-full mt-12 text-white text-left">
             <h2 className="text-gray-200 md:text-lg text-sm md:mb-6 mb-3 font-medium tracking-wide">
               Our numbers speak for themselves
             </h2>
@@ -214,8 +214,7 @@ const Hero = () => {
           </section>
         </div>
 
-        {/* <div style={{ height: "600px", position: "relative" }}> */}
-        <div className="relative h-[300px] md:h-[600px]">
+        <div style={{ height: "600px", position: "relative" }}>
           <CardSwap
             cardDistance={60}
             verticalDistance={70}
