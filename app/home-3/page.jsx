@@ -39,15 +39,7 @@ const Hero = () => {
   }, []);
 
   return (
-    <div className="relative md:-mt-12 -mt-6 zoom-out ">
-      {/* Top gradient (light to transparent) */}
-      {/* <div className="absolute top÷-0 inset-x-0 h-24 bg-gradient-to-b from-[#060606] to-transparent z-10 pointer-events-none" /> */}
-      {/* <img src="hero-bg.jpg" className="absolute inset-0 w-full h-full" /> */}
-
-      {/* Bottom gradient (light to transparent) */}
-      {/* <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" /> */}
-
-      {/* Grid Background */}
+    <div className="relative md:-mt-12 -mt-6 zoom-out">
       <div
         className={cn(
           "pointer-events-none absolute inset-0 [background-size:50px_50px] select-none opacity-70",
@@ -55,70 +47,78 @@ const Hero = () => {
         )}
       />
 
-      {/* Half Circle Overlay with mask */}
-
-      {/* Orb + Hero Content */}
-      <div className="w-full relative flex items-start justify-between gap-1">
-        {/* <Orb />÷ */}
-        <div className="relative w-full h-[115vh]">
-         <Orb />
+      <div className="w-full relative flex flex-col md:flex-row items-start justify-between">
+        {/* Orb container */}
+        <div className="relative w-full h-[70vh] md:h-[115vh]">
+          <Orb />
         </div>
 
-        <div className="absolute inset-0 backdrop-brightness-100 bg-black/20 z-10" />
+        {/* Overlay */}
+        <div className="absolute inset-0 backdrop-brightness-90 bg-black/30 z-10 pointer-events-none" />
 
-        <div className="absolute z-20 text-left inset-0 h-full flex justify-center items-center flex-col w-full px-4 md:px-7">
-          <h1 className="text-[18px] drop-shadow-2xl mt-16 md:mt-32 md:text-[38px] md:px-0 px-4 font-medium text-white leading-tight">
+        {/* Content */}
+        <div className="absolute z-20 inset-0 flex flex-col items-center justify-center text-center px-4 md:px-12 pointer-events-none">
+          <h1 className="text-lg sm:text-2xl md:text-5xl font-semibold text-white leading-tight drop-shadow-lg">
             97% of customer conversations are lost.
             <br className="hidden md:block" />
-            <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
+            <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text font-bold">
               Only 3% get audited
             </span>
           </h1>
-          <section className="w-full  pt-2 pb-8 text-white text-left ">
-            {/* <h2 className="text-gray-200 md:text-xl text-sm mb-6 font-medium tracking-wide">
-              Our numbers speak for themselves
-            </h2> */}
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-8  w-fit mx-auto ">
+
+          <section className="w-full mt-6 md:mt-8">
+            <div className="max-w-5xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 md:gap-8 justify-center">
               {stats.map((item, index) => (
                 <motion.div
                   key={index}
-                  whileHover={{ scale: 1.03 }}
-                  className="w-50 relative max-w-md rounded-2xl md:px-6 md:py-8 p-4 text-left 
-               transition duration-300 shadow-lg hover:shadow-purple-500/20 
-               bg-white/10 backdrop-blur-sm border border-white/15"
+                  whileHover={{ scale: 1.05 }}
+                  className="relative rounded-2xl p-4 md:p-6 text-left
+        transition duration-300 shadow-lg hover:shadow-purple-500/20
+        bg-white/10 backdrop-blur-md border border-white/20"
                 >
-                  <div className="absolute top-2 right-4">
-                    <div className="md:w-10 md:h-10 w-8 h-8 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
-                      <item.icon className="md:w-5 md:h-5 w-3 h-3 text-white" />
+                  <div className="absolute top-3 right-3">
+                    <div
+                      className="w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center shadow-md 
+            bg-white/10 backdrop-blur-md border border-white/20"
+                    >
+                      <item.icon className="w-4 h-4 md:w-5 md:h-5 text-white" />
                     </div>
                   </div>
 
-                  <div className="md:text-3xl text-lg font-normal text-white mb-2">
+                  <div className="text-base md:text-2xl font-semibold text-white mb-2">
                     {item.value}
                   </div>
-                  <div className="text-xs mt-4 text-gray-300">{item.label}</div>
+                  <div className="text-xs md:text-sm text-gray-300">
+                    {item.label}
+                  </div>
                 </motion.div>
               ))}
             </div>
           </section>
-          <p className="text-gray-200 text-[10px] md:text-[16px] mt-6 font-normal max-w-[650px]">
+
+          <p className="text-gray-300 text-xs sm:text-sm md:text-base mt-6 md:mt-8 font-light max-w-lg md:max-w-2xl leading-relaxed">
             100% conversations audited, flags compliance risks & delivers
             actionable insights to CX, QA & compliance teams reducing churn,
             cutting review time
-            <br className="md:block hidden" /> & driving smarter decisions in
+            <br className="hidden md:block" /> & driving smarter decisions in
             real time.
           </p>
 
-          <div className="mt-6 font-light md:text-[15px] text-xs flex flex-row justify-start items-center gap-2 md:gap-4">
-            <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 md:px-3.5 px-3 md:py-2.5 py-2 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
+          <div className="mt-6 md:mt-8 flex flex-wrap justify-center gap-3 md:gap-4 pointer-events-auto">
+            <button
+              className="bg-white text-purple-800 px-4 py-2 md:px-6 md:py-3 rounded-full font-medium 
+          hover:bg-purple-700 hover:text-white transition-all duration-300 shadow-md text-sm md:text-base"
+            >
               Book a Demo
             </button>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white md:px-4 px-3 md:py-3 py-2 rounded-full font-normal hover:opacity-90 transition-all duration-300">
+            <button
+              className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white px-4 py-2 md:px-6 md:py-3 rounded-full font-medium 
+          hover:opacity-90 transition-all duration-300 shadow-md text-sm md:text-base"
+            >
               See How It Works
             </button>
           </div>
         </div>
-       
       </div>
     </div>
   );
