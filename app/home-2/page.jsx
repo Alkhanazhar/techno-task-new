@@ -48,12 +48,12 @@ const Hero = () => {
       <div className="absolute bottom-0 inset-x-0 h-40 bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
 
       {/* Grid Background */}
-      <div
+      {/* <div
         className={cn(
-          "pointer-events-none absolute inset-0 [background-size:50px_50px] select-none opacity-70",
+          "pointer-events-none absolute inset-0 [background-size:50px_50px] select-none opacity-70 ",
           "[background-image:linear-gradient(to_right,#171717_1px,transparent_1px),linear-gradient(to_bottom,#171717_1px,transparent_1px)]"
         )}
-      />
+      /> */}
 
       {/* Half Circle Overlay with mask */}
 
@@ -61,7 +61,7 @@ const Hero = () => {
       <div className="w-full relative flex items-start justify-between gap-4">
         {/* <Orb />÷ */}
         <div className="relative w-full  h-[115vh]">
-          <video
+           <video
             ref={videoRef}
             className="w-full object-cover h-[115vh]"
             autoPlay
@@ -71,7 +71,7 @@ const Hero = () => {
           >
             <source src="/hero-bg.mp4" type="video/mp4" />
             Your browser does not support the video tag.
-          </video>
+          </video> 
         </div>
 
         <div className="absolute inset-0 backdrop-brightness-100 bg-black/20 z-10" />
