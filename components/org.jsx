@@ -1,8 +1,7 @@
-"use client"
+"use client";
+
 import { useEffect, useRef } from "react";
 import { Renderer, Program, Mesh, Triangle, Vec3 } from "ogl";
-
-// import "./Orb.css";
 
 export default function Orb({
   hue = 0,
@@ -259,7 +258,8 @@ export default function Orb({
       program.uniforms.hoverIntensity.value = hoverIntensity;
 
       const effectiveHover = forceHoverState ? 1 : targetHover;
-      program.uniforms.hover.value += (effectiveHover - program.uniforms.hover.value) * 0.1;
+      program.uniforms.hover.value +=
+        (effectiveHover - program.uniforms.hover.value) * 0.1;
 
       if (rotateOnHover && effectiveHover > 0.5) {
         currentRot += dt * rotationSpeed;
@@ -278,9 +278,14 @@ export default function Orb({
       container.removeChild(gl.canvas);
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
-  return <div ref={ctnDom} className="orb-container absolute right-0 top-1/2 -translate-y-1/2 w-[300px] h-[300px]" />;
-
+  return (
+    <div
+      ref={ctnDom}
+      className="absolute w-[360px] h-[360px] top-8 md:w-[400px] md:h-[400px] sm:right-1/3 scale-150 sm:!ml-20 mx-auto sm:top-24  z-0  sm:!scale-200"
+      style={{ zIndex: 0 }}
+    />
+  );
 }

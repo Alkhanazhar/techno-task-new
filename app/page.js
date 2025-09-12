@@ -19,6 +19,7 @@ import Orb from "@/components/org";
 import ContactUs from "@/components/Pages/ContactUs";
 import { motion } from "framer-motion";
 import Lenis from "lenis";
+import Script from "next/script";
 import { useEffect, useRef } from "react";
 
 export default function Home() {
@@ -81,6 +82,7 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <BookDemo />
+     
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <FeaturesCart />

@@ -99,7 +99,7 @@ export default function SolutionCarts() {
                 </div>
 
                 {/* Icon for Mobile */}
-                <div className="bg-gradient-to-r md:hidden to-[#B462CE] from-[#3F2AB2] md:w-10 w-6 md:h-7 h-5 rounded-full flex items-center justify-center text-white">
+                <div className="bg-gradient-to-r md:!hidden to-[#B462CE] from-[#3F2AB2] md:w-10 w-6 md:h-7 h-5 rounded-full flex items-center justify-center text-white">
                   <step.icon className="md:w-4 w-3 md:h-4 h-3" />
                 </div>
               </div>

@@ -362,8 +362,8 @@ const TimelineJourneyMobile = () => {
                     {/* Content card - stays visible once shown */}
                     <motion.div
                       className={`
-                        absolute left-1/2 transform -translate-x-1/2
-                        md:w-80 w-[75vw] ml-[1vw] z-30
+                        absolute left-0 transform -translate-x-1/4
+                        md:w-80 w-[40vw] ml-[.1vw] z-30
                       `}
                       initial={{
                         opacity: 0,

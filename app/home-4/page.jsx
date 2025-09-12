@@ -2,7 +2,7 @@
 import React, { useEffect, useRef, useState } from "react";
 // import Orb from "../org";÷
 import { BarChart, Cpu, LineChart, TrendingUp } from "lucide-react";
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Orb from "@/components/org";
 
@@ -12,6 +12,16 @@ const Hero = () => {
 
   useEffect(() => {
     setIsVisible(true);
+  }, []);
+
+  const [currentIndex, setCurrentIndex] = useState(0);
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) => (prevIndex + 1) % stats.length);
+    }, 3000); // Switch every 1 second
+
+    return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
 
   const stats = [
@@ -288,6 +298,7 @@ const Hero = () => {
       </div>
     </div>
   );
+  const Icon = stats[currentIndex].icon;
 
   return (
     <div className="relative zoom-out min-h-[115vh] -mt-6 py-10">
@@ -302,7 +313,7 @@ const Hero = () => {
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen p-10 px-20">
         {/* Left Side - Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-          <h1 className="text-[20px] md:text-[28px] lg:text-[38px] drop-shadow-2xl font-medium text-white leading-tight">
+          <h1 className="text-[24px] md:text-[28px] lg:text-[38px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
             <br className="hidden md:block" />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
@@ -329,7 +340,7 @@ const Hero = () => {
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
           </h2>
-          <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
+          <div className="sm:grid grid-cols-2 hidden  sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
             {stats.map((item, index) => (
               <div
                 key={index}
@@ -357,21 +368,47 @@ const Hero = () => {
               </div>
             ))}
           </div>
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex} // Key ensures re-render on index change
+              className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-4 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
+              initial={{ opacity: 0, x: 20 }} // Slide in from right
+              animate={{ opacity: 1, x: 0 }} // Center
+              exit={{ opacity: 0, x: -20 }} // Slide out to left
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div className="absolute top-2 right-4">
+                <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
+                  <Icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
+                </div>
+              </div>
+              <div className="text-lg md:text-2xl lg:text-3xl font-normal text-white mb-2">
+                {stats[currentIndex].value}
+              </div>
+              <div className="text-xs mt-2 md:mt-4 text-gray-300">
+                {stats[currentIndex].label}
+              </div>
+            </motion.div>
+          </AnimatePresence>
         </div>
 
         {/* Right Side - Dashboard */}
         <motion.div
-          className="relative w-full max-w-[100%] lg:max-w-[50%] h-[400px] sm:h-[500px] md:h-[600px] px-4 sm:px-6 lg:px-12 overflow-hidden mt-8 lg:mt-0"
+          className="relative w-full max-w-[100%] lg:max-w-[50%] zoom-out-more h-[400px] sm:h-[500px] md:h-[600px] px-4 sm:px-6 lg:px-12"
           variants={containerVariants}
           initial="hidden"
           animate="show"
         >
+          {/* Centered Orb with z-index */}
+         
+            <Orb />
+
           {/* Main centered Customer Analysis panel */}
-          <motion.div className="flex items-center justify-center h-full">
+          <motion.div className="flex items-center justify-center h-full z-10">
             <motion.img
               src="/Customer analysis.png"
               alt="Customer Analysis"
-              className="w-[20rem] sm:w-[25rem] md:w-[30rem] lg:w-[38rem] rounded-xl shadow-lg object-contain"
+              className="w-[20rem] sm:w-[25rem] md:w-[30rem] brightness-75 lg:w-[36rem] rounded-xl object-contain custom-shadow"
               variants={itemVariants}
               animate={{ y: [0, -15, 0] }}
               transition={{
@@ -382,9 +419,9 @@ const Hero = () => {
 
           {/* Dashboard image behind */}
           <motion.img
-            src="/dashbaord.png"
+            src="/sentiment.png"
             alt="Dashboard"
-            className="absolute top-4 left-1/2 sm:left-1/3 w-40 sm:w-50 md:w-60 rounded-xl shadow-lg object-contain"
+            className="absolute top-4 left-1/2 sm:left-1/3 w-40 sm:w-50 hidden md:flex md:w-60 rounded-xl object-contain z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -20, 0] }}
             transition={{
@@ -396,7 +433,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004368.png"
             alt="Group 4368"
-            className="absolute top-10 sm:top-20 left-4 sm:left-8 w-40 sm:w-50 md:w-60 rounded-md shadow-lg"
+            className="absolute top-10 sm:top-20 left-4 sm:left-16 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -10, 0] }}
             transition={{
@@ -406,7 +443,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004369.png"
             alt="Group 4369"
-            className="absolute top-4 sm:top-12 right-4 sm:right-4 w-40 sm:w-50 md:w-60 rounded-md shadow-lg"
+            className="absolute top-6 sm:top-12 right-4 sm:right-8 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -12, 0] }}
             transition={{
@@ -416,7 +453,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004370.png"
             alt="Group 4370"
-            className="absolute bottom-10 sm:bottom-12 left-6 sm:left-10 w-40 sm:w-50 md:w-60 rounded-md shadow-lg"
+            className="absolute bottom-7 sm:bottom-12 left-8 sm:left-16 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -8, 0] }}
             transition={{
@@ -426,7 +463,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004371.png"
             alt="Group 4371"
-            className="absolute bottom-4 sm:bottom-20 right-24 sm:right-4 w-40 sm:w-50 md:w-60 rounded-md shadow-lg"
+            className="absolute bottom-6 sm:bottom-10 right-4 sm:right-4 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -10, 0] }}
             transition={{

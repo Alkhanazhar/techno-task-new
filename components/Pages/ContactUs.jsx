@@ -3,6 +3,7 @@ import React from "react";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { SparklesCore } from "../ui/sparkles";
 import { motion } from "framer-motion";
+import Script from "next/script";
 
 const ContactUs = ({ isCards = true }) => {
   return (
@@ -22,43 +23,19 @@ const ContactUs = ({ isCards = true }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             // className="flex w-full gap-2"
-            className="space-y-4 border border-neutral-400/50 bg-gray-200/90  backdrop-blur-sm p-4 md:p-5 rounded-lg relative"
+            className=" backdrop-blur-sm  rounded-lg relative"
           >
-            <h2 className="text-2xl relative md:text-4xl font-semibold  bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text">
-              Contact Us
-            </h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4 relative">
-              <input
-                type="text"
-                placeholder="First Name"
-                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 focus:outline-none focus:ring-1 focus:ring-blue-500 text-xs md:text-base"
-              />
-              <input
-                type="text"
-                placeholder="Last Name"
-                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
-              />
-              <input
-                required
-                type="text"
-                placeholder="Phone No."
-                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
-              />
-              <input
-                type="email"
-                placeholder="Email Address"
-                className="bg-gray-200 text-black border border-neutral-400 px-4 md:py-3 py-2 rounded-lg placeholder:text-neutral-600 text-xs md:text-base"
-              />
-            </div>
-
-            <textarea
-              rows="4"
-              placeholder="Write Message..."
-              className="w-full bg-gray-200 text-black border border-neutral-400 px-4 py-3 rounded-lg resize-none placeholder:text-neutral-600 text-xs md:text-base"
-            ></textarea>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] py-2 px-4 cursor-pointer rounded-full text-xs md:text-xs text-white font-semibold hover:opacity-90 transition-all">
-              Submit Now
-            </button>
+             <div className="flex justify-center items-center px-4 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
+                    <div
+                      id="kl__form-container"
+                      className="mx-auto w-full  bg-gradient-to-tl to-[#21082b] from-[#27022e]  px-4 zoom-out z-20 mt-8"
+                    ></div>
+                  </div>
+                  <Script
+                    src="https://assets.kylas.io/lead-capture-forms/lcf.min.js"
+                    strategy="afterInteractive"
+                    form-id="36a6e74c-b840-4b37-b993-6a89cdcb75fc"
+                  />
           </motion.div>
 
           {/* Map */}

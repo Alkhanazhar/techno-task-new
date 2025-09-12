@@ -58,8 +58,8 @@ const Footer = () => {
     </div>
   
     {/* Background Gradients */}
-    <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-purple-900 opacity-30 blur-3xl rounded-full -z-0" />
-    <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-indigo-900 opacity-30 blur-3xl rounded-full -z-0" />
+    <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-purple-900 opacity-30 !blur-2xl rounded-full  -z-0" />
+    <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-indigo-900 opacity-30 !blur-2xl rounded-full -z-0" />
   </footer>
   
   );
