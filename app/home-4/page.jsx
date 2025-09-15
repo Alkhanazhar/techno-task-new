@@ -313,11 +313,11 @@ const Hero = () => {
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen p-10 px-20">
         {/* Left Side - Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-          <h1 className="text-[24px] md:text-[28px] lg:text-[38px] drop-shadow-2xl font-medium text-white leading-tight">
+          <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
-            {/* <br className="hidden md:block" /> */}
+            <br className="hidden md:block " />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
-              Only 3% get audited
+              Only 3% get audited.
             </span>
           </h1>
 
