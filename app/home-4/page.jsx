@@ -315,7 +315,7 @@ const Hero = () => {
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <h1 className="text-[24px] md:text-[28px] lg:text-[38px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
-            <br className="hidden md:block" />
+            {/* <br className="hidden md:block" /> */}
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
               Only 3% get audited
             </span>
@@ -340,7 +340,7 @@ const Hero = () => {
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
           </h2>
-          <div className="sm:grid grid-cols-2 hidden  sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
+          <div className="sm:grid grid-cols-2 hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
             {stats.map((item, index) => (
               <div
                 key={index}
@@ -371,7 +371,7 @@ const Hero = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex} // Key ensures re-render on index change
-              className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-4 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
+              className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
               initial={{ opacity: 0, x: 20 }} // Slide in from right
               animate={{ opacity: 1, x: 0 }} // Center
               exit={{ opacity: 0, x: -20 }} // Slide out to left
@@ -394,21 +394,20 @@ const Hero = () => {
 
         {/* Right Side - Dashboard */}
         <motion.div
-          className="relative w-full max-w-[100%] lg:max-w-[50%] zoom-out-more h-[400px] sm:h-[500px] md:h-[600px] px-4 sm:px-6 lg:px-12"
+          className="relative w-full max-w-[100%] sm:max-w-[80%] lg:max-w-[47%] zoom-out-more h-[300px] xs:h-[400px] sm:h-[500px] md:h-[600px] lg:h-[700px] px-2 xs:px-4 sm:px-6 lg:px-12 "
           variants={containerVariants}
           initial="hidden"
           animate="show"
         >
           {/* Centered Orb with z-index */}
-         
-            <Orb />
+          <Orb />
 
           {/* Main centered Customer Analysis panel */}
           <motion.div className="flex items-center justify-center h-full z-10">
             <motion.img
               src="/Customer analysis.png"
               alt="Customer Analysis"
-              className="w-[20rem] sm:w-[25rem] md:w-[30rem] brightness-75 lg:w-[36rem] rounded-xl object-contain custom-shadow"
+              className="w-[16rem] xs:w-[18rem] sm:w-[22rem] md:w-[28rem] lg:w-[34rem] xl:w-[36rem] brightness-95 rounded-xl object-contain custom-shadow"
               variants={itemVariants}
               animate={{ y: [0, -15, 0] }}
               transition={{
@@ -421,7 +420,7 @@ const Hero = () => {
           <motion.img
             src="/sentiment.png"
             alt="Dashboard"
-            className="absolute top-4 left-1/2 sm:left-1/3 w-40 sm:w-50 hidden md:flex md:w-60 rounded-xl object-contain z-5 custom-shadow"
+            className="absolute top-4 xs:top-6 sm:top-8 md:top-10 left-[55%] xs:left-[60%] sm:left-[40%] md:left-[35%] w-[6rem] xs:w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-xl object-contain z-5 custom-shadow hidden sm:flex"
             variants={itemVariants}
             animate={{ y: [0, -20, 0] }}
             transition={{
@@ -433,7 +432,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004368.png"
             alt="Group 4368"
-            className="absolute top-10 sm:top-20 left-4 sm:left-16 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
+            className="absolute top-8 xs:top-10 sm:top-16 md:top-20 left-2 xs:left-4 sm:left-8 md:left-12 w-[6rem] xs:w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -10, 0] }}
             transition={{
@@ -443,7 +442,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004369.png"
             alt="Group 4369"
-            className="absolute top-6 sm:top-12 right-4 sm:right-8 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
+            className="absolute top-4 xs:top-6 sm:top-10 md:top-12 right-2 xs:right-4 sm:right-6 md:right-8 w-[6rem] xs:w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -12, 0] }}
             transition={{
@@ -453,7 +452,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004370.png"
             alt="Group 4370"
-            className="absolute bottom-7 sm:bottom-12 left-8 sm:left-16 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
+            className="absolute bottom-6 xs:bottom-6 sm:bottom-10 md:bottom-16 left-2 xs:left-4 sm:left-8 md:left-12 w-[6rem] xs:w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -8, 0] }}
             transition={{
@@ -463,7 +462,7 @@ const Hero = () => {
           <motion.img
             src="/Group 1000004371.png"
             alt="Group 4371"
-            className="absolute bottom-6 sm:bottom-10 right-4 sm:right-4 w-40 sm:w-50 md:w-60 rounded-md z-5 custom-shadow"
+            className="absolute bottom-4 xs:bottom-6 sm:bottom-8 md:bottom-16 right-2 xs:right-4 sm:right-6 md:right-8 w-[6rem] xs:w-[8rem] sm:w-[10rem] md:w-[12rem] lg:w-[14rem] rounded-md z-5 custom-shadow"
             variants={itemVariants}
             animate={{ y: [0, -10, 0] }}
             transition={{

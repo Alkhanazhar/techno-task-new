@@ -47,7 +47,6 @@ export function Industries() {
         </p>
       </div>
       <div className="w-screen h-full overflow-hidden !-mb-20 md:mb-0">
-
       <Carousel slides={slideData} />
       </div>
     </div>

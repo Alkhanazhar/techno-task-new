@@ -69,18 +69,9 @@ const CaseStudy = () => {
               <span className="text-white font-semibold w-24">Date:</span>
               <span className="text-gray-300">25 January 2025</span>
             </div>
-          </div>
-          
-          <div className="w-full md:w-1/2 flex justify-end">
-            <div className="w-80 h-48 rounded-lg overflow-hidden">
-              <div className="w-full h-full bg-gradient-to-br from-red-500 via-orange-500 to-blue-500 opacity-90"></div>
-            </div>
-          </div>
-        </motion.div>
 
-        {/* Support Section */}
-        <motion.div 
-          className="mb-20 flex items-start space-x-8"
+              <motion.div 
+          className="mb-20 flex items-start space-x-8 mt-8"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true }}
@@ -106,7 +97,18 @@ const CaseStudy = () => {
               </div>
             </div>
           </div>
+        </motion.div> 
+          </div>
+          
+          <div className="w-full md:w-1/2 h-[70vh] flex justify-end">
+            <div className="w-full h-full rounded-lg overflow-hidden">
+              <div className="w-full h-full bg-gradient-to-br from-red-500 via-orange-500 to-blue-500 opacity-90"></div>
+            </div>
+          </div>
         </motion.div>
+
+        {/* Support Section */}
+      
 
         {/* The Reality on the Floor Section */}
         <motion.div 

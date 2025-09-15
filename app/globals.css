@@ -10,7 +10,7 @@
   height: 100%;
 }
 .custom-shadow {
- box-shadow: 2px 1px 20px 15px #2828284f !important
+ box-shadow: 2px 1px 20px 15px #28282834 !important
 }
 
 .form-label[for="kl-11-input"],
@@ -69,7 +69,13 @@
 }
 
 .zoom-out-more {
-  zoom: 80%;
+  zoom: 75%;
+}
+@media (max-width: 624px) {
+  .zoom-out-more {
+    zoom: 90%;
+    transform: scale(0.9);
+  }
 }
 :root {
   font-family: var(--font-sora), sans-serif;

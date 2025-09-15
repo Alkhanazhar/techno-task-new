@@ -202,12 +202,12 @@ export default function Orb({
 
     function resize() {
       if (!container) return;
-      const dpr = window.devicePixelRatio || 1;
+      const dpr = Math.min(window.devicePixelRatio, 2); // Cap DPR for performance
       const width = container.clientWidth;
       const height = container.clientHeight;
       renderer.setSize(width * dpr, height * dpr);
-      gl.canvas.style.width = width + "px";
-      gl.canvas.style.height = height + "px";
+      gl.canvas.style.width = `${width}px`;
+      gl.canvas.style.height = `${height}px`;
       program.uniforms.iResolution.value.set(
         gl.canvas.width,
         gl.canvas.height,
@@ -278,13 +278,12 @@ export default function Orb({
       container.removeChild(gl.canvas);
       gl.getExtension("WEBGL_lose_context")?.loseContext();
     };
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [hue, hoverIntensity, rotateOnHover, forceHoverState]);
 
   return (
     <div
       ref={ctnDom}
-      className="absolute w-[360px] h-[360px] top-8 md:w-[400px] md:h-[400px] sm:right-1/3 scale-150 sm:!ml-20 mx-auto sm:top-24  z-0  sm:!scale-200"
+      className="absolute  inset-0 w-full h-full scale-125 z-0"
       style={{ zIndex: 0 }}
     />
   );
