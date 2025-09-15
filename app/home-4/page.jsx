@@ -321,10 +321,12 @@ const Hero = () => {
             </span>
           </h1>
 
-          <p className="text-gray-200 text-[12px] md:text-[14px] lg:text-[16px] mt-4 md:mt-6 font-normal max-w-lg lg:max-w-2xl leading-relaxed mx-auto lg:mx-0">
-            100% conversations audited, flags compliance risks & delivers
-            actionable insights...
+         <p className="text-gray-200 text-[10px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
+           Convoze AI analyses 100% of conversations, flags compliance risks, and delivers actionable insights to CX, QA, and compliance teams reducing churn, cutting review  
+             & driving smarter decisions in
+            real time.
           </p>
+
 
           {/* Buttons */}
           <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">

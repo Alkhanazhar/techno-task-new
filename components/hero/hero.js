@@ -60,10 +60,8 @@ const Hero = () => {
           </h1>
 
           <p className="text-gray-200 text-[10px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
-            100% conversations audited, flags compliance risks & delivers
-            actionable insights to CX, QA & compliance teams reducing churn,
-            cutting review time
-            <br className="hidden md:block" /> & driving smarter decisions in
+           Convoze AI analyses 100% of conversations, flags compliance risks, and delivers actionable insights to CX, QA, and compliance teams reducing churn, cutting review  
+            & driving smarter decisions in
             real time.
           </p>
 
