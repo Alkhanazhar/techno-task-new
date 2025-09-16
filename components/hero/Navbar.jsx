@@ -35,6 +35,7 @@ const Navbar = () => {
     { name: "Solution", route: "/solution" },
     { name: "Pricing", route: "/pricing" },
     { name: "Contact Us", route: "/contact" },
+    { name: "Case Study", route: "/casestudy" },
   ];
 
   const handleNav = (route) => {

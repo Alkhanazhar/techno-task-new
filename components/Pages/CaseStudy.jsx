@@ -26,15 +26,20 @@ const CaseStudy = () => {
     <div className="min-h-screen ">
       {/* Header Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 mt-12 sm:py-12 md:py-24  mb-8 xs:mb-10 sm:mb-12 md:mb-16"
+        className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6 }}
       >
-        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <div className="flex flex-col lg:flex-row items-center lg:items-center justify-center lg:justify-between gap-12 xs:gap-8 sm:gap-10 md:gap-12 lg:gap-16">
+        <div className="w-full max-w-sm h-full xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div
+            className="flex flex-col lg:flex-row 
+                 items-center justify-center lg:justify-between 
+                 gap-12 xs:gap-8 sm:gap-10 md:gap-12 lg:gap-16 
+                 h-screen"
+          >
             {/* Left Side - Text Content */}
             <div className="w-full lg:w-1/2 text-center lg:text-left">
               <h1 className="text-3xl xs:text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl font-bold text-white mb-2 xs:mb-3 sm:mb-4">
@@ -43,10 +48,10 @@ const CaseStudy = () => {
               <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
                 BPO & Contact Centers
               </h2>
-              <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
+              <p className="text-gray-200 font-extralight text-sm xs:text-base sm:text-lg ">
                 Turning Every Conversation into Actionable Insight
               </p>
-              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
+              <div className="mt-4 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
                 <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
                   Book a Demo
                 </button>
@@ -474,32 +479,31 @@ const CaseStudy = () => {
       </motion.div>
 
       {/* Built for the Real World Section - Dark */}
-     <motion.div
-  className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={fadeIn}
-  transition={{ duration: 0.6, delay: 0.6 }}
->
-  <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-6">
-      Why{" "}
-      <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-        Convoze
-      </span>{" "}
-      Stands Out
-    </h3>
-    <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
-      Most QA tools still work in isolation or rely on a handful of conversation
-      samples. Being different, Convoze audits every single solitary
-      conversation in one unified platform. That gives reduced blind spots, more
-      rapid decisions, and better outcomes for both your customers and your
-      business.
-    </p>
-  </div>
-</motion.div>
-
+      <motion.div
+        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-6">
+            Why{" "}
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+              Convoze
+            </span>{" "}
+            Stands Out
+          </h3>
+          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
+            Most QA tools still work in isolation or rely on a handful of
+            conversation samples. Being different, Convoze audits every single
+            solitary conversation in one unified platform. That gives reduced
+            blind spots, more rapid decisions, and better outcomes for both your
+            customers and your business.
+          </p>
+        </div>
+      </motion.div>
 
       <motion.div
         className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
@@ -513,7 +517,7 @@ const CaseStudy = () => {
           {/* Header */}
           <div className="mb-8">
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              See Convoze in {" "}
+              See Convoze in{" "}
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
                 Action - (CTA)
               </span>
