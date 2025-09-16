@@ -46,20 +46,20 @@ const CaseStudy = () => {
               <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
                 Turning Every Conversation into Actionable Insight
               </p>
-             <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
-            <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
-              Book a Demo
-            </button>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
-              See How It Works
-            </button>
-          </div>
+              <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
+                <button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
+                  Book a Demo
+                </button>
+                <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
+                  See How It Works
+                </button>
+              </div>
             </div>
 
             {/* Right Side - Image */}
             <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
               <img
-                src="https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&h=600&fit=crop&crop=face&auto=format&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://images.unsplash.com/photo-1651922118990-4017b1f29fd3?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
                 className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-auto rounded-lg shadow-lg object-cover"
                 loading="lazy"
@@ -122,7 +122,10 @@ const CaseStudy = () => {
                 variants={fadeIn}
                 transition={{ duration: 0.6, delay: 0.3 }}
               >
-                <div className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[320px] bg-gray-900 rounded-lg p-4 xs:p-5 sm:p-6" aria-label="Contact support information">
+                <div
+                  className="w-full max-w-[240px] xs:max-w-[280px] sm:max-w-[320px] bg-gray-900 rounded-lg p-4 xs:p-5 sm:p-6"
+                  aria-label="Contact support information"
+                >
                   <div className="w-10 xs:w-12 h-10 xs:h-12 bg-pink-500 rounded-lg flex items-center justify-center mb-3 xs:mb-4">
                     <span className="text-white font-bold text-lg xs:text-xl">
                       co
@@ -132,7 +135,8 @@ const CaseStudy = () => {
                     We're here to help!
                   </h4>
                   <p className="text-gray-400 text-xs xs:text-sm sm:text-base mb-3 xs:mb-4">
-                    Need assistance? We're here to help with support, guidance, and resources. Reach out to us!
+                    Need assistance? We're here to help with support, guidance,
+                    and resources. Reach out to us!
                   </p>
                   <div className="space-y-2 xs:space-y-3">
                     <div className="flex items-center text-gray-400 text-xs xs:text-sm">
@@ -179,186 +183,250 @@ const CaseStudy = () => {
             </span>{" "}
             on the Floor
           </h3>
-         <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
-  Running a contact center is a constant balancing act. Peaks in demand, customers who expect instant answers, and the pressure to hit service targets can stretch even the best teams to their limits. The truth? Most centers still manage to audit only 3–4% of their conversations. That means 96% of valuable insights—performance gaps, compliance risks, and customer sentiment shifts—go completely unseen. And when those go unnoticed, it leads to:
-</p>
-<ul className="text-gray-300 text-sm xs:text-base sm:text-lg space-y-2 xs:space-y-3">
-  <li>• Scaling struggles when seasonal surges lead to long wait times and frustrated customers.</li>
-  <li>• Inconsistent quality because only a handful of conversations get checked.</li>
-  <li>• High staff turnover, which means never-ending recruiting and retraining.</li>
-  <li>• Costly compliance slips that can damage your brand and trigger escalation & fines.</li>
-  <li>• Missed sentiment cues, like those subtle signs of dissatisfaction, until it’s too late.</li>
-</ul>
+          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
+            Running a contact center is a constant balancing act. Peaks in
+            demand, customers who expect instant answers, and the pressure to
+            hit service targets can stretch even the best teams to their limits.
+            The truth? Most centers still manage to audit only 3–4% of their
+            conversations. That means 96% of valuable insights—performance gaps,
+            compliance risks, and customer sentiment shifts—go completely
+            unseen. And when those go unnoticed, it leads to:
+          </p>
+          <ul className="text-gray-300 text-sm xs:text-base sm:text-lg space-y-2 xs:space-y-3">
+            <li>
+              • Scaling struggles when seasonal surges lead to long wait times
+              and frustrated customers.
+            </li>
+            <li>
+              • Inconsistent quality because only a handful of conversations get
+              checked.
+            </li>
+            <li>
+              • High staff turnover, which means never-ending recruiting and
+              retraining.
+            </li>
+            <li>
+              • Costly compliance slips that can damage your brand and trigger
+              escalation & fines.
+            </li>
+            <li>
+              • Missed sentiment cues, like those subtle signs of
+              dissatisfaction, until it’s too late.
+            </li>
+          </ul>
         </div>
       </motion.div>
 
       {/* How Convoze Changes the Game Section - Light */}
-     <motion.div
-  className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={fadeIn}
-  transition={{ duration: 0.6, delay: 0.5 }}
->
-  <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-4 xs:mb-6 sm:mb-8">
-      How Convoze Changes the{" "}
-      <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.900')]">
-        Game
-      </span>
-    </h3>
-    <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
-      Think of Convoze as an expert QA and customer insight powerhouse that listens to every conversation every single one without missing a moment.
-    </p>
-    <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
-      This is exactly what it brings to the table:
-    </p>
-    <div className="space-y-3 xs:space-y-4 sm:space-y-5">
-      <div className="flex items-start space-x-2 xs:space-x-3">
-        <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
-        <p className="text-black text-sm xs:text-base sm:text-lg">
-          Live transcription & speech-to-text so conversations are captured instantly.
-        </p>
-      </div>
-      <div className="flex items-start space-x-2 xs:space-x-3">
-        <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
-        <p className="text-black text-sm xs:text-base sm:text-lg">
-          Emotion & intent detection to spot frustration, urgency, or satisfaction in real time.
-        </p>
-      </div>
-      <div className="flex items-start space-x-2 xs:space-x-3">
-        <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
-        <p className="text-black text-sm xs:text-base sm:text-lg">
-          Compliance alerts that flag risky phrases or missed disclosures on the spot.
-        </p>
-      </div>
-      <div className="flex items-start space-x-2 xs:space-x-3">
-        <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
-        <p className="text-black text-sm xs:text-base sm:text-lg">
-          Automated QA scoring that gives consistent, fair feedback for every interaction.
-        </p>
-      </div>
-    </div>
-    <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mt-4 xs:mt-6 sm:mt-8">
-      With Convoze, managers don’t have to wait for the end-of-week reports. They can act on insights while the conversation is still happening.
-    </p>
-  </div>
-</motion.div>
-
+      <motion.div
+        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.6, delay: 0.5 }}
+      >
+        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-4 xs:mb-6 sm:mb-8">
+            How Convoze Changes the{" "}
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.900')]">
+              Game
+            </span>
+          </h3>
+          <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
+            Think of Convoze as an expert QA and customer insight powerhouse
+            that listens to every conversation every single one without missing
+            a moment.
+          </p>
+          <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
+            This is exactly what it brings to the table:
+          </p>
+          <div className="space-y-3 xs:space-y-4 sm:space-y-5">
+            <div className="flex items-start space-x-2 xs:space-x-3">
+              <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+              <p className="text-black text-sm xs:text-base sm:text-lg">
+                Live transcription & speech-to-text so conversations are
+                captured instantly.
+              </p>
+            </div>
+            <div className="flex items-start space-x-2 xs:space-x-3">
+              <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+              <p className="text-black text-sm xs:text-base sm:text-lg">
+                Emotion & intent detection to spot frustration, urgency, or
+                satisfaction in real time.
+              </p>
+            </div>
+            <div className="flex items-start space-x-2 xs:space-x-3">
+              <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+              <p className="text-black text-sm xs:text-base sm:text-lg">
+                Compliance alerts that flag risky phrases or missed disclosures
+                on the spot.
+              </p>
+            </div>
+            <div className="flex items-start space-x-2 xs:space-x-3">
+              <div className="w-1.5 xs:w-2 h-1.5 xs:h-2 bg-[#C068D1] rounded-full mt-1.5 xs:mt-2 flex-shrink-0"></div>
+              <p className="text-black text-sm xs:text-base sm:text-lg">
+                Automated QA scoring that gives consistent, fair feedback for
+                every interaction.
+              </p>
+            </div>
+          </div>
+          <p className="text-black text-sm xs:text-base sm:text-lg md:text-xl mt-4 xs:mt-6 sm:mt-8">
+            With Convoze, managers don’t have to wait for the end-of-week
+            reports. They can act on insights while the conversation is still
+            happening.
+          </p>
+        </div>
+      </motion.div>
 
       {/* Proven Measurable Impact Section - Dark */}
-    <motion.div
-  className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
-  initial="hidden"
-  whileInView="visible"
-  viewport={{ once: true }}
-  variants={staggerContainer}
->
-  <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3 xs:mb-4 sm:mb-6">
-      Proven Measurable{" "}
-      <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-        Impact
-      </span>
-    </h3>
-    <p className="text-white text-sm xs:text-base sm:text-lg mb-6 xs:mb-8 sm:mb-10 md:mb-12">
-      BPOs and contact centers using Convoze are experiencing:
-    </p>
+      <motion.div
+        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={staggerContainer}
+      >
+        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3 xs:mb-4 sm:mb-6">
+            Proven Measurable{" "}
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+              Impact
+            </span>
+          </h3>
+          <p className="text-white text-sm xs:text-base sm:text-lg mb-6 xs:mb-8 sm:mb-10 md:mb-12">
+            BPOs and contact centers using Convoze are experiencing:
+          </p>
 
-    {/* Bulleted impact list */}
-    <ul className="text-gray-300 text-sm xs:text-base sm:text-lg space-y-3 mb-6 xs:mb-8 sm:mb-10 md:mb-12">
-      <li>• Elevate customer satisfaction by 35% through accelerated and precision-driven service.</li>
-      <li>• Reduce QA review time by 60%, reallocating expert talent to strategic initiatives.</li>
-      <li>• Achieve total visibility with comprehensive, 100% conversation coverage.</li>
-      <li>• Realize a full return on investment in under 90 days through significant cost reduction and a dramatic drop in case escalations.</li>
-    </ul>
+          {/* Bulleted impact list */}
+          <ul className="text-gray-300 text-sm xs:text-base sm:text-lg space-y-3 mb-6 xs:mb-8 sm:mb-10 md:mb-12">
+            <li>
+              • Elevate customer satisfaction by 35% through accelerated and
+              precision-driven service.
+            </li>
+            <li>
+              • Reduce QA review time by 60%, reallocating expert talent to
+              strategic initiatives.
+            </li>
+            <li>
+              • Achieve total visibility with comprehensive, 100% conversation
+              coverage.
+            </li>
+            <li>
+              • Realize a full return on investment in under 90 days through
+              significant cost reduction and a dramatic drop in case
+              escalations.
+            </li>
+          </ul>
 
-    {/* Comparison Table */}
-    <div className="rounded-lg overflow-hidden border border-white/10">
-      <table className="w-full">
-        <thead>
-          <tr className="bg-white/10 backdrop-blur-sm">
-            <th scope="col" className="text-left p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base">
-              Metric
-            </th>
-            <th scope="col" className="text-center p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base">
-              Before Convoze
-            </th>
-            <th scope="col" className="text-center p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base">
-              After Convoze
-            </th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">QA Coverage</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              3–4% manually reviewed
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              100% auto-audit
-            </td>
-          </tr>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">Quality Review Time</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Days for feedback
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Instant real-time scoring
-            </td>
-          </tr>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">CSAT (Customer Satisfaction)</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Inconsistent
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              +35% uplift
-            </td>
-          </tr>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">Compliance Monitoring</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Breaches found post-escalation
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Live risk flagging
-            </td>
-          </tr>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">Agent Coaching</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Limited sample-based coaching
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              Continuous coaching from all data
-            </td>
-          </tr>
-          <tr className="border-b border-white/10">
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">Operational Costs</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              High manual QA costs
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              ~60% QA time reduction
-            </td>
-          </tr>
-          <tr>
-            <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">ROI Realization</td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              6–12 months
-            </td>
-            <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
-              ~90 days
-            </td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
-</motion.div>
+          {/* Comparison Table */}
+          <div className="rounded-lg overflow-hidden border border-white/10">
+            <table className="w-full">
+              <thead>
+                <tr className="bg-white/10 backdrop-blur-sm">
+                  <th
+                    scope="col"
+                    className="text-left p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base"
+                  >
+                    Metric
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base"
+                  >
+                    Before Convoze
+                  </th>
+                  <th
+                    scope="col"
+                    className="text-center p-2 xs:p-3 sm:p-4 font-semibold text-white text-xs xs:text-sm sm:text-base"
+                  >
+                    After Convoze
+                  </th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    QA Coverage
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    3–4% manually reviewed
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    100% auto-audit
+                  </td>
+                </tr>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    Quality Review Time
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Days for feedback
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Instant real-time scoring
+                  </td>
+                </tr>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    CSAT (Customer Satisfaction)
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Inconsistent
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    +35% uplift
+                  </td>
+                </tr>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    Compliance Monitoring
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Breaches found post-escalation
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Live risk flagging
+                  </td>
+                </tr>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    Agent Coaching
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Limited sample-based coaching
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    Continuous coaching from all data
+                  </td>
+                </tr>
+                <tr className="border-b border-white/10">
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    Operational Costs
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    High manual QA costs
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    ~60% QA time reduction
+                  </td>
+                </tr>
+                <tr>
+                  <td className="p-2 xs:p-3 sm:p-4 text-white text-xs xs:text-sm sm:text-base">
+                    ROI Realization
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    6–12 months
+                  </td>
+                  <td className="text-center p-2 xs:p-3 sm:p-4 text-gray-300 text-xs xs:text-sm sm:text-base">
+                    ~90 days
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </motion.div>
 
       {/* What You Get Inside Convoze Section - Light */}
       <motion.div
@@ -377,12 +445,26 @@ const CaseStudy = () => {
             </span>
           </h3>
           <ul className="text-black text-sm xs:text-base sm:text-lg space-y-2 xs:space-y-3">
-            <li>• Instant transcription for quick reference and keyword searches.</li>
-            <li>• Sentiment analysis that captures not just the words, but the tone behind them.</li>
-            <li>• Live compliance monitoring to keep calls aligned with regulations.</li>
-            <li>• Role-based dashboards showing real-time alerts and performance heatmaps.</li>
+            <li>
+              • Instant transcription for quick reference and keyword searches.
+            </li>
+            <li>
+              • Sentiment analysis that captures not just the words, but the
+              tone behind them.
+            </li>
+            <li>
+              • Live compliance monitoring to keep calls aligned with
+              regulations.
+            </li>
+            <li>
+              • Role-based dashboards showing real-time alerts and performance
+              heatmaps.
+            </li>
             <li>• Multilingual capability for diverse customer bases.</li>
-            <li>• Easy integration with your existing systems without heavy lifting required.</li>
+            <li>
+              • Easy integration with your existing systems without heavy
+              lifting required.
+            </li>
           </ul>
         </div>
       </motion.div>
@@ -404,7 +486,10 @@ const CaseStudy = () => {
             </span>
           </h3>
           <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
-            Whether you’re managing telecom support, handling travel bookings, or assisting utility customers, Convoze fits seamlessly into your workflow. It’s built for high-volume contact centers, global teams, and any business where every conversation matters.
+            Whether you’re managing telecom support, handling travel bookings,
+            or assisting utility customers, Convoze fits seamlessly into your
+            workflow. It’s built for high-volume contact centers, global teams,
+            and any business where every conversation matters.
           </p>
         </div>
       </motion.div>
