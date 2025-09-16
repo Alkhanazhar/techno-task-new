@@ -41,7 +41,7 @@ const Hero = () => {
 
   return (
     <div
-      className="relative md:-mt-12 -mt-6 overflow-hidden"
+      className="relative md:-mt-12 zoom-out -mt-6 overflow-hidden"
       id="main-hero-section"
     >
       <img src="hero-bg.jpg" className="absolute inset-0 w-full h-full" />
@@ -50,7 +50,7 @@ const Hero = () => {
         <div className="relative w-full md:h-[115vh]"></div>
 
         <div className="absolute inset-0 backdrop-brightness-100 bg-black/20 z-10" />
-        <div className="md:absolute z-20 text-left inset-0 h-full flex flex-col justify-start w-full px-4 md:px-7 mt-6">
+        <div className="md:absolute z-20 text-left inset-0 h-full flex flex-col justify-start w-full px-4 md:px-12 mt-6">
           <h1 className="text-[18px] drop-shadow-2xl mt-16 md:mt-42 md:text-[38px] font-medium text-white leading-tight">
             97% of customer conversations are lost.
             <br className="hidden md:block" />
