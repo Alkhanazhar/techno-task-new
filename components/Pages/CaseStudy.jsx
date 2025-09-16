@@ -439,7 +439,7 @@ const CaseStudy = () => {
       >
         <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-4 xs:mb-6 sm:mb-8">
-            What You Get Inside{" "}
+            Enhancing BPO Operations with{" "}
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.900')]">
               Convoze
             </span>
@@ -449,48 +449,140 @@ const CaseStudy = () => {
               • Instant transcription for quick reference and keyword searches.
             </li>
             <li>
-              • Sentiment analysis that captures not just the words, but the
-              tone behind them.
+              • Sentiment audit that recognizes not just the words, but the
+              tone, emotion and intent.
             </li>
             <li>
-              • Live compliance monitoring to keep calls aligned with
+              • Live compliance monitoring to keep conversations aligned with
               regulations.
             </li>
             <li>
-              • Role-based dashboards showing real-time alerts and performance
+              • Role-based dashboards showing trends, alerts, and performance
               heatmaps.
             </li>
             <li>• Multilingual capability for diverse customer bases.</li>
             <li>
-              • Easy integration with your existing systems without heavy
+              • Easy integration with your existing systems with no heavy
               lifting required.
+            </li>
+            <li>
+              • 100% customizable according to the business need, ensuring QA
+              and insights adapt to your workflows.
             </li>
           </ul>
         </div>
       </motion.div>
 
       {/* Built for the Real World Section - Dark */}
+     <motion.div
+  className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
+  initial="hidden"
+  whileInView="visible"
+  viewport={{ once: true }}
+  variants={fadeIn}
+  transition={{ duration: 0.6, delay: 0.6 }}
+>
+  <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+    <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-6">
+      Why{" "}
+      <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+        Convoze
+      </span>{" "}
+      Stands Out
+    </h3>
+    <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
+      Most QA tools still work in isolation or rely on a handful of conversation
+      samples. Being different, Convoze audits every single solitary
+      conversation in one unified platform. That gives reduced blind spots, more
+      rapid decisions, and better outcomes for both your customers and your
+      business.
+    </p>
+  </div>
+</motion.div>
+
+
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12  from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
+        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white  mb-6">
-            Built for the{" "}
-            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-              Real World
-            </span>
-          </h3>
-          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
-            Whether you’re managing telecom support, handling travel bookings,
-            or assisting utility customers, Convoze fits seamlessly into your
-            workflow. It’s built for high-volume contact centers, global teams,
-            and any business where every conversation matters.
-          </p>
+        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+          {/* Header */}
+          <div className="mb-8">
+            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
+              See Convoze in {" "}
+              <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+                Action - (CTA)
+              </span>
+            </h2>
+          </div>
+
+          {/* AI Detection Badge */}
+          <div className="mb-8">
+            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
+              <div className="text-white text-sm font-medium mb-1">
+                Your Text is Human written
+              </div>
+              <div className="flex items-center justify-center gap-2">
+                <div className="text-gray-300 text-xs">0%</div>
+                <div className="text-gray-400 text-xs">AI GPT*</div>
+              </div>
+            </div>
+          </div>
+
+          {/* Content Section */}
+          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/10 text-left">
+            <h3 className="text-lg font-semibold text-white mb-4">
+              Convoze for BPO & Contact Centers:
+            </h3>
+
+            <div className="space-y-4 text-gray-200 text-sm leading-relaxed">
+              <p className="font-medium text-white">
+                Turning Every Conversation into Actionable Insights
+              </p>
+
+              <p>
+                <span className="font-medium text-white">
+                  The Reality on the Floor:
+                </span>
+              </p>
+
+              <p>
+                Running a contact center is a constant balancing act. Peaks in
+                demand, customers who expect instant answers, and the pressure
+                to hit service targets can stretch even the best teams to their
+                limits.
+              </p>
+
+              <p>
+                The truth? Most contact call managers review only 3-4% of their
+                calls. That means 96% valuable insights – performance gaps,
+                compliance risks, and customer sentiment shifts– completely
+                unseen. And when those gaps unnoticed, it leads to:
+              </p>
+
+              <ul className="list-disc list-inside space-y-2 ml-4">
+                <li>
+                  Scaling struggles when seasonal surges lead to long wait times
+                  and frustrated customers.
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          {/* CTA Button */}
+          <div className="mt-8">
+            <motion.button
+              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              See Convoze in Action
+            </motion.button>
+          </div>
         </div>
       </motion.div>
     </div>
