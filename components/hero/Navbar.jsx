@@ -34,8 +34,8 @@ const Navbar = () => {
     { name: "Features", route: "/features" },
     { name: "Solution", route: "/solution" },
     { name: "Pricing", route: "/pricing" },
-    { name: "Contact Us", route: "/contact" },
     { name: "Case Study", route: "/casestudy" },
+    { name: "Contact Us", route: "/contact" },
   ];
 
   const handleNav = (route) => {
