@@ -1,6 +1,11 @@
+
+"use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 
 const Footer = () => {
+    const router = useRouter();
+  
   return (
    
     <footer className="bg-[#0A0A0A] border-t border-white/10 text-white py-10 px-6 relative overflow-hidden">
@@ -27,9 +32,12 @@ const Footer = () => {
       <div className="mt-10 grid grid-cols-1 md:grid-cols-3 gap-10 border-b border-white/10 pb-10 relative z-10">
         {/* Logo + Brand */}
         <div className="flex items-start space-x-4">
-          <div className="bg-gradient-to-br from-purple-600 to-indigo-600 p-2 rounded-full">
-            <span className="text-white text-xl md:text-2xl font-bold">💬</span>
-          </div>
+            <div
+          className="flex items-center gap-2 cursor-pointer"
+          onClick={() => router.push("/")}
+        >
+          <img src="/logo.png" alt="logo" className="md:h-9 h-6" />
+        </div>
           <div>
             <h3 className="text-lg md:text-xl font-bold">Convoze</h3>
             <p className="text-[10px] md:text-xs text-white/60 mt-1">AI Speech Analytics Platform</p>
