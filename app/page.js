@@ -21,6 +21,7 @@ import { motion } from "framer-motion";
 import Lenis from "lenis";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
+import Hero4 from "./home-4/page";
 
 export default function Home() {
   const lenisRef = useRef(null);
@@ -51,7 +52,7 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
     >
-      <Hero />
+      <Hero4/>
 
       {/* <Customers/> */}
       {/* <Container className={" justify-between"}>

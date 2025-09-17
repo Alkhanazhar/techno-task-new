@@ -124,50 +124,6 @@ const TimelineJourney = () => {
     }
   });
 
-  // Handle scroll locking when timeline is not complete
-
-  // useEffect(() => {
-  //   const handleScroll = (e) => {
-  //     if (!timelineRef.current || isTimelineComplete) return;
-
-  //     const timelineRect = timelineRef.current.getBoundingClientRect();
-  //     const timelineTop = timelineRect.top;
-  //     const timelineBottom = timelineRect.bottom;
-  //     const windowHeight = window.innerHeight;
-  //     const scrollingDown = e.deltaY > 0;
-
-  //     // If user tries to scroll past the timeline before completion
-  //     if (scrollingDown && timelineTop < -100 && !isTimelineComplete) {
-  //       e.preventDefault();
-  //       // Keep the timeline in view
-  //       timelineRef.current.scrollIntoView({
-  //         behavior: "smooth",
-  //         block: "center",
-  //       });
-  //     }
-
-  //     // If user tries to scroll up past the timeline start
-  //     if (!scrollingDown && timelineBottom > windowHeight + 100) {
-  //       e.preventDefault();
-  //       timelineRef.current.scrollIntoView({
-  //         behavior: "smooth",
-  //         block: "start",
-  //       });
-  //     }
-  //   };
-
-  //   // Only add scroll lock when timeline is not complete
-  //   if (!isTimelineComplete) {
-  //     window.addEventListener("wheel", handleScroll, { passive: false });
-  //     window.addEventListener("touchmove", handleScroll, { passive: false });
-  //   }
-
-  //   return () => {
-  //     window.removeEventListener("wheel", handleScroll);
-  //     window.removeEventListener("touchmove", handleScroll);
-  //   };
-  // }, [isTimelineComplete]);
-
   // // Update SVG circle position based on line progress
   useMotionValueEvent(lineProgress, "change", (latest) => {
     if (!pathRef.current || !circleRef.current) return;
@@ -179,36 +135,7 @@ const TimelineJourney = () => {
     circleRef.current.setAttribute("cy", point.y);
   });
 
-  // useEffect(() => {
-  //   if (!pathRef.current) return;
 
-  //   const pathLength = pathRef.current.getTotalLength();
-  //   const totalSentences = data.reduce(
-  //     (acc, step) => acc + step.content.length,
-  //     0
-  //   );
-  //   const spacing = pathLength / (totalSentences + 1);
-
-  //   let sentenceIndex = 1;
-  //   const positions = [];
-
-  //   data.forEach((step, stepIndex) => {
-  //     step.content.forEach((sentence, sentenceIdx) => {
-  //       const lengthAt = spacing * sentenceIndex;
-  //       const point = pathRef.current.getPointAtLength(lengthAt);
-  //       positions.push({
-  //         x: point.x,
-  //         y: point.y,
-  //         sentence,
-  //         stepIndex,
-  //         sentenceIdx,
-  //       });
-  //       sentenceIndex++;
-  //     });
-  //   });
-
-  //   setContentPositions(positions);
-  // }, [data]);
 
   return (
     <motion.div

@@ -6,7 +6,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Orb from "@/components/org";
 
-const Hero = () => {
+const Hero4 = () => {
   const videoRef = useRef(null);
   const [isVisible, setIsVisible] = useState(false);
 
@@ -487,4 +487,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default Hero4;
