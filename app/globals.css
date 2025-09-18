@@ -68,6 +68,10 @@
   zoom: 90%;
 }
 
+html,body{
+  scroll-behavior: smooth;
+}
+
 .zoom-out-more {
   zoom: 75%;
 }

@@ -41,24 +41,24 @@ const FeaturesCart = () => {
       </div>
 
       {/* Demo Section */}
-      <motion.div
-        initial={{ opacity: 0, y: 60 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8 }}
-        viewport={{ once: true }}
-        className="max-w-6xl mx-auto w-full md:mb-12 mb-8 px-0 md:px-4"
-      >
-        <div className="w-full aspect-video scroll-smooth rounded-xl overflow-hidden shadow-lg border border-gray-800">
-          <iframe
-            src="https://www.youtube.com/embed/dQw4w9WgXcQ"
-            title="Convoze Product Demo"
-            frameBorder="0"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-            allowFullScreen
-            className="w-full h-full"
-          ></iframe>
-        </div>
-      </motion.div>
+        {/* <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8 }}
+          viewport={{ once: true }}
+          className="max-w-6xl mx-auto w-full md:mb-12 mb-8 px-0 md:px-4"
+        >
+          <div className="w-full aspect-video scroll-smooth rounded-xl overflow-hidden shadow-lg border border-gray-800">
+            <iframe
+              src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+              title="Convoze Product Demo"
+              frameBorder="0"
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+              className="w-full h-full"
+            ></iframe>
+          </div>
+        </motion.div> */}
 
       {/* Features Grid */}
       <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4 px-0 md:px-4">

@@ -52,18 +52,15 @@ export default function Home() {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
     >
-      <Hero4/>
+      <Hero4 />
 
       {/* <Customers/> */}
       {/* <Container className={" justify-between"}>
-
         <StatsCart />
       </Container> */}
-
       <WhyConvoze />
       {/* <Container className={" justify-between bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2]"}> */}
       <WhatCustomerSays />
-
       {/* </Container> */}
       {/* <Timelinecomp /> */}
 
@@ -83,7 +80,7 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <BookDemo />
-     
+
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <FeaturesCart />

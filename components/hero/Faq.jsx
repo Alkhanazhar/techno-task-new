@@ -39,20 +39,27 @@ const Faq = () => {
   };
 
   return (
-    <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] md:py-8 py-6 px-4 md:px-8">
+    <section className="bg-gray-200 md:py-24 py-16 relative px-4 md:px-8">
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start">
         {/* Left Column */}
+         <div className="absolute inset-0 z-0">
+        <img
+          src="/bgPattern.png"
+          alt="Background Pattern"
+          className="w-full h-full object-cover opacity-20 !z-0"
+        />
+      </div>
         <div className="md:w-1/2 md:space-y-6 space-y-2">
-          <h2 className="text-2xl md:text-4xl font-light text-white">
+          <h2 className="text-2xl md:text-4xl font-semibold text-black">
             Your AI questions, expertly{" "}
             <span className="bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text font-semibold">
               answered here
             </span>
           </h2>
 
-          <button className="md:mt-4 mt-1 px-6 py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium text-sm">
+          {/* <button className="md:mt-4 mt-1 px-6 py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium text-sm">
             View All Faqs
-          </button>
+          </button> */}
         </div>
 
         {/* Right Column: FAQ Accordion */}
@@ -60,7 +67,7 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#0b0b1f] border border-white/10 rounded-lg p-4 transition-all duration-300"
+              className="bg-purple-500/90 border border-white/10  rounded-lg p-4 transition-all duration-300"
             >
               <button
                 className="flex items-center justify-between w-full text-left text-white md:font-medium"
@@ -74,7 +81,7 @@ const Faq = () => {
                 )}
               </button>
               {openIndex === index && faq.answer && (
-                <p className="mt-3 text-xs md:text-sm text-gray-400 leading-relaxed">
+                <p className="mt-3 text-xs md:text-sm font-light text-neutral-100 leading-relaxed">
                   {faq.answer}
                 </p>
               )}

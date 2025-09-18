@@ -34,7 +34,7 @@ const Navbar = () => {
     { name: "Features", route: "/features" },
     { name: "Solution", route: "/solution" },
     { name: "Pricing", route: "/pricing" },
-    { name: "Case Study", route: "/casestudy" },
+    { name: "Use Cases", route: "/casestudy" },
     { name: "Contact Us", route: "/contact" },
   ];
 
@@ -55,8 +55,8 @@ const Navbar = () => {
       <nav
         className={`w-full fixed -mt-3 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "bg-black/60 backdrop-blur-md shadow-sm"
-            : "bg-transparent"
+            ? "!bg-black/30 !backdrop-blur-md shadow-sm"
+            : "!bg-transparent"
         }`}
       >
         <div

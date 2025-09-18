@@ -11,7 +11,7 @@ import {
 const TimelineJourney = () => {
   const [activeStep, setActiveStep] = useState(0);
   const [isTimelineComplete, setIsTimelineComplete] = useState(false);
-  const [visibleSteps, setVisibleSteps] = useState(new Set()); // Track which steps should be visible
+  const [visibleSteps, setVisibleSteps] = useState(new Set());
   const containerRef = useRef(null);
   const pathRef = useRef(null);
   const circleRef = useRef(null);
@@ -24,8 +24,6 @@ const TimelineJourney = () => {
       content: [
         "Manual QA tools used to review conversations",
         "Experienced inefficiencies in traditional call center QA",
-        // "No automation or transcription - audits were not uniform",
-        // "Realized the need for scalable QA automation and better call quality monitoring"
       ],
     },
     {
@@ -33,7 +31,6 @@ const TimelineJourney = () => {
       content: [
         "Built a simple multilingual QA system allowing sound uploads",
         "Could review only 2-5% of support conversations manually",
-        // "Did not provide real-time tracking and benchmarking of agents",
         "It emphasized the importance of AI-powered call review tools",
       ],
     },
@@ -50,9 +47,7 @@ const TimelineJourney = () => {
       content: [
         "Automatic call-reviewing increased to 100%",
         "AI coaching reports are customized and provided to agents",
-        // "CX and compliance – real-time alerts",
         "Grew to be a complete conversation analytics platform",
-        // "Fully replaced manual QA with AI-powered call QA software",
         "Extended support to emails and chats for full omnichannel quality monitoring",
       ],
     },
@@ -66,21 +61,20 @@ const TimelineJourney = () => {
       ([entry]) => {
         if (entry.isIntersecting && !isLocked) {
           setIsLocked(true);
-          document.body.style.overflow = "hidden"; // lock scrolling
+          document.body.style.overflow = "hidden";
 
-          // Play animation
           controls
             .start({
               strokeDashoffset: 0,
               transition: { duration: 3, ease: "easeInOut" },
             })
             .then(() => {
-              document.body.style.overflow = "auto"; // unlock scrolling
+              document.body.style.overflow = "auto";
               setIsLocked(false);
             });
         }
       },
-      { threshold: 0.5 } // when 50% of section is visible
+      { threshold: 0.5 }
     );
 
     if (containerRef.current) {
@@ -90,15 +84,12 @@ const TimelineJourney = () => {
     return () => observer.disconnect();
   }, [controls, isLocked]);
 
-  // Framer Motion scroll tracking
   const { scrollYProgress } = useScroll({
     target: containerRef,
-    offset: ["start start", "end end"], // start when top hits top, end when bottom hits top
+    offset: ["start start", "end end"],
   });
-  // Transform scroll progress to timeline progress
   const lineProgress = useTransform(scrollYProgress, [0, 1], [0, 1]);
 
-  // Listen to scroll progress changes
   useMotionValueEvent(scrollYProgress, "change", (latest) => {
     const progress = Math.max(0, Math.min(1, latest));
     const newActiveStep = Math.floor(progress * data.length);
@@ -106,25 +97,20 @@ const TimelineJourney = () => {
 
     setActiveStep(clampedStep);
 
-    // Add current step to visible steps (once visible, stays visible)
     setVisibleSteps((prev) => {
       const newSet = new Set(prev);
-      // Only add the current active step (one by one progression)
       newSet.add(clampedStep);
       return newSet;
     });
 
-    // Check if timeline is complete
-    const complete = progress >= 0.95; // 95% completion threshold
+    const complete = progress >= 0.95;
     setIsTimelineComplete(complete);
 
-    // When complete, show all steps
     if (complete) {
       setVisibleSteps(new Set(data.map((_, i) => i)));
     }
   });
 
-  // // Update SVG circle position based on line progress
   useMotionValueEvent(lineProgress, "change", (latest) => {
     if (!pathRef.current || !circleRef.current) return;
 
@@ -135,15 +121,11 @@ const TimelineJourney = () => {
     circleRef.current.setAttribute("cy", point.y);
   });
 
-
-
   return (
     <motion.div
       ref={containerRef}
-      className="hidden md:block relative h-[400vh] py-14  bg-slate-200"
+      className="hidden md:block relative h-[400vh] py-14 bg-slate-200"
     >
-      {" "}
-      {/* Sticky timeline */}
       <div className="absolute inset-0 z-0 overflow-hidden w-screen">
         <img
           src="/bgPattern.png"
@@ -153,7 +135,7 @@ const TimelineJourney = () => {
       </div>
       <motion.div
         ref={timelineRef}
-        className="sticky top-0 left-0 w-full h-screen px-4 z-30 "
+        className="sticky top-0 left-0 w-full h-screen px-4 z-30"
       >
         <div className="max-w-6xl mx-auto relative zoom-out">
           <div className="text-center md:-mt-8">
@@ -161,8 +143,7 @@ const TimelineJourney = () => {
               Our Journey
             </h2>
           </div>
-          <div ref={containerRef} className="relative my-20 ">
-            {/* Main timeline container */}
+          <div ref={containerRef} className="relative my-20">
             <div className="relative h-[420px]">
               <svg
                 className="absolute inset-0 w-full h-full z-10"
@@ -191,20 +172,16 @@ const TimelineJourney = () => {
                     <circle cx="5" cy="5" r="1.5" fill="#9333ea" />
                   </pattern>
                 </defs>
-
-                {/* Static dotted path */}
                 <path
-                  d="M 50 100 L 250 300 L 450 100 L 650 300 L 850 100 L 950 "
+                  d="M 50 100 L 250 300 L 450 100 L 650 300 L 850 100 L 950"
                   stroke="url(#zigzagDots)"
                   strokeWidth="2"
                   fill="none"
                   strokeDasharray="5,5"
                 />
-
-                {/* Active progress path */}
                 <motion.path
                   ref={pathRef}
-                  d="M 50 100 L 250 300 L 450 100 L 650 300 L 850 100 L 950 "
+                  d="M 50 100 L 250 300 L 450 100 L 650 300 L 850 100 L 950"
                   stroke="url(#activeZigzagDots)"
                   strokeWidth="3"
                   fill="none"
@@ -213,14 +190,12 @@ const TimelineJourney = () => {
                   style={{
                     strokeDashoffset: useTransform(
                       lineProgress,
-                      [0, 1], // Starts right away, finishes earlier
+                      [0, 1],
                       [2000, 0]
                     ),
                   }}
                   transition={{ duration: 0.1, ease: "easeOut" }}
                 />
-
-                {/* Single moving circle indicator */}
                 <motion.circle
                   ref={circleRef}
                   r="18"
@@ -238,8 +213,6 @@ const TimelineJourney = () => {
                       : { duration: 0.1 },
                   }}
                 />
-
-                {/* Completion celebration effect */}
                 {isTimelineComplete && (
                   <motion.circle
                     cx={circleRef.current?.getAttribute("cx") || 900}
@@ -257,8 +230,6 @@ const TimelineJourney = () => {
                   />
                 )}
               </svg>
-
-              {/* Timeline step content cards */}
               {data.map((step, index) => {
                 const isActive = activeStep === index;
                 const isPast = activeStep > index;
@@ -282,7 +253,6 @@ const TimelineJourney = () => {
                       transform: "translate(-50%, -50%)",
                     }}
                   >
-                    {/* Step indicator dot */}
                     <motion.div
                       className={`w-4 h-4 rounded-full border-2 z-30 ${
                         isPast
@@ -304,8 +274,6 @@ const TimelineJourney = () => {
                           : { duration: 0.1 },
                       }}
                     />
-
-                    {/* Content card - stays visible once shown */}
                     <motion.div
                       className={`
                         absolute left-1/2 transform -translate-x-1/2
@@ -325,20 +293,20 @@ const TimelineJourney = () => {
                           ? "blur(0px)"
                           : isActive
                           ? "blur(0px)"
-                          : "blur(6px)", // <--- add this
+                          : "blur(6px)",
                       }}
                       transition={{
                         duration: 0.2,
                         ease: "easeOut",
                       }}
-                      style={{ willChange: "filter, opacity, transform" }} // improve rendering
+                      style={{ willChange: "filter, opacity, transform" }}
                     >
                       <motion.div
                         className={`
                           bg-white rounded-lg p-4 shadow-xl border-2 transition-all duration-200
                           ${
                             isActive
-                              ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600  scale-100"
+                              ? "bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600 scale-100"
                               : isPast
                               ? "border-green-400 bg-green-50"
                               : "border-gray-300 bg-gray-50"
@@ -363,20 +331,17 @@ const TimelineJourney = () => {
                               : "text-gray-600"
                           }`}
                         >
-                          
                           {step.stepLabel}
                         </div>
-                        <p
-                          className={`text-xs leading-relaxed transition-1 ${
+                        <ul
+                          className={`text-xs leading-relaxed transition-all list-none ${
                             isActive ? "text-white" : "text-gray-700"
                           }`}
                         >
                           {step.content.map((point, idx) => (
-                            <li key={idx} >{point}</li>
+                            <li key={idx} className="mb-1">{point}</li>
                           ))}
-                        </p>
-
-                        {/* Active indicator */}
+                        </ul>
                         {isActive && (
                           <motion.div
                             className="absolute -top-2 -right-2 w-4 h-4 bg-purple-500 rounded-full"
@@ -384,8 +349,6 @@ const TimelineJourney = () => {
                             transition={{ duration: 0.6, repeat: Infinity }}
                           />
                         )}
-
-                        {/* Completed indicator */}
                         {isPast && !isActive && (
                           <div className="absolute -top-2 -right-2 w-4 h-4 bg-[#9333ea] rounded-full flex items-center justify-center">
                             <svg
@@ -408,7 +371,6 @@ const TimelineJourney = () => {
               })}
             </div>
           </div>
-          {/* Progress indicator */}
         </div>
       </motion.div>
     </motion.div>
