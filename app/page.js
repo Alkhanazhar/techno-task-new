@@ -21,7 +21,7 @@ import { motion } from "framer-motion";
 import Lenis from "lenis";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
-import Hero4 from "./home-4/page";
+import Hero4 from "../components/hero/home-4/page";
 
 export default function Home() {
   const lenisRef = useRef(null);
