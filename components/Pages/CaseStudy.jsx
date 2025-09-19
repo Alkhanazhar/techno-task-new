@@ -480,7 +480,7 @@ const CaseStudy = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
+        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -519,13 +519,13 @@ const CaseStudy = () => {
             <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
               See Convoze in{" "}
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-                Action - (CTA)
+                Action
               </span>
             </h2>
           </div>
 
           {/* AI Detection Badge */}
-          <div className="mb-8">
+          {/* <div className="mb-8">
             <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
               <div className="text-white text-sm font-medium mb-1">
                 Your Text is Human written
@@ -535,16 +535,16 @@ const CaseStudy = () => {
                 <div className="text-gray-400 text-xs">AI GPT*</div>
               </div>
             </div>
-          </div>
+          </div> */}
 
           {/* Content Section */}
           <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/10 text-left">
-            <h3 className="text-lg font-semibold text-white mb-4">
+            {/* <h3 className="text-lg font-semibold text-white mb-4">
               Convoze for BPO & Contact Centers:
-            </h3>
+            </h3> */}
 
             <div className="space-y-4 text-gray-200 text-sm leading-relaxed">
-              <p className="font-medium text-white">
+              {/* <p className="font-medium text-white">
                 Turning Every Conversation into Actionable Insights
               </p>
 
@@ -552,7 +552,7 @@ const CaseStudy = () => {
                 <span className="font-medium text-white">
                   The Reality on the Floor:
                 </span>
-              </p>
+              </p> */}
 
               <p>
                 Running a contact center is a constant balancing act. Peaks in
@@ -589,6 +589,7 @@ const CaseStudy = () => {
           </div>
         </div>
       </motion.div>
+
     </div>
   );
 };
