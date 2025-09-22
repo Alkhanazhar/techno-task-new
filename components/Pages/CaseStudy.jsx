@@ -1,6 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
+import Link from "next/link";
 import { useRouter } from "next/navigation";
 
 const CaseStudy = () => {
@@ -75,7 +76,7 @@ const CaseStudy = () => {
       </motion.div>
 
       {/* Company Info Section - Light */}
-      <motion.div
+      {/* <motion.div
         className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
         initial="hidden"
         whileInView="visible"
@@ -169,11 +170,11 @@ const CaseStudy = () => {
             </div>
           </div>
         </div>
-      </motion.div>
+      </motion.div> */}
 
       {/* The Reality on the Floor Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -181,14 +182,14 @@ const CaseStudy = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-4 xs:mb-6 sm:mb-8">
+          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-4 xs:mb-6 sm:mb-8">
             The{" "}
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
               Reality
             </span>{" "}
             on the Floor
           </h3>
-          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
+          <p className="text-gray-900 text-sm xs:text-base sm:text-lg md:text-xl mb-4 xs:mb-6 sm:mb-8">
             Running a contact center is a constant balancing act. Peaks in
             demand, customers who expect instant answers, and the pressure to
             hit service targets can stretch even the best teams to their limits.
@@ -197,7 +198,7 @@ const CaseStudy = () => {
             compliance risks, and customer sentiment shifts—go completely
             unseen. And when those go unnoticed, it leads to:
           </p>
-          <ul className="text-gray-300 text-sm xs:text-base sm:text-lg space-y-2 xs:space-y-3">
+          <ul className="text-gray-900 text-sm xs:text-base sm:text-lg space-y-2 xs:space-y-3">
             <li>
               • Scaling struggles when seasonal surges lead to long wait times
               and frustrated customers.
@@ -480,7 +481,7 @@ const CaseStudy = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center flex items-center justify-center"
+        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12  flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -503,10 +504,21 @@ const CaseStudy = () => {
             customers and your business.
           </p>
         </div>
+
+        <div className="mt-8">
+          <Link href={"/contact"}><motion.button
+            className="bg-gradient-to-r from-purple-500 mb-6 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
+            whileHover={{ scale: 1.05 }}
+            whileTap={{ scale: 0.95 }}
+          >
+            See Convoze in Action
+          </motion.button>
+          </Link>
+        </div>
       </motion.div>
 
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center"
+        className="w-full bg-gradient-to-tl to-[#21082b]  from-[#27022e] shadow-xl pb-4 xs:pb-4 sm:pb-8 md:pb-8 text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -515,14 +527,7 @@ const CaseStudy = () => {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-          <div className="mb-8">
-            <h2 className="text-2xl md:text-3xl font-bold text-white mb-2">
-              See Convoze in{" "}
-              <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-                Action
-              </span>
-            </h2>
-          </div>
+
 
           {/* AI Detection Badge */}
           {/* <div className="mb-8">
@@ -538,55 +543,10 @@ const CaseStudy = () => {
           </div> */}
 
           {/* Content Section */}
-          <div className="bg-white/5 backdrop-blur-sm rounded-lg p-6 md:p-8 border border-white/10 text-left">
-            {/* <h3 className="text-lg font-semibold text-white mb-4">
-              Convoze for BPO & Contact Centers:
-            </h3> */}
 
-            <div className="space-y-4 text-gray-200 text-sm leading-relaxed">
-              {/* <p className="font-medium text-white">
-                Turning Every Conversation into Actionable Insights
-              </p>
-
-              <p>
-                <span className="font-medium text-white">
-                  The Reality on the Floor:
-                </span>
-              </p> */}
-
-              <p>
-                Running a contact center is a constant balancing act. Peaks in
-                demand, customers who expect instant answers, and the pressure
-                to hit service targets can stretch even the best teams to their
-                limits.
-              </p>
-
-              <p>
-                The truth? Most contact call managers review only 3-4% of their
-                calls. That means 96% valuable insights – performance gaps,
-                compliance risks, and customer sentiment shifts– completely
-                unseen. And when those gaps unnoticed, it leads to:
-              </p>
-
-              <ul className="list-disc list-inside space-y-2 ml-4">
-                <li>
-                  Scaling struggles when seasonal surges lead to long wait times
-                  and frustrated customers.
-                </li>
-              </ul>
-            </div>
-          </div>
 
           {/* CTA Button */}
-          <div className="mt-8">
-            <motion.button
-              className="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-105 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              See Convoze in Action
-            </motion.button>
-          </div>
+
         </div>
       </motion.div>
 

@@ -301,7 +301,7 @@ const Hero4 = () => {
   const Icon = stats[currentIndex].icon;
 
   return (
-    <div className="relative zoom-out min-h-[115vh] -mt-6 py-10">
+    <div className="relative zoom-out min-h-[115vh] -mt-12 py-10">
       {/* Background */}
       <img
         src="hero-bg.jpg"
@@ -310,31 +310,34 @@ const Hero4 = () => {
       <div className="absolute bottom-0 inset-0  bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
 
       {/* Main Flex Container */}
-      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen p-10 px-20">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-6">
         {/* Left Side - Text Content */}
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
-            <br className="hidden md:block " />
+            <br className="block " />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
               Only 3% get audited.
             </span>
           </h1>
 
-         <p className="text-gray-200 text-[10px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
-           Convoze AI analyses 100% of conversations, flags compliance risks, and delivers actionable insights to CX, QA, and compliance teams reducing churn, cutting review  
-             & driving smarter decisions in
+          <p className="text-gray-200 text-[11px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
+            Convoze AI analyses 100% of conversations, flags compliance risks, and delivers actionable insights to CX, QA, and compliance teams reducing churn, cutting review
+            & driving smarter decisions in
             real time.
           </p>
 
 
           {/* Buttons */}
-          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
-            <a href="#contact-us"><button  className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-purple-500 hover:text-white transition-all duration-300">
+          <div className="mt-6 md:mt-8 flex flex-col  sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start px-4 md:px-6">
+            <a href="#contact-us"><button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-purple-500 hover:text-white transition-all duration-300">
               Book a Demo
             </button>
             </a>
-            <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
+            <button className="bg-gradient-to-r  hidden sm:flex  from-[#C068D1]  w-fit to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
+              See How It Works
+            </button>
+            <button className="bg-gradient-to-r  sm:hidden mx-auto  from-[#C068D1]  w-fit to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
               See How It Works
             </button>
           </div>
@@ -343,18 +346,17 @@ const Hero4 = () => {
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
           </h2>
-          <div className="sm:grid grid-cols-2 hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
+          <div className="sm:grid grid-cols-2 hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 -my-4 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
             {stats.map((item, index) => (
               <div
                 key={index}
                 className={`relative rounded-2xl px-4 md:px-6 py-4 md:py-6 lg:py-8 text-left 
                 transition duration-300 shadow-lg hover:shadow-purple-500/20
                 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105
-                ${
-                  isVisible
+                ${isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
-                }`}
+                  }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="absolute top-2 right-4">
@@ -375,9 +377,9 @@ const Hero4 = () => {
             <motion.div
               key={currentIndex} // Key ensures re-render on index change
               className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
-              initial={{ opacity: 0, x: 20 }} // Slide in from right
+              initial={{ opacity: 0, x: 0 }} // Slide in from right
               animate={{ opacity: 1, x: 0 }} // Center
-              exit={{ opacity: 0, x: -20 }} // Slide out to left
+              exit={{ opacity: 0, x: 0 }} // Slide out to left
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <div className="absolute top-2 right-4">

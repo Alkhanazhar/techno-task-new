@@ -22,6 +22,7 @@ import Lenis from "lenis";
 import Script from "next/script";
 import { useEffect, useRef } from "react";
 import Hero4 from "../components/hero/home-4/page";
+import Testimonial from "@/components/testimonial";
 
 export default function Home() {
   const lenisRef = useRef(null);
@@ -48,7 +49,7 @@ export default function Home() {
   return (
     <motion.div
       ref={lenisRef}
-      initial={{ opacity: 0, y: -20 }}
+      initial={{ opacity: 0, y: 0 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 1.5 }}
     >
@@ -84,6 +85,7 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <FeaturesCart />
+      <Testimonial />
 
       <ContactUs isCards={false} />
       {/* </Container> */}

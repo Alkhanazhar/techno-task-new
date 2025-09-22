@@ -225,7 +225,7 @@ const TimelineJourneyMobile = () => {
       </div>
       <motion.div
         ref={timelineRef}
-        className="sticky  top-0 left-0 w-full h-screen px-4 z-30  py-12 md:py-20 "
+        className="sticky  top-0 left-0 w-full h-screen px-4 z-30 py-12 md:py-20 "
       >
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center ">
@@ -363,7 +363,7 @@ const TimelineJourneyMobile = () => {
                     <motion.div
                       className={`
                         absolute left-0 transform -translate-x-1/4
-                        md:w-80 w-[40vw] ml-[.1vw] z-30
+                        md:w-80 w-[60vw] ml-[.01vw] z-30
                       `}
                       initial={{
                         opacity: 0,
@@ -385,10 +385,9 @@ const TimelineJourneyMobile = () => {
                       <motion.div
                         className={`
                           bg-white rounded-lg p-4 shadow-xl border-2 transition-all duration-200
-                          ${
-                            isPast
-                              ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
-                              : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
+                          ${isPast
+                            ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
+                            : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
                           }
                         `}
                         animate={{

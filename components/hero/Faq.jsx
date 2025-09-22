@@ -6,33 +6,28 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
   {
     question: "1. What services does your AI agency offer?",
-    answer:
-      "Project timelines vary depending on complexity but typically range from 4 to 12 weeks. We provide a clear roadmap during the discovery phase.",
+    answer: "We provide AI consulting, model development, and integration services tailored to your business.",
   },
   {
     question: "2. Do I need a large amount of data to use AI?",
-    answer:
-      "Project timelines vary depending on complexity but typically range from 4 to 12 weeks. We provide a clear roadmap during the discovery phase.",
+    answer: "Not always. We can start with pre-trained models or small datasets and then scale up.",
   },
   {
     question: "3. How long does it take to develop an AI solution?",
-    answer:
-      "Project timelines vary depending on complexity but typically range from 4 to 12 weeks. We provide a clear roadmap during the discovery phase.",
+    answer: "Timelines vary between 4–12 weeks depending on complexity.",
   },
   {
     question: "4. Is my data secure with you?",
-    answer:
-      "Project timelines vary depending on complexity but typically range from 4 to 12 weeks. We provide a clear roadmap during the discovery phase.",
+    answer: "Yes, we follow strict data security and compliance standards.",
   },
   {
     question: "5. Can you integrate AI into our existing systems?",
-    answer:
-      "Project timelines vary depending on complexity but typically range from 4 to 12 weeks. We provide a clear roadmap during the discovery phase.",
+    answer: "Absolutely. We ensure smooth integration with your current workflows.",
   },
 ];
 
 const Faq = () => {
-  const [openIndex, setOpenIndex] = useState(0); // By default, open second one
+  const [openIndex, setOpenIndex] = useState(null); // start closed
 
   const toggleFAQ = (index) => {
     setOpenIndex(openIndex === index ? null : index);
@@ -40,15 +35,17 @@ const Faq = () => {
 
   return (
     <section className="bg-gray-200 md:py-24 py-16 relative px-4 md:px-8">
-      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start">
+      <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start relative z-10">
+        {/* Background */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/bgPattern.png"
+            alt="Background Pattern"
+            className="w-full h-full object-cover opacity-20"
+          />
+        </div>
+
         {/* Left Column */}
-         <div className="absolute inset-0 z-0">
-        <img
-          src="/bgPattern.png"
-          alt="Background Pattern"
-          className="w-full h-full object-cover opacity-20 !z-0"
-        />
-      </div>
         <div className="md:w-1/2 md:space-y-6 space-y-2">
           <h2 className="text-2xl md:text-4xl font-semibold text-black">
             Your AI questions, expertly{" "}
@@ -56,18 +53,14 @@ const Faq = () => {
               answered here
             </span>
           </h2>
-
-          {/* <button className="md:mt-4 mt-1 px-6 py-2 text-xs md:text-base rounded-full bg-gradient-to-r from-[#a855f7] to-[#6366f1] text-white font-medium text-sm">
-            View All Faqs
-          </button> */}
         </div>
 
         {/* Right Column: FAQ Accordion */}
-        <div className="md:w-1/2 space-y-2 md:space-y-4 w-full">
+        <div className="md:w-1/2 space-y-2 md:space-y-4 w-full relative z-10">
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-purple-500/90 border border-white/10  rounded-lg p-4 transition-all duration-300"
+              className="bg-gray-800/90 border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
               <button
                 className="flex items-center justify-between w-full text-left text-white md:font-medium"
@@ -80,7 +73,7 @@ const Faq = () => {
                   <ChevronDown className="w-5 h-5" />
                 )}
               </button>
-              {openIndex === index && faq.answer && (
+              {openIndex === index && (
                 <p className="mt-3 text-xs md:text-sm font-light text-neutral-100 leading-relaxed">
                   {faq.answer}
                 </p>
