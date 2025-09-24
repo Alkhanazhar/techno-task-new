@@ -329,18 +329,27 @@ const Hero4 = () => {
 
 
           {/* Buttons */}
-          <div className="mt-6 md:mt-8 flex flex-col  sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start px-4 md:px-6">
-            <a href="#contact-us"><button className="bg-white cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:bg-purple-500 hover:text-white transition-all duration-300">
-              Book a Demo
-            </button>
+          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-2 md:gap-6 justify-center lg:justify-start px-4 md:px-6">
+            <a href="#contact-us">
+              <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-40 cursor-pointer text-white px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:opacity-90 transition-all duration-300">
+                Book a Demo
+              </button>
             </a>
-            <button className="bg-gradient-to-r  hidden sm:flex  from-[#C068D1]  w-fit to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
-              See How It Works
-            </button>
-            <button className="bg-gradient-to-r  sm:hidden mx-auto  from-[#C068D1]  w-fit to-[#3224AF] cursor-pointer text-white px-3 md:px-5 py-2 md:py-3 rounded-full font-normal hover:opacity-90 transition-all duration-300">
-              See How It Works
-            </button>
+
+            <a href="#how-itworks">
+              <button className="bg-white hidden sm:flex w-fit cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
+                See How It Works
+              </button>
+            </a>
+
+            <a href="#how-itworks">
+              <button className="bg-white sm:hidden mx-auto w-fit cursor-pointer text-purple-800 border border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
+                See How It Works
+              </button>
+            </a>
           </div>
+
+
 
           {/* Stats */}
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
@@ -486,7 +495,7 @@ const Hero4 = () => {
           position="bottom-4 left-1/2 transform -translate-x-1/2"
         />
       </div> */}
-    </div>
+    </div >
   );
 };
 

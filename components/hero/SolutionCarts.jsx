@@ -10,28 +10,28 @@ const steps = [
     title: "Upload",
     step: "STEP 01",
     icon: UploadCloud,
-    image: "step1.jpeg",
+    image: "step1.jpg",
   },
   {
     id: 2,
     title: "Transcribe",
     step: "STEP 02",
     icon: Waves,
-    image: "step2.jpeg",
+    image: "step2.jpg",
   },
   {
     id: 3,
     title: "Analyze",
     step: "STEP 03",
     icon: Brain,
-    image: "step3.jpeg",
+    image: "step3.jpg",
   },
   {
     id: 4,
     title: "Insights",
     step: "STEP 04",
     icon: BarChart3,
-    image: "step4.jpeg",
+    image: "step4.jpg",
   },
 ];
 
@@ -39,7 +39,7 @@ export default function SolutionCarts() {
   const [activeStep, setActiveStep] = useState(steps[0]);
 
   return (
-    <section className="bg-gradient-to-tl to-[#21082b] md:zoom-out from-[#27022e] text-black  px-4 md:px-10 md:py-24 py-8 space-y-8">
+    <section className="bg-gradient-to-tl to-[#21082b] md:zoom-out from-[#27022e] text-black  px-4 md:px-10 md:py-16 py-8 space-y-8" id="how-itworks">
       <div className="text-center space-y-4 md:space-y-8">
         <h2 className="text-2xl md:text-4xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           How{" "}
@@ -54,11 +54,11 @@ export default function SolutionCarts() {
         </p>
 
         {/* CTA Button */}
-        <div className="">
+        {/* <div className="">
           <button className="bg-gradient-to-r text-xs sm:text-base cursor-pointer text-sm md:text-base from-purple-500 to-blue-500 text-white md:px-6 md:py-3 px-3 py-1.5 rounded-full font-medium hover:opacity-90 transition duration-300">
             Try it yourself
           </button>
-        </div>
+        </div> */}
       </div>
 
       <div className="max-w-6xl mx-auto  h-full flex flex-col md:flex-row md:gap-12 gap-4 items-start">
@@ -68,11 +68,10 @@ export default function SolutionCarts() {
             <motion.div
               key={step.id}
               onClick={() => setActiveStep(step)}
-              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 hover:scale-95 rounded-2xl md:px-5 px-3 md:py-4 py-3 cursor-pointer group ${
-                activeStep.id === step.id
+              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 hover:scale-95 rounded-2xl md:px-5 px-3 md:py-4 py-3 cursor-pointer group ${activeStep.id === step.id
                   ? "border-purple-600 shadow-2xl bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2]"
                   : "border-zinc-700 bg-gradient-to-br to-[#371d3e] from-[#3F2AB2]"
-              }`}
+                }`}
             >
               <div className="relative z-10 flex items-start gap-2 md:gap-4">
                 {/* Icon for Desktop */}
@@ -83,16 +82,14 @@ export default function SolutionCarts() {
                 {/* Step Text */}
                 <div>
                   <h4
-                    className={`md:text-sm text-[10px] text-gray-100 font-medium mb-1 ${
-                      activeStep.id === step.id && "text-white"
-                    }`}
+                    className={`md:text-sm text-[10px] text-gray-100 font-medium mb-1 ${activeStep.id === step.id && "text-white"
+                      }`}
                   >
                     {step.step}
                   </h4>
                   <h3
-                    className={`md:text-lg text-sm font-semibold text-gray-200 mb-1 ${
-                      activeStep.id === step.id && "text-white"
-                    }`}
+                    className={`md:text-lg text-sm font-semibold text-gray-200 mb-1 ${activeStep.id === step.id && "text-white"
+                      }`}
                   >
                     {step.title}
                   </h3>
@@ -116,11 +113,10 @@ export default function SolutionCarts() {
                 key={step.id}
                 src={step.image}
                 alt={step.title}
-                className={`absolute inset-0 shadow-[0_3px_10px_rgb(0,0,0,0.4)] aspect-video w-full h-full object-fill rounded-2xl  transition-all duration-500 ${
-                  isActive
+                className={`absolute inset-0 shadow-[0_3px_10px_rgb(0,0,0,0.4)] aspect-video w-full h-full object-fill rounded-2xl  transition-all duration-500 ${isActive
                     ? "z-30 opacity-100 scale-105"
                     : "z-10 opacity-30 scale-[0.90]"
-                }`}
+                  }`}
                 initial={{ opacity: 0 }}
                 animate={{ opacity: isActive ? 1 : 0.3 }}
                 transition={{ duration: 0.5, delay: isActive ? 0.1 : 0 }}
@@ -139,11 +135,10 @@ export default function SolutionCarts() {
               key={step.id}
               src={step.image}
               alt={step.title}
-              className={`absolute inset-0 w-full h-full object-contain rounded-2xl shadow-lg transition-all duration-500 ${
-                isActive
+              className={`absolute inset-0 w-full h-full object-contain rounded-2xl shadow-lg transition-all duration-500 ${isActive
                   ? "z-30 opacity-100 scale-105"
                   : "z-10 opacity-30 scale-[0.90]"
-              }`}
+                }`}
               initial={{ opacity: 0 }}
               animate={{ opacity: isActive ? 1 : 0.3 }}
               transition={{ duration: 0.5, delay: isActive ? 0.1 : 0 }}

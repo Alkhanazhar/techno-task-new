@@ -101,7 +101,7 @@ const WhyConvoze = () => {
   ];
 
   return (
-    <div className="min-h-screen md:py-24 py-12  relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
+    <div className="min-h-screen md:py-16 py-12  relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img

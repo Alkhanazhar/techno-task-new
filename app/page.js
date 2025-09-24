@@ -85,7 +85,7 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <FeaturesCart />
-      <Testimonial />
+      {/* <Testimonial /> */}
 
       <ContactUs isCards={false} />
       {/* </Container> */}
