@@ -195,7 +195,7 @@ Less than 5% of customer conversation are reviewed
             </div> */}
 
             <div className="p-4 rounded-2xl">
-              <h2 className="text-2xl font-medium text-white mb-6">
+              <h2 className="text-center text-2xl font-medium text-white mb-6">
                 This isn't just inefficient — it's expensive
               </h2>
 
@@ -228,13 +228,13 @@ Less than 5% of customer conversation are reviewed
                             <Icon className="w-full h-full text-white" />
                           </div>
                           <div>
-                            <h3 className="md:text-lg font-semibold text-white mb-1">
+                            <h3 className="md:text-lg font-semibold text-purple-200 mb-1">
                               {problem.title}
                             </h3>
-                            <p className="text-gray-300 md:text-sm text-xs mb-2">
+                            <p className="text-gray-300 md:text-sm text-xs mb-1">
                               {problem.description}
                             </p>
-                            <div className="text-purple-200 text-sm font-medium">
+                            <div className="text-white text-sm font-medium">
                               {problem.impact}
                             </div>
                           </div>

@@ -44,13 +44,13 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 md:gap-6 gap-4 max-w-6xl md:mx-auto mx-4 md:mx-8">
+      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 md:gap-6 gap-3 max-w-6xl md:mx-auto mx-4 md:mx-8">
         {trustData.map((item, idx) => (
           <div
             key={idx}
             className="rounded-2xl p-6 bg-gradient-to-br from-[#0c0c2d] w-full to-[#1b012a] hover:scale-105 transform transition-all duration-300"
           >
-            <h4 className="text-white font-semibold text-sm md:text-[15px] mb-4">
+            <h4 className="text-white font-semibold text-sm md:text-[15px] mb-2">
               {item.title}
             </h4>
             {/* <div className="text-purple-400 text-3xl font-bold mb-1">

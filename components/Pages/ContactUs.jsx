@@ -14,14 +14,14 @@ const ContactUs = ({ isCards = true }) => {
           </span>
         </h1>
         {/* Top Section: Centered Form */}
-        <div className="flex justify-center items-center rounded-3xl relative px-4">
+        <div className="flex justify-center items-center rounded-3xl relative px-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
             className="backdrop-blur-sm rounded-lg relative w-full max-w-4xl"
           >
-            <div className="flex justify-center items-center px-4 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
+            <div className="flex justify-center items-center px-1 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
               <div
                 id="kl__form-container"
                 className="mx-auto w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] px-4 zoom-out z-20 mt-8"
@@ -37,7 +37,7 @@ const ContactUs = ({ isCards = true }) => {
 
         {/* Bottom Cards */}
         {isCards && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 text-center mb-6">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-6">
             {/* Contact Us */}
             <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
               <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
@@ -45,9 +45,8 @@ const ContactUs = ({ isCards = true }) => {
               </div>
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
               <p className="text-xs text-neutral-200">
-                (+00) 123-254-963
-                <br />
-                (+12) 761 852 339
+                ( +971 ) 507861178
+
               </p>
             </div>
 
@@ -58,14 +57,13 @@ const ContactUs = ({ isCards = true }) => {
               </div>
               <h3 className="text-lg font-semibold mb-2">Email Us</h3>
               <p className="text-xs text-neutral-200">
-                info@domainname.com
-                <br />
-                support@domain.com
+                sales@technotaskglobal.com
+
               </p>
             </div>
 
             {/* Working Hours */}
-            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
+            {/* <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
               <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
                 <Clock className="text-white w-6 h-6" />
               </div>
@@ -75,7 +73,7 @@ const ContactUs = ({ isCards = true }) => {
                 <br />
                 Sat - Sun : Closed
               </p>
-            </div>
+            </div> */}
 
             {/* Location */}
             <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
@@ -84,9 +82,9 @@ const ContactUs = ({ isCards = true }) => {
               </div>
               <h3 className="text-lg font-semibold mb-2">Location</h3>
               <p className="text-xs text-neutral-200">
-                2715 Ash San Jose, USA
+                123 Ayodhya Bypass Road
                 <br />
-                2715 Ash San Jose, USA
+                Bhopal, India
               </p>
             </div>
           </div>

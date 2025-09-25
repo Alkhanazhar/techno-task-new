@@ -301,7 +301,7 @@ const Hero4 = () => {
   const Icon = stats[currentIndex].icon;
 
   return (
-    <div className="relative zoom-out min-h-[115vh] -mt-12 py-10">
+    <div className="relative zoom-out min-h-[115vh] -mt-12 py-10 overflow-hidden">
       {/* Background */}
       <img
         src="hero-bg.jpg"
@@ -329,7 +329,7 @@ const Hero4 = () => {
 
 
           {/* Buttons */}
-          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-2 md:gap-6 justify-center lg:justify-start px-4 md:px-6">
+          <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-2 md:gap-6">
             <a href="#contact-us">
               <button className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-40 cursor-pointer text-white px-3 md:px-4 py-2 md:py-2.5 rounded-full font-medium hover:opacity-90 transition-all duration-300">
                 Book a Demo
@@ -355,6 +355,7 @@ const Hero4 = () => {
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
           </h2>
+
           <div className="sm:grid grid-cols-2 hidden sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 -my-4 max-w-lg md:max-w-2xl lg:max-w-3xl mx-auto lg:mx-0">
             {stats.map((item, index) => (
               <div
@@ -382,7 +383,8 @@ const Hero4 = () => {
               </div>
             ))}
           </div>
-          <AnimatePresence mode="wait">
+
+          {/* <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex} // Key ensures re-render on index change
               className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
@@ -403,7 +405,32 @@ const Hero4 = () => {
                 {stats[currentIndex].label}
               </div>
             </motion.div>
+          </AnimatePresence> */}
+
+          <AnimatePresence mode="wait">
+            <motion.div
+              key={currentIndex} // Key ensures re-render on index change
+              className="relative w-[90%] max-w-sm mx-auto rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
+              initial={{ opacity: 0, x: 0 }} 
+              animate={{ opacity: 1, x: 0 }}
+              exit={{ opacity: 0, x: 0 }}
+              transition={{ duration: 0.5, ease: "easeInOut" }}
+            >
+              <div className="absolute top-2 right-4">
+                <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
+                  <Icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
+                </div>
+              </div>
+              <div className="text-lg md:text-2xl lg:text-3xl font-normal text-white mb-2">
+                {stats[currentIndex].value}
+              </div>
+              <div className="text-xs mt-2 md:mt-4 text-gray-300">
+                {stats[currentIndex].label}
+              </div>
+            </motion.div>
           </AnimatePresence>
+
+
         </div>
 
         {/* Right Side - Dashboard */}

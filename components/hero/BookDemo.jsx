@@ -15,9 +15,11 @@ const BookDemo = () => {
 
         {/* Button */}
         <div className="md:mt-10 mt-5">
-          <button className="px-6 py-2 rounded-full  text-white font-medium text-xs md:text-base bg-gradient-to-r from-[#a855f7] to-[#6366f1] hover:from-[#9333ea] hover:to-[#3b82f6] transition-all duration-300">
-            Book A Free Demo
-          </button>
+          <a href="#contact-us">
+            <button className="px-6 py-2 rounded-full  text-white font-medium text-xs md:text-base bg-gradient-to-r from-[#a855f7] to-[#6366f1] hover:from-[#9333ea] hover:to-[#3b82f6] transition-all duration-300">
+              Book A Free Demo
+            </button>
+          </a>
         </div>
 
         {/* Subtext */}

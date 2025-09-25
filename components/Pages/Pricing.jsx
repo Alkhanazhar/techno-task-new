@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import { Check, X, Star, Zap, Crown, ArrowRight } from "lucide-react";
 import { cn } from "../hero/lib/utils";
+import Link from "next/link";
 
 const Pricing = () => {
   const plans = [
@@ -273,13 +274,15 @@ const Pricing = () => {
           <p className="text-gray-300 mb-6">
             Our team is here to help you choose the right plan for your needs.
           </p>
-          <motion.button
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-            className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
-          >
-            Contact Sales
-          </motion.button>
+          <Link href="/contact">
+            <motion.button
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+              className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white px-8 py-3 rounded-full font-semibold shadow-lg hover:shadow-xl transition-all duration-300"
+            >
+              Contact Sales
+            </motion.button>
+          </Link>
         </motion.div>
       </div>
     </div>

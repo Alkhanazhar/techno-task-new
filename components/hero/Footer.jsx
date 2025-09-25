@@ -38,17 +38,17 @@ const Footer = () => {
             >
               <img src="/logo.png" alt="logo" className="md:h-9 h-6" />
             </div>
-            <div>
+            {/* <div>
               <h3 className="text-lg md:text-xl font-bold">Convoze</h3>
               <p className="text-[10px] md:text-xs text-white/60 mt-1">AI Speech Analytics Platform</p>
-            </div>
+            </div> */}
           </div>
 
           {/* Get In Touch */}
           <div>
             <h4 className="font-semibold mb-2 text-sm md:text-base">Get In Touch</h4>
-            <p className="text-xs md:text-sm text-white/70">+(00) - 123 456 789</p>
-            <p className="text-xs md:text-sm text-white/70">info@domainname.com</p>
+            <p className="text-xs md:text-sm text-white/70">( +971 ) 507861178</p>
+            <p className="text-xs md:text-sm text-white/70">sales@technotaskglobal.com</p>
           </div>
 
           {/* Location */}
