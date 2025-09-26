@@ -215,7 +215,7 @@ const Solutions = () => {
               >
                 <div className="absolute left-1/2 transform -translate-x-1/2 w-6 h-6 bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] rounded-full border-4 border-gray-900 z-10 hidden lg:block" />
 
-                <div className="flex flex-col lg:flex-row items-center gap-8">
+                <div className="flex flex-col lg:flex-row items-center md:gap-8">
                   {/* Problem on Left */}
                   <div className="w-full p-4 lg:w-1/2 lg:text-right lg:pr-2">
                     <div className="relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A] transition-all duration-500 hover:scale-105">
@@ -227,7 +227,7 @@ const Solutions = () => {
                           <div className="text-orange-500 font-bold text-sm tracking-wider mb-1">
                             CHALLENGE
                           </div>
-                          <h3 className="text-xl font-bold text-white">
+                          <h3 className="text-md md:text-xl font-bold text-white">
                             {item.problemTitle}
                           </h3>
                         </div>
@@ -260,7 +260,7 @@ const Solutions = () => {
                               <div className="text-white font-bold text-sm tracking-wider mb-1">
                                 SOLUTION
                               </div>
-                              <h3 className="text-xl font-bold text-white">
+                              <h3 className="text-md md:text-xl font-bold text-white">
                                 {item.solutionTitle}
                               </h3>
                             </div>

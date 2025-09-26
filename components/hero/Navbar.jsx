@@ -149,10 +149,10 @@ import { X, Menu } from "lucide-react";
 import Link from "next/link";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false); 
+  const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
-  const [showMegaMenu, setShowMegaMenu] = useState(false); 
-  const [mobileMegaOpen, setMobileMegaOpen] = useState(false); 
+  const [showMegaMenu, setShowMegaMenu] = useState(false);
+  const [mobileMegaOpen, setMobileMegaOpen] = useState(false);
   const router = useRouter();
   const [isMobile, setIsMobile] = useState(false);
 
@@ -197,8 +197,9 @@ const Navbar = () => {
   ];
 
   const links = [
-    { name: "BPO & Contact Centers", route: "/casestudy" },
-    { name: "Banking & Finance", route: "/" },
+    { name: "BPO & Contact Centers", route: "/bpo-contact-centers" },
+    { name: "Banking & Finance", route: "/banking-finance" },
+    { name: "Saas & Tech", route: "/saas-tech" },
     { name: "Human Resources & Recruitment", route: "/" },
     { name: "E-commerce & Retail", route: "/" },
     { name: "Healthcare", route: "/" },
@@ -208,9 +209,9 @@ const Navbar = () => {
   ];
 
   const handleNav = (item) => {
-    setIsOpen(false); 
+    setIsOpen(false);
     if (item.isMegaMenu) {
-      setShowMegaMenu(!showMegaMenu); 
+      setShowMegaMenu(!showMegaMenu);
     } else if (item.route) {
       setShowMegaMenu(false);
       setMobileMegaOpen(false);
@@ -293,7 +294,7 @@ const Navbar = () => {
             <div className="grid grid-cols-2 gap-6 flex-1">
               <div className="border-l border-gray-500 pl-2">
                 <ul className="space-y-1">
-                  <Link href="/casestudy">
+                  <Link href="/bpo-contact-centers">
                     <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         BPO & Contact Centers
@@ -303,19 +304,21 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Banking & Finance
-                    </h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
-                      Identify compliance risks quickly, strengthen processes, and ensure secure customer interactions with Convoze.
-                    </p>
-                  </li>
+                  <Link href="/banking-finance">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">
+                        Banking & Finance
+                      </h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Identify compliance risks quickly, strengthen processes, and ensure secure customer interactions with Convoze.
+                      </p>
+                    </li>
+                  </Link>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">
                       Human Resources & Recruitment
                     </h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Assess communication and behavior, streamline hiring, and improve recruitment decisions effectively.
                     </p>
                   </li>
@@ -323,7 +326,7 @@ const Navbar = () => {
                     <h4 className="font-medium text-[14px] text-white">
                       E-commerce & Retail
                     </h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Analyze customer sentiment, address concerns proactively, and increase loyalty effectively.
                     </p>
                   </li>
@@ -333,9 +336,17 @@ const Navbar = () => {
               {/* Column 2 */}
               <div>
                 <ul className="space-y-1">
+                  <Link href="/saas-tech">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">Saas & Tech</h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Drive product adoption, reduce churn, and strengthen customer retention with real-time intelligence and seamless onboarding insights.
+                      </p>
+                    </li>
+                  </Link>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">Healthcare</h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Detect patient emotions instantly and improve satisfaction through real-time sentiment analysis.
                     </p>
                   </li>
@@ -343,13 +354,13 @@ const Navbar = () => {
                     <h4 className="font-medium text-[14px] text-white">
                       Enterprise Operations
                     </h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Automate audits, provide actionable feedback, and enhance agent training for better service.
                     </p>
                   </li>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">Real Estate</h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Understand client needs, build stronger relationships, and close deals efficiently.
                     </p>
                   </li>
@@ -357,13 +368,14 @@ const Navbar = () => {
                     <h4 className="font-medium text-[14px] text-white">
                       Telecommunications
                     </h4>
-                    <p className="text-[11px] text-gray-300 mt-1">
+                    <p className="text-[11px] text-gray-400 mt-1">
                       Detect issues in real time, resolve faster, and enhance customer satisfaction consistently.
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
+
           </div>
         </div>
       )}

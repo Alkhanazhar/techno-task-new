@@ -1,10 +1,214 @@
+// "use client";
+// import { IconArrowNarrowRight } from "@tabler/icons-react";
+// import { useState, useRef, useId, useEffect } from "react";
+
+// const Slide = ({ slide, index, current, handleSlideClick }) => {
+//   const slideRef = useRef(null);
+
+//   const xRef = useRef(0);
+//   const yRef = useRef(0);
+//   const frameRef = useRef();
+
+//   useEffect(() => {
+//     const animate = () => {
+//       if (!slideRef.current) return;
+
+//       const x = xRef.current;
+//       const y = yRef.current;
+
+//       slideRef.current.style.setProperty("--x", `${x}px`);
+//       slideRef.current.style.setProperty("--y", `${y}px`);
+
+//       frameRef.current = requestAnimationFrame(animate);
+//     };
+
+//     frameRef.current = requestAnimationFrame(animate);
+
+//     return () => {
+//       if (frameRef.current) {
+//         cancelAnimationFrame(frameRef.current);
+//       }
+//     };
+//   }, []);
+
+//   const handleMouseMove = (event) => {
+//     const el = slideRef.current;
+//     if (!el) return;
+
+//     const r = el.getBoundingClientRect();
+//     xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
+//     yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
+//   };
+
+//   const handleMouseLeave = () => {
+//     xRef.current = 0;
+//     yRef.current = 0;
+//   };
+
+//   const imageLoaded = (event) => {
+//     event.currentTarget.style.opacity = "1";
+//   };
+
+//   const { src, button, title, description } = slide;
+
+//   return (
+//     <div className="[perspective:1200px] [transform-style:preserve-3d]">
+//       <li
+//         ref={slideRef}
+//         className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
+//         onClick={() => handleSlideClick(index)}
+//         onMouseMove={handleMouseMove}
+//         onMouseLeave={handleMouseLeave}
+//         style={{
+//           transform:
+//             current !== index
+//               ? "scale(0.98) rotateX(8deg)"
+//               : "scale(1) rotateX(0deg)",
+//           transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+//           transformOrigin: "bottom",
+//         }}
+//       >
+//         <div
+//           className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
+//           style={{
+//             transform:
+//               current === index
+//                 ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
+//                 : "none",
+//           }}
+//         >
+//           <img
+//             className="absolute inset-0 w-[140%] h-[140%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+//             style={{
+//               opacity: current === index ? 1 : 0.5,
+//             }}
+//             alt={title}
+//             src={src}
+//             onLoad={imageLoaded}
+//             loading="eager"
+//             decoding="sync"
+//           />
+//           {current === index && (
+//             <div className="absolute inset-0 bg-black/50 transition-all duration-1000" />
+//           )}
+//         </div>
+
+//         <article
+//           className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
+//             }`}
+//         >
+//           <h2 className="lg:text-3xl font-semibold relative">
+//             {title}
+//           </h2>
+//           <h1 className="text-sm md:text-lg mt-2 font-light relative">
+//             {description}
+//           </h1>
+//           <div className="flex justify-center">
+//             <button className=" mt-4  text-xs  bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white font-semibold md:text-sm px-5 py-2 rounded-full hover:opacity-90 transition-all duration-200">
+//               {button}
+//             </button>
+//           </div>
+//         </article>
+//       </li>
+//     </div>
+//   );
+// };
+
+// const CarouselControl = ({ type, title, handleClick }) => {
+//   return (
+//     <button
+//       className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
+//         }`}
+//       title={title}
+//       onClick={handleClick}
+//     >
+//       <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+//     </button>
+//   );
+// };
+
+
+// export function Carousel({ slides }) {
+//   const [current, setCurrent] = useState(3);
+//   const [isHovered, setIsHovered] = useState(false);
+
+//   const handlePreviousClick = () => {
+//     const previous = current - 1;
+//     setCurrent(previous < 0 ? slides.length - 1 : previous);
+//   };
+
+//   const handleNextClick = () => {
+//     const next = current + 1;
+//     setCurrent(next === slides.length ? 0 : next);
+//   };
+
+//   const handleSlideClick = (index) => {
+//     if (current !== index) {
+//       setCurrent(index);
+//     }
+//   };
+
+//   const id = useId();
+
+//   useEffect(() => {
+//     if (isHovered) return;
+
+//     const interval = setInterval(() => {
+//       setCurrent((prev) => (prev + 1) % slides.length);
+//     }, 2000);
+
+//     return () => clearInterval(interval);
+//   }, [slides.length, isHovered]);
+
+//   return (
+//     <div
+//       className="relative w-[70vmin] h-[70vmin] mx-auto"
+//       aria-labelledby={`carousel-heading-${id}`}
+//       onMouseEnter={() => setIsHovered(true)}
+//       onMouseLeave={() => setIsHovered(false)}
+//     >
+//       <ul
+//         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
+//         style={{
+//           transform: `translateX(-${current * (100 / slides.length)}%)`,
+//         }}
+//       >
+//         {slides.map((slide, index) => (
+//           <Slide
+//             key={index}
+//             slide={slide}
+//             index={index}
+//             current={current}
+//             handleSlideClick={handleSlideClick}
+//           />
+//         ))}
+//       </ul>
+//       <div className="absolute flex justify-center w-full mt-4 top-[calc(100%+1rem)]">
+//         <CarouselControl
+//           type="previous"
+//           title="Go to previous slide"
+//           handleClick={handlePreviousClick}
+//         />
+//         <CarouselControl
+//           type="next"
+//           title="Go to next slide"
+//           handleClick={handleNextClick}
+//         />
+//       </div>
+//     </div>
+//   );
+// }
+
+
 "use client";
+
+import { useState, useRef, useEffect, useId } from "react";
+import { useRouter } from "next/navigation";
 import { IconArrowNarrowRight } from "@tabler/icons-react";
-import { useState, useRef, useId, useEffect } from "react";
 
-const Slide = ({ slide, index, current, handleSlideClick }) => {
+const Slide = ({ slide, index, current }) => {
+  const router = useRouter();
   const slideRef = useRef(null);
-
   const xRef = useRef(0);
   const yRef = useRef(0);
   const frameRef = useRef();
@@ -12,32 +216,18 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
   useEffect(() => {
     const animate = () => {
       if (!slideRef.current) return;
-
-      const x = xRef.current;
-      const y = yRef.current;
-
-      slideRef.current.style.setProperty("--x", `${x}px`);
-      slideRef.current.style.setProperty("--y", `${y}px`);
-
+      slideRef.current.style.setProperty("--x", `${xRef.current}px`);
+      slideRef.current.style.setProperty("--y", `${yRef.current}px`);
       frameRef.current = requestAnimationFrame(animate);
     };
-
     frameRef.current = requestAnimationFrame(animate);
-
-    return () => {
-      if (frameRef.current) {
-        cancelAnimationFrame(frameRef.current);
-      }
-    };
+    return () => cancelAnimationFrame(frameRef.current);
   }, []);
 
   const handleMouseMove = (event) => {
-    const el = slideRef.current;
-    if (!el) return;
-
-    const r = el.getBoundingClientRect();
-    xRef.current = event.clientX - (r.left + Math.floor(r.width / 2));
-    yRef.current = event.clientY - (r.top + Math.floor(r.height / 2));
+    const r = slideRef.current.getBoundingClientRect();
+    xRef.current = event.clientX - (r.left + r.width / 2);
+    yRef.current = event.clientY - (r.top + r.height / 2);
   };
 
   const handleMouseLeave = () => {
@@ -45,151 +235,100 @@ const Slide = ({ slide, index, current, handleSlideClick }) => {
     yRef.current = 0;
   };
 
-  const imageLoaded = (event) => {
-    event.currentTarget.style.opacity = "1";
-  };
-
-  const { src, button, title, description } = slide;
-
   return (
-    <div className="[perspective:1200px] [transform-style:preserve-3d]">
-      <li
-        ref={slideRef}
-        className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 "
-        onClick={() => handleSlideClick(index)}
-        onMouseMove={handleMouseMove}
-        onMouseLeave={handleMouseLeave}
+    <li
+      ref={slideRef}
+      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
+      onClick={() => router.push(slide.link)}
+      onMouseMove={handleMouseMove}
+      onMouseLeave={handleMouseLeave}
+      style={{
+        transform:
+          current !== index
+            ? "scale(0.98) rotateX(8deg)"
+            : "scale(1) rotateX(0deg)",
+        transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
+        transformOrigin: "bottom",
+      }}
+    >
+      <div
+        className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
         style={{
           transform:
-            current !== index
-              ? "scale(0.98) rotateX(8deg)"
-              : "scale(1) rotateX(0deg)",
-          transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
-          transformOrigin: "bottom",
+            current === index
+              ? "translate3d(calc(var(--x)/30), calc(var(--y)/30), 0)"
+              : "none",
         }}
       >
-        <div
-          className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
-          style={{
-            transform:
-              current === index
-                ? "translate3d(calc(var(--x) / 30), calc(var(--y) / 30), 0)"
-                : "none",
-          }}
-        >
-          <img
-            className="absolute inset-0 w-[140%] h-[140%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
-            style={{
-              opacity: current === index ? 1 : 0.5,
-            }}
-            alt={title}
-            src={src}
-            onLoad={imageLoaded}
-            loading="eager"
-            decoding="sync"
-          />
-          {current === index && (
-            <div className="absolute inset-0 bg-black/50 transition-all duration-1000" />
-          )}
-        </div>
+        <img
+          src={slide.src}
+          alt={slide.title}
+          className="absolute inset-0 w-[140%] h-[140%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          style={{ opacity: current === index ? 1 : 0.5 }}
+        />
+        {current === index && (
+          <div className="absolute inset-0 bg-black/50 transition-all duration-1000" />
+        )}
+      </div>
 
-        <article
-          className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
-            current === index ? "opacity-100 visible" : "opacity-0 invisible"
+      <article
+        className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
           }`}
-        >
-          <h2 className="lg:text-3xl font-semibold relative">
-            {title}
-          </h2>
-          <h1 className="text-sm md:text-lg mt-2 font-light relative">
-            {description}
-          </h1>
-          <div className="flex justify-center">
-            <button className=" mt-4  text-xs  bg-gradient-to-r from-[#C068D1] to-[#3224AF] cursor-pointer text-white font-semibold md:text-sm px-5 py-2 rounded-full hover:opacity-90 transition-all duration-200">
-              {button}
-            </button>
-          </div>
-        </article>
-      </li>
-    </div>
+      >
+        <h2 className="lg:text-3xl font-semibold">{slide.title}</h2>
+        <h1 className="text-sm md:text-lg mt-2 font-light">{slide.description}</h1>
+        <span className="mt-4 inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm">
+          {slide.button}
+        </span>
+      </article>
+    </li>
   );
 };
 
-const CarouselControl = ({ type, title, handleClick }) => {
-  return (
-    <button
-      className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
-        type === "previous" ? "rotate-180" : ""
+const CarouselControl = ({ type, handleClick }) => (
+  <button
+    className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
       }`}
-      title={title}
-      onClick={handleClick}
-    >
-      <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
-    </button>
-  );
-};
+    onClick={handleClick}
+  >
+    <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
+  </button>
+);
 
-export function Carousel({ slides }) {
-  const [current, setCurrent] = useState(3);
-
-  const handlePreviousClick = () => {
-    const previous = current - 1;
-    setCurrent(previous < 0 ? slides.length - 1 : previous);
-  };
-
-  const handleNextClick = () => {
-    const next = current + 1;
-    setCurrent(next === slides.length ? 0 : next);
-  };
-
-  const handleSlideClick = (index) => {
-    if (current !== index) {
-      setCurrent(index);
-    }
-  };
-
+export const Carousel = ({ slides }) => {
+  const [current, setCurrent] = useState(0);
+  const [isHovered, setIsHovered] = useState(false);
   const id = useId();
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrent((prev) => (prev + 1) % slides.length);
-    }, 2000);
 
-    return () => clearInterval(interval); // Clean up interval on unmount
-  }, [slides.length]);
+  const handlePreviousClick = () =>
+    setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
+  const handleNextClick = () => setCurrent((prev) => (prev + 1) % slides.length);
+
+  useEffect(() => {
+    if (isHovered) return;
+    const interval = setInterval(() => setCurrent((prev) => (prev + 1) % slides.length), 3000);
+    return () => clearInterval(interval);
+  }, [slides.length, isHovered]);
+
   return (
     <div
       className="relative w-[70vmin] h-[70vmin] mx-auto"
       aria-labelledby={`carousel-heading-${id}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
     >
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
-        style={{
-          transform: `translateX(-${current * (100 / slides.length)}%)`,
-        }}
+        style={{ transform: `translateX(-${current * (100 / slides.length)}%)` }}
       >
         {slides.map((slide, index) => (
-          <Slide
-            key={index}
-            slide={slide}
-            index={index}
-            current={current}
-            handleSlideClick={handleSlideClick}
-          />
+          <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>
       <div className="absolute flex justify-center w-full mt-4 top-[calc(100%+1rem)]">
-        <CarouselControl
-          type="previous"
-          title="Go to previous slide"
-          handleClick={handlePreviousClick}
-        />
-
-        <CarouselControl
-          type="next"
-          title="Go to next slide"
-          handleClick={handleNextClick}
-        />
+        <CarouselControl type="previous" handleClick={handlePreviousClick} />
+        <CarouselControl type="next" handleClick={handleNextClick} />
       </div>
     </div>
   );
-}
+};
