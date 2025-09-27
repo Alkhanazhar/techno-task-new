@@ -3,9 +3,9 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
-    "dev": "dotenv -e .env -- next dev",
+    "dev": "next dev",
     "build": "next build",
-    "start": "dotenv -e .env.production -- next start",
+    "start": "next start",
     "lint": "next lint",
     "export": "next export"
   },
@@ -38,7 +38,6 @@
     "@eslint/eslintrc": "^3",
     "@tailwindcss/postcss": "^4",
     "cross-env": "^10.0.0",
-    "dotenv-cli": "^10.0.0",
     "eslint": "^9",
     "eslint-config-next": "15.3.4",
     "tailwindcss": "^4",
