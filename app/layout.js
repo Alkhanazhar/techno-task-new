@@ -16,13 +16,14 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${sora.variable} w-full antialiased bg-gradient-to-tl to-[#21082b] from-[#27022e]`}
+        className={`${sora?.variable} w-full antialiased bg-gradient-to-tl to-[#21082b] from-[#27022e]`}
+        suppressHydrationWarning
       >
-        <Navbar/>
+        <Navbar />
         {children}
-        <Footer/>
+        <Footer />
       </body>
     </html>
   );

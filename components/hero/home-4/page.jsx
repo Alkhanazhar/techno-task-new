@@ -80,238 +80,19 @@ const Hero4 = () => {
     }
   }, []);
 
-  // const ScoreBox = ({ score, delay, position }) => (
-  //   <motion.div
-  //     variants={floatVariant(delay)}
-  //     initial="hidden"
-  //     animate={isVisible ? "show" : "hidden"}
-  //     className={`absolute bg-white rounded-2xl shadow-2xl p-3 w-36 h-16 ${position} sm:w-40 md:w-44`}
-  //   >
-  //     <div className="flex items-center justify-between h-full">
-  //       <div>
-  //         <div className="text-xs text-gray-500 font-medium">POSITIVE</div>
-  //         <div className="text-2xl font-bold text-gray-800 mt-1">{score}</div>
-  //       </div>
-  //       <div className="w-6 h-6 bg-green-500 rounded-full flex items-center justify-center">
-  //         <span className="text-white font-bold text-xs">{score}</span>
-  //       </div>
-  //     </div>
-  //   </motion.div>
-  // );
 
-  // const CustomerAnalysisBox = ({ delay, position }) => (
-  //   <div
-  //     className={`absolute bg-white rounded-2xl shadow-2xl p-4 md:p-6 w-72 h-56 md:w-80 md:h-64
-  //       transform transition-all duration-700 hover:scale-105 hover:shadow-3xl
-  //       ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}
-  //       ${position}`}
-  //     style={{
-  //       transitionDelay: `${delay}ms`,
-  //       animation: isVisible
-  //         ? `float 8s ease-in-out infinite ${delay}ms`
-  //         : "none",
-  //     }}
-  //   >
-  //     <div className="h-full flex flex-col">
-  //       <div className="flex items-center gap-2 md:gap-3 mb-3 md:mb-4">
-  //         <img
-  //           src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=40&h=40&fit=crop&crop=face&auto=format"
-  //           alt="Customer"
-  //           className="w-8 h-8 md:w-10 md:h-10 rounded-full object-cover"
-  //         />
-  //         <div className="flex-1">
-  //           <h3 className="text-sm md:text-lg font-bold text-gray-800">
-  //             Customer Analysis
-  //           </h3>
-  //           <p className="text-xs text-gray-500 hidden md:block">
-  //             Real-time sentiment analysis, mood, and experience using the
-  //             latest AI
-  //           </p>
-  //         </div>
-  //       </div>
-
-  //       <div className="flex items-center gap-3 md:gap-4 mb-3 md:mb-4">
-  //         <img
-  //           src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face&auto=format"
-  //           alt="Analyst"
-  //           className="w-12 h-12 md:w-16 md:h-16 rounded-lg object-cover"
-  //         />
-  //         <div className="flex-1">
-  //           <div className="text-xs md:text-sm font-medium text-gray-700 mb-2">
-  //             Customer Profile
-  //           </div>
-  //           <div className="space-y-1">
-  //             <div className="flex justify-between text-xs">
-  //               <span className="text-gray-500">Satisfaction</span>
-  //               <span className="font-medium">High</span>
-  //             </div>
-  //             <div className="flex justify-between text-xs">
-  //               <span className="text-gray-500">Engagement</span>
-  //               <span className="font-medium">Active</span>
-  //             </div>
-  //           </div>
-  //         </div>
-  //       </div>
-
-  //       <div className="flex-1 bg-gray-50 rounded-lg p-2 md:p-3">
-  //         <div className="text-xs text-gray-600 mb-2">Sentiment Analysis</div>
-  //         <svg className="w-full h-12 md:h-16" viewBox="0 0 300 60">
-  //           <polyline
-  //             fill="none"
-  //             stroke="#3b82f6"
-  //             strokeWidth="2"
-  //             points="10,40 40,20 70,35 100,15 130,30 160,10 190,25 220,5 250,20 280,15"
-  //             className={`transition-all duration-3000 ${
-  //               isVisible ? "opacity-100" : "opacity-0"
-  //             }`}
-  //             style={{
-  //               strokeDasharray: 400,
-  //               strokeDashoffset: isVisible ? 0 : 400,
-  //             }}
-  //           />
-  //           <polyline
-  //             fill="none"
-  //             stroke="#ef4444"
-  //             strokeWidth="2"
-  //             points="10,45 40,35 70,40 100,25 130,45 160,20 190,40 220,25 250,35 280,30"
-  //             className={`transition-all duration-3000 ${
-  //               isVisible ? "opacity-100" : "opacity-0"
-  //             }`}
-  //             style={{
-  //               strokeDasharray: 400,
-  //               strokeDashoffset: isVisible ? 0 : 400,
-  //               transitionDelay: "500ms",
-  //             }}
-  //           />
-  //         </svg>
-  //         <div className="flex items-center gap-2 md:gap-4 mt-2">
-  //           <div className="flex items-center gap-1">
-  //             <div className="w-2 h-2 bg-blue-500 rounded-full"></div>
-  //             <span className="text-xs text-gray-600">Positive</span>
-  //           </div>
-  //           <div className="flex items-center gap-1">
-  //             <div className="w-2 h-2 bg-red-500 rounded-full"></div>
-  //             <span className="text-xs text-gray-600">Negative</span>
-  //           </div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-
-  // const ChartBox = ({ delay, position }) => (
-  //   <div
-  //     className={`absolute bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-48 h-40 md:w-56 md:h-48
-  //       transform transition-all duration-700 hover:scale-105 hover:shadow-3xl
-  //       ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}
-  //       ${position}`}
-  //     style={{
-  //       transitionDelay: `${delay}ms`,
-  //       animation: isVisible
-  //         ? `float 7s ease-in-out infinite ${delay}ms`
-  //         : "none",
-  //     }}
-  //   >
-  //     <div className="h-full flex flex-col">
-  //       <h4 className="text-xs md:text-sm font-medium text-gray-700 mb-3">
-  //         Call Resolution
-  //       </h4>
-
-  //       <div className="flex-1 flex items-center justify-center">
-  //         <div className="relative w-20 h-20 md:w-24 md:h-24">
-  //           <svg
-  //             className="w-full h-full transform -rotate-90"
-  //             viewBox="0 0 36 36"
-  //           >
-  //             <path
-  //               d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-  //               fill="none"
-  //               stroke="#e5e7eb"
-  //               strokeWidth="3"
-  //             />
-  //             <path
-  //               d="M18 2.0845 a 15.9155 15.9155 0 0 1 0 31.831 a 15.9155 15.9155 0 0 1 0 -31.831"
-  //               fill="none"
-  //               stroke="#8b5cf6"
-  //               strokeWidth="3"
-  //               strokeDasharray="85, 100"
-  //               className={`transition-all duration-2000 ${
-  //                 isVisible ? "opacity-100" : "opacity-0"
-  //               }`}
-  //               style={{ strokeDashoffset: isVisible ? 0 : 100 }}
-  //             />
-  //           </svg>
-  //           <div className="absolute inset-0 flex items-center justify-center">
-  //             <span className="text-base md:text-lg font-bold text-purple-600">
-  //               85%
-  //             </span>
-  //           </div>
-  //         </div>
-  //       </div>
-
-  //       <div className="grid grid-cols-2 gap-2 mt-2 md:mt-3">
-  //         <div className="text-center p-2 bg-purple-50 rounded">
-  //           <div className="text-xs text-gray-600">Resolved</div>
-  //           <div className="text-xs md:text-sm font-bold text-purple-600">
-  //             342
-  //           </div>
-  //         </div>
-  //         <div className="text-center p-2 bg-gray-50 rounded">
-  //           <div className="text-xs text-gray-600">Pending</div>
-  //           <div className="text-xs md:text-sm font-bold text-gray-600">58</div>
-  //         </div>
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
-
-  // const SmallChartBox = ({ delay, position, title, value }) => (
-  //   <div
-  //     className={`absolute bg-white rounded-2xl shadow-2xl p-3 md:p-4 w-40 h-28 md:w-48 md:h-32
-  //       transform transition-all duration-700 hover:scale-105 hover:shadow-3xl
-  //       ${isVisible ? "translate-y-0 opacity-100" : "translate-y-12 opacity-0"}
-  //       ${position}`}
-  //     style={{
-  //       transitionDelay: `${delay}ms`,
-  //       animation: isVisible
-  //         ? `float 5s ease-in-out infinite ${delay}ms`
-  //         : "none",
-  //     }}
-  //   >
-  //     <div className="h-full flex flex-col justify-between">
-  //       <div>
-  //         <h4 className="text-xs font-medium text-gray-500 mb-1">{title}</h4>
-  //         <div className="text-xl md:text-2xl font-bold text-gray-800">
-  //           {value}
-  //         </div>
-  //       </div>
-
-  //       <div className="h-6 md:h-8 bg-gradient-to-r from-purple-400 to-purple-600 rounded relative overflow-hidden">
-  //         <div
-  //           className="absolute inset-0 bg-white/30 transform origin-left transition-transform duration-2000"
-  //           style={{
-  //             transform: isVisible ? "scaleX(0.75)" : "scaleX(0)",
-  //             transitionDelay: `${delay + 1000}ms`,
-  //           }}
-  //         />
-  //       </div>
-  //     </div>
-  //   </div>
-  // );
   const Icon = stats[currentIndex].icon;
 
   return (
     <div className="relative zoom-out min-h-[115vh] -mt-12 py-10 overflow-hidden">
-      {/* Background */}
       <img
         src="hero-bg.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute bottom-0 inset-0  bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
 
-      {/* Main Flex Container */}
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-6">
-        {/* Left Side - Text Content */}
+
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
@@ -384,34 +165,12 @@ const Hero4 = () => {
             ))}
           </div>
 
-          {/* <AnimatePresence mode="wait">
-            <motion.div
-              key={currentIndex} // Key ensures re-render on index change
-              className="relative rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
-              initial={{ opacity: 0, x: 0 }} // Slide in from right
-              animate={{ opacity: 1, x: 0 }} // Center
-              exit={{ opacity: 0, x: 0 }} // Slide out to left
-              transition={{ duration: 0.5, ease: "easeInOut" }}
-            >
-              <div className="absolute top-2 right-4">
-                <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
-                  <Icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
-                </div>
-              </div>
-              <div className="text-lg md:text-2xl lg:text-3xl font-normal text-white mb-2">
-                {stats[currentIndex].value}
-              </div>
-              <div className="text-xs mt-2 md:mt-4 text-gray-300">
-                {stats[currentIndex].label}
-              </div>
-            </motion.div>
-          </AnimatePresence> */}
 
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex} // Key ensures re-render on index change
+              key={currentIndex} 
               className="relative w-[90%] max-w-sm mx-auto rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
-              initial={{ opacity: 0, x: 0 }} 
+              initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}

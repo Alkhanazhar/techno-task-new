@@ -401,7 +401,7 @@ const TimelineJourneyMobile = () => {
                         </div>
                         <p className="text-xs leading-relaxed transition-1 text-white">
                           {step.content.map((point, idx) => (
-                            <li key={idx} >{point}</li>
+                            <span key={idx} >{point}</span>
                           ))}
                         </p>
 
