@@ -192,7 +192,7 @@ const BankingFinance = () => {
           <div className="space-y-4">
             <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white ">
               Redefining conversation{" "}
-              <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+              <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text ">
                 Intelligence{" "}
               </span>
               with Convoze

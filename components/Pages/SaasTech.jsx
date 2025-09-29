@@ -129,7 +129,9 @@ const SaasTech = () => {
                   <div className="ml-5 space-y-1">
                     {feature.description.map((desc, i) => (
                       <div key={i} className="flex items-start space-x-2">
-                        <span className="w-[6px] h-[6px] mt-2 bg-white rounded-full flex-shrink-0"></span>
+                        <span className=" text-gray-300 rounded-full flex-shrink-0">
+                          -
+                        </span>
                         <p className="text-gray-300 text-sm sm:text-sm leading-relaxed">
                           {desc}
                         </p>
@@ -177,7 +179,9 @@ const SaasTech = () => {
                   <div className="ml-5 space-y-1">
                     {feature.description.map((desc, i) => (
                       <div key={i} className="flex items-start space-x-2">
-                        <span className="w-[6px] h-[6px] mt-2 bg-white rounded-full flex-shrink-0"></span>
+                        <span className=" text-gray-300 rounded-full flex-shrink-0">
+                          -
+                        </span>
                         <p className="text-gray-300 text-sm sm:text-sm leading-relaxed">
                           {desc}
                         </p>

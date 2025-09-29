@@ -190,12 +190,12 @@ const Navbar = () => {
     { name: "BPO & Contact Centers", route: "/bpo-contact-centers" },
     { name: "Banking & Finance", route: "/banking-finance" },
     { name: "Saas & Tech", route: "/saas-tech" },
-    { name: "Human Resources & Recruitment", route: "/" },
-    { name: "E-commerce & Retail", route: "/" },
-    { name: "Healthcare", route: "/" },
-    { name: "Enterprise Operations", route: "/" },
-    { name: "Real Estate", route: "/" },
-    { name: "Telecommunications", route: "/" },
+    // { name: "Human Resources & Recruitment", route: "/" },
+    // { name: "E-commerce & Retail", route: "/" },
+    { name: "Healthcare and Insurance", route: "/" },
+    // { name: "Enterprise Operations", route: "/" },
+    { name: "E-commerce and D2C", route: "/" },
+    // { name: "Telecommunications", route: "/" },
   ];
 
   const handleNav = (item) => {
@@ -310,16 +310,7 @@ const Navbar = () => {
                   </Link>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">
-                      Human Resources & Recruitment
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Assess communication and behavior, streamline hiring, and
-                      improve recruitment decisions effectively.
-                    </p>
-                  </li>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      E-commerce & Retail
+                      E-commerce and D2C
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
                       Analyze customer sentiment, address concerns proactively,
@@ -346,38 +337,11 @@ const Navbar = () => {
                   </Link>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">
-                      Healthcare
+                      Healthcare and Insurance
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
                       Detect patient emotions instantly and improve satisfaction
                       through real-time sentiment analysis.
-                    </p>
-                  </li>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Enterprise Operations
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Automate audits, provide actionable feedback, and enhance
-                      agent training for better service.
-                    </p>
-                  </li>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Real Estate
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Understand client needs, build stronger relationships, and
-                      close deals efficiently.
-                    </p>
-                  </li>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Telecommunications
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Detect issues in real time, resolve faster, and enhance
-                      customer satisfaction consistently.
                     </p>
                   </li>
                 </ul>
