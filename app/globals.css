@@ -10,7 +10,10 @@
   height: 100%;
 }
 .custom-shadow {
- box-shadow: 2px 1px 20px 15px #28282834 !important
+  box-shadow: 2px 1px 20px 15px #28282834 !important;
+}
+.kl-form__branding {
+  display: none !important;
 }
 
 .form-label[for="kl-11-input"],
@@ -25,11 +28,10 @@
   color: #ffffff !important;
 }
 
-
-.kl-form__form-title{
+.kl-form__form-title {
   color: #ffffff !important;
 }
-.kl-form{
+.kl-form {
   border: 0px none #ffffff !important;
 }
 .card-spotlight {
@@ -69,7 +71,8 @@
   zoom: 90%;
 }
 
-html,body{
+html,
+body {
   scroll-behavior: smooth;
 }
 
@@ -82,18 +85,18 @@ html,body{
     transform: scale(0.9);
   }
 }
-.kl-form__submit-button{
-  background-color: #C068D1 !important;
+.kl-form__submit-button {
+  background-color: #c068d1 !important;
   border-radius: 9999px !important;
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
   border: 0px none !important;
 }
 
-.kl-form__branding{
-  color: #C068D1 !important;
+.kl-form__branding {
+  color: #c068d1 !important;
 }
-.kl-form{
+.kl-form {
   border: 0px none #ffffff !important;
 }
 :root {

@@ -151,7 +151,6 @@ Less than 5% of customer conversation are reviewed
             <div className="space-y-5 p-2 bg-neutral-100 rounded-xl shadow-2xl relative z-10">
               {wastedStats.map((stat, index) => {
                 const Icon = stat.icon;
-
                 return (
                   <div
                     key={index}
@@ -162,10 +161,10 @@ Less than 5% of customer conversation are reviewed
                     </div>
                     <div className="flex-1 min-w-0">
                       <div className="flex items-baseline gap-2">
-                        <span className="text-base font-bold text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+                        <span className="text-base font-bold text-transparent bg-clip-text bg-[#3f2ab2]">
                           {stat.percentage}
                         </span>
-                        <span className="text-xs font-medium text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+                        <span className=" font-medium text-transparent bg-clip-text bg-[#3f2ab2]">
                           {stat.label}
                         </span>
                       </div>
@@ -195,11 +194,11 @@ Less than 5% of customer conversation are reviewed
             </div> */}
 
             <div className="p-4 rounded-2xl">
-              <h2 className="text-center text-2xl font-medium text-white mb-6">
+              <h2 className="text-center text-2xl font-medium text-white mb-4">
                 This isn't just inefficient — it's expensive
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
                 {problems.map((problem, index) => {
                   const Icon = problem.icon;
                   const isHovered = hoveredProblem === index;
@@ -207,7 +206,7 @@ Less than 5% of customer conversation are reviewed
                   return (
                     <div
                       key={index}
-                      className={`group transition-all  duration-500 cursor-pointer
+                      className={`group transition-all   duration-500 cursor-pointer
                         ${
                           isVisible
                             ? "opacity-100 translate-y-0"
@@ -219,7 +218,7 @@ Less than 5% of customer conversation are reviewed
                       onMouseLeave={() => setHoveredProblem(null)}
                     >
                       <div
-                        className={`p-3 rounded-xl transition-all bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  duration-300 border border-gray-800/50 
+                        className={`p-3  rounded-xl transition-all  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  duration-300 border border-gray-800/50 
                         ${isHovered ? "scale-[1.02] shadow-lg" : ""}
                       `}
                       >
@@ -228,13 +227,13 @@ Less than 5% of customer conversation are reviewed
                             <Icon className="w-full h-full text-white" />
                           </div>
                           <div>
-                            <h3 className="md:text-lg font-semibold text-purple-200 mb-1">
+                            <h3 className=" font-semibold text-purple-200 mb-1">
                               {problem.title}
                             </h3>
                             <p className="text-gray-300 md:text-sm text-xs mb-1">
                               {problem.description}
                             </p>
-                            <div className="text-white text-sm font-medium">
+                            <div className="text-gray-300 text-sm ">
                               {problem.impact}
                             </div>
                           </div>

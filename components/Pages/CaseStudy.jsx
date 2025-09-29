@@ -4,6 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
+import HeroSectionCaseStudy from "./HomeCaseStudy";
 
 const CaseStudy = () => {
   const router = useRouter();
@@ -27,59 +28,10 @@ const CaseStudy = () => {
   return (
     <div className="min-h-screen ">
       {/* Header Section - Dark */}
-      <motion.div
-        className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6 }}
-      >
-        <div className="w-full max-w-sm h-full xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <div
-            className="flex flex-col lg:flex-row 
-                 items-center justify-center lg:justify-between 
-                 gap-12 xs:gap-8 sm:gap-10 md:gap-12 lg:gap-16 
-                 h-screen"
-          >
-            {/* Left Side - Text Content */}
-            <div className="w-full lg:w-1/2 text-center lg:text-left">
-              <h1 className="text-3xl xs:text-4xl sm:text-4.5xl md:text-5xl lg:text-6xl font-bold text-white mb-2 xs:mb-3 sm:mb-4">
-                Convoze for
-              </h1>
-              <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
-                BPO & Contact Centers
-              </h2>
-              <p className="text-gray-200 font-extralight text-sm xs:text-base sm:text-lg ">
-                Turning Every Conversation into Actionable Insight
-              </p>
-              <div className="mt-4 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
-                <Link href="/contact">
-                  <button className="w-3/5 sm:w-auto bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-sm cursor-pointer text-white border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
-                    Book a Demo
-                  </button>
-                </Link>
-                {/* <button className="w-1/2 sm:w-auto mx-auto sm:mx-0  bg-white text-sm cursor-pointer text-purple-800 px-3 md:px-5 py-2 md:py-2 rounded-full font-normal hover:opacity-90 transition-all duration-300">
-                  See How It Works
-                </button> */}
-              </div>
-            </div>
-
-            {/* Right Side - Image */}
-            <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-              <img
-                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
-                alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
-                className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-auto rounded-lg shadow-lg object-cover"
-                loading="lazy"
-              />
-            </div>
-          </div>
-        </div>
-      </motion.div>
+      <HeroSectionCaseStudy />
 
       <motion.div
-        className="w-full flex flex-col md:flex-row bg-slate-200 shadow-xl py-8 md:py-12 mb-10 gap-8 justify-center items-start"
+        className="w-full flex flex-col md:flex-row bg-slate-200 shadow-xl py-8 md:py-12 mb-10 gap-5 justify-center items-start"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -105,8 +57,12 @@ const CaseStudy = () => {
             Running a contact center is a constant balancing act. Peaks in
             demand, customers who expect instant answers, and the pressure to
             hit service targets can stretch even the best teams to their limits.
-            Most centers still manage to audit only 3–4% of conversations. That
-            means 96% of valuable insights go unseen.
+          </p>
+          <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
+            The truth ? most centers still manage to audit only 3–4% of their
+            conversation . That means 96% valuable insights – performance gaps,
+            compliance risks, and customer sentiment shifts– Completely unseen.
+            And when those goes unnoticed, it leads to -
           </p>
 
           <div className="space-y-2 sm:space-y-3 font-semibold">
@@ -139,9 +95,13 @@ const CaseStudy = () => {
             </span>
           </h3>
 
-          <p className="text-gray-800 text-sm sm:text-base md:text-base mb-3 md:text-left">
-            Convoze is an expert QA & customer insight powerhouse that listens
-            to every conversation without missing a moment.
+          <p className="text-gray-800 text-sm sm:text-base md:text-base mb-2 md:text-left">
+            Think of Convoze as an expert QA and customer insight powerhouse
+            that listens to every conversation every single one without missing
+            a moment.
+          </p>
+          <p className="text-gray-800 text-sm sm:text-base md:text-base mb-2 md:text-left">
+            This is exactly what it brings to the table-
           </p>
           <div className="space-y-2 sm:space-y-3 font-semibold">
             {[
@@ -157,7 +117,8 @@ const CaseStudy = () => {
             ))}
           </div>
           <p className="text-gray-800 text-sm sm:text-base mt-4 text-center md:text-left">
-            Managers can act on insights while the conversation is still
+            With Convoze, managers don’t have to wait for the end-of-week
+            reports. They can act on insights while the conversation is still
             happening.
           </p>
         </div>
@@ -314,7 +275,7 @@ const CaseStudy = () => {
 
       {/* What You Get Inside Convoze Section - Light */}
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-16"
+        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -362,70 +323,63 @@ const CaseStudy = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12  flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-12 text-center flex items-center justify-center"
+        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-6">
-            Why{" "}
-            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
-              Convoze
-            </span>{" "}
-            Stands Out
-          </h3>
-          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
-            Most QA tools still work in isolation or rely on a handful of
-            conversation samples. Being different, Convoze audits every single
-            solitary conversation in one unified platform. That gives reduced
-            blind spots, more rapid decisions, and better outcomes for both your
-            customers and your business.
-          </p>
-        </div>
-
-        <div className="mt-8">
-          <Link href={"/contact"}>
-            <motion.button
-              className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] mb-6 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-102 shadow-lg"
-              whileHover={{ scale: 1.05 }}
-              whileTap={{ scale: 0.95 }}
-            >
-              See Convoze in Action
-            </motion.button>
-          </Link>
-        </div>
-      </motion.div>
-
-      <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b]  from-[#27022e] shadow-xl pb-4 xs:pb-4 sm:pb-8 md:pb-8 text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-
-          {/* AI Detection Badge */}
-          {/* <div className="mb-8">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-              <div className="text-white text-sm font-medium mb-1">
-                Your Text is Human written
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <div className="text-gray-300 text-xs">0%</div>
-                <div className="text-gray-400 text-xs">AI GPT*</div>
-              </div>
+        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+            {/* Left Section */}
+            <div>
+              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
+                Built for the{" "}
+                <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+                  Real
+                </span>{" "}
+                World
+              </h3>
+              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+                Whether you're managing telecom support, handling travel
+                bookings, or assisting utility customers, Convoze fits
+                seamlessly into your workflow. It is built for high-volume
+                contact centres, global teams, and any business where trust,
+                accuracy, and compliance matter.
+              </p>
             </div>
-          </div> */}
 
-          {/* Content Section */}
+            {/* Right Section */}
+            <div>
+              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
+                Why{" "}
+                <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+                  Convoze
+                </span>{" "}
+                Stands Out
+              </h3>
+              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+                Most QA tools still work in isolation or rely on a handful of
+                conversation samples. Being different, Convoze audits every
+                single solitary conversation in one unified platform. That gives
+                reduced blind spots, more rapid decisions, and better outcomes
+                for both your customers and your business.
+              </p>
+            </div>
+          </div>
 
-          {/* CTA Button */}
+          <div className="mt-8 flex justify-center mb-4 md:mb-0">
+            <Link href={"/contact"}>
+              <motion.button
+                className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-102 shadow-lg"
+                whileHover={{ scale: 1.05 }}
+                whileTap={{ scale: 0.95 }}
+              >
+                See Convoze in Action
+              </motion.button>
+            </Link>
+          </div>
         </div>
       </motion.div>
     </div>

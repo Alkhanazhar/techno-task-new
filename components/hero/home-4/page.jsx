@@ -5,6 +5,7 @@ import { BarChart, Cpu, LineChart, TrendingUp } from "lucide-react";
 import { AnimatePresence, motion } from "framer-motion";
 import { cn } from "@/lib/utils";
 import Orb from "@/components/org";
+import { TextRoll } from "../TextRoll";
 
 const Hero4 = () => {
   const videoRef = useRef(null);
@@ -80,7 +81,6 @@ const Hero4 = () => {
     }
   }, []);
 
-
   const Icon = stats[currentIndex].icon;
 
   return (
@@ -92,7 +92,6 @@ const Hero4 = () => {
       <div className="absolute bottom-0 inset-0  bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
 
       <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-6">
-
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
@@ -103,11 +102,11 @@ const Hero4 = () => {
           </h1>
 
           <p className="text-gray-200 text-[11px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
-            Convoze AI analyses 100% of conversations, flags compliance risks, and delivers actionable insights to CX, QA, and compliance teams reducing churn, cutting review
-            & driving smarter decisions in
-            real time.
+            Convoze AI analyses 100% of conversations, flags compliance risks,
+            and delivers actionable insights to CX, QA, and compliance teams
+            reducing churn, cutting review & driving smarter decisions in real
+            time.
           </p>
-
 
           {/* Buttons */}
           <div className="mt-6 md:mt-8 flex flex-col sm:flex-row gap-2 md:gap-6">
@@ -130,8 +129,6 @@ const Hero4 = () => {
             </a>
           </div>
 
-
-
           {/* Stats */}
           <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
@@ -144,10 +141,11 @@ const Hero4 = () => {
                 className={`relative rounded-2xl px-4 md:px-6 py-4 md:py-6 lg:py-8 text-left 
                 transition duration-300 shadow-lg hover:shadow-purple-500/20
                 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105
-                ${isVisible
+                ${
+                  isVisible
                     ? "translate-y-0 opacity-100"
                     : "translate-y-4 opacity-0"
-                  }`}
+                }`}
                 style={{ transitionDelay: `${index * 200}ms` }}
               >
                 <div className="absolute top-2 right-4">
@@ -165,10 +163,9 @@ const Hero4 = () => {
             ))}
           </div>
 
-
           <AnimatePresence mode="wait">
             <motion.div
-              key={currentIndex} 
+              key={currentIndex}
               className="relative w-[90%] max-w-sm mx-auto rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
               initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
@@ -188,8 +185,6 @@ const Hero4 = () => {
               </div>
             </motion.div>
           </AnimatePresence>
-
-
         </div>
 
         {/* Right Side - Dashboard */}
@@ -281,7 +276,7 @@ const Hero4 = () => {
           position="bottom-4 left-1/2 transform -translate-x-1/2"
         />
       </div> */}
-    </div >
+    </div>
   );
 };
 

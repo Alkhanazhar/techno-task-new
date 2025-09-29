@@ -188,7 +188,7 @@ const Navbar = () => {
 
   const links = [
     { name: "BPO & Contact Centers", route: "/bpo-contact-centers" },
-    { name: "Banking & Finance", route: "/" },
+    { name: "Banking & Finance", route: "/banking-finance" },
     { name: "Saas & Tech", route: "/saas-tech" },
     { name: "Human Resources & Recruitment", route: "/" },
     { name: "E-commerce & Retail", route: "/" },
@@ -297,7 +297,7 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <Link href="/">
+                  <Link href="/banking-finance">
                     <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         Banking & Finance
