@@ -10,7 +10,7 @@ const fadeIn = {
 const HeroSaas = () => {
   return (
     <motion.div
-      className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl"
+      className="w-full min-h-screen bg-[#27022e] shadow-xl"
       //   initial="hidden"
       //   whileInView="visible"
       //   viewport={{ once: true }}
