@@ -99,7 +99,7 @@ const SaasTech = () => {
                   title: "Automated Compliance and QA scoring",
                   description: [
                     "Compliance alerts flag risky language in-the moment, preventing costly issues.",
-                    "Automated QA scoring delivers consistent, unbiased audits for every conversation",
+                    "Automated QA scoring delivers consistent, unbiased audits for every conversation.",
                   ],
                 },
                 {
@@ -215,7 +215,7 @@ const SaasTech = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
           <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-center md:text-left mb-3">
-            The Convoze Advantage{" "}
+            The Convoze {" "}
             <span className="sm:inline-block block bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
               Advantage
             </span>
