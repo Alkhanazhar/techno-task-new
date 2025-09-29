@@ -3,6 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
 import HeroSectionCaseStudy from "./HomeCaseStudy";
 
@@ -14,6 +15,9 @@ const CaseStudy = () => {
     hidden: { opacity: 0, y: 20 },
     visible: { opacity: 1, y: 0 },
   };
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   const staggerContainer = {
     hidden: { opacity: 0 },

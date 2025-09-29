@@ -2,12 +2,16 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { ShieldCheck, ShoppingCart, Zap, Handshake } from "lucide-react";
 import HeroSectionBanking from "@/app/banking-finance/Hero-banking";
 
 const BankingFinance = () => {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   // Animation variants
   const fadeIn = {

@@ -3,11 +3,15 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
+import { useState, useEffect } from "react";
 import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
 import HeroSaas from "./HeroSaas";
 
 const SaasTech = () => {
   const router = useRouter();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => setMounted(true), []);
+  if (!mounted) return null;
 
   // Animation variants
   const fadeIn = {
@@ -215,7 +219,7 @@ const SaasTech = () => {
         {/* Right Section */}
         <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
           <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-center md:text-left mb-3">
-            The Convoze {" "}
+            The Convoze{" "}
             <span className="sm:inline-block block bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
               Advantage
             </span>
