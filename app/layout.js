@@ -12,6 +12,9 @@ const sora = localFont({
 export const metadata = {
   title: "Convoze",
   description: "Convoze is a leading provider of Ai SaaS tech solutions.",
+  icons: {
+    icon: "favicon.ico",
+  },
 };
 
 export default function RootLayout({ children }) {
