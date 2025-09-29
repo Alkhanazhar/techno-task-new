@@ -3,8 +3,7 @@
 import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { Headphones,ShoppingCart, Zap,CheckCircle  } from "lucide-react";
-
+import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
 
 const CaseStudy = () => {
   const router = useRouter();
@@ -64,7 +63,6 @@ const CaseStudy = () => {
                   See How It Works
                 </button> */}
               </div>
-
             </div>
 
             {/* Right Side - Image */}
@@ -79,7 +77,6 @@ const CaseStudy = () => {
           </div>
         </div>
       </motion.div>
-
 
       <motion.div
         className="w-full flex flex-col md:flex-row bg-slate-200 shadow-xl py-8 md:py-12 mb-10 gap-8 justify-center items-start"
@@ -105,11 +102,11 @@ const CaseStudy = () => {
             on the Floor
           </h3>
           <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-            Running a contact center is a constant balancing act. Peaks in demand,
-            customers who expect instant answers, and the pressure to hit service
-            targets can stretch even the best teams to their limits. Most centers still
-            manage to audit only 3–4% of conversations. That means 96% of valuable
-            insights go unseen.
+            Running a contact center is a constant balancing act. Peaks in
+            demand, customers who expect instant answers, and the pressure to
+            hit service targets can stretch even the best teams to their limits.
+            Most centers still manage to audit only 3–4% of conversations. That
+            means 96% of valuable insights go unseen.
           </p>
 
           <div className="space-y-2 sm:space-y-3 font-semibold">
@@ -118,7 +115,7 @@ const CaseStudy = () => {
               "Inconsistent quality because few conversations get checked.",
               "High staff turnover with ongoing recruiting and retraining.",
               "Costly compliance slips risking brand damage & fines.",
-              "Missed sentiment cues until it’s too late."
+              "Missed sentiment cues until it’s too late.",
             ].map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2">
                 <div className="w-1.5 h-1.5 bg-[#C068D1] rounded-full mt-1 flex-shrink-0"></div>
@@ -132,7 +129,7 @@ const CaseStudy = () => {
         <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
           <div className="flex mb-2">
             <div className="bg-gray-300 rounded-full p-3 flex items-center justify-center">
-              <CheckCircle  className="w-6 h-6 text-purple-700" />
+              <CheckCircle className="w-6 h-6 text-purple-700" />
             </div>
           </div>
           <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-center md:text-left mb-3">
@@ -143,15 +140,15 @@ const CaseStudy = () => {
           </h3>
 
           <p className="text-gray-800 text-sm sm:text-base md:text-base mb-3 md:text-left">
-            Convoze is an expert QA & customer insight powerhouse that listens to every
-            conversation without missing a moment.
+            Convoze is an expert QA & customer insight powerhouse that listens
+            to every conversation without missing a moment.
           </p>
           <div className="space-y-2 sm:space-y-3 font-semibold">
             {[
               "Live transcription & speech-to-text so conversations are captured instantly.",
               "Emotion & intent detection to spot frustration, urgency, or satisfaction in real time.",
               "Compliance alerts flag risky phrases or missed disclosures on the spot.",
-              "Automated QA scoring gives consistent, fair feedback for every interaction."
+              "Automated QA scoring gives consistent, fair feedback for every interaction.",
             ].map((item, idx) => (
               <div key={idx} className="flex items-start space-x-2">
                 <div className="w-1.5 h-1.5 bg-[#C068D1] rounded-full mt-1 flex-shrink-0"></div>
@@ -160,11 +157,11 @@ const CaseStudy = () => {
             ))}
           </div>
           <p className="text-gray-800 text-sm sm:text-base mt-4 text-center md:text-left">
-            Managers can act on insights while the conversation is still happening.
+            Managers can act on insights while the conversation is still
+            happening.
           </p>
         </div>
       </motion.div>
-
 
       {/* Proven Measurable Impact Section - Dark */}
       <motion.div
@@ -177,7 +174,7 @@ const CaseStudy = () => {
         <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3 xs:mb-4 sm:mb-6">
             Proven Measurable{" "}
-            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
               Impact
             </span>
           </h3>
@@ -325,7 +322,6 @@ const CaseStudy = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
-
           {/* Image Section */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
@@ -352,7 +348,7 @@ const CaseStudy = () => {
                 "Role-based dashboards showing trends, alerts, and performance heatmaps.",
                 "Multilingual capability for diverse customer bases.",
                 "Easy integration with your existing systems with no heavy lifting required.",
-                "100% customizable according to the business need, ensuring QA and insights adapt to your workflows."
+                "100% customizable according to the business need, ensuring QA and insights adapt to your workflows.",
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-[#C068D1] rounded-full mt-1 flex-shrink-0"></div>
@@ -361,10 +357,8 @@ const CaseStudy = () => {
               ))}
             </div>
           </div>
-
         </div>
       </motion.div>
-
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
@@ -378,7 +372,7 @@ const CaseStudy = () => {
         <div className="w-full max-w-sm xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-3xl xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-6">
             Why{" "}
-            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
               Convoze
             </span>{" "}
             Stands Out
@@ -393,13 +387,14 @@ const CaseStudy = () => {
         </div>
 
         <div className="mt-8">
-          <Link href={"/contact"}><motion.button
-            className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] mb-6 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-102 shadow-lg"
-            whileHover={{ scale: 1.05 }}
-            whileTap={{ scale: 0.95 }}
-          >
-            See Convoze in Action
-          </motion.button>
+          <Link href={"/contact"}>
+            <motion.button
+              className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] mb-6 text-white font-semibold py-3 px-8 rounded-full transition-all duration-300 transform hover:scale-102 shadow-lg"
+              whileHover={{ scale: 1.05 }}
+              whileTap={{ scale: 0.95 }}
+            >
+              See Convoze in Action
+            </motion.button>
           </Link>
         </div>
       </motion.div>
@@ -414,7 +409,6 @@ const CaseStudy = () => {
       >
         <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           {/* Header */}
-
 
           {/* AI Detection Badge */}
           {/* <div className="mb-8">
@@ -431,12 +425,9 @@ const CaseStudy = () => {
 
           {/* Content Section */}
 
-
           {/* CTA Button */}
-
         </div>
       </motion.div>
-
     </div>
   );
 };

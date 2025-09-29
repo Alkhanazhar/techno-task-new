@@ -1,10 +1,7 @@
-import CaseStudy from '@/components/Pages/CaseStudy'
-import React from 'react'
+import CaseStudy from "@/components/Pages/CaseStudy";
 
 const page = () => {
-  return (
-      <CaseStudy/>
-  )
-}
+  return <CaseStudy />;
+};
 
-export default page
+export default page;

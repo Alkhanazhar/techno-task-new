@@ -131,11 +131,6 @@
 
 // export default Navbar;
 
-
-
-
-
-
 "use client";
 
 import React, { useState, useEffect } from "react";
@@ -193,7 +188,7 @@ const Navbar = () => {
 
   const links = [
     { name: "BPO & Contact Centers", route: "/bpo-contact-centers" },
-    { name: "Banking & Finance", route: "/banking-finance" },
+    { name: "Banking & Finance", route: "/" },
     { name: "Saas & Tech", route: "/saas-tech" },
     { name: "Human Resources & Recruitment", route: "/" },
     { name: "E-commerce & Retail", route: "/" },
@@ -217,10 +212,11 @@ const Navbar = () => {
   return (
     <div className="py-3 relative">
       <nav
-        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${isScrolled
-          ? "!bg-black/30 !backdrop-blur-md shadow-sm"
-          : "!bg-transparent"
-          }`}
+        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "!bg-black/30 !backdrop-blur-md shadow-sm"
+            : "!bg-transparent"
+        }`}
       >
         <div
           className="flex items-center gap-2 cursor-pointer"
@@ -295,17 +291,20 @@ const Navbar = () => {
                         BPO & Contact Centers
                       </h4>
                       <p className="text-[11px] text-gray-400 mt-1">
-                        Transform conversations into insights, improving efficiency, agent performance, and overall customer experiences.
+                        Transform conversations into insights, improving
+                        efficiency, agent performance, and overall customer
+                        experiences.
                       </p>
                     </li>
                   </Link>
-                  <Link href="/banking-finance">
+                  <Link href="/">
                     <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         Banking & Finance
                       </h4>
                       <p className="text-[11px] text-gray-400 mt-1">
-                        Identify compliance risks quickly, strengthen processes, and ensure secure customer interactions with Convoze.
+                        Identify compliance risks quickly, strengthen processes,
+                        and ensure secure customer interactions with Convoze.
                       </p>
                     </li>
                   </Link>
@@ -314,7 +313,8 @@ const Navbar = () => {
                       Human Resources & Recruitment
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Assess communication and behavior, streamline hiring, and improve recruitment decisions effectively.
+                      Assess communication and behavior, streamline hiring, and
+                      improve recruitment decisions effectively.
                     </p>
                   </li>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
@@ -322,7 +322,8 @@ const Navbar = () => {
                       E-commerce & Retail
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Analyze customer sentiment, address concerns proactively, and increase loyalty effectively.
+                      Analyze customer sentiment, address concerns proactively,
+                      and increase loyalty effectively.
                     </p>
                   </li>
                 </ul>
@@ -333,16 +334,23 @@ const Navbar = () => {
                 <ul className="space-y-1">
                   <Link href="/saas-tech">
                     <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">Saas & Tech</h4>
+                      <h4 className="font-medium text-[14px] text-white">
+                        Saas & Tech
+                      </h4>
                       <p className="text-[11px] text-gray-400 mt-1">
-                        Drive product adoption, reduce churn, and strengthen customer retention with real-time intelligence and seamless onboarding insights.
+                        Drive product adoption, reduce churn, and strengthen
+                        customer retention with real-time intelligence and
+                        seamless onboarding insights.
                       </p>
                     </li>
                   </Link>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">Healthcare</h4>
+                    <h4 className="font-medium text-[14px] text-white">
+                      Healthcare
+                    </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Detect patient emotions instantly and improve satisfaction through real-time sentiment analysis.
+                      Detect patient emotions instantly and improve satisfaction
+                      through real-time sentiment analysis.
                     </p>
                   </li>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
@@ -350,13 +358,17 @@ const Navbar = () => {
                       Enterprise Operations
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Automate audits, provide actionable feedback, and enhance agent training for better service.
+                      Automate audits, provide actionable feedback, and enhance
+                      agent training for better service.
                     </p>
                   </li>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">Real Estate</h4>
+                    <h4 className="font-medium text-[14px] text-white">
+                      Real Estate
+                    </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Understand client needs, build stronger relationships, and close deals efficiently.
+                      Understand client needs, build stronger relationships, and
+                      close deals efficiently.
                     </p>
                   </li>
                   <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
@@ -364,13 +376,13 @@ const Navbar = () => {
                       Telecommunications
                     </h4>
                     <p className="text-[11px] text-gray-400 mt-1">
-                      Detect issues in real time, resolve faster, and enhance customer satisfaction consistently.
+                      Detect issues in real time, resolve faster, and enhance
+                      customer satisfaction consistently.
                     </p>
                   </li>
                 </ul>
               </div>
             </div>
-
           </div>
         </div>
       )}
@@ -391,9 +403,7 @@ const Navbar = () => {
                   {item.isMegaMenu ? (
                     <>
                       <button
-                        onClick={() =>
-                          setMobileMegaOpen(!mobileMegaOpen)
-                        }
+                        onClick={() => setMobileMegaOpen(!mobileMegaOpen)}
                         className="text-white text-lg font-medium flex justify-between w-full hover:text-purple-400 transition-all duration-200"
                       >
                         {item.name}
