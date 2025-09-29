@@ -9,187 +9,178 @@ const fadeIn = {
 };
 
 // Avatar images data - Better distributed for left and right alignment
-const avatars = [
-  // Left side avatars
-  {
-    id: 1,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Felix",
-    initialX: 8,
-    initialY: 15,
-    side: "left",
-  },
-  {
-    id: 2,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Luna",
-    initialX: 12,
-    initialY: 45,
-    side: "left",
-  },
-  {
-    id: 3,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Charlie",
-    initialX: 18,
-    initialY: 75,
-    side: "left",
-  },
-  {
-    id: 4,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Oreo",
-    initialX: 5,
-    initialY: 55,
-    side: "left",
-  },
-  // Right side avatars
-  {
-    id: 5,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Aneka",
-    initialX: 88,
-    initialY: 12,
-    side: "right",
-  },
-  {
-    id: 6,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Max",
-    initialX: 92,
-    initialY: 35,
-    side: "right",
-  },
-  {
-    id: 7,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Buddy",
-    initialX: 90,
-    initialY: 70,
-    side: "right",
-  },
-  {
-    id: 8,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Milo",
-    initialX: 85,
-    initialY: 88,
-    side: "right",
-  },
-];
+// const avatars = [
+//   // Left side avatars
+//   {
+//     id: 1,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Felix",
+//     initialX: 8,
+//     initialY: 15,
+//     side: "left",
+//   },
+//   {
+//     id: 2,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Luna",
+//     initialX: 12,
+//     initialY: 45,
+//     side: "left",
+//   },
+//   {
+//     id: 3,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Charlie",
+//     initialX: 18,
+//     initialY: 75,
+//     side: "left",
+//   },
+//   {
+//     id: 4,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Oreo",
+//     initialX: 5,
+//     initialY: 55,
+//     side: "left",
+//   },
+//   // Right side avatars
+//   {
+//     id: 5,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Aneka",
+//     initialX: 88,
+//     initialY: 12,
+//     side: "right",
+//   },
+//   {
+//     id: 6,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Max",
+//     initialX: 92,
+//     initialY: 35,
+//     side: "right",
+//   },
+//   {
+//     id: 7,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Buddy",
+//     initialX: 90,
+//     initialY: 70,
+//     side: "right",
+//   },
+//   {
+//     id: 8,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Milo",
+//     initialX: 85,
+//     initialY: 88,
+//     side: "right",
+//   },
+// ];
 
-const FloatingAvatar = ({ avatar, mouseX, mouseY }) => {
-  const [isMounted, setIsMounted] = useState(false);
+// const FloatingAvatar = ({ avatar, mouseX, mouseY }) => {
+//   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+//   useEffect(() => {
+//     setIsMounted(true);
+//   }, []);
 
-  const avatarX = useSpring(0, { stiffness: 50, damping: 20 });
-  const avatarY = useSpring(0, { stiffness: 50, damping: 20 });
+//   const avatarX = useSpring(0, { stiffness: 50, damping: 20 });
+//   const avatarY = useSpring(0, { stiffness: 50, damping: 20 });
 
-  useEffect(() => {
-    if (!isMounted) return;
+//   useEffect(() => {
+//     if (!isMounted) return;
 
-    const updatePosition = () => {
-      const x = mouseX.get();
-      const y = mouseY.get();
+//     const updatePosition = () => {
+//       const x = mouseX.get();
+//       const y = mouseY.get();
 
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
+//       const centerX = window.innerWidth / 2;
+//       const centerY = window.innerHeight / 2;
 
-      const offsetX =
-        ((avatar.initialX / 100) * window.innerWidth - centerX) / centerX;
-      const offsetY =
-        ((avatar.initialY / 100) * window.innerHeight - centerY) / centerY;
+//       const offsetX =
+//         ((avatar.initialX / 100) * window.innerWidth - centerX) / centerX;
+//       const offsetY =
+//         ((avatar.initialY / 100) * window.innerHeight - centerY) / centerY;
 
-      // Enhanced parallax effect with side consideration
-      const multiplier = avatar.side === "left" ? 0.06 : 0.06;
-      const moveX = (x - centerX) * offsetX * multiplier;
-      const moveY = (y - centerY) * offsetY * multiplier;
+//       // Enhanced parallax effect with side consideration
+//       const multiplier = avatar.side === "left" ? 0.06 : 0.06;
+//       const moveX = (x - centerX) * offsetX * multiplier;
+//       const moveY = (y - centerY) * offsetY * multiplier;
 
-      avatarX.set(moveX);
-      avatarY.set(moveY);
-    };
+//       avatarX.set(moveX);
+//       avatarY.set(moveY);
+//     };
 
-    const unsubscribeX = mouseX.on("change", updatePosition);
-    const unsubscribeY = mouseY.on("change", updatePosition);
+//     const unsubscribeX = mouseX.on("change", updatePosition);
+//     const unsubscribeY = mouseY.on("change", updatePosition);
 
-    return () => {
-      unsubscribeX();
-      unsubscribeY();
-    };
-  }, [mouseX, mouseY, avatar, avatarX, avatarY, isMounted]);
+//     return () => {
+//       unsubscribeX();
+//       unsubscribeY();
+//     };
+//   }, [mouseX, mouseY, avatar, avatarX, avatarY, isMounted]);
 
-  return (
-    <motion.div
-      className="absolute pointer-events-none z-10 opacity-70"
-      style={{
-        left: `${avatar.initialX}%`,
-        top: `${avatar.initialY}%`,
-        x: avatarX,
-        y: avatarY,
-      }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 0.7, scale: 1 }}
-      transition={{
-        delay: avatar.id * 0.1,
-        duration: 0.5,
-        ease: "easeOut",
-      }}
-    >
-      <motion.img
-        src={avatar.src}
-        alt={`Avatar ${avatar.id}`}
-        className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 rounded-full border-2 border-purple-400/30 shadow-lg bg-purple-900/20"
-        whileHover={{ scale: 1.2, rotate: 10 }}
-        transition={{ duration: 0.3 }}
-      />
-      {/* Colored dots effect */}
-      <motion.div
-        className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-purple-400"
-        animate={{
-          scale: [1, 1.5, 1],
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          delay: avatar.id * 0.2,
-        }}
-      />
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       className="absolute pointer-events-none z-10 opacity-70"
+//       style={{
+//         left: `${avatar.initialX}%`,
+//         top: `${avatar.initialY}%`,
+//         x: avatarX,
+//         y: avatarY,
+//       }}
+//       initial={{ opacity: 0, scale: 0 }}
+//       animate={{ opacity: 0.7, scale: 1 }}
+//       transition={{
+//         delay: avatar.id * 0.1,
+//         duration: 0.5,
+//         ease: "easeOut",
+//       }}
+//     >
+//       <motion.img
+//         src={avatar.src}
+//         alt={`Avatar ${avatar.id}`}
+//         className="w-10 h-10 xs:w-12 xs:h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 lg:w-14 lg:h-14 rounded-full border-2 border-purple-400/30 shadow-lg bg-purple-900/20"
+//         whileHover={{ scale: 1.2, rotate: 10 }}
+//         transition={{ duration: 0.3 }}
+//       />
+//       {/* Colored dots effect */}
+//       <motion.div
+//         className="absolute -top-1 -right-1 w-2.5 h-2.5 sm:w-3 sm:h-3 rounded-full bg-purple-400"
+//         animate={{
+//           scale: [1, 1.5, 1],
+//           opacity: [0.5, 1, 0.5],
+//         }}
+//         transition={{
+//           duration: 2,
+//           repeat: Infinity,
+//           delay: avatar.id * 0.2,
+//         }}
+//       />
+//     </motion.div>
+//   );
+// };
 
 export default function HeroSectionCaseStudy() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const [isMounted, setIsMounted] = useState(false);
+  //   const mouseX = useMotionValue(0);
+  //   const mouseY = useMotionValue(0);
+  //   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
+  //   useEffect(() => {
+  //     setIsMounted(true);
 
-    const handleMouseMove = (e) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
-    };
+  //     const handleMouseMove = (e) => {
+  //       mouseX.set(e.clientX);
+  //       mouseY.set(e.clientY);
+  //     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //     return () => window.removeEventListener("mousemove", handleMouseMove);
+  //   }, [mouseX, mouseY]);
 
   return (
     <motion.div
       className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl relative overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+      //   initial="hidden"
+      //   whileInView="visible"
+      //   viewport={{ once: true }}
       variants={fadeIn}
       transition={{ duration: 0.6 }}
     >
       {/* Floating Avatars */}
-      {isMounted &&
-        avatars.map((avatar) => (
-          <FloatingAvatar
-            key={avatar.id}
-            avatar={avatar}
-            mouseX={mouseX}
-            mouseY={mouseY}
-          />
-        ))}
 
       {/* Animated particles/dots background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -242,7 +233,7 @@ export default function HeroSectionCaseStudy() {
           <motion.div
             className="w-full lg:w-1/2 flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >

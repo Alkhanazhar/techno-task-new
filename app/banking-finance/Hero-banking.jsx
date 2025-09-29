@@ -8,170 +8,170 @@ const fadeIn = {
   visible: { opacity: 1, y: 0 },
 };
 
-// Avatar images data
-const avatars = [
-  {
-    id: 1,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Felix",
-    initialX: 10,
-    initialY: 15,
-  },
-  {
-    id: 2,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Aneka",
-    initialX: 85,
-    initialY: 10,
-  },
-  {
-    id: 3,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Luna",
-    initialX: 15,
-    initialY: 40,
-  },
-  {
-    id: 4,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Max",
-    initialX: 90,
-    initialY: 30,
-  },
-  {
-    id: 5,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Charlie",
-    initialX: 20,
-    initialY: 70,
-  },
-  {
-    id: 6,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Buddy",
-    initialX: 88,
-    initialY: 65,
-  },
-  {
-    id: 7,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Oreo",
-    initialX: 50,
-    initialY: 8,
-  },
-  {
-    id: 8,
-    src: "https://api.dicebear.com/7.x/bottts/svg?seed=Milo",
-    initialX: 92,
-    initialY: 80,
-  },
-];
+// // Avatar images data
+// const avatars = [
+//   {
+//     id: 1,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Felix",
+//     initialX: 10,
+//     initialY: 15,
+//   },
+//   {
+//     id: 2,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Aneka",
+//     initialX: 85,
+//     initialY: 10,
+//   },
+//   {
+//     id: 3,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Luna",
+//     initialX: 15,
+//     initialY: 40,
+//   },
+//   {
+//     id: 4,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Max",
+//     initialX: 90,
+//     initialY: 30,
+//   },
+//   {
+//     id: 5,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Charlie",
+//     initialX: 20,
+//     initialY: 70,
+//   },
+//   {
+//     id: 6,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Buddy",
+//     initialX: 88,
+//     initialY: 65,
+//   },
+//   {
+//     id: 7,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Oreo",
+//     initialX: 50,
+//     initialY: 8,
+//   },
+//   {
+//     id: 8,
+//     src: "https://api.dicebear.com/7.x/bottts/svg?seed=Milo",
+//     initialX: 92,
+//     initialY: 80,
+//   },
+// ];
 
-const FloatingAvatar = ({ avatar, mouseX, mouseY }) => {
-  const [isMounted, setIsMounted] = useState(false);
+// const FloatingAvatar = ({ avatar, mouseX, mouseY }) => {
+//   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
-  }, []);
+//   useEffect(() => {
+//     setIsMounted(true);
+//   }, []);
 
-  const avatarX = useSpring(0, { stiffness: 50, damping: 20 });
-  const avatarY = useSpring(0, { stiffness: 50, damping: 20 });
+//   const avatarX = useSpring(0, { stiffness: 50, damping: 20 });
+//   const avatarY = useSpring(0, { stiffness: 50, damping: 20 });
 
-  useEffect(() => {
-    if (!isMounted) return;
+//   useEffect(() => {
+//     if (!isMounted) return;
 
-    const updatePosition = () => {
-      const x = mouseX.get();
-      const y = mouseY.get();
+//     const updatePosition = () => {
+//       const x = mouseX.get();
+//       const y = mouseY.get();
 
-      // Calculate parallax effect based on avatar's initial position
-      const centerX = window.innerWidth / 2;
-      const centerY = window.innerHeight / 2;
+//       // Calculate parallax effect based on avatar's initial position
+//       const centerX = window.innerWidth / 2;
+//       const centerY = window.innerHeight / 2;
 
-      const offsetX =
-        ((avatar.initialX / 100) * window.innerWidth - centerX) / centerX;
-      const offsetY =
-        ((avatar.initialY / 100) * window.innerHeight - centerY) / centerY;
+//       const offsetX =
+//         ((avatar.initialX / 100) * window.innerWidth - centerX) / centerX;
+//       const offsetY =
+//         ((avatar.initialY / 100) * window.innerHeight - centerY) / centerY;
 
-      // Move avatars in opposite direction of mouse (parallax effect)
-      const moveX = (x - centerX) * offsetX * 0.05;
-      const moveY = (y - centerY) * offsetY * 0.05;
+//       // Move avatars in opposite direction of mouse (parallax effect)
+//       const moveX = (x - centerX) * offsetX * 0.05;
+//       const moveY = (y - centerY) * offsetY * 0.05;
 
-      avatarX.set(moveX);
-      avatarY.set(moveY);
-    };
+//       avatarX.set(moveX);
+//       avatarY.set(moveY);
+//     };
 
-    const unsubscribeX = mouseX.on("change", updatePosition);
-    const unsubscribeY = mouseY.on("change", updatePosition);
+//     const unsubscribeX = mouseX.on("change", updatePosition);
+//     const unsubscribeY = mouseY.on("change", updatePosition);
 
-    return () => {
-      unsubscribeX();
-      unsubscribeY();
-    };
-  }, [mouseX, mouseY, avatar, avatarX, avatarY, isMounted]);
+//     return () => {
+//       unsubscribeX();
+//       unsubscribeY();
+//     };
+//   }, [mouseX, mouseY, avatar, avatarX, avatarY, isMounted]);
 
-  return (
-    <motion.div
-      className="absolute pointer-events-none z-10 opacity-60"
-      style={{
-        left: `${avatar.initialX}%`,
-        top: `${avatar.initialY}%`,
-        x: avatarX,
-        y: avatarY,
-      }}
-      initial={{ opacity: 0, scale: 0 }}
-      animate={{ opacity: 1, scale: 1 }}
-      transition={{
-        delay: avatar.id * 0.1,
-        duration: 0.5,
-        ease: "easeOut",
-      }}
-    >
-      <motion.img
-        src={avatar.src}
-        alt={`Avatar ${avatar.id}`}
-        className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 rounded-full border-2 border-purple-400/30 shadow-lg"
-        whileHover={{ scale: 1.2, rotate: 10 }}
-        transition={{ duration: 0.3 }}
-      />
-      {/* Colored dots effect */}
-      <motion.div
-        className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-purple-400"
-        animate={{
-          scale: [1, 1.5, 1],
-          opacity: [0.5, 1, 0.5],
-        }}
-        transition={{
-          duration: 2,
-          repeat: Infinity,
-          delay: avatar.id * 0.2,
-        }}
-      />
-    </motion.div>
-  );
-};
+//   return (
+//     <motion.div
+//       className="absolute pointer-events-none z-10 opacity-60"
+//       style={{
+//         left: `${avatar.initialX}%`,
+//         top: `${avatar.initialY}%`,
+//         x: avatarX,
+//         y: avatarY,
+//       }}
+//       initial={{ opacity: 0, scale: 0 }}
+//       animate={{ opacity: 1, scale: 1 }}
+//       transition={{
+//         delay: avatar.id * 0.1,
+//         duration: 0.5,
+//         ease: "easeOut",
+//       }}
+//     >
+//       <motion.img
+//         src={avatar.src}
+//         alt={`Avatar ${avatar.id}`}
+//         className="w-12 h-12 sm:w-14 sm:h-14 md:w-12 md:h-12 rounded-full border-2 border-purple-400/30 shadow-lg"
+//         whileHover={{ scale: 1.2, rotate: 10 }}
+//         transition={{ duration: 0.3 }}
+//       />
+//       {/* Colored dots effect */}
+//       <motion.div
+//         className="absolute -top-1 -right-1 w-3 h-3 rounded-full bg-purple-400"
+//         animate={{
+//           scale: [1, 1.5, 1],
+//           opacity: [0.5, 1, 0.5],
+//         }}
+//         transition={{
+//           duration: 2,
+//           repeat: Infinity,
+//           delay: avatar.id * 0.2,
+//         }}
+//       />
+//     </motion.div>
+//   );
+// };
 
 export default function HeroSectionBanking() {
-  const mouseX = useMotionValue(0);
-  const mouseY = useMotionValue(0);
-  const [isMounted, setIsMounted] = useState(false);
+  //   const mouseX = useMotionValue(0);
+  //   const mouseY = useMotionValue(0);
+  //   const [isMounted, setIsMounted] = useState(false);
 
-  useEffect(() => {
-    setIsMounted(true);
+  //   useEffect(() => {
+  //     setIsMounted(true);
 
-    const handleMouseMove = (e) => {
-      mouseX.set(e.clientX);
-      mouseY.set(e.clientY);
-    };
+  //     const handleMouseMove = (e) => {
+  //       mouseX.set(e.clientX);
+  //       mouseY.set(e.clientY);
+  //     };
 
-    window.addEventListener("mousemove", handleMouseMove);
-    return () => window.removeEventListener("mousemove", handleMouseMove);
-  }, [mouseX, mouseY]);
+  //     window.addEventListener("mousemove", handleMouseMove);
+  //     return () => window.removeEventListener("mousemove", handleMouseMove);
+  //   }, [mouseX, mouseY]);
 
   return (
     <motion.div
       className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl relative overflow-hidden"
-      initial="hidden"
-      whileInView="visible"
-      viewport={{ once: true }}
+      //   initial="hidden"
+      //   whileInView="visible"
+      //   viewport={{ once: true }}
       variants={fadeIn}
       transition={{ duration: 0.6 }}
     >
       {/* Floating Avatars */}
-      {isMounted &&
+      {/* {isMounted &&
         avatars.map((avatar) => (
           <FloatingAvatar
             key={avatar.id}
@@ -179,7 +179,7 @@ export default function HeroSectionBanking() {
             mouseX={mouseX}
             mouseY={mouseY}
           />
-        ))}
+        ))} */}
 
       {/* Animated particles/dots background */}
       <div className="absolute inset-0 overflow-hidden pointer-events-none">
@@ -230,7 +230,7 @@ export default function HeroSectionBanking() {
           <motion.div
             className="w-full lg:w-1/2 flex justify-center lg:justify-end"
             initial={{ opacity: 0, x: 50 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            animate={{ opacity: 1, x: 0 }}
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
