@@ -1,8 +1,8 @@
-"use client";
 import React from "react";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Script from "next/script";
+import Image from "next/image";
 
 const ContactUs = ({ isCards = true }) => {
   return (
@@ -16,13 +16,15 @@ const ContactUs = ({ isCards = true }) => {
             Need a custom Solution?
           </span>
         </h1>
-        {/* Top Section: Centered Form */}
-        <div className="flex justify-center items-center rounded-3xl relative px-2">
+
+        {/* Top Section: Two Columns (Form + Image) */}
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+          {/* Left: Form */}
           <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.5, delay: 0.1 }}
-            className="backdrop-blur-sm rounded-lg relative w-full max-w-4xl"
+            initial={{ opacity: 0, x: -50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.1 }}
+            className="backdrop-blur-sm rounded-lg relative w-full"
           >
             <div className="flex justify-center items-center px-1 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
               <div
@@ -34,6 +36,22 @@ const ContactUs = ({ isCards = true }) => {
               src="https://assets.kylas.io/lead-capture-forms/lcf.min.js"
               strategy="afterInteractive"
               form-id="36a6e74c-b840-4b37-b993-6a89cdcb75fc"
+            />
+          </motion.div>
+
+          {/* Right: Contact Image */}
+          <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="flex justify-center"
+          >
+            <Image
+              src="/contact-us.png" // 👉 replace with your image path
+              alt="Contact Us"
+              width={500}
+              height={500}
+              className="rounded-2xl shadow-2xl object-cover"
             />
           </motion.div>
         </div>
@@ -60,19 +78,6 @@ const ContactUs = ({ isCards = true }) => {
                 sales@technotaskglobal.com
               </p>
             </div>
-
-            {/* Working Hours */}
-            {/* <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
-              <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
-                <Clock className="text-white w-6 h-6" />
-              </div>
-              <h3 className="text-lg font-semibold mb-2">Working Hours</h3>
-              <p className="text-xs text-neutral-200">
-                Mon - Fri : 08AM - 10PM
-                <br />
-                Sat - Sun : Closed
-              </p>
-            </div> */}
 
             {/* Location */}
             <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">

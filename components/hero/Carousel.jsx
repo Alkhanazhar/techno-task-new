@@ -236,15 +236,15 @@ const Slide = ({ slide, index, current }) => {
   return (
     <li
       ref={slideRef}
-      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[60vmin] h-[60vmin] mt-12 mx-[4vmin] z-10 cursor-pointer"
+      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[62vmin] h-[62vmin] mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
       onClick={() => router.push(slide.link)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
         transform:
           current !== index
-            ? "scale(0.98) rotateX(8deg)"
-            : "scale(1) rotateX(0deg)",
+            ? "scale(0.96) rotateX(8deg)"
+            : "scale(1.1) rotateX(0deg)",
         transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
         transformOrigin: "bottom",
       }}
@@ -261,7 +261,7 @@ const Slide = ({ slide, index, current }) => {
         <img
           src={slide.src}
           alt={slide.title}
-          className="absolute inset-0 w-[140%] h-[140%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          className="absolute inset-0 w-[150%] h-[150%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
         />
         {current === index && (
@@ -318,7 +318,7 @@ export const Carousel = ({ slides }) => {
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto zoom-out"
+      className="relative w-[74vmin] h-[74vmin] mx-auto zoom-out"
       aria-labelledby={`carousel-heading-${id}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
@@ -333,7 +333,7 @@ export const Carousel = ({ slides }) => {
           <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>
-      <div className="absolute flex justify-center w-full mt-4 md:top-[calc(94%+1rem)] top-[calc(100%+1rem)] zoom-out ">
+      <div className="absolute flex justify-center w-full mt-4 md:top-[calc(93%+1rem)] top-[calc(100%+1rem)] zoom-out ">
         <CarouselControl type="previous" handleClick={handlePreviousClick} />
         <CarouselControl type="next" handleClick={handleNextClick} />
       </div>

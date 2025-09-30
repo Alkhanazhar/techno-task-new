@@ -113,7 +113,7 @@ const WhyConvoze = () => {
 
       <div className="relative z-10 max-w-7xl mx-auto px-4 ">
         {/* Header Section */}
-        <div
+        {/* <div
           className={`text-center z-5 md:mb-10 mb-6 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
@@ -126,7 +126,7 @@ const WhyConvoze = () => {
             In traditional contact center setups, 95% of Conversations Are
             Wasted. Less than 5% of customer conversations are reviewed
           </p>
-        </div>
+        </div> */}
 
         {/* Main Content - Two Column Layout */}
         <div className="flex flex-col lg:flex-row gap-8 relaive">

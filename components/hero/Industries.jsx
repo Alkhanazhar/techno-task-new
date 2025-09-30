@@ -137,7 +137,7 @@ export const Industries = () => {
         </p>
       </div>
 
-      <div className="w-screen h-full  !-mb-20 pb-16 md:mb-0 sm:pb-8 overflow-hidden">
+      <div className="w-screen h-full  !-mb-20 pb-16 md:mb-0 sm:pb-12 overflow-hidden">
         <Carousel slides={slideData} />
       </div>
     </div>
