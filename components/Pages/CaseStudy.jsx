@@ -345,7 +345,7 @@ const CaseStudy = () => {
                 </span>{" "}
                 World
               </h3>
-              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
                 Whether you're managing telecom support, handling travel
                 bookings, or assisting utility customers, Convoze fits
                 seamlessly into your workflow. It is built for high-volume
@@ -363,7 +363,7 @@ const CaseStudy = () => {
                 </span>{" "}
                 Stands Out
               </h3>
-              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
                 Most QA tools still work in isolation or rely on a handful of
                 conversation samples. Being different, Convoze audits every
                 single solitary conversation in one unified platform. That gives

@@ -495,7 +495,7 @@ const EcommerceD2c = () => {
                 </span>{" "}
                 the Difference
               </h3>
-              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
                 With Convoze, ecommerce and D2C brands don’t just manage support — they build loyalty,
                 grow revenue, and make smarter product decisions. Every interaction becomes a chance
                 to engage customers better, reduce churn, and turn conversations into
@@ -515,7 +515,7 @@ const EcommerceD2c = () => {
                 </span>{" "}
                 Stands Out
               </h3>
-              <p className="text-white text-sm xs:text-base sm:text-lg md:text-md">
+              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
                 Most QA tools still work in isolation or rely on a handful of
                 conversation samples. Being different, Convoze audits every
                 single solitary conversation in one unified platform. That gives
