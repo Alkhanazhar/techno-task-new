@@ -33,7 +33,14 @@ const trustData = [
 
 export default function WhyTrustUs() {
   return (
-    <section className="bg-gray-50 md:-mt-0  md:py-20  text-black  py-6">
+    <section className="bg-slate-200 md:-mt-0  md:py-24  text-black  py-6 relative">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/bgPattern.png"
+          alt="Background Pattern"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
       <div className="max-w-6xl mx-auto text-center mb-6 md:mb-12">
         <h2 className="text-2xl md:text-4xl font-light">
           Engineered for{" "}

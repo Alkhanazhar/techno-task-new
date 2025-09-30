@@ -6,7 +6,10 @@ import Script from "next/script";
 
 const ContactUs = ({ isCards = true }) => {
   return (
-    <div className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8" id="contact-us">
+    <div
+      className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8"
+      id="contact-us"
+    >
       <div className="text-white max-w-7xl mx-auto px-4 md:px-16 pt-12 space-y-12">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
           <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
@@ -44,10 +47,7 @@ const ContactUs = ({ isCards = true }) => {
                 <Phone className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Contact Us</h3>
-              <p className="text-xs text-neutral-200">
-                ( +971 ) 507861178
-
-              </p>
+              <p className="text-xs text-neutral-200">( +971 ) 507861178</p>
             </div>
 
             {/* Email Us */}
@@ -58,7 +58,6 @@ const ContactUs = ({ isCards = true }) => {
               <h3 className="text-lg font-semibold mb-2">Email Us</h3>
               <p className="text-xs text-neutral-200">
                 sales@technotaskglobal.com
-
               </p>
             </div>
 

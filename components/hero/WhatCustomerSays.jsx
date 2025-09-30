@@ -63,7 +63,7 @@ export default function WhatCustomerSays() {
     <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] text-white md:px-8 px-3 py-12 md:py-16">
       <div className="max-w-7xl mx-auto space-y-10">
         {/* Heading */}
-        
+
         {/* <h2 className="text-center text-2xl md:text-4xl font-light leading-tight">
           What Our{" "}
           <span className="font-semibold bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text">
@@ -77,7 +77,6 @@ export default function WhatCustomerSays() {
             Customers are Saying
           </span>
         </h2>
-
 
         <div className="relative bg-gradient-to-br from-[#0B0B1F] to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
           {/* Left Content */}

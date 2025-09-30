@@ -162,8 +162,6 @@ export default function HeroSectionBanking() {
   //   }, [mouseX, mouseY]);
 
   return (
-
-    
     <motion.div
       className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl relative overflow-hidden"
       //   initial="hidden"
@@ -213,7 +211,7 @@ export default function HeroSectionBanking() {
             <h1 className="text-3xl xs:text-4xl sm:text-4.5xl md:text-5xl lg:text-5xl font-bold text-white mb-2 xs:mb-3 sm:mb-5">
               Convoze for
             </h1>
-            <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
+            <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-6xl whitespace-nowrap font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
               Banking & Finance
             </h2>
             <p className="text-gray-200 font-extralight text-sm xs:text-base sm:text-lg">
