@@ -5,6 +5,7 @@ import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
 import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
+import HeroSectionCaseStudy from "@/components/Pages/HomeCaseStudy";
 
 const EcommerceD2c = () => {
   const router = useRouter();
@@ -31,6 +32,87 @@ const EcommerceD2c = () => {
   return (
     <div className="min-h-screen ">
       {/* Header Section - Dark */}
+      {/* <HeroSectionCaseStudy /> */}
+      <motion.div
+        className="w-full min-h-screen bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl relative overflow-hidden"
+        //   initial="hidden"
+        //   whileInView="visible"
+        //   viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.6 }}
+      >
+        {/* Floating Avatars */}
+
+        {/* Animated particles/dots background */}
+        <div className="absolute inset-0 overflow-hidden pointer-events-none">
+          {[...Array(25)].map((_, i) => (
+            <motion.div
+              key={i}
+              className="absolute w-1 h-1 bg-purple-100/90 rounded-full"
+              style={{
+                left: `${Math.random() * 100}%`,
+                top: `${Math.random() * 100}%`,
+              }}
+              animate={{
+                y: [0, -30, 0],
+                opacity: [0.2, 0.5, 0.2],
+              }}
+              transition={{
+                duration: 3 + Math.random() * 2,
+                repeat: Infinity,
+                delay: Math.random() * 2,
+              }}
+            />
+          ))}
+        </div>
+
+        <div className="w-full max-w-sm h-full xs:max-w-md sm:max-w-lg md:max-w-2xl lg:max-w-4xl xl:max-w-6xl 2xl:max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative z-20">
+          <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-10 min-h-screen py-12 lg:py-0">
+            {/* Left Side - Text Content */}
+            <div className="w-full lg:w-1/2 text-center lg:text-left space-y-2 sm:space-y-2">
+              <div className="space-y-2 sm:space-y-3 md:space-y-2">
+                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
+                  Convoze for
+                </h1>
+                <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
+                  BPO & Contact Centers
+                </h2>
+              </div>
+              <p className="text-gray-200 font-light text-sm xs:text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
+                Turning Every Conversation into Actionable Insight
+              </p>
+              <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center lg:justify-start items-center">
+                <Link href="/contact" className="w-full sm:w-auto">
+                  <button className="w-full sm:w-auto bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-sm sm:text-base cursor-pointer text-white border border-purple-500 sm:border-none px-6 md:px-8 py-2.5 md:py-3 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300">
+                    Book a Demo
+                  </button>
+                </Link>
+              </div>
+            </div>
+
+            {/* Right Side - Image */}
+            <motion.div
+              className="w-full lg:w-1/2 flex justify-center lg:justify-end"
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              viewport={{ once: true, amount: 0.3 }}
+              transition={{ duration: 0.6, ease: "easeOut" }}
+            >
+              <motion.img
+                src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
+                className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px] h-auto rounded-xl shadow-2xl object-cover"
+                loading="lazy"
+                whileHover={{
+                  scale: 1.05,
+                  rotate: 2,
+                  transition: { duration: 0.3, ease: "easeInOut" },
+                }}
+              />
+            </motion.div>
+          </div>
+        </div>
+      </motion.div>
 
       <motion.div
         className="w-full flex flex-col md:flex-row bg-slate-200 shadow-xl py-8 md:py-12 mb-10 gap-5 justify-center items-start"
