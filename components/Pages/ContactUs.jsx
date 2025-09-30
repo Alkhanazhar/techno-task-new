@@ -1,13 +1,13 @@
+"use client";
 import React from "react";
 import { Phone, Mail, Clock, MapPin } from "lucide-react";
 import { motion } from "framer-motion";
 import Script from "next/script";
-import Image from "next/image";
 
 const ContactUs = ({ isCards = true }) => {
   return (
     <div
-      className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8"
+      className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8 py-4"
       id="contact-us"
     >
       <div className="text-white max-w-7xl mx-auto px-4 md:px-16 pt-12 space-y-12">
@@ -46,11 +46,11 @@ const ContactUs = ({ isCards = true }) => {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="flex justify-center"
           >
-            <Image
-              src="/contact-us.png" // 👉 replace with your image path
+            <img
+              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // 👉 replace with your image path
               alt="Contact Us"
-              width={500}
-              height={500}
+              width={800}
+              height={800}
               className="rounded-2xl shadow-2xl object-cover"
             />
           </motion.div>

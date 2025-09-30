@@ -18,6 +18,7 @@ import {
   Link,
   Unlink,
 } from "lucide-react";
+import AnimatedStatsCards from "./AnimatedSeries";
 
 const WhyConvoze = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,68 +102,63 @@ const WhyConvoze = () => {
   ];
 
   return (
-    <div className=" md:py-24 py-12  relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
+    <div className="   relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
           alt="Background Pattern"
-          className="w-full h-full object-cover opacity-20 !z-0"
+          className="w-full h-full object-cover rotate-180  opacity-20 !z-0"
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 ">
+      <div className="relative z-10 max-w-[90rem] mx-auto px-4 md:py-24 py-12 ">
         {/* Header Section */}
-        {/* <div
-          className={`text-center z-5 md:mb-10 mb-6 transition-all duration-1000 ${
-            isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
-          }`}
-        >
-          <h1 className="text-2xl lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-            Why
-            <span className="font-normal text-black"> Convoze?</span>
-          </h1>
-          <p className="text-gray-800 ">
-            In traditional contact center setups, 95% of Conversations Are
-            Wasted. Less than 5% of customer conversations are reviewed
-          </p>
-        </div> */}
 
         {/* Main Content - Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 relaive">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 relaive w-full">
           {/* Left Column - Wasted Stats */}
           <div className="flex-1 relative flex flex-col">
-            <div className="flex-1 space-y-5 p-4 rounded-xl shadow-2xl bg-slate-200 border border-gray-800/10">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 h-full">
+            <div className="flex-1 space-y-5 p-4 py-12 rounded-xl relative shadow-2xl bg-slate-200/10 backdrop-blur border border-gray-800/10">
+              {/* <div className="relative flex flex-col py-10">
                 {wastedStats.map((stat, index) => {
                   const Icon = stat.icon;
+                  const isLeft = index % 2 === 0; // even → left, odd → right
                   return (
                     <div
                       key={index}
-                      className="group p-3 rounded-xl transition-all duration-300 border border-gray-800/20  hover:scale-[1.02] hover:shadow-lg"
+                      className={`flex ${
+                        isLeft ? "justify-start" : "justify-end"
+                      } w-full`}
                     >
-                      <div className="flex items-center gap-4 justify-center">
-                        <div className="w-10 h-10 rounded-lg bg-gradient-to-tl mt-1 from-[#3F2AB2] to-[#B462CE] p-2 flex-shrink-0">
-                          <Icon className="w-full h-full text-white" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold bg-gradient-to-br from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text mb-1">
-                            {stat.percentage} {stat.label}
-                          </h3>
-                          <p className="text-gray-900 text-sm">
-                            {stat.description}
-                          </p>
+                      <div
+                        className="group p-4 rounded-xl transition-all duration-300 border border-gray-800/20 
+                         hover:scale-[1.02] hover:shadow-lg w-80 group "
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl from-[#3F2AB2] to-[#B462CE] p-2 flex-shrink-0">
+                            <Icon className="w-full h-full text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold bg-gradient-to-br text-sm md:text-lg from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text ">
+                              {stat.percentage} {stat.label}
+                            </h3>
+                            <p className="text-gray-700 text-sm leading-relaxed">
+                              {stat.description}
+                            </p>
+                          </div>
                         </div>
                       </div>
                     </div>
                   );
                 })}
-              </div>
+              </div> */}
+              <AnimatedStatsCards />
             </div>
           </div>
 
           {/* Right Column - Problems */}
-          <div className="lg:w-1/2 relaive rounded-xl shadow-2xl  backdrop-blur backdrop:opacity-50 bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2] border-gray-800/10 ">
+          <div className="lg:w-1/2 relaive  ">
             {/* Sales Data Section */}
             {/* <div className="mb-4">
               <h3 className="text-lg font-medium text-white mb-4">Sales Objections</h3>
@@ -176,12 +172,29 @@ const WhyConvoze = () => {
               </div>
             </div> */}
 
-            <div className="p-4 rounded-2xl">
-              <h2 className="text-center text-2xl font-medium text-white mb-4">
+            <div
+              className={`text-center z-5 mb-4 transition-all duration-1000 ${
+                isVisible
+                  ? "opacity-100 translate-y-0"
+                  : "opacity-0 translate-y-10"
+              }`}
+            >
+              <h1 className="text-3xl text-center md:text-start lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+                Why
+                <span className="font-normal text-black"> Convoze?</span>
+              </h1>
+              <p className="text-gray-700 text-center md:text-start ">
+                In traditional contact center setups, 95% of Conversations Are
+                Wasted. Less than 5% of customer conversations are reviewed
+              </p>
+            </div>
+
+            <div className="p-2 rounded-2xl">
+              <h2 className="text-start text-xl font-medium text-gray-700 mb-4">
                 This isn't just inefficient — it's expensive
               </h2>
 
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-3 ">
                 {problems.map((problem, index) => {
                   const Icon = problem.icon;
                   const isHovered = hoveredProblem === index;
@@ -189,7 +202,7 @@ const WhyConvoze = () => {
                   return (
                     <div
                       key={index}
-                      className={`group transition-all   duration-500 cursor-pointer
+                      className={`group transition-all  duration-500 cursor-pointer
                         ${
                           isVisible
                             ? "opacity-100 translate-y-0"
@@ -201,22 +214,21 @@ const WhyConvoze = () => {
                       onMouseLeave={() => setHoveredProblem(null)}
                     >
                       <div
-                        className={`p-3  rounded-xl transition-all  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  duration-300 border border-gray-800/50 
-                        ${isHovered ? "scale-[1.02] shadow-lg" : ""}
+                        className={`py-4  rounded-xl transition-all  duration-300  
+                        ${isHovered ? "scale-[1.02] " : ""}
                       `}
                       >
-                        <div className="flex items-center gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl mt-1 my-auto md:my-0 to-[#B462CE] from-[#3F2AB2] p-2 flex-shrink-0">
-                            <Icon className="w-full h-full text-white" />
-                          </div>
+                        <div className="flex flex-col items-start gap-3">
+                          <Icon className=" text-purple-900 w-10 h-10" />
+                          <div className="h-1  bg-gradient-to-r from-[#B462CE] via-[#3e2ab2a5] to-transparent w-[67%] rounded-3xl"></div>
                           <div>
-                            <h3 className=" font-semibold text-purple-200 mb-1">
+                            <h3 className=" font-semibold text-purple-900 mb-1">
                               {problem.title}
                             </h3>
-                            <p className="text-gray-300 md:text-sm text-xs mb-1">
+                            <p className="text-primary md:text-sm text-xs">
                               {problem.description}
                             </p>
-                            <div className="text-gray-300 text-sm ">
+                            <div className="text-primary text-sm">
                               {problem.impact}
                             </div>
                           </div>

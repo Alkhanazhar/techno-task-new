@@ -26,6 +26,7 @@
 .form-label[for="kl-81-input"],
 .form-label[for="kl-91-input"] {
   color: #ffffff !important;
+  font-weight: 200 !important;
 }
 
 .form-control {
@@ -35,7 +36,8 @@
 }
 
 .is-invalid__control {
-  background: #292929 !important;
+  background: #21082b !important;
+
   border: 1px solid #1f1f1f !important;
   color: #fff !important;
 }
@@ -105,6 +107,8 @@ body {
   border-radius: 9999px !important;
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
+  padding-top: 0.6rem !important;
+  padding-bottom: 0.6rem !important;
   border: none !important;
   color: #fff !important; /* make text readable */
   transition: all 0.3s ease-in-out !important;
