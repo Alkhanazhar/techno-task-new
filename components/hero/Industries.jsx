@@ -113,7 +113,7 @@ export const Industries = () => {
       button: "See use cases",
       description: "Understand customer issues and improve support",
       src: "https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "/",
+      link: "/ecommerce-d2c",
     },
     {
       title: "SaaS & Tech",

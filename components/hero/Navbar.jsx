@@ -191,7 +191,7 @@ const Navbar = () => {
     { name: "Banking & Finance", route: "/banking-finance" },
     { name: "Saas & Tech", route: "/saas-tech" },
     { name: "Human Resources & Recruitment", route: "/" },
-    { name: "E-commerce & Retail", route: "/" },
+    { name: "E-commerce & Retail", route: "/ecommerce-d2c" },
     { name: "Healthcare", route: "/" },
     { name: "Enterprise Operations", route: "/" },
     { name: "Real Estate", route: "/" },
@@ -317,15 +317,18 @@ const Navbar = () => {
                       improve recruitment decisions effectively.
                     </p>
                   </li>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      E-commerce & Retail
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Analyze customer sentiment, address concerns proactively,
-                      and increase loyalty effectively.
-                    </p>
-                  </li>
+
+                  <Link href="/ecommerce-d2c">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">
+                        E-commerce & Retail
+                      </h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Analyze customer sentiment, address concerns
+                        proactively, and increase loyalty effectively.
+                      </p>
+                    </li>
+                  </Link>
                 </ul>
               </div>
 
