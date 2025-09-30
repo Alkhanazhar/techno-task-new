@@ -7,7 +7,7 @@ import Script from "next/script";
 const ContactUs = ({ isCards = true }) => {
   return (
     <div
-      className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8 py-4"
+      className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8"
       id="contact-us"
     >
       <div className="text-white max-w-7xl mx-auto px-4 md:px-16 pt-12 space-y-12">
@@ -16,15 +16,13 @@ const ContactUs = ({ isCards = true }) => {
             Need a custom Solution?
           </span>
         </h1>
-
-        {/* Top Section: Two Columns (Form + Image) */}
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
-          {/* Left: Form */}
+        {/* Top Section: Centered Form */}
+        <div className="flex justify-center items-center rounded-3xl relative px-2">
           <motion.div
-            initial={{ opacity: 0, x: -50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.1 }}
-            className="backdrop-blur-sm rounded-lg relative w-full"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.1 }}
+            className="backdrop-blur-sm rounded-lg relative w-full max-w-4xl"
           >
             <div className="flex justify-center items-center px-1 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
               <div
@@ -36,22 +34,6 @@ const ContactUs = ({ isCards = true }) => {
               src="https://assets.kylas.io/lead-capture-forms/lcf.min.js"
               strategy="afterInteractive"
               form-id="36a6e74c-b840-4b37-b993-6a89cdcb75fc"
-            />
-          </motion.div>
-
-          {/* Right: Contact Image */}
-          <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="flex justify-center"
-          >
-            <img
-              src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" // 👉 replace with your image path
-              alt="Contact Us"
-              width={800}
-              height={800}
-              className="rounded-2xl shadow-2xl object-cover"
             />
           </motion.div>
         </div>
@@ -78,6 +60,19 @@ const ContactUs = ({ isCards = true }) => {
                 sales@technotaskglobal.com
               </p>
             </div>
+
+            {/* Working Hours */}
+            {/* <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
+              <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
+                <Clock className="text-white w-6 h-6" />
+              </div>
+              <h3 className="text-lg font-semibold mb-2">Working Hours</h3>
+              <p className="text-xs text-neutral-200">
+                Mon - Fri : 08AM - 10PM
+                <br />
+                Sat - Sun : Closed
+              </p>
+            </div> */}
 
             {/* Location */}
             <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
