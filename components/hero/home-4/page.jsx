@@ -84,14 +84,14 @@ const Hero4 = () => {
   const Icon = stats[currentIndex].icon;
 
   return (
-    <div className="relative zoom-out min-h-[115vh] -mt-12 py-10 overflow-hidden">
+    <div className="relative zoom-out min-h-[115vh] -mt-12 py-16 overflow-hidden">
       <img
         src="hero-bg.jpg"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute bottom-0 inset-0  bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
 
-      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-12 px-4 md:px-12">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-12">
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
           <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
             97% of customer conversations are lost.
