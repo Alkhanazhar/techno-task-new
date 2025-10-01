@@ -48,8 +48,15 @@
 .kl-form__form-title {
   color: #ffffff !important;
 }
+.kl-form__form-title {
+  font-weight: 400 !important;
+  display: none !important;
+}
 .kl-form {
   border: 0px none #ffffff !important;
+  display: grid !important;
+  grid-template-columns: repeat(2, 1fr) !important;
+  gap: 1rem !important;
 }
 .card-spotlight {
   position: relative;

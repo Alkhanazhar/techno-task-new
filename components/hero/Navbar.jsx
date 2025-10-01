@@ -191,7 +191,7 @@ const Navbar = () => {
     { name: "Banking & Finance", route: "/banking-finance" },
     { name: "Saas & Tech", route: "/saas-tech" },
     { name: "E-commerce & D2C", route: "/ecommerce-d2c" },
-    { name: "Healthcare and Insurance", route: "/" },
+    { name: "Healthcare and Insurance", route: "/healthcare-insurance" },
   ];
 
   const handleNav = (item) => {
@@ -334,15 +334,17 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Healthcare and Insurance
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Detect patient emotions instantly and improve satisfaction
-                      through real-time sentiment analysis.
-                    </p>
-                  </li>
+                  <Link href="/healthcare-insurance">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">
+                        Healthcare and Insurance
+                      </h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Detect patient emotions instantly and improve
+                        satisfaction through real-time sentiment analysis.
+                      </p>
+                    </li>
+                  </Link>
                 </ul>
               </div>
             </div>
