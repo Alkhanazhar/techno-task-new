@@ -23,6 +23,7 @@ import Script from "next/script";
 import { useEffect, useRef } from "react";
 import Hero4 from "../components/hero/home-4/page";
 import Testimonial from "@/components/testimonial";
+import { MarqueeCompanies } from "@/components/marquee";
 
 export default function Home() {
   const lenisRef = useRef(null);
