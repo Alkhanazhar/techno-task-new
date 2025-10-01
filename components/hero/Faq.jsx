@@ -63,7 +63,7 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-[#27022e] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
+              className="bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
               <button
                 className="flex items-center justify-between w-full text-left text-white font-light"
