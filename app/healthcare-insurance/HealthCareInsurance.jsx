@@ -4,14 +4,14 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
-import HeroSectionCaseStudy from "@/components/Pages/HomeCaseStudy";
 import {
   Repeat,
   Gauge,
   TrendingUp,
   MessageSquare,
   DollarSign,
+  ShieldCheck,
+  ArrowDownCircle,
 } from "lucide-react";
 
 const HealthcareInsurance = () => {
@@ -38,29 +38,39 @@ const HealthcareInsurance = () => {
 
   const stats = [
     {
-      icon: <Repeat className="w-8 h-8 text-white" />,
-      stat: "30–40%",
-      desc: "increase in repeat purchases by proactively identifying at-risk customers.",
-    },
-    {
-      icon: <Gauge className="w-8 h-8 text-white" />,
-      stat: "25%",
-      desc: "faster product improvement cycles through automated feedback capture.",
-    },
-    {
-      icon: <TrendingUp className="w-8 h-8 text-white" />,
-      stat: "20%",
-      desc: "higher conversion on upsells using real-time recommendations.",
-    },
-    {
-      icon: <MessageSquare className="w-8 h-8 text-white" />,
+      icon: <Repeat className="w-6 h-6 text-white" />,
       stat: "100%",
-      desc: "conversation coverage vs. <5% manual auditing.",
+      desc: "Conversation Coverage",
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-white" />,
-      stat: "15–20%",
-      desc: "reduction in QA costs through automation.",
+      icon: <ShieldCheck className="w-6 h-6 text-white" />,
+      stat: "50%",
+      desc: "Faster Compliance & Risk Resolution",
+    },
+    {
+      icon: <TrendingUp className="w-6 h-6 text-white" />,
+      stat: "10–15%",
+      desc: "Higher Member/Patient Satisfaction (CSAT/NPS)",
+    },
+    {
+      icon: <MessageSquare className="w-6 h-6 text-white" />,
+      stat: "40–60%",
+      desc: "Faster QA Reviews & Agent Coaching",
+    },
+    {
+      icon: <ArrowDownCircle className="w-6 h-6 text-white" />,
+      stat: "20–30%",
+      desc: "Fewer Escalations & Disputes",
+    },
+    {
+      icon: <Gauge className="w-6 h-6 text-white" />,
+      stat: "25%",
+      desc: "Faster Service & Process Improvements",
+    },
+    {
+      icon: <DollarSign className="w-6 h-6 text-white" />,
+      stat: "20–25%",
+      desc: "Lower Auditing & Operational Costs",
     },
   ];
 
@@ -109,11 +119,11 @@ const HealthcareInsurance = () => {
                   Convoze for
                 </h1>
                 <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
-                  E-Commerce and D2C
+                  Healthcare & Insurance
                 </h2>
               </div>
               <p className="text-gray-200 font-light text-sm xs:text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
-                Turn Every Customer Interaction into Loyalty and Revenue
+                Powering Smarter, Safer Conversations that Care for Every Life
               </p>
               <div className="mt-4 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
                 <Link href="/contact">
@@ -133,7 +143,7 @@ const HealthcareInsurance = () => {
               transition={{ duration: 0.6, ease: "easeOut" }}
             >
               <motion.img
-                src="https://plus.unsplash.com/premium_photo-1661513736823-f325fd06577e?q=80&w=872&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                src="https://plus.unsplash.com/premium_photo-1673953509975-576678fa6710?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
                 alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
                 className="w-full max-w-[350px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px] h-auto rounded-xl shadow-2xl object-cover"
                 loading="lazy"
@@ -159,7 +169,7 @@ const HealthcareInsurance = () => {
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
           <div className="w-full md:w-1/2 flex justify-center">
             <img
-              src="/ecomm.png"
+              src="/medical.png"
               alt="E-Commerce and D2C"
               className="w-full h-auto max-w-md rounded-xl shadow-lg"
             />
@@ -167,23 +177,26 @@ const HealthcareInsurance = () => {
 
           <div className="w-full md:w-1/2">
             <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-black text-center mb-4 xs:mb-6 sm:mb-8">
-              Transform Customer Conversations into Revenue with <br />
+              Transforming Risk Management into <br />
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
-                AI Intelligence
+                Relationship Building
               </span>
             </h3>
             <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-              In ecommerce and D2C, each customer interaction and support ticket
-              is an opportunity to strengthen your brand, boost repeat
-              purchases, and gather insights about your products. Most teams
-              only capture a small part of these interactions, missing vital
-              signals that affect revenue and customer loyalty
+              In healthcare and insurance, every interaction carries high stakes — from patient
+              well-being to sensitive financial data
             </p>
             <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-              Convoze AI changes that. It audits 100% of conversations across
-              all channels, tracks key performance metrics (KPIs) for every
-              interaction, extracts actionable insights in real time, and helps
-              your teams respond instantly on what matters most.
+              Convoze helps your teams offer caring, compliant, and efficient services. It protects every call, chat, and support ticket.
+            </p>
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
+              Instead of catching errors after the damage is done, your teams get real-time alerts
+              for potential risks, policy breaches, or signs of distress — enabling
+              faster claims resolution, reduced escalations, and improved patient/member trust.
+            </p>
+            <p className="text-gray-800 text-sm sm:text-base md:text-md md:text-left font-semibold">
+              With Convoze, you don’t just monitor conversations — you protect lives, secure data,
+              and earn lasting trust
             </p>
           </div>
         </div>
@@ -202,21 +215,19 @@ const HealthcareInsurance = () => {
             <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-white text-center mb-4 xs:mb-6 sm:mb-8">
               Challenges{" "}
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
-                Ecommerce & D2C
+                Healthcare & Insurance
               </span>{" "}
-              Brands Face
+              Teams Face
             </h3>
             <div className="space-y-2 sm:space-y-3">
               {[
-                "Slow or inconsistent support can lead to customer churn.",
-                "Missed chances for upselling, cross-selling, and keeping clients.",
-                "Customer journeys can be scattered across chat, calls, email, and social media.",
-                "Sales are lost because of unaddressed concerns and cart abandonment.",
-                "Data scattered across platforms delays product and marketing insights.",
-                "Inconsistent brand experience results from varying responses from agents.",
-                "High support volume, fraud, and policy abuse can go unnoticed.",
-                "Language and regional diversity can create communication challenges.",
-                "There is limited visibility into agent performanc.",
+                "Fragmented communication channels.",
+                "Strict regulatory & compliance burden.",
+                "Emotionally charged high-stakes interactions.",
+                " Hidden fraud risks & claim irregularities.",
+                " Inconsistent service & agent performance.",
+                "Slow claims resolution & escalations",
+                "High volume & seasonal pressure."
               ].map((item, idx) => (
                 <div key={idx} className="flex items-start space-x-2">
                   <div className="w-1.5 h-1.5 bg-[#C068D1] rounded-full mt-2 flex-shrink-0"></div>
@@ -227,7 +238,7 @@ const HealthcareInsurance = () => {
           </div>
           <div className="w-full md:w-1/2 flex justify-center">
             <img
-              src="/driven.png"
+              src="/med.png"
               alt="Ecommerce & D2C Brands Face"
               className="w-full h-auto max-w-md rounded-xl shadow-lg"
             />
@@ -256,24 +267,27 @@ const HealthcareInsurance = () => {
             <div className="space-y-4">
               {[
                 {
-                  title: "Real-Time Customer Sentiment & Insights",
+                  title: "100% Conversation & Ticket Auditing",
                   description: [
-                    "Detects frustration, urgency, or buying signals instantly.",
-                    "Flags high-value or at-risk customers for immediate action driving proactive support and increasing repeat purchases.",
+                    "Every call,chat and support ticket is automatically analyzed and audited with KPI-linked QA metrics, ensuring no interaction is ever missed.",
                   ],
                 },
                 {
-                  title: "Automated Product Feedback Loops",
+                  title: "Sentiment & Emotion Detection in Real Time",
                   description: [
-                    "Automatically captures recurring bug reports, feature requests, and product questions.",
-                    "Prioritizes improvements based on actual customer demand, this leads to quicker product updates and improved user satisfaction.",
+                    "Helps teams detect and address frustration, stress or confusion instantly improving outcome and member/patient satisfaction.",
                   ],
                 },
                 {
-                  title: "More Informed Sales and Promotions",
+                  title: "Multilingual Support & accent adaptability",
                   description: [
-                    "Finds possibilities for cross-selling and upselling during discussions.",
-                    "Suggests personalized offers in real time. This results in higher conversion and increased average order value.",
+                    "Supports multiple languages and accents. This allows seamless care and service to diverse populations.",
+                  ],
+                },
+                {
+                  title: "Protecting sensitive data",
+                  description: [
+                    "Safe guards confidential information while making compliance and auditing effortless for your team.",
                   ],
                 },
               ].map((feature, index) => (
@@ -302,17 +316,21 @@ const HealthcareInsurance = () => {
             <div className="space-y-4">
               {[
                 {
-                  title: "Quality Assurance & Training at Scale",
+                  title: "Actionable Insights & Dashboards",
                   description: [
-                    " AI audits every conversation, ensuring consistent service quality.",
-                    "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
+                    "Turns conversation data into actionable insights, giving managers and compliance teams visibility into trends, risks and recurring gaps.",
                   ],
                 },
                 {
-                  title: "Detection of Fraud and Risk",
+                  title: "AI + Human QA Integration",
                   description: [
-                    "Spots unusual patterns in returns, complaints, or interactions.",
-                    "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
+                    "Combines automated insights with human oversight for accurate compliance monitoring, fraud and performance monitoring.",
+                  ],
+                },
+                {
+                  title: "Immediate risk detection",
+                  description: [
+                    "Detect policy violations or potential fraud in real time hence enabling your team to act swiftly and prevent larger issues.",
                   ],
                 },
               ].map((feature, index) => (
@@ -351,17 +369,20 @@ const HealthcareInsurance = () => {
       >
         <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-5 md:mb-10">
-            Measurable{" "}
+            Proven Measurable{" "}
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
               Impact
-            </span>
+            </span>{" "}<br />
+            with Convoze
           </h3>
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 md:mb-0">
             {stats.map((item, idx) => (
               <div
                 key={idx}
-                className="group p-5 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
+                className="group p-5 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 
+                 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl 
+                 transition duration-300 flex flex-col justify-between h-[130px]"
               >
                 <div className="flex items-center gap-3 mb-4">
                   <div className="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
@@ -375,6 +396,7 @@ const HealthcareInsurance = () => {
               </div>
             ))}
           </div>
+
         </section>
       </motion.div>
 
@@ -388,16 +410,17 @@ const HealthcareInsurance = () => {
       >
         <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-5">
           <h3 className="text-center text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-6">
-            Boost your Ecommerce and D2C growth with <br />
+            Redefining Care and Service with<br />
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
               Convoze
             </span>
           </h3>
 
-          <p className="text-center max-w-3xl mx-auto text-gray-800 text-sm sm:text-base leading-relaxed mb-5">
-            Convoze transforms all discussions into valuable insights that drive
-            sales growth, enhance customer loyalty, and accelerate product
-            selection.
+          <p className="text-center max-w-4xl mx-auto text-gray-800 text-sm sm:text-base leading-relaxed mb-5">
+            Timely and accurate communication makes all the difference. Convoze helps providers,
+            clinics, hospitals, and insurance companies enhance patient and client
+            experiences while ensuring compliance and efficiency.
+            Trusted by healthcare and insurance leaders, here's how it helps.
           </p>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-5">
@@ -405,19 +428,19 @@ const HealthcareInsurance = () => {
             <div className="space-y-6">
               {[
                 {
-                  title: "Actionable Insights in Real-Time",
+                  title: "24/7 Patient & Customer Support",
                   description:
-                    "Provides real-time insights enabling sales, support, and product teams to resolve customer issues quickly and engage effectively.",
+                    "Automate appointment reminders, policy queries, claims updates, and FAQs with a personal touch.",
                 },
                 {
-                  title: "Multilingual & Accent-Adaptive AI",
+                  title: "Safe and Compliant",
                   description:
-                    "Ensures seamless communication across regions and languages, breaking barriers for global businesses.",
+                    "Compliant with HIPAA and other regulatory standards thus ensuring sensitive health and insurance data remains secure within the system.",
                 },
                 {
-                  title: "Seamless Integration",
+                  title: "Data Driven Insights",
                   description:
-                    "Integrates smoothly with chat, email, CRM, and call systems—no disruption to business operations.",
+                    "Easily audits discussions to identify patterns , enhance customer service , and inform wise choices for data diven insights.",
                 },
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -438,19 +461,14 @@ const HealthcareInsurance = () => {
             <div className="space-y-6">
               {[
                 {
-                  title: "Scalable Multi-Channel Operations",
+                  title: "Operational Efficiency",
                   description:
-                    "Handles large data volumes and seasonal spikes without compromising performance.",
+                    "Reduce administrative burden on staff, enabling quicker responses and smoother operations.",
                 },
                 {
-                  title: "Customizable to Your Brand",
+                  title: "Unified customer Communication",
                   description:
-                    "Adapts to your policies and workflows while preserving brand voice for consistency and compliance.",
-                },
-                {
-                  title: "Risk Reduction & Fraud Detection",
-                  description:
-                    "Detects unusual patterns in interactions to reduce fraud and financial losses.",
+                    " Keep all customer conversations in one place making service faster and more efficient.",
                 },
               ].map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
@@ -469,10 +487,9 @@ const HealthcareInsurance = () => {
           </div>
 
           <p className="text-center max-w-4xl mx-auto text-gray-800 text-sm sm:text-base leading-relaxed">
-            Convoze uses every customer interaction to generate valuable
-            business intelligence which enables Ecommerce and D2C brands to
-            maintain customer loyalty and boost sales and make better business
-            choices.
+            Convoze ensures healthcare and insurance providers don’t just communicate.
+            They connect, build trust, improve efficiency, and deliver exceptional care
+            and service.
           </p>
         </div>
       </motion.div>
@@ -498,15 +515,10 @@ const HealthcareInsurance = () => {
                 the Difference
               </h3>
               <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
-                With Convoze, ecommerce and D2C brands don’t just manage support
-                — they build loyalty, grow revenue, and make smarter product
-                decisions. Every interaction becomes a chance to engage
-                customers better, reduce churn, and turn conversations into
-                measurable business growth
-              </p>
-              <p className="mt-4 max-w-4xl mx-auto text-gray-300 text-sm sm:text-base leading-relaxed">
-                Convoze ensures brands deliver consistent, personalized, and
-                efficient experiences at scale.
+                With Convoze, healthcare and insurance providers don’t just handle interactions — they
+                protect lives, secure sensitive data, and earn lasting trust.
+                Every conversation becomes an opportunity to care better, resolve faster,
+                and deliver safer, compliant service at scale.
               </p>
             </div>
 
