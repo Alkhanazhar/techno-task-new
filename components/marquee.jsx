@@ -3,16 +3,10 @@ import { Marquee } from "./ui/marquee";
 
 const reviews = [
   {
-    name: "Jack",
-    username: "@jack",
-    body: "I've never seen anything like this before. It's amazing. I love it.",
-    img: "logo-1.jpg",
-  },
-  {
     name: "Jill",
     username: "@jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "logo-2.jpg",
+    img: "./logo-2.jpg",
   },
   {
     name: "John",
@@ -24,7 +18,7 @@ const reviews = [
     name: "Jane",
     username: "@jane",
     body: "I'm at a loss for words. This is amazing. I love it.",
-    img: "logo-4.jpg",
+    img: "./logo-8.png",
   },
   {
     name: "Jenny",
@@ -32,9 +26,15 @@ const reviews = [
     body: "I'm at a loss for words. This is amazing. I love it.",
     img: "logo-5.jpg",
   },
+  {
+    name: "sasaasa",
+    username: "@saasasas",
+    body: "I'm at a loss for words. This is amazing. I love it.",
+    img: "./logo-7.avif",
+  },
 ];
 
-const firstRow = reviews.slice(0, reviews.length - 1);
+const firstRow = reviews;
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (

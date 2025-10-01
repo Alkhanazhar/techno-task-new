@@ -62,8 +62,8 @@ export default function WhatCustomerSays() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] text-white md:px-8 px-3 py-12 md:py-16">
-      <div className="max-w-7xl mx-auto space-y-10">
+    <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] text-white  py-12 md:py-16">
+      <div className="max-w-7xl mx-auto space-y-10 ">
         {/* Heading */}
 
         {/* <h2 className="text-center text-2xl md:text-4xl font-light leading-tight">
@@ -80,7 +80,7 @@ export default function WhatCustomerSays() {
           </span>
         </h2>
 
-        <div className="relative bg-gradient-to-br from-[#0B0B1F] to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
+        <div className="relative bg-gradient-to-br from-[#0B0B1F] px-6 md:px-12 to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
           {/* Left Content */}
           <div className="flex-1 z-10">
             <h3 className="text-xl md:text-3xl font-light leading-snug ">

@@ -12,7 +12,7 @@ const reviews = [
     name: "Jill",
     username: "@jill",
     body: "I don't know what to say. I'm speechless. This is amazing.",
-    img: "logo-2.jpg",
+    img: "logo-6.jpg",
   },
   {
     name: "John",
@@ -34,22 +34,23 @@ const reviews = [
   },
 ];
 
-const firstRow = reviews.slice(0, reviews.length - 1);
+const firstRow = reviews;
 
 const ReviewCard = ({ img, name, username, body }) => {
   return (
     <figure
       className={cn(
-        "relative h-full  cursor-pointer overflow-hidden rounded "
-        // light styles
-        // dark styles
+        "relative cursor-pointer overflow-hidden rounded flex items-center justify-center"
       )}
     >
-      <img className="rounded-xl object-center" width="140" alt="" src={img} />
+      <img
+        className="w-36 h-36 rounded-xl object-cover"
+        alt={name || "review image"}
+        src={img}
+      />
     </figure>
   );
 };
-
 export function MarqueeCompanies() {
   return (
     <div className="relative flex w-full bg-transparent flex-col items-center justify-center overflow-hidden">

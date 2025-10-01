@@ -129,7 +129,7 @@ export const Industries = () => {
     <div className="relative w-full h-full bg-gradient-to-tl to-[#21082b] from-[#27022e] py-16 md:py-24 md:mb-16">
       <div className="text-center mb-5 md:mb-6 px-8">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-4 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-          Who <span className="font-normal text-white">Its For</span>
+          Who <span className="font-normal text-white">It{"'"}s For</span>
         </h2>
         <p className="text-gray-200 font-light text-sm md:text-xl max-w-4xl mx-auto">
           Built for Teams Where Conversations Drive Business Convoze is trusted
