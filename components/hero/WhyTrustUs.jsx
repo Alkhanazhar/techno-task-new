@@ -55,7 +55,7 @@ export default function WhyTrustUs() {
         {trustData.map((item, idx) => (
           <div
             key={idx}
-            className="rounded-2xl p-6 relative bg-gradient-to-br   to-[#371d3ee8] from-[#3e2ab2eb] w-full  hover:scale-105 transform transition-all duration-300"
+            className="rounded-2xl p-6 bg-gradient-to-br from-[#0c0c2d] w-full to-[#1b012a] hover:scale-105 transform transition-all duration-300"
           >
             <h4 className="text-white font-semibold text-sm md:text-[15px] mb-2">
               {item.title}

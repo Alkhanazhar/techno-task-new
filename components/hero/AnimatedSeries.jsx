@@ -63,7 +63,7 @@ const AnimatedStatsCards = () => {
   return (
     <div className="flex items-center justify-center">
       <motion.div
-        className="relative flex flex-col gap-2 max-w-3xl w-full"
+        className="relative flex flex-col gap-6 max-w-3xl w-full"
         variants={containerVariants}
         initial="hidden"
         animate="visible"
@@ -84,7 +84,7 @@ const AnimatedStatsCards = () => {
             >
               <motion.div
                 className="group relative p-4 rounded-2xl transition-all duration-300 
-                  bg-white/20 backdrop-blur-xs border border-gray-200 shadow-lg hover:shadow-2xl w-full max-w-md
+                  bg-white border border-gray-200 shadow-lg hover:shadow-2xl w-full max-w-md
                   overflow-hidden"
                 initial={{ borderColor: "rgba(229, 231, 235, 1)" }}
                 whileHover={{
@@ -127,7 +127,7 @@ const AnimatedStatsCards = () => {
                   <div className="flex-1">
                     {/* Animated Title */}
                     <motion.h3
-                      className="font-bold  mb-2 bg-gradient-to-br from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text"
+                      className="font-bold text-lg md:text-lg mb-2 bg-gradient-to-br from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text"
                       initial={{ y: 10, opacity: 0 }}
                       animate={{ y: 0, opacity: 1 }}
                       transition={{ delay: index * 0.2 + 0.3 }}

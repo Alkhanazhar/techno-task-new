@@ -3,8 +3,6 @@
 import { useEffect, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { QuoteIcon } from "lucide-react";
-import { Marquee } from "../ui/marquee";
-import { MarqueeCompanies } from "../marquee";
 
 const testimonials = [
   {
@@ -147,7 +145,6 @@ export default function WhatCustomerSays() {
             </div>
           </div>
         </div>
-        <MarqueeCompanies />
       </div>
     </section>
   );
