@@ -84,7 +84,7 @@ const Hero4 = () => {
   const Icon = stats[currentIndex].icon;
 
   return (
-    <div className="relative zoom-out min-h-[115vh] -mt-12 py-14 overflow-hidden">
+    <div className="relative zoom-out bg-white min-h-[115vh] -mt-12 py-14 overflow-hidden">
       {/* <img
         src="hero-bg.jpg"
         className="absolute inset-0 w-full h-full object-cover"
