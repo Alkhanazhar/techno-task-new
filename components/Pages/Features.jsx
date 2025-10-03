@@ -106,7 +106,7 @@ const Features = () => {
         ></div>
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-18">
+      <div className="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-24">
         {/* Header Section */}
         <div
           className={`text-center mb-16 lg:mb-20 transition-all duration-1000 ${

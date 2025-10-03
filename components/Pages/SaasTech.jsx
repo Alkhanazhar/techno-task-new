@@ -260,7 +260,7 @@ const SaasTech = () => {
             </span>{" "}
             Stands Out
           </h3>
-          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
+          <p className="text-white text-base xs:text-base sm:text-lg md:text-xl !font-light">
             Most QA tools still work in isolation or rely on a handful of
             conversation samples. Being different, Convoze audits every single
             solitary conversation in one unified platform. That gives reduced

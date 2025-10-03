@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import React, { useState, useEffect, useRef } from "react";
 import {
   motion,
@@ -124,7 +124,7 @@ const TimelineJourney = () => {
   return (
     <motion.div
       ref={containerRef}
-      className="hidden md:block relative h-[400vh] py-14 bg-slate-200"
+      className="hidden md:block relative h-[400vh] py-12 bg-slate-200"
     >
       <div className="absolute inset-0 z-0 overflow-hidden w-screen">
         <img
@@ -137,14 +137,14 @@ const TimelineJourney = () => {
         ref={timelineRef}
         className="sticky top-0 left-0 w-full h-screen px-4 z-30"
       >
-        <div className="max-w-6xl mx-auto relative zoom-out">
-          <div className="text-center md:-mt-8">
-            <h2 className="text-3xl font-bold text-gray-800 mb-b pb-16 pt-10">
+        <div className="max-w-6xl mx-auto relative zoom-out py-16">
+          <div className="text-center md:-mt-4">
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-b pb-16 pt-10">
               Our Journey
             </h2>
           </div>
-          <div ref={containerRef} className="relative my-20">
-            <div className="relative h-[420px]">
+          <div ref={containerRef} className="relative my-32">
+            <div className="relative h-[320px]">
               <svg
                 className="absolute inset-0 w-full h-full z-10"
                 viewBox="0 0 1000 400"
@@ -339,7 +339,9 @@ const TimelineJourney = () => {
                           }`}
                         >
                           {step.content.map((point, idx) => (
-                            <li key={idx} className="mb-1">{point}</li>
+                            <li key={idx} className="mb-1">
+                              {point}
+                            </li>
                           ))}
                         </ul>
                         {isActive && (

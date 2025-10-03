@@ -211,11 +211,11 @@ export default function HeroSectionBanking() {
             <h1 className="text-3xl xs:text-4xl sm:text-4.5xl md:text-5xl lg:text-5xl font-bold text-white mb-2 xs:mb-3 sm:mb-5">
               Convoze for
             </h1>
-            <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-5xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
-              BPO & Contact Centers
+            <h2 className="text-2xl xs:text-3xl sm:text-3.5xl md:text-4xl lg:text-6xl whitespace-nowrap font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] mb-2 xs:mb-3 sm:mb-4">
+              Banking & Finance
             </h2>
             <p className="text-gray-200 font-extralight text-sm xs:text-base sm:text-lg">
-              Turning Every Conversation into Actionable Insight
+              Powering Smarter, Safer Conversations that Drive Finance Forward
             </p>
             <div className="mt-4 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
               <Link href="/contact">
@@ -237,7 +237,7 @@ export default function HeroSectionBanking() {
             <motion.img
               src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
-              className="w-full max-w-[300px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-auto rounded-lg shadow-lg object-cover"
+              className="w-full max-w-[350px] xs:max-w-[350px] sm:max-w-[400px] md:max-w-[450px] lg:max-w-[500px] h-auto rounded-lg shadow-lg object-cover"
               loading="lazy"
               whileHover={{
                 scale: 1.05,

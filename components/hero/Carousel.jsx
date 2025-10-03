@@ -127,7 +127,6 @@
 //   );
 // };
 
-
 // export function Carousel({ slides }) {
 //   const [current, setCurrent] = useState(3);
 //   const [isHovered, setIsHovered] = useState(false);
@@ -199,7 +198,6 @@
 //   );
 // }
 
-
 "use client";
 
 import { useState, useRef, useEffect, useId } from "react";
@@ -238,15 +236,15 @@ const Slide = ({ slide, index, current }) => {
   return (
     <li
       ref={slideRef}
-      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[70vmin] h-[70vmin] mx-[4vmin] z-10 cursor-pointer"
+      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[62vmin] h-[62vmin] mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
       onClick={() => router.push(slide.link)}
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
         transform:
           current !== index
-            ? "scale(0.98) rotateX(8deg)"
-            : "scale(1) rotateX(0deg)",
+            ? "scale(0.96) rotateX(8deg)"
+            : "scale(1.1) rotateX(0deg)",
         transition: "transform 0.5s cubic-bezier(0.4, 0, 0.2, 1)",
         transformOrigin: "bottom",
       }}
@@ -263,7 +261,7 @@ const Slide = ({ slide, index, current }) => {
         <img
           src={slide.src}
           alt={slide.title}
-          className="absolute inset-0 w-[140%] h-[140%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          className="absolute inset-0 w-[150%] h-[150%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
         />
         {current === index && (
@@ -272,11 +270,14 @@ const Slide = ({ slide, index, current }) => {
       </div>
 
       <article
-        className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${current === index ? "opacity-100 visible" : "opacity-0 invisible"
-          }`}
+        className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
+          current === index ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
         <h2 className="lg:text-3xl font-semibold">{slide.title}</h2>
-        <h1 className="text-sm md:text-lg mt-2 font-light">{slide.description}</h1>
+        <h1 className="text-sm md:text-lg mt-2 font-light">
+          {slide.description}
+        </h1>
         <span className="mt-4 inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm">
           {slide.button}
         </span>
@@ -287,8 +288,9 @@ const Slide = ({ slide, index, current }) => {
 
 const CarouselControl = ({ type, handleClick }) => (
   <button
-    className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${type === "previous" ? "rotate-180" : ""
-      }`}
+    className={`w-10 h-10 flex items-center mx-2 justify-center bg-neutral-200 dark:bg-neutral-800 border-3 border-transparent rounded-full focus:border-[#6D64F7] focus:outline-none hover:-translate-y-0.5 active:translate-y-0.5 transition duration-200 ${
+      type === "previous" ? "rotate-180" : ""
+    }`}
     onClick={handleClick}
   >
     <IconArrowNarrowRight className="text-neutral-600 dark:text-neutral-200" />
@@ -302,30 +304,36 @@ export const Carousel = ({ slides }) => {
 
   const handlePreviousClick = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
-  const handleNextClick = () => setCurrent((prev) => (prev + 1) % slides.length);
+  const handleNextClick = () =>
+    setCurrent((prev) => (prev + 1) % slides.length);
 
   useEffect(() => {
     if (isHovered) return;
-    const interval = setInterval(() => setCurrent((prev) => (prev + 1) % slides.length), 3000);
+    const interval = setInterval(
+      () => setCurrent((prev) => (prev + 1) % slides.length),
+      3000
+    );
     return () => clearInterval(interval);
   }, [slides.length, isHovered]);
 
   return (
     <div
-      className="relative w-[70vmin] h-[70vmin] mx-auto"
+      className="relative w-[74vmin] h-[74vmin] mx-auto zoom-out"
       aria-labelledby={`carousel-heading-${id}`}
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
     >
       <ul
         className="absolute flex mx-[-4vmin] transition-transform duration-1000 ease-in-out"
-        style={{ transform: `translateX(-${current * (100 / slides.length)}%)` }}
+        style={{
+          transform: `translateX(-${current * (100 / slides.length)}%)`,
+        }}
       >
         {slides.map((slide, index) => (
           <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>
-      <div className="absolute flex justify-center w-full mt-4 top-[calc(100%+1rem)]">
+      <div className="absolute flex justify-center w-full mt-4 md:top-[calc(93%+1rem)] top-[calc(100%+1rem)] zoom-out ">
         <CarouselControl type="previous" handleClick={handlePreviousClick} />
         <CarouselControl type="next" handleClick={handleNextClick} />
       </div>

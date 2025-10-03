@@ -18,6 +18,8 @@ import {
   Link,
   Unlink,
 } from "lucide-react";
+import AnimatedStatsCards from "./AnimatedSeries";
+import { motion } from "framer-motion";
 
 const WhyConvoze = () => {
   const [isVisible, setIsVisible] = useState(false);
@@ -101,85 +103,78 @@ const WhyConvoze = () => {
   ];
 
   return (
-    <div className=" md:py-24 py-12  relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
+    <div className=" md:min-h-screen  relative w-full  bg-slate-200 text-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
           alt="Background Pattern"
-          className="w-full h-full object-cover opacity-20 !z-0"
+          className="w-full h-full object-cover rotate-180  opacity-20 !z-0"
         />
       </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto px-4 ">
+      <div className="relative z-10 max-w-[82rem] mx-auto px-4 md:py-24 py-12 ">
         {/* Header Section */}
+
         <div
-          className={`text-center z-5 md:mb-10 mb-6 transition-all duration-1000 ${
+          className={`text-center z-5 mb-2 space-y-2 transition-all duration-1000 ${
             isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-10"
           }`}
         >
-          <h1 className="text-2xl lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
+          <h1 className="text-3xl text-center lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
             Why
             <span className="font-normal text-black"> Convoze?</span>
           </h1>
-          <p className="text-gray-800 mb-6">
-            In traditional contact center setups, 95% of Conversations Are
-            Wasted. Less than 5% of customer conversations are reviewed
-          </p>
+
+          <h2 className="text-center text-xl  text-gray-900/80 mb-4">
+            This isn't just inefficient — it's expensive
+          </h2>
         </div>
 
         {/* Main Content - Two Column Layout */}
-        <div className="flex flex-col lg:flex-row gap-8 relaive">
+        <div className="flex flex-col-reverse lg:flex-row gap-8 relaive w-full">
           {/* Left Column - Wasted Stats */}
-          <div className="lg:w-1/2 relaive">
-            {/* <div className="mb-8">
-             <h1 className="text-2xl lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-            Why
-            <span className="font-normal text-white"> Convoze?</span>
-          </h1>
-              <p className="text-gray-400 mb-6">
-                In traditional contact center setups, 95% of Conversations Are Wasted.
-Less than 5% of customer conversation are reviewed
-
-              </p>
-              <button className="text-purple-400 hover:text-purple-300 flex items-center">
-                Learn more <ArrowRight className="ml-2 w-4 h-4" />
-              </button>
-            </div> */}
-
-            {/* Wasted Stats */}
-            <div className="space-y-5 p-2 bg-neutral-100 rounded-xl shadow-2xl relative z-10">
-              {wastedStats.map((stat, index) => {
-                const Icon = stat.icon;
-                return (
-                  <div
-                    key={index}
-                    className="flex relative  items-center gap-3 p-2 hover:bg-slate-300 rounded-lg transition-colors duration-200 cursor-pointer"
-                  >
-                    <div className="flex-shrink-0 w-8 h-8 text-white rounded-lg bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2] p-2">
-                      <Icon className="w-full h-full" />
-                    </div>
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-baseline gap-2">
-                        <span className="text-base font-bold text-transparent bg-clip-text bg-[#3f2ab2]">
-                          {stat.percentage}
-                        </span>
-                        <span className=" font-medium text-transparent bg-clip-text bg-[#3f2ab2]">
-                          {stat.label}
-                        </span>
+          <div className="flex-1 relative flex flex-col">
+            <div className="flex-1 space-y-5  rounded-xl relative ">
+              {/* <div className="relative flex flex-col py-10">
+                {wastedStats.map((stat, index) => {
+                  const Icon = stat.icon;
+                  const isLeft = index % 2 === 0; // even → left, odd → right
+                  return (
+                    <div
+                      key={index}
+                      className={`flex ${
+                        isLeft ? "justify-start" : "justify-end"
+                      } w-full`}
+                    >
+                      <div
+                        className="group p-4 rounded-xl transition-all duration-300 border border-gray-800/20 
+                         hover:scale-[1.02] hover:shadow-lg w-80 group "
+                      >
+                        <div className="flex items-center gap-4">
+                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl from-[#3F2AB2] to-[#B462CE] p-2 flex-shrink-0">
+                            <Icon className="w-full h-full text-white" />
+                          </div>
+                          <div>
+                            <h3 className="font-semibold bg-gradient-to-br text-sm md:text-lg from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text ">
+                              {stat.percentage} {stat.label}
+                            </h3>
+                            <p className="text-gray-700 text-sm leading-relaxed">
+                              {stat.description}
+                            </p>
+                          </div>
+                        </div>
                       </div>
-                      <p className="text-xs text-gray-800">
-                        {stat.description}
-                      </p>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                })}
+              </div> */}
+              <AnimatedStatsCards />
             </div>
           </div>
 
           {/* Right Column - Problems */}
-          <div className="lg:w-1/2 relaive rounded-xl shadow-2xl  backdrop-blur backdrop:opacity-50 bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2] ">
+          <div className="lg:w-1/2 relaive  ">
             {/* Sales Data Section */}
             {/* <div className="mb-4">
               <h3 className="text-lg font-medium text-white mb-4">Sales Objections</h3>
@@ -193,12 +188,8 @@ Less than 5% of customer conversation are reviewed
               </div>
             </div> */}
 
-            <div className="p-4 rounded-2xl">
-              <h2 className="text-center text-2xl font-medium text-white mb-4">
-                This isn't just inefficient — it's expensive
-              </h2>
-
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-3 ">
+            <div className=" rounded-2xl space-y-2">
+              <div className="grid grid-cols-2 md:grid-cols-2 gap-3 ">
                 {problems.map((problem, index) => {
                   const Icon = problem.icon;
                   const isHovered = hoveredProblem === index;
@@ -206,7 +197,7 @@ Less than 5% of customer conversation are reviewed
                   return (
                     <div
                       key={index}
-                      className={`group transition-all   duration-500 cursor-pointer
+                      className={`group transition-all  duration-500 cursor-pointer
                         ${
                           isVisible
                             ? "opacity-100 translate-y-0"
@@ -217,28 +208,29 @@ Less than 5% of customer conversation are reviewed
                       onMouseEnter={() => setHoveredProblem(index)}
                       onMouseLeave={() => setHoveredProblem(null)}
                     >
-                      <div
-                        className={`p-3  rounded-xl transition-all  bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  duration-300 border border-gray-800/50 
-                        ${isHovered ? "scale-[1.02] shadow-lg" : ""}
-                      `}
+                      <motion.div
+                        className="group relative p-4 rounded-2xl transition-all  duration-300 
+                                        w-full max-w-md
+                                       overflow-hidden"
+                        initial={{ borderColor: "rgba(229, 231, 235, 1)" }}
                       >
-                        <div className="flex items-start gap-4">
-                          <div className="w-10 h-10 rounded-lg bg-gradient-to-tl  my-auto md:my-0 to-[#B462CE] from-[#3F2AB2] p-2 flex-shrink-0">
-                            <Icon className="w-full h-full text-white" />
-                          </div>
+                        <div className="flex flex-col items-start gap-3">
+                          <Icon className=" text-purple-900 w-8 h-8" />
+                          <div className="h-1  bg-gradient-to-r from-[#B462CE] via-[#3e2ab2a5] to-transparent w-[67%] rounded-3xl"></div>
                           <div>
-                            <h3 className=" font-semibold text-purple-200 mb-1">
+                            <h3 className=" font-semibold text-purple-900 mb-1">
                               {problem.title}
                             </h3>
-                            <p className="text-gray-300 md:text-sm text-xs mb-1">
+                            <p className="text-primary md:text-sm text-xs">
                               {problem.description}
                             </p>
-                            <div className="text-gray-300 text-sm ">
+                            <div className="text-primary text-sm">
                               {problem.impact}
                             </div>
                           </div>
                         </div>
-                      </div>
+                        {/* <div className="w-8 h-full rotate-45 absolute right-10 group-hover:right-10 group-hover:-top-10 transition-all duration-300 bg-purple-900/10 top-0 blur-xl"></div> */}
+                      </motion.div>
                     </div>
                   );
                 })}

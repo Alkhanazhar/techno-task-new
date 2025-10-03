@@ -220,9 +220,9 @@ export default function HeroSectionCaseStudy() {
             <p className="text-gray-200 font-light text-sm xs:text-base sm:text-lg md:text-xl max-w-xl mx-auto lg:mx-0">
               Turning Every Conversation into Actionable Insight
             </p>
-            <div className="pt-2 sm:pt-4 flex flex-col sm:flex-row gap-3 sm:gap-4 md:gap-6 justify-center lg:justify-start items-center">
-              <Link href="/contact" className="w-full sm:w-auto">
-                <button className="w-full sm:w-auto bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-sm sm:text-base cursor-pointer text-white border border-purple-500 sm:border-none px-6 md:px-8 py-2.5 md:py-3 rounded-full font-medium hover:shadow-lg hover:shadow-purple-500/50 hover:scale-105 transition-all duration-300">
+            <div className="mt-4 flex flex-col sm:flex-row gap-3 md:gap-6 justify-center lg:justify-start">
+              <Link href="/contact">
+                <button className="w-3/5 sm:w-auto bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-sm cursor-pointer text-white border md:border-none border-purple-500 px-3 md:px-4 py-2 md:py-2 rounded-full font-medium hover:bg-black hover:text-white transition-all duration-300">
                   Book a Demo
                 </button>
               </Link>
@@ -240,7 +240,7 @@ export default function HeroSectionCaseStudy() {
             <motion.img
               src="https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
               alt="Modern contact center with diverse agents working at desks with headsets, representing BPO operations"
-              className="w-full max-w-[280px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px] h-auto rounded-xl shadow-2xl object-cover"
+              className="w-full max-w-[350px] xs:max-w-[320px] sm:max-w-[380px] md:max-w-[420px] lg:max-w-[450px] xl:max-w-[500px] h-auto rounded-xl shadow-2xl object-cover"
               loading="lazy"
               whileHover={{
                 scale: 1.05,

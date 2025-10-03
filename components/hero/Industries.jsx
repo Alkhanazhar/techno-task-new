@@ -113,7 +113,7 @@ export const Industries = () => {
       button: "See use cases",
       description: "Understand customer issues and improve support",
       src: "https://plus.unsplash.com/premium_photo-1681488262364-8aeb1b6aac56?q=80&w=870&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-      link: "/",
+      link: "/ecommerce-d2c",
     },
     {
       title: "SaaS & Tech",
@@ -126,18 +126,18 @@ export const Industries = () => {
   ];
 
   return (
-    <div className="relative w-full h-full bg-gradient-to-tl to-[#21082b] from-[#27022e] py-12 md:py-16 md:mb-16">
+    <div className="relative w-full h-full bg-gradient-to-tl to-[#21082b] from-[#27022e] py-16 md:py-24 md:mb-16">
       <div className="text-center mb-5 md:mb-6 px-8">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-4 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-          Who <span className="font-normal text-white">Its For</span>
+          Who <span className="font-normal text-white">It{"'"}s For</span>
         </h2>
-        <p className="text-gray-400 font-light text-sm md:text-xl max-w-4xl mx-auto">
+        <p className="text-gray-200 font-light text-sm md:text-xl max-w-4xl mx-auto">
           Built for Teams Where Conversations Drive Business Convoze is trusted
           by fast-moving teams using call center quality assurance software in:
         </p>
       </div>
 
-      <div className="w-screen h-full overflow-hidden !-mb-20 md:mb-0">
+      <div className="w-screen h-full  !-mb-20 pb-16 md:mb-0 sm:pb-12 overflow-hidden">
         <Carousel slides={slideData} />
       </div>
     </div>

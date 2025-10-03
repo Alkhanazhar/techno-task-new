@@ -6,11 +6,13 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 const faqs = [
   {
     question: "1. What services does your AI agency offer?",
-    answer: "We provide AI consulting, model development, and integration services tailored to your business.",
+    answer:
+      "We provide AI consulting, model development, and integration services tailored to your business.",
   },
   {
     question: "2. Do I need a large amount of data to use AI?",
-    answer: "Not always. We can start with pre-trained models or small datasets and then scale up.",
+    answer:
+      "Not always. We can start with pre-trained models or small datasets and then scale up.",
   },
   {
     question: "3. How long does it take to develop an AI solution?",
@@ -22,7 +24,8 @@ const faqs = [
   },
   {
     question: "5. Can you integrate AI into our existing systems?",
-    answer: "Absolutely. We ensure smooth integration with your current workflows.",
+    answer:
+      "Absolutely. We ensure smooth integration with your current workflows.",
   },
 ];
 
@@ -34,16 +37,16 @@ const Faq = () => {
   };
 
   return (
-    <section className="bg-gray-200 md:py-24 py-12 relative px-4 md:px-8">
+    <section className="bg-gray-200 md:py-24 py-12  relative px-4 md:px-8">
+      <div className="absolute inset-0 z-0">
+        <img
+          src="/bgPattern.png"
+          alt="Background Pattern"
+          className="w-full h-full object-cover opacity-20"
+        />
+      </div>
       <div className="max-w-6xl mx-auto flex flex-col md:flex-row gap-10 md:gap-20 items-start relative z-10">
         {/* Background */}
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/bgPattern.png"
-            alt="Background Pattern"
-            className="w-full h-full object-cover opacity-20"
-          />
-        </div>
 
         {/* Left Column */}
         <div className="md:w-1/2 md:space-y-6 space-y-2">
@@ -60,13 +63,13 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
-              className="bg-gray-800/90 border border-white/10 rounded-lg p-4 transition-all duration-300"
+              className="bg-gradient-to-br  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
               <button
-                className="flex items-center justify-between w-full text-left text-white md:font-medium"
+                className="flex items-center justify-between w-full text-left text-white font-light"
                 onClick={() => toggleFAQ(index)}
               >
-                <span className="text-sm md:text-base">{faq.question}</span>
+                <span className="text-sm ">{faq.question}</span>
                 {openIndex === index ? (
                   <ChevronUp className="w-5 h-5" />
                 ) : (

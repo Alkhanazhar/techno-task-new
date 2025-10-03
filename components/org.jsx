@@ -283,7 +283,7 @@ export default function Orb({
   return (
     <div
       ref={ctnDom}
-      className="absolute  inset-0 w-full h-full scale-125 z-0"
+      className="absolute  inset-0 w-full h-full scale-115 z-0"
       style={{ zIndex: 0 }}
     />
   );

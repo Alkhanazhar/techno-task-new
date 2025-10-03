@@ -317,7 +317,7 @@ const BankingFinance = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b]   flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-24 text-center flex items-center justify-center"
+        className="w-full bg-gradient-to-tl to-[#21082b]   flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -332,7 +332,7 @@ const BankingFinance = () => {
             </span>{" "}
             Stands Out
           </h3>
-          <p className="text-white text-sm xs:text-base sm:text-lg md:text-xl">
+          <p className="text-white text-base xs:text-base sm:text-lg md:text-xl !font-light">
             Most QA tools still work in isolation or rely on a handful of
             conversation samples. Being different, Convoze audits every single
             solitary conversation in one unified platform. That gives reduced
@@ -354,35 +354,7 @@ const BankingFinance = () => {
         </div>
       </motion.div>
 
-      <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b]  from-[#27022e] shadow-xl pb-4 xs:pb-4 sm:pb-8 md:pb-8 text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-          {/* Header */}
-
-          {/* AI Detection Badge */}
-          {/* <div className="mb-8">
-            <div className="inline-block bg-white/10 backdrop-blur-sm rounded-full px-6 py-3 border border-white/20">
-              <div className="text-white text-sm font-medium mb-1">
-                Your Text is Human written
-              </div>
-              <div className="flex items-center justify-center gap-2">
-                <div className="text-gray-300 text-xs">0%</div>
-                <div className="text-gray-400 text-xs">AI GPT*</div>
-              </div>
-            </div>
-          </div> */}
-
-          {/* Content Section */}
-
-          {/* CTA Button */}
-        </div>
-      </motion.div>
+    
     </div>
   );
 };
