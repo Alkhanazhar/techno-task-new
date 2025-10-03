@@ -1,3 +1,4 @@
+import { Heart } from "lucide-react";
 import React from "react";
 
 const trustData = [
@@ -7,6 +8,8 @@ const trustData = [
     subtitle: "Years of AI-Driven Design",
     description:
       "Works with your existing systems instantly. No complicated setup. No dev team required.",
+    image:
+      "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=500&h=600&fit=crop",
   },
   {
     title: "Multilingual & Region-Aware",
@@ -14,13 +17,17 @@ const trustData = [
     subtitle: "Projects Successfully Delivered",
     description:
       "Understand intent, emotion, and context in native languages — tailored to each region.",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=500&h=600&fit=crop",
   },
   {
     title: "Built for Compliance",
     value: "95%",
     subtitle: "Client Satisfaction Rate",
     description:
-      "Industry-grade phrase detection flags high-risk content in real time — not after it’s too late.",
+      "Industry-grade phrase detection flags high-risk content in real time — not after it's too late.",
+    image:
+      "https://images.unsplash.com/photo-1450101499163-c8848c66ca85?w=500&h=600&fit=crop",
   },
   {
     title: "Human Feedback Loop",
@@ -28,12 +35,13 @@ const trustData = [
     subtitle: "Client Satisfaction Rate",
     description:
       "Give agents instant, actionable coaching — not weekly summaries.",
+    image:
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?w=500&h=600&fit=crop",
   },
 ];
-
 export default function WhyTrustUs() {
   return (
-    <section className="bg-slate-200 md:-mt-0  md:py-24  text-black  py-6 relative">
+    <section className="bg-slate-200 min-h-screen flex flex-col justify-center md:-mt-0  md:py-24  text-black  py-6 relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
@@ -51,26 +59,48 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1  sm:grid-cols-2 md:grid-cols-4 md:gap-6 gap-3 max-w-6xl md:mx-auto mx-4 md:mx-8">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
         {trustData.map((item, idx) => (
           <div
             key={idx}
-            className="rounded-2xl p-6 relative bg-gradient-to-br   to-[#371d3ee8] from-[#3e2ab2eb] w-full  hover:scale-105 transform transition-all duration-300"
+            className="group relative rounded-3xl overflow-hidden hover:scale-105 transform transition-all duration-300"
           >
-            <h4 className="text-white font-semibold text-sm md:text-[15px] mb-2">
-              {item.title}
-            </h4>
-            {/* <div className="text-purple-400 text-3xl font-bold mb-1">
-              {item.value}
-            </div>
-            <div className="text-gray-300 text-sm mb-4">{item.subtitle}</div> */}
-            <div className=" rounded-xl text-xs text-gray-400 leading-relaxed">
-              {item.description}
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center"
+              style={{ backgroundImage: `url(${item.image})` }}
+            />
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-black/50" />
+
+            {/* Glassmorphism Effect */}
+
+            {/* Content */}
+            <div className="relative p-2 h-full flex flex-col justify-end min-h-[400px]">
+              {/* Heart Icon */}
+              <div className="absolute top-6 right-6 bg-pink-500 rounded-full p-2 shadow-lg">
+                <Heart className="w-4 h-4 text-white fill-white" />
+              </div>
+
+              {/* Stats */}
+              <div className=" relative rounded-3xl px-4 py-2 overflow-hidden">
+                <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-b  rounded-3xl from-black/30 to-black/60" />
+
+                <div className="text-white relative font-semibold text-sm md:text-[15px] mb-1">
+                  {item.title}
+                </div>
+                <div className="text-purple-400 text-3xl font-bold mb-1 relative">
+                  {item.value}
+                </div>
+                <div className="text-gray-200 text-sm font-thin relative">
+                  {item.description}
+                </div>
+              </div>
             </div>
           </div>
         ))}
       </div>
-
       {/* Footer Note */}
       {/* <div className="text-center mt-10 text-sm text-gray-300">
         <span className="bg-purple-600 text-white px-2 py-1 rounded-full text-xs mr-2">

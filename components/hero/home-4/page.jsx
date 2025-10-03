@@ -84,16 +84,16 @@ const Hero4 = () => {
   const Icon = stats[currentIndex].icon;
 
   return (
-    <div className="relative zoom-out min-h-[115vh] -mt-12 py-16 overflow-hidden">
-      <img
+    <div className="relative zoom-out min-h-[115vh] bg-white -mt-12 py-16 overflow-hidden">
+      {/* <img
         src="hero-bg.jpg"
-        className="absolute inset-0 w-full h-full object-cover"
-      />
-      <div className="absolute bottom-0 inset-0  bg-gradient-to-t from-[#060606] to-transparent z-10 pointer-events-none" />
+        className="absolute inset-0 w-full h-full object-cover" 
+      /> */}
+      {/* <div className="absolute bottom-0 inset-0  z-10 pointer-events-none" /> */}
 
-      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-12">
+      <div className="relative z-20 flex flex-col lg:flex-row items-center justify-center lg:justify-between min-h-screen py-10 px-4 md:px-28">
         <div className="w-full lg:w-1/2 flex flex-col justify-center text-center lg:text-left">
-          <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-white leading-tight">
+          <h1 className="text-[24px] md:text-[28px] lg:text-[34px] drop-shadow-2xl font-medium text-black leading-tight">
             97% of customer conversations are lost.
             <br className="block " />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
@@ -101,7 +101,7 @@ const Hero4 = () => {
             </span>
           </h1>
 
-          <p className="text-gray-200 text-[11px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
+          <p className="text-slate-800 text-[11px] md:text-[16px] mt-6  max-w-[650px] leading-relaxed">
             Convoze AI analyses 100% of conversations, flags compliance risks,
             and delivers actionable insights to CX, QA, and compliance teams
             reducing churn, cutting review & driving smarter decisions in real
@@ -117,20 +117,20 @@ const Hero4 = () => {
             </a>
 
             <a href="#how-itworks">
-              <button className="bg-white hidden sm:flex w-fit cursor-pointer text-purple-800 border md:border-none border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
+              <button className="bg-purple-500 hidden sm:flex w-fit cursor-pointer text-purple-100 border md:border-none border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
                 See How It Works
               </button>
             </a>
 
             <a href="#how-itworks">
-              <button className="bg-white sm:hidden mx-auto w-fit cursor-pointer text-purple-800 border border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
+              <button className="bg- sm:hidden mx-auto w-fit cursor-pointer !text-purple-100 border border-purple-500 px-3 md:px-5 py-2 md:py-2.5 rounded-full font-normal hover:bg-purple-500 hover:text-white transition-all duration-300">
                 See How It Works
               </button>
             </a>
           </div>
 
           {/* Stats */}
-          <h2 className="text-gray-200 text-sm md:text-xl mt-8 md:mt-12 mb-4 md:mb-6 font-medium tracking-wide">
+          <h2 className="text-gray-900 text-sm md:text-xl mt-6 md:mt-8 mb-4 md:mb-6 font-medium tracking-wide">
             Our numbers speak for themselves
           </h2>
 
@@ -139,8 +139,8 @@ const Hero4 = () => {
               <div
                 key={index}
                 className={`relative rounded-2xl px-4 md:px-6 py-4 md:py-6 lg:py-8 text-left 
-                transition duration-300 shadow-lg hover:shadow-purple-500/20
-                bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105
+                transition duration-300 shadow-lg hover:shadow-purple-500/60
+                backdrop-blur-sm border border-black/15 hover:scale-105
                 ${
                   isVisible
                     ? "translate-y-0 opacity-100"
@@ -150,13 +150,13 @@ const Hero4 = () => {
               >
                 <div className="absolute top-2 right-4">
                   <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
-                    <item.icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
+                    <item.icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-bla" />
                   </div>
                 </div>
-                <div className="text-lg md:text-2xl lg:text-3xl font-normal text-white mb-2">
+                <div className="text-lg md:text-2xl lg:text-3xl font-normal text-black mb-2">
                   {item.value}
                 </div>
-                <div className="text-xs mt-2 md:mt-4 text-gray-300">
+                <div className="text-xs mt-2 md:mt-4 text-gray-800">
                   {item.label}
                 </div>
               </div>
@@ -166,18 +166,18 @@ const Hero4 = () => {
           <AnimatePresence mode="wait">
             <motion.div
               key={currentIndex}
-              className="relative w-[90%] max-w-sm mx-auto rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-white/10 backdrop-blur-sm border border-white/15 hover:scale-105"
+              className="relative w-[90%] max-w-sm mx-auto rounded-2xl px-4 md:px-6 sm:hidden py-4 my-8 overflow-hidden md:py-6 lg:py-8 text-left transition duration-300 shadow-lg hover:shadow-purple-500/20 bg-bla/10 backdrop-blur-sm border border-bla/15 hover:scale-105"
               initial={{ opacity: 0, x: 0 }}
               animate={{ opacity: 1, x: 0 }}
               exit={{ opacity: 0, x: 0 }}
               transition={{ duration: 0.5, ease: "easeInOut" }}
             >
               <div className="absolute top-2 right-4">
-                <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-white/10 backdrop-blur-sm border border-white/15">
-                  <Icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-white" />
+                <div className="w-6 h-6 md:w-8 md:h-8 lg:w-10 lg:h-10 rounded-full flex items-center justify-center shadow-md bg-bla/10 backdrop-blur-sm border border-bla/15">
+                  <Icon className="w-3 h-3 md:w-4 md:h-4 lg:w-5 lg:h-5 text-black" />
                 </div>
               </div>
-              <div className="text-lg md:text-2xl lg:text-3xl font-normal text-white mb-2">
+              <div className="text-lg md:text-2xl lg:text-3xl font-normal text-black mb-2">
                 {stats[currentIndex].value}
               </div>
               <div className="text-xs mt-2 md:mt-4 text-gray-300">

@@ -45,7 +45,7 @@ const ReviewCard = ({ img, name, username, body }) => {
         // dark styles
       )}
     >
-      <img className="rounded-xl object-center" width="140" alt="" src={img} />
+      <img className="rounded-xl object-center" width="84" alt="" src={img} />
     </figure>
   );
 };

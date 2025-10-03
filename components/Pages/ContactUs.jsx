@@ -10,7 +10,7 @@ const ContactUs = ({ isCards = true }) => {
       className="bg-gradient-to-tl to-[#21082b] from-[#27022e] mb-8"
       id="contact-us"
     >
-      <div className="text-white max-w-7xl mx-auto px-4 md:px-16 pt-12 space-y-12">
+      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-12">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
           <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
             Need a custom Solution?
@@ -22,7 +22,7 @@ const ContactUs = ({ isCards = true }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.1 }}
-            className="backdrop-blur-sm rounded-lg relative w-full max-w-4xl"
+            className="backdrop-blur-sm rounded-lg relative w-full max-w-7xl"
           >
             <div className="flex justify-center items-center px-1 bg-gradient-to-tl to-[#21082b] from-[#27022e]">
               <div

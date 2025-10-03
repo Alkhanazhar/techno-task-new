@@ -103,7 +103,7 @@ const WhyConvoze = () => {
   ];
 
   return (
-    <div className="   relative w-full zoom-out bg-slate-200 text-black overflow-hidden">
+    <div className=" md:min-h-screen  relative w-full  bg-slate-200 text-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -113,7 +113,7 @@ const WhyConvoze = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[90rem] mx-auto px-4 md:py-24 py-12 ">
+      <div className="relative z-10 max-w-[82rem] mx-auto px-4 md:py-24 py-12 ">
         {/* Header Section */}
 
         <div

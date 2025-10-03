@@ -62,7 +62,7 @@ export default function WhatCustomerSays() {
   }, []);
 
   return (
-    <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] text-white  py-12 md:py-16">
+    <section className="bg-gradient-to-tl to-[#21082b] from-[#27022e] text-white min-h-screen  py-12 md:py-16 ">
       <div className="max-w-7xl mx-auto space-y-10 ">
         {/* Heading */}
 
