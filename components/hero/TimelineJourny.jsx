@@ -237,9 +237,9 @@ const TimelineJourney = () => {
 
                 const positions = [
                   { x: "5%", y: "35%" },
-                  { x: "25%", y: "75%" },
-                  { x: "45%", y: "25%" },
-                  { x: "95%", y: "-35%" },
+                  { x: "32%", y: "75%" },
+                  { x: "47%", y: "20%" },
+                  { x: "90%", y: "-35%" },
                 ];
                 const position = positions[index];
 
