@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Headphones, ShoppingCart, Zap, CheckCircle } from "lucide-react";
+import { Repeat, Gauge, TrendingUp, MessageSquare, UserCheck, DollarSign } from "lucide-react";
 import HeroSaas from "./HeroSaas";
 
 const SaasTech = () => {
@@ -29,13 +29,48 @@ const SaasTech = () => {
     },
   };
 
+  const stats = [
+    {
+      icon: <Repeat className="w-8 h-8 text-white" />,
+      stat: "40–60%",
+      desc: "faster onboarding for new support engineers through automated QA-based training insights."
+    },
+    {
+      icon: <Gauge className="w-8 h-8 text-white" />,
+      stat: "Up to 30%",
+      desc: "fewer escalations by detecting unresolved issues early in customer conversations."
+    },
+    {
+      icon: <TrendingUp className="w-8 h-8 text-white" />,
+      stat: "25%",
+      desc: "faster bug/feature identification as recurring product feedback is automatically flagged from conversations."
+    },
+    {
+      icon: <MessageSquare className="w-8 h-8 text-white" />,
+      stat: "100%",
+      desc: "conversation coverage vs. <5% manual auditing — ensuring no customer interaction goes unheard."
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-white" />,
+      stat: "10–15%",
+      desc: "CSAT improvement through better coaching and proactive issue resolution."
+    },
+    {
+      icon: <DollarSign className="w-8 h-8 text-white" />,
+      stat: "20–25%",
+      desc: "reduction in QA costs by automating manual auditing at scale."
+    }
+  ];
+
+
   return (
     <div className="min-h-screen ">
       {/* Header Section - Dark */}
       <HeroSaas />
       {/* What You Get Inside Convoze Section - Light */}
+
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16"
+        className="w-full md:min-h-screen bg-slate-200 py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16 flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -43,6 +78,8 @@ const SaasTech = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
+
+          {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
               src="/saas.png"
@@ -51,28 +88,25 @@ const SaasTech = () => {
             />
           </div>
 
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-black text-center mb-4 xs:mb-6 sm:mb-8">
+          {/* Text Content */}
+          <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+            <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-black mb-4 xs:mb-6 sm:mb-8">
               Fuel Retention and CX with Real-Time{" "}
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
                 Customer Intelligence
               </span>
             </h3>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-              In SaaS, every communication matters, from the very first
-              onboarding call to ongoing support and upselling. Most teams can
-              only review a fraction of these engagements thus leaving valuable
-              insights and risks unheard.
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
+              In SaaS, every communication matters, from the very first onboarding call to ongoing support and upselling. Most teams can only review a fraction of these engagements thus leaving valuable insights and risks unheard.
             </p>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-              Convoze changes that. Our AI-powered platform captures and
-              analyzes 100% of customer interactions, giving you instant
-              visibility into customer sentiment, compliance, and agent
-              performance that too in real time.
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
+              Convoze changes that. Our AI-powered platform captures and analyzes 100% of customer interactions, giving you instant visibility into customer sentiment, compliance, and agent performance that too in real time.
             </p>
           </div>
+
         </div>
       </motion.div>
+
 
       <motion.div
         className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 sm:py-12 md:py-6 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
@@ -189,6 +223,44 @@ const SaasTech = () => {
             </div>
           </div>
         </div>
+      </motion.div>
+
+      <motion.div
+        className="w-full md:min-h-screen bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.6, delay: 0.6 }}
+      >
+        <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+          <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-5 md:mb-10">
+            Measurable{" "}
+            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
+              Impact
+            </span>
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 md:mb-0">
+            {stats.map((item, idx) => (
+              <div
+                key={idx}
+                className="group p-5 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
+              >
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
+                    {item.icon}
+                  </div>
+                  <p className="text-2xl font-bold text-white">{item.stat}</p>
+                </div>
+                <p className="text-white text-xs sm:text-base leading-relaxed">
+                  {item.desc}
+                </p>
+              </div>
+            ))}
+          </div>
+        </section>
+
       </motion.div>
 
       <motion.div

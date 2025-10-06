@@ -217,14 +217,14 @@ const Solutions = () => {
 
                 <div className="flex flex-col lg:flex-row items-center md:gap-8">
                   {/* Problem on Left */}
-                  <div className="w-full p-4 lg:w-1/2 lg:text-right lg:pr-2">
-                    <div className="relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A] transition-all duration-500 hover:scale-105">
-                      <div className="flex items-center gap-4 lg:flex-row-reverse mb-6">
+                  <div className="w-full p-4 lg:w-1/2 lg:text-left lg:pr-2">
+                   <div className="relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A]/70 backdrop-blur-md transition-all duration-500 hover:scale-105">
+                      <div className="flex items-center gap-4 mb-6 lg:text-left">
                         <div className="w-11 h-10 rounded-xl bg-gradient-to-br from-[#3F2AB2] to-[#B462CE] p-3 shadow-xl">
                           <ProblemIcon className="w-5 h-5 text-white" />
                         </div>
                         <div>
-                          <div className="text-orange-500 font-bold text-sm tracking-wider mb-1">
+                          <div className="text-gray-500 font-bold text-sm tracking-wider mb-1">
                             CHALLENGE
                           </div>
                           <h3 className="text-md md:text-xl font-bold text-white">
@@ -241,7 +241,7 @@ const Solutions = () => {
                   {/* Solution on Right */}
                   <div className="w-full p-4 lg:w-1/2 lg:text-left lg:p-2">
                     <div
-                      className={`relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A] transition-all duration-500 cursor-pointer ${
+                      className={`relative p-4 rounded-3xl border-2 border-white/10 bg-[#fff]/10 backdrop-blur-md transition-all transition-all duration-500 cursor-pointer ${
                         isActive
                           ? "shadow-2xl shadow-[#9933FF]/20 scale-105"
                           : "hover:border-[#B462CE]"
@@ -257,7 +257,7 @@ const Solutions = () => {
                               <SolutionIcon className="w-5 h-5 text-white" />
                             </div>
                             <div>
-                              <div className="text-white font-bold text-sm tracking-wider mb-1">
+                              <div className="text-gray-400 font-bold text-sm tracking-wider mb-1">
                                 SOLUTION
                               </div>
                               <h3 className="text-md md:text-xl font-bold text-white">
