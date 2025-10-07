@@ -80,13 +80,15 @@ export default function WhatCustomerSays() {
           </span>
         </h2>
 
-        <div className="relative bg-gradient-to-br from-[#0B0B1F] px-6 md:px-12 to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
+        <div className="relative bg-gradient-to-br mx-8 md:mx-0 from-[#0B0B1F] px-6 md:px-12 to-[#1B012A] rounded-2xl p-4 md:p-12 flex flex-col md:flex-row justify-between items-center gap-10 overflow-hidden">
           {/* Left Content */}
           <div className="flex-1 z-10">
             <h3 className="text-xl md:text-3xl font-light leading-snug ">
-              Powering innovation with <br className="md:block hidden" />
-              data-driven{" "}
-              <span className="text-purple-500 font-semibold">design</span>
+              Empowering Conversations with
+              <br />
+              <span className="bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text font-semibold">
+                AI-Driven Intelligence
+              </span>
             </h3>
             <p className="text-gray-400 md:mb-6 mb-4 text-xs md:text-base max-w-md">
               Crafting intuitive, user-first interfaces by intelligence for
@@ -98,13 +100,13 @@ export default function WhatCustomerSays() {
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
                   200+
                 </h4>
-                <p className="text-xs text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Businesses Empowered</p>
               </div>
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
-                  600+
+                  1M+
                 </h4>
-                <p className="text-xs text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Conversations Audited</p>
               </div>
             </div>
           </div>

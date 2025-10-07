@@ -103,7 +103,7 @@ const WhyConvoze = () => {
   ];
 
   return (
-    <div className=" md:min-h-screen  relative w-full  bg-slate-200 text-black overflow-hidden">
+    <div className=" md:min-h-screen  relative w-full md:py-24 py-12  bg-slate-200 text-black overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
@@ -113,7 +113,7 @@ const WhyConvoze = () => {
         />
       </div>
 
-      <div className="relative z-10 max-w-[82rem] mx-auto px-4 md:py-24 py-12 ">
+      <div className="relative z-10 max-w-[82rem] mx-auto px-4   ">
         {/* Header Section */}
 
         <div
@@ -125,10 +125,6 @@ const WhyConvoze = () => {
             Why
             <span className="font-normal text-black"> Convoze?</span>
           </h1>
-
-          <h2 className="text-center text-xl  text-gray-900/80 mb-4">
-            This isn't just inefficient — it's expensive
-          </h2>
         </div>
 
         {/* Main Content - Two Column Layout */}
@@ -189,6 +185,9 @@ const WhyConvoze = () => {
             </div> */}
 
             <div className=" rounded-2xl space-y-2">
+              <h2 className="text-left text-xl px-4  text-gray-900/80 mb-4">
+                This isn't just inefficient — it's expensive
+              </h2>
               <div className="grid grid-cols-2 md:grid-cols-2 gap-3 ">
                 {problems.map((problem, index) => {
                   const Icon = problem.icon;
