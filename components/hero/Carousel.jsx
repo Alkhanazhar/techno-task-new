@@ -249,7 +249,7 @@ const Slide = ({ slide, index, current }) => {
       }}
     >
       <div
-        className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-3xl overflow-hidden transition-all duration-150 ease-out"
+        className="absolute top-0 left-0 w-full h-full bg-[#1D1F2F] rounded-[1%] overflow-hidden transition-all duration-150 ease-out"
         style={{
           transform:
             current === index
@@ -260,32 +260,24 @@ const Slide = ({ slide, index, current }) => {
         <img
           src={slide.src}
           alt={slide.title}
-          className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
+          className="absolute inset-0 w-[150%] h-[150%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
         />
         {current === index && (
-          <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+          <div className="absolute inset-0 bg-black/50 transition-all duration-1000" />
         )}
       </div>
 
       <article
-        className={`absolute bottom-0 left-0 right-0 p-[3vmin] m-2 
-  backdrop-blur-sm bg-gradient-to-b rounded-3xl 
-  from-black/30 to-black/60 
-  transition-opacity duration-1000 ease-in-out 
-  ${current === index ? "opacity-100 visible" : "opacity-0 invisible"}`}
+        className={`relative p-[4vmin] transition-opacity duration-1000 ease-in-out ${
+          current === index ? "opacity-100 visible" : "opacity-0 invisible"
+        }`}
       >
-        <div className="text-white relative font-semibold text-sm md:text-[20px] mb-1">
-          {slide.title}
-        </div>
-
-        <div className="text-slate-200 text-base font-thin relative">
+        <h2 className="lg:text-3xl font-semibold">{slide.title}</h2>
+        <h1 className="text-sm md:text-lg mt-2 font-light">
           {slide.description}
         </h1>
-        <button
-          onClick={() => router.push(slide.link)}
-          className="mt-4 inline-block cursor-pointer px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm"
-        >
+        <button className="mt-4 inline-block px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm">
           {slide.button}
         </button>
       </article>
@@ -308,7 +300,6 @@ export const Carousel = ({ slides }) => {
   const [current, setCurrent] = useState(0);
   const [isHovered, setIsHovered] = useState(false);
   const id = useId();
-  const extendedSlides = [slides[slides.length - 1], ...slides, slides[0]];
 
   const handlePreviousClick = () =>
     setCurrent((prev) => (prev - 1 + slides.length) % slides.length);
@@ -337,7 +328,7 @@ export const Carousel = ({ slides }) => {
           transform: `translateX(-${current * (100 / slides.length)}%)`,
         }}
       >
-        {extendedSlides.map((slide, index) => (
+        {slides.map((slide, index) => (
           <Slide key={index} slide={slide} index={index} current={current} />
         ))}
       </ul>
