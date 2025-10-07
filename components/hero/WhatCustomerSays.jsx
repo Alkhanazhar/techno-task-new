@@ -84,27 +84,30 @@ export default function WhatCustomerSays() {
           {/* Left Content */}
           <div className="flex-1 z-10">
             <h3 className="text-xl md:text-3xl font-light leading-snug ">
-              Powering innovation with <br className="md:block hidden" />
-              data-driven{" "}
-              <span className="text-purple-500 font-semibold">design</span>
+              Empowering Conversations with <br className="md:block hidden" />
+              <span className="bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text font-semibold">
+                {" "}
+                AI-Driven Intelligence{" "}
+              </span>
             </h3>
-            <p className="text-gray-400 md:mb-6 mb-4 text-xs md:text-base max-w-md">
-              Crafting intuitive, user-first interfaces by intelligence for
-              smarter, faster, and more personalized digital artificial
-              intelligence experiences.
+            <p className="text-slate-300 md:mb-6 mb-4 text-xs font-light md:text-base max-w-md">
+              Transforming customer interactions through data, automation, and
+              real-time insights — enabling businesses to communicate smarter,
+              respond faster, and deliver more personalized experiences powered
+              by Convoze AI.
             </p>
             <div className="flex gap-10">
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
                   200+
                 </h4>
-                <p className="text-xs text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Businesses Empowered</p>
               </div>
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
-                  600+
+                  1M+
                 </h4>
-                <p className="text-xs text-white mt-1">Projects Successfully</p>
+                <p className="text-xs text-white mt-1">Conversations Audited</p>
               </div>
             </div>
           </div>
