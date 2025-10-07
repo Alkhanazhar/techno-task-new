@@ -71,7 +71,7 @@ export default function SolutionCarts() {
             <motion.div
               key={step.id}
               onClick={() => setActiveStep(step)}
-              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 hover:scale-95 rounded-2xl md:px-5 px-3 md:py-4 py-3 cursor-pointer group ${
+              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)] transition-all duration-300 hover:scale-95 rounded-3xl md:px-5 px-3 md:py-4 py-3 cursor-pointer group ${
                 activeStep.id === step.id
                   ? "border-purple-600 shadow-2xl bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2]"
                   : "border-zinc-700 bg-gradient-to-br to-[#371d3e] from-[#3F2AB2]"
@@ -118,7 +118,7 @@ export default function SolutionCarts() {
                 key={step.id}
                 src={step.image}
                 alt={step.title}
-                className={`absolute inset-0 shadow-[0_3px_10px_rgb(0,0,0,0.4)] aspect-video w-full h-full object-fill rounded-2xl  transition-all duration-500 ${
+                className={`absolute inset-0 shadow-[0_3px_10px_rgb(0,0,0,0.4)] aspect-video w-full h-full object-fill rounded-3xl  transition-all duration-500 ${
                   isActive
                     ? "z-30 opacity-100 scale-105"
                     : "z-10 opacity-30 scale-[0.90]"

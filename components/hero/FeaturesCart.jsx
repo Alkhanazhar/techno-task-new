@@ -5,26 +5,29 @@ import { motion } from "framer-motion";
 const features = [
   {
     title: "Live Transcription",
-    desc: "Instant, accurate transcripts of every conversation.",
+    desc: "Instantly capture accurate transcripts of every customer interaction.",
+    img: "/live-transaction.png",
   },
   {
     title: "Emotion & Intent Detection",
-    desc: "Know if a customer is frustrated, satisfied or confused.",
+    desc: "Identify customer tone to reveal satisfaction, confusion, or frustration.",
+    img: "/emotion-intent-detection.png",
   },
   {
     title: "Auto QA Scoring",
-    desc: "Objective scores based on what was said—not who said it Compliance Phrase Alerts: Get notified when high-risk phrases appear.",
+    desc: "Generate unbiased quality scores from every analyzed conversation.",
+    img: "/auto-qa-scoring.png",
   },
   {
     title: "Smart Dashboards",
-    desc: "Everything you need, all in one place.",
+    desc: "Access clear insights and performance trends in one unified view.",
+    img: "/smart-conversation.png",
   },
 ];
-
 const FeaturesCart = () => {
   return (
-    <section className="w-full  text-white md:px-4 px-3 md:py-24 py-12 bg-gradient-to-tl to-[#131113] from-[#27022e]">
-      <div className="md:max-w-6xl max-w-7xl mx-auto text-center mb-6 md:mb-12 px-6">
+    <section className="w-full sm:min-h-screen  text-white md:px-4 px-3 md:py-24 py-12 bg-gradient-to-tl to-[#131113] from-[#27022e]">
+      <div className="md:max-w-6xl max-w-7xl mx-auto text-center pb-6 md:mb-12 px-6">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-4 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           What is <span className=" font-normal text-white"> Convoze?</span>
         </h2>
@@ -61,17 +64,34 @@ const FeaturesCart = () => {
         </motion.div> */}
 
       {/* Features Grid */}
-      <div className="max-w-6xl mx-auto grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 md:gap-6 gap-4 px-0 md:px-4">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pb-16 sm:pb-8 lg:grid-cols-4 gap-6 max-w-7xl mx-8 sm:mx-auto">
         {features.map((item, idx) => (
           <motion.div
             key={idx}
-            whileHover={{ scale: 1.03 }}
-            className="rounded-2xl p-4 md:p-6 min-h-[180px] bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2]  relative text-left border border-gray-800 transition duration-300 hover:shadow-[0_0_30px_#9333ea]/20"
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
+            className="group relative rounded-3xl overflow-hidden shadow-lg min-h-[84px] cursor-pointer"
           >
-            <h3 className="text-white font-semibold text-sm md:text-[16px] mb-2">
-              {item.title}
-            </h3>
-            <p className="text-gray-400 text-xs sm:text-sm">{item.desc}</p>
+            {/* Background Image */}
+            <div
+              className="absolute inset-0 bg-cover bg-center  transition-transform duration-500 group-hover:scale-110"
+              style={{ backgroundImage: `url(${item.img})` }}
+            />
+
+            {/* Dark Overlay */}
+            <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/50 to-black/80" />
+
+            {/* Content */}
+            <div className="relative p-4 sm:p-4 flex flex-col justify-end h-[350px]">
+              <div className="relative backdrop-blur-md bg-black/30 rounded-2xl p-4">
+                <h3 className="text-white font-semibold text-base  mb-2">
+                  {item.title}
+                </h3>
+                <p className="text-gray-300 text-xs leading-snug">
+                  {item.desc}
+                </p>
+              </div>
+            </div>
           </motion.div>
         ))}
       </div>

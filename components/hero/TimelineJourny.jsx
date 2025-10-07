@@ -20,14 +20,16 @@ const TimelineJourney = () => {
 
   const data = [
     {
-      stepLabel: "2022 – Manual Quality Auditing Systems",
+      year: 2022,
+      stepLabel: "Manual Quality Auditing Systems",
       content: [
         "Manual QA tools used to review conversations",
         "Experienced inefficiencies in traditional call center QA",
       ],
     },
     {
-      stepLabel: "2023 – Quality Management System",
+      year: 2023,
+      stepLabel: "Quality Management System",
       content: [
         "Built a simple multilingual QA system allowing sound uploads",
         "Could review only 2-5% of support conversations manually",
@@ -35,7 +37,8 @@ const TimelineJourney = () => {
       ],
     },
     {
-      stepLabel: "2024 – Convoze Speech Analytics",
+      year: 2024,
+      stepLabel: "Convoze Speech Analytics",
       content: [
         "Integrated real-time speech-to-text and emotion detection",
         "Added call summaries, silence indicators, and talk ratio",
@@ -43,7 +46,8 @@ const TimelineJourney = () => {
       ],
     },
     {
-      stepLabel: "2025 – Convoze Conversational Analytics",
+      year: 2025,
+      stepLabel: "Convoze Conversational Analytics",
       content: [
         "Automatic call-reviewing increased to 100%",
         "AI coaching reports are customized and provided to agents",
@@ -331,6 +335,8 @@ const TimelineJourney = () => {
                               : "text-gray-600"
                           }`}
                         >
+                          <span className="text-xl font-bold">{step.year}</span>
+                          {" - "}
                           {step.stepLabel}
                         </div>
                         <ul

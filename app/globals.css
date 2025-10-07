@@ -25,20 +25,32 @@
 .form-label[for="kl-71-input"],
 .form-label[for="kl-81-input"],
 .form-label[for="kl-91-input"] {
-  color: #ffffff !important;
-  font-weight: 200 !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+
+.validate {
+  color: red !important;
+  background: #fff !important;
+  margin-top: 4px !important;
+}
+
+.picklist {
+  background: #fff !important;
+  border: none !important;
+  color: #000 !important;
 }
 
 .form-control {
-  background: #21082b !important;
+  background: #fff !important;
   border: 1px solid #7c7c7cc4 !important;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .is-invalid__control {
-  background: #21082b !important;
+  background: #fff !important;
+  border: none !important;
 
-  border: 1px solid #1f1f1f !important;
   color: #fff !important;
 }
 .form-control::placeholder {
@@ -109,17 +121,19 @@ body {
     transform: scale(0.9);
   }
 }
+
 .kl-form__submit-button {
+  /* position: absolute;
+  bottom: -2.8rem !important; */
+  /* width: 50% !important; */
   background: linear-gradient(to right, #b462ce, #3f2ab2) !important;
   border-radius: 9999px !important;
-  padding-left: 1.5rem !important;
-  padding-right: 1.5rem !important;
-  padding-top: 0.6rem !important;
-  padding-bottom: 0.6rem !important;
+  padding: 0.6rem 1.5rem !important;
   border: none !important;
-  color: #fff !important; /* make text readable */
+  color: #fff !important;
   transition: all 0.3s ease-in-out !important;
 }
+
 .kl-form__branding {
   color: #c068d1 !important;
 }
@@ -237,6 +251,29 @@ html::-webkit-scrollbar {
     }
   }
 }
+
+/* For small screens (mobile) */
+@media screen and (max-width: 640px) {
+  .kl-form__submit-button {
+    position: absolute;
+    bottom: -2.8rem !important;
+    width: 100% !important;
+    background: linear-gradient(to right, #b462ce, #3f2ab2) !important;
+    border-radius: 9999px !important;
+    padding: 0.6rem 1.5rem !important;
+    border: none !important;
+    color: #fff !important;
+    transition: all 0.3s ease-in-out !important;
+  }
+  .kl-form {
+    border: 0px none #ffffff !important;
+    display: grid !important;
+    grid-template-columns: repeat(1, 1fr) !important;
+    gap: 0.4rem !important;
+  }
+}
+
+/* For small screens (mobile) */
 
 .dark {
   --background: oklch(0.145 0 0);

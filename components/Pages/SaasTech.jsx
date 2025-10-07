@@ -32,33 +32,33 @@ const SaasTech = () => {
   const stats = [
     {
       icon: <Repeat className="w-8 h-8 text-white" />,
-      stat: "40–60%",
-      desc: "faster onboarding for new support engineers through automated QA-based training insights."
+      stat: "40–60% — Faster onboarding",
+      desc: "for new support engineers through automated QA-based training insights ."
     },
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
-      stat: "Up to 30%",
-      desc: "fewer escalations by detecting unresolved issues early in customer conversations."
+      stat: "Up to 30% — Fewer escalations",
+      desc: "by detecting unresolved issues early in customer conversations ."
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
-      stat: "25%",
-      desc: "faster bug/feature identification as recurring product feedback is automatically flagged from conversations."
+      stat: "25% — Faster issue detection",
+      desc: "as recurring product feedback is automatically flagged from conversations."
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />,
-      stat: "100%",
-      desc: "conversation coverage vs. <5% manual auditing — ensuring no customer interaction goes unheard."
+      stat: "100% — Full conversation coverage",
+      desc: "<5% manual auditing — ensuring no customer interaction goes unheard ."
     },
     {
       icon: <DollarSign className="w-8 h-8 text-white" />,
-      stat: "10–15%",
-      desc: "CSAT improvement through better coaching and proactive issue resolution."
+      stat: "10–15% — Higher CSAT scores",
+      desc: "improvement through better coaching and proactive issue resolution ."
     },
     {
       icon: <DollarSign className="w-8 h-8 text-white" />,
-      stat: "20–25%",
-      desc: "reduction in QA costs by automating manual auditing at scale."
+      stat: "20–25% — Lower QA costs",
+      desc: "reduction in QA costs by automating manual auditing at scale ."
     }
   ];
 
@@ -117,10 +117,11 @@ const SaasTech = () => {
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <h3 className="text-center text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-10">
-            Fuel Retention and CX with Real-Time <br />
+            Convoze Integration Framework for <br />
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text]">
-              Customer Intelligence
-            </span>
+              SaaS & Tech
+            </span> {" "}
+            Teams
           </h3>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
@@ -228,7 +229,7 @@ const SaasTech = () => {
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-14">
           <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-5 md:mb-10">
             Measurable{" "}
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
@@ -236,24 +237,27 @@ const SaasTech = () => {
             </span>
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mb-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 items-stretch">
             {stats.map((item, idx) => (
               <div
                 key={idx}
-                className="group p-4 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
+                className="group p-4  bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300 h-full flex flex-col justify-between"
               >
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
-                    {item.icon}
+                <div>
+                  <div className="flex items-center gap-3 mb-2">
+                    <div className="p-1.5 bg-white/20 rounded-xl text-left group-hover:bg-white/30 transition">
+                      {item.icon}
+                    </div>
+                    <p className="text-md font-bold text-white text-left">{item.stat}</p>
                   </div>
-                  <p className="text-2xl font-bold text-white">{item.stat}</p>
+                  <p className="text-white text-xs sm:text-base leading-relaxed">
+                    {item.desc}
+                  </p>
                 </div>
-                <p className="text-white text-xs sm:text-base leading-relaxed">
-                  {item.desc}
-                </p>
               </div>
             ))}
           </div>
+
         </section>
 
       </motion.div>

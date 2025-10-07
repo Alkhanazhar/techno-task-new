@@ -59,7 +59,7 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 mx-8 gap-6 max-w-7xl sm:mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-8 sm:mx-auto">
         {trustData.map((item, idx) => (
           <div
             key={idx}

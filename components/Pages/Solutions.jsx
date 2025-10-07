@@ -218,7 +218,7 @@ const Solutions = () => {
                 <div className="flex flex-col lg:flex-row items-center md:gap-8">
                   {/* Problem on Left */}
                   <div className="w-full p-4 lg:w-1/2 lg:text-left lg:pr-2">
-                   <div className="relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A]/70 backdrop-blur-md transition-all duration-500 hover:scale-105">
+                    <div className="relative p-4 rounded-3xl border-2 border-white/10 bg-[#0A0A0A]/70 backdrop-blur-md transition-all duration-500 hover:scale-105">
                       <div className="flex items-center gap-4 mb-6 lg:text-left">
                         <div className="w-11 h-10 rounded-xl bg-gradient-to-br from-[#3F2AB2] to-[#B462CE] p-3 shadow-xl">
                           <ProblemIcon className="w-5 h-5 text-white" />
@@ -341,12 +341,12 @@ const Solutions = () => {
             {[
               {
                 value: "500+",
-                label: "Companies Trust Us",
+                label: "Business Empowered",
                 color: "from-purple-500 to-blue-500",
               },
               {
                 value: "10M+",
-                label: "Conversations Analyzed",
+                label: "Conversations Audited",
                 color: "from-blue-400 to-cyan-400",
               },
               {
