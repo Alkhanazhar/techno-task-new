@@ -109,7 +109,7 @@ const SaasTech = () => {
 
 
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-8 xs:py-10 sm:py-12 md:py-6 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e]  py-8 xs:py-10 sm:py-12 md:py-6 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -146,12 +146,7 @@ const SaasTech = () => {
                     "Agent assist suggests the right KB articles or responses live, increasing first-call resolution rates.",
                   ],
                 },
-                {
-                  title: "Real Time Dashboards",
-                  description: [
-                    "Our Convoze lists up live dashboards that show capability metrics, sentiment trends, and critical alerts so managers can act Instantly.",
-                  ],
-                },
+
               ].map((feature, index) => (
                 <div key={index} className="space-y-1 mb-2">
                   <div className="flex items-center space-x-2">
@@ -178,23 +173,19 @@ const SaasTech = () => {
             <div className="space-y-4">
               {[
                 {
+                  title: "Real Time Dashboards",
+                  description: [
+                    "Our Convoze lists up live dashboards that show capability metrics, sentiment trends, and critical alerts so managers can act Instantly.",
+                  ],
+                },
+                {
                   title: "Faster Product Feedback Loopse",
                   description: [
                     "Surfaces recurring bug mentions, feature requests, and integration issues directly from customer conversations.",
                     "Enables product teams to act faster and prioritize what matters most to users.",
                   ],
                 },
-                {
-                  title: "Measurable Impact",
-                  description: [
-                    "40–60% faster onboarding for new support engineers through automated QA-based training insights.",
-                    "Up to 30% fewer escalations by detecting unresolved issues early in customer conversations.",
-                    "25% faster bug/feature identification as recurring product feedback is automatically flagged from conversations.",
-                    "Covers 100% conversation vs. <5% manual auditing — ensuring no customer interaction goes unheard.",
-                    "10–15% CSAT improvement through better coaching and proactive issue resolution .",
-                    "20–25% reduction in QA costs by automating manual auditing at scale.",
-                  ],
-                },
+
               ].map((feature, index) => (
                 <div key={index} className="space-y-1 mb-2">
                   <div className="flex items-center space-x-2">
@@ -226,7 +217,7 @@ const SaasTech = () => {
       </motion.div>
 
       <motion.div
-        className="w-full md:min-h-screen bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
+        className="w-full md:min-h-screen bg-slate-200  md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -234,20 +225,20 @@ const SaasTech = () => {
         transition={{ duration: 0.6, delay: 0.6 }}
       >
         <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-5 md:mb-10">
+          <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-black mb-5 md:mb-10">
             Measurable{" "}
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
               Impact
             </span>
           </h3>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 md:mb-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:mb-0">
             {stats.map((item, idx) => (
               <div
                 key={idx}
-                className="group p-5 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
+                className="group p-4 bg-gradient-to-br from-[#3224AF]/90 to-[#C068D1]/80 rounded-2xl shadow-md hover:scale-105 hover:shadow-xl transition duration-300"
               >
-                <div className="flex items-center gap-3 mb-4">
+                <div className="flex items-center gap-3 mb-3">
                   <div className="p-2 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
                     {item.icon}
                   </div>
@@ -264,56 +255,88 @@ const SaasTech = () => {
       </motion.div>
 
       <motion.div
-        className="w-full flex flex-col md:flex-row bg-slate-200 shadow-xl py-8 md:py-12 mb-10 gap-8 justify-center items-start"
+        className="w-full flex md:min-h-screen flex-col md:flex-row bg-gradient-to-tl to-[#21082b] from-[#27022e] py-8 md:py-12   justify-center items-center" initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true }}
+        variants={fadeIn}
+        transition={{ duration: 0.6, delay: 0.4 }}
+      >
+        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
+
+          {/* Left Section */}
+          <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
+            <h3 className="text-xl sm:text-xl md:text-4xl font-semibold text-center text-white md:text-center mb-3">
+              Why It Fits Modern{" "}
+              <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
+                SaaS
+              </span>{" "}
+              Workflows
+            </h3>
+            <p className="text-gray-300 text-sm sm:text-base md:text-md mb-3 md:text-center">
+              Contact center and CRM systems are easily integrated with Convoze.
+              It supports multiple languages, adapts to regulatory requirements,
+              and is 100% customizable according to your business needs, whether
+              you’re in fintech, healthtech, e-commerce, or developer tools.
+            </p>
+          </div>
+
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src="/saas1.png"
+              alt="Convoze BPO"
+              className="w-full h-auto max-w-md rounded-xl shadow-lg"
+            />
+          </div>
+        </div>
+      </motion.div>
+
+      <motion.div
+        className="w-full flex md:min-h-screen flex-col md:flex-row bg-slate-200 py-8 md:py-12 mb-10 justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        {/* Left Section */}
-        <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
-          <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-center md:text-left mb-3">
-            Why It Fits Modern{" "}
-            <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
-              SaaS
-            </span>{" "}
-            Workflows
-          </h3>
-          <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-            Contact center and CRM systems are easily integrated with Convoze.
-            It supports multiple languages, adapts to regulatory requirements,
-            and is 100% customizable according to your business needs, whether
-            you’re in fintech, healthtech, e-commerce, or developer tools.
-          </p>
-        </div>
+        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col-reverse md:flex-row items-center gap-8">
 
-        {/* Right Section */}
-        <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
-          <h3 className="text-xl sm:text-xl md:text-2xl font-semibold text-center md:text-left mb-3">
-            The Convoze{" "}
-            <span className="sm:inline-block block bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
-              Advantage
-            </span>
-          </h3>
+          {/* Left Section (Image) */}
+          <div className="w-full md:w-1/2 flex justify-center">
+            <img
+              src="/saas1.png"
+              alt="Convoze BPO"
+              className="w-full h-auto max-w-md rounded-xl shadow-lg"
+            />
+          </div>
 
-          <p className="text-gray-800 text-sm sm:text-base md:text-base mb-3 md:text-left">
-            Most QA tools give you fragments of the customer journey. Convoze
-            delivers the full picture from enabling product teams to identify
-            recurring feature requests, sales leaders to track objection
-            patterns, and support managers to recognize top-performing agents.
-          </p>
+          {/* Right Section (Text) */}
+          <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
+            <h3 className="text-xl sm:text-xl md:text-4xl font-semibold text-center md:text-left mb-3">
+              The Convoze{" "}
+              <span className="sm:inline-block block bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
+                Advantage
+              </span>
+            </h3>
 
-          <p className="text-gray-800 text-sm sm:text-base mt-4 text-center md:text-left">
-            With Convoze, every interaction becomes an opportunity to improve
-            your product, retain your customers, and grow your revenue.
-          </p>
+            <p className="text-gray-800 text-sm sm:text-base md:text-base mb-3 text-center md:text-left md:px-6">
+              Most QA tools give you fragments of the customer journey. Convoze
+              delivers the full picture—from enabling product teams to identify
+              recurring feature requests, sales leaders to track objection patterns,
+              and support managers to recognize top-performing agents.
+            </p>
+
+            <p className="text-gray-800 text-sm sm:text-base mt-4 text-center md:text-left">
+              With Convoze, every interaction becomes an opportunity to improve
+              your product, retain your customers, and grow your revenue.
+            </p>
+          </div>
         </div>
       </motion.div>
 
+
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12  flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-12 text-center flex items-center justify-center"
+        className="w-full md:min-h-screen  bg-gradient-to-tl to-[#21082b] md:-mt-12  flex-col from-[#27022e] shadow-xl py-12 xs:py-10 sm:py-12 md:py-12 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -350,16 +373,7 @@ const SaasTech = () => {
         </div>
       </motion.div>
 
-      <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b]  from-[#27022e] shadow-xl pb-4 xs:pb-4 sm:pb-8 md:pb-8 text-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"></div>
-      </motion.div>
+
     </div>
   );
 };
