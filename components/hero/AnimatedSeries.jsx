@@ -1,6 +1,14 @@
 import React, { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { MessageSquare, Phone, Clock, Unlink } from "lucide-react";
+import {
+  MessageSquare,
+  Phone,
+  Clock,
+  Unlink,
+  FileSearch,
+  AlertTriangle,
+  Frown,
+} from "lucide-react";
 
 const AnimatedStatsCards = () => {
   const containerRef = useRef(null);
@@ -13,28 +21,26 @@ const AnimatedStatsCards = () => {
 
   const wastedStats = [
     {
-      percentage: "95%",
-      label: "Conversations Wasted",
-      description: "In traditional contact centers",
-      icon: MessageSquare,
+      icon: FileSearch,
+      title: "Less than 5% of Customer Calls Are Audited",
+      description:
+        "Most contact centers only review a fraction of interactions",
     },
     {
-      percentage: "<5%",
-      label: "conversations Audited",
-      description: "Through manual QA coverage",
-      icon: Phone,
-    },
-    {
-      percentage: "Timing Gap",
-      label: "Delayed Coaching",
-      description: "Agent feedback timing",
       icon: Clock,
+      title: "Most Agent Coaching Is Delayed by Days",
+      description: "Feedback often comes too late to improve live performance",
     },
     {
-      percentage: "Disconnect",
-      label: "Customer Sentiment",
-      description: "Is misunderstood or ignored",
-      icon: Unlink,
+      icon: AlertTriangle,
+      title: "Compliance Risks Go Unnoticed Until Escalation",
+      description:
+        "Issues are detected only after customer complaints or penalties",
+    },
+    {
+      icon: Frown,
+      title: "Customer Sentiment Is Misunderstood or Ignored",
+      description: "Emotional tone and intent often go unrecognized",
     },
   ];
 
@@ -52,6 +58,14 @@ const AnimatedStatsCards = () => {
 
           {/* Cards */}
           <div className="space-y-4 pl-12 sm:pl-24">
+            <div className="max-w-3xl mx-auto text-center">
+              <h2 className="text-2xl sm:text-xl font-extrabold bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] text-transparent bg-clip-text mb-4">
+                In Traditional Contact Center Setups
+              </h2>
+              <p className="text-gray-600 text-sm sm:text-base">
+                Here’s why 95% of conversations end up wasted:
+              </p>
+            </div>
             {wastedStats.map((stat, index) => {
               const Icon = stat.icon;
               const start = index / wastedStats.length;
@@ -98,7 +112,7 @@ const AnimatedStatsCards = () => {
                       className="absolute -top-10 -right-20 w-40 h-32 bg-gradient-to-br from-[#3F2AB2]/10 to-[#B462CE]/10 rounded-full blur-3xl"
                       animate={{
                         scale: [1, 1.2, 1],
-                        rotate: [0, 90, 0],
+                        rotate: [0, 10, 0],
                       }}
                       transition={{
                         duration: 8,
@@ -107,24 +121,24 @@ const AnimatedStatsCards = () => {
                       }}
                     />
 
-                    <div className="relative z-10 flex items-start gap-3">
+                    <div className="relative z-10 flex items-center gap-3">
                       {/* Animated Icon Container */}
                       <motion.div
                         className="sm:w-12 sm:h-12 w-9 h-9 rounded-xl bg-gradient-to-tl from-[#3F2AB2] to-[#B462CE] p-2 flex-shrink-0 shadow-lg"
-                        whileHover={{ rotate: 360 }}
-                        transition={{ duration: 0.6, ease: "easeInOut" }}
+                        whileHover={{ rotate: 30 }}
+                        transition={{ duration: 0.2, ease: "easeInOut" }}
                       >
                         <Icon className="w-full h-full text-white" />
                       </motion.div>
 
                       <div className="flex-1">
-                        <h3 className="sm:text-xl font-bold mb-1 bg-gradient-to-br from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text">
-                          {stat.percentage} {stat.label}
+                        <h3 className="text-sm sm:text-base font-bold mb-1 bg-gradient-to-br from-[#3F2AB2] to-[#371d3e] text-transparent bg-clip-text">
+                          {stat.title}
                         </h3>
-
+                        {/* 
                         <p className="text-gray-600 text-xs leading-relaxed">
-                          {stat.description}
-                        </p>
+                          {stat.percentage} {stat.label}
+                        </p> */}
                       </div>
                     </div>
                   </motion.div>
