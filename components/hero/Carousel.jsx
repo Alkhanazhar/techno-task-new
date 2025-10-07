@@ -236,8 +236,7 @@ const Slide = ({ slide, index, current }) => {
   return (
     <li
       ref={slideRef}
-      className="flex flex-1 flex-col items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[48vmin] h-[62vmin] mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
-      onClick={() => router.push(slide.link)}
+      className="flex flex-1 flex-col overflow-hidden items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[48vmin] h-[60vmin] rounded-3xl mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{
@@ -264,9 +263,9 @@ const Slide = ({ slide, index, current }) => {
           className="absolute inset-0 w-[100%] h-[100%] object-cover opacity-100 transition-opacity duration-600 ease-in-out"
           style={{ opacity: current === index ? 1 : 0.5 }}
         />
-        {/* {current === index && (
-          <div className="absolute inset-0 bg-black/50 transition-all duration-1000" />
-        )} */}
+        {current === index && (
+          <div className="absolute inset-0 bg-black/30 transition-all duration-1000" />
+        )}
       </div>
 
       <article
@@ -282,11 +281,13 @@ const Slide = ({ slide, index, current }) => {
 
         <div className="text-slate-200 text-base font-thin relative">
           {slide.description}
-        </div>
-
-        <span className="mt-4 inline-block relative px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm">
+        </h1>
+        <button
+          onClick={() => router.push(slide.link)}
+          className="mt-4 inline-block cursor-pointer px-5 py-2 rounded-full bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-white font-semibold text-xs md:text-sm"
+        >
           {slide.button}
-        </span>
+        </button>
       </article>
     </li>
   );
