@@ -180,11 +180,19 @@ const Navbar = () => {
   const menuItems = [
     { name: "Home", route: "/" },
     { name: "Features", route: "/features" },
-    { name: "Solution", route: "/solution" },
+    { name: "Solutions", route: "", isMegaMenu: true, arrow: true },
     { name: "Pricing", route: "/pricing" },
-    { name: "Use Cases", route: "", isMegaMenu: true },
     { name: "Contact Us", route: "/contact" },
   ];
+
+  const [openMenu, setOpenMenu] = useState(null);
+
+  const handleClick = (item) => {
+    if (item.isMegaMenu) {
+      setOpenMenu(openMenu === item.name ? null : item.name);
+    }
+    handleNav(item);
+  };
 
   const links = [
     { name: "BPO & Contact Centers", route: "/bpo-contact-centers" },
@@ -212,11 +220,10 @@ const Navbar = () => {
   return (
     <div className="py-3 relative">
       <nav
-        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
-          isScrolled
-            ? "!bg-black/30 !backdrop-blur-md shadow-sm"
-            : "!bg-transparent"
-        }`}
+        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${isScrolled
+          ? "!bg-black/30 !backdrop-blur-md shadow-sm"
+          : "!bg-transparent"
+          }`}
       >
         <div
           className="flex items-center gap-2 cursor-pointer"
@@ -230,10 +237,22 @@ const Navbar = () => {
           {menuItems.map((item) => (
             <button
               key={item.name}
-              onClick={() => handleNav(item)}
-              className="text-white cursor-pointer hover:text-purple-400 transition-all duration-200 relative"
+              onClick={() => handleClick(item)}
+              className="text-white cursor-pointer hover:text-purple-400 transition-all duration-200 relative flex items-center gap-1"
             >
               {item.name}
+              {item.arrow && (
+                <svg
+                  className={`w-3 h-3 hover:text-purple-400 transition-transform duration-200 ${openMenu === item.name ? "rotate-180" : ""
+                    }`}
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                </svg>
+              )}
             </button>
           ))}
         </div>
@@ -272,12 +291,17 @@ const Navbar = () => {
                 translate customer <br />
                 insights into business value.
               </p>
-
+              <Link
+                href="/solution"
+                className="text-gray-300 font-medium flex items-center gap-1 hover:underline"
+              >
+                How it work <span className="text-gray-300">→</span>
+              </Link>
               <Link
                 href="/solution"
                 className="text-purple-500 font-medium flex items-center gap-1 mb-3 hover:underline"
               >
-                Solutions <span className="text-purple-500">→</span>
+                Industry <span className="text-purple-500">→</span>
               </Link>
             </div>
 
@@ -388,6 +412,18 @@ const Navbar = () => {
                               </Link>
                             ))}
                           </div>
+                          <Link
+                            href="/solution"
+                            className="text-gray-300 font-medium flex items-center gap-1 hover:underline mt-5"
+                          >
+                            How it work <span className="text-gray-300">→</span>
+                          </Link>
+                          <Link
+                            href="/solution"
+                            className="text-purple-500 font-medium flex items-center gap-1 mb-3 hover:underline"
+                          >
+                            Industry <span className="text-purple-500">→</span>
+                          </Link>
                         </div>
                       )}
                     </>

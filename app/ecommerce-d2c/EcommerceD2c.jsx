@@ -100,7 +100,7 @@ const EcommerceD2c = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-10 min-h-screen py-12 lg:py-0">
             <div className="w-full lg:w-1/2 text-center lg:text-left space-y-2 sm:space-y-2">
               <div className="space-y-2 sm:space-y-3 md:space-y-2">
-                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-white leading-tight">
                   Convoze for
                 </h1>
                 <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
@@ -144,8 +144,7 @@ const EcommerceD2c = () => {
       </motion.div>
 
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16"
-        initial="hidden"
+        className="w-full md:min-h-screen bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16 flex items-center justify-center" initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
@@ -184,7 +183,7 @@ const EcommerceD2c = () => {
 
       {/* Proven Measurable Impact Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-8 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] py-6 xs:py-10 sm:py-12 md:py-8 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -219,11 +218,11 @@ const EcommerceD2c = () => {
               ))}
             </div>
           </div>
-          <div className="w-full md:w-1/2 flex justify-center">
+          <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex justify-center items-center">
             <img
               src="/driven.png"
               alt="Ecommerce & D2C Brands Face"
-              className="w-full h-auto max-w-md rounded-xl shadow-lg"
+              className="rounded-2xl shadow-lg w-[450px] h-auto object-cover"
             />
           </div>
         </div>
@@ -231,7 +230,7 @@ const EcommerceD2c = () => {
 
       {/* What You Get Inside Convoze Section - Light */}
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
+        className="w-full md:min-h-screen  bg-slate-200 py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -338,7 +337,7 @@ const EcommerceD2c = () => {
 
 
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
+        className="w-full md:min-h-screen bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -477,14 +476,14 @@ const EcommerceD2c = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
+        className="w-full md:min-h-screen bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.6 }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div className="w-full  max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
             {/* Left Section */}
             <div>

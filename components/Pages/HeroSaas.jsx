@@ -47,10 +47,10 @@ const HeroSaas = () => {
         >
           <div className="w-full lg:w-1/2 text-center lg:text-left space-y-2 sm:space-y-2">
             <div className="space-y-2 sm:space-y-3 md:space-y-2">
-              <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
+              <h1 className="text-2xl xs:text-4xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-white leading-tight">
                 Convoze for
               </h1>
-              <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
+              <h2 className="text-4xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
                 SaaS & Tech
               </h2>
             </div>
