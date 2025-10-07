@@ -25,14 +25,25 @@
 .form-label[for="kl-71-input"],
 .form-label[for="kl-81-input"],
 .form-label[for="kl-91-input"] {
-  color: #ffffff !important;
-  font-weight: 200 !important;
+  color: #000 !important;
+  font-weight: 400 !important;
+}
+.validate {
+  color: red !important;
+  background: #fff !important;
+  margin-top: 4px !important;
+}
+
+.picklist {
+  background: #fff !important;
+  border: 1px solid #7c7c7cc4 !important;
+  color: #000 !important;
 }
 
 .form-control {
-  background: #21082b !important;
+  background: #fff !important;
   border: 1px solid #7c7c7cc4 !important;
-  color: #fff !important;
+  color: #000 !important;
 }
 
 .is-invalid__control {

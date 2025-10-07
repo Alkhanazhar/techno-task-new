@@ -216,10 +216,11 @@ const Navbar = () => {
   return (
     <div className="py-3 relative">
       <nav
-        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${isScrolled
-          ? "!bg-black/30 !backdrop-blur-md shadow-sm"
-          : "!bg-transparent"
-          }`}
+        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+          isScrolled
+            ? "!bg-black/30 !backdrop-blur-md shadow-sm"
+            : "!bg-transparent"
+        }`}
       >
         <div
           className="flex items-center gap-2 cursor-pointer"
@@ -239,14 +240,19 @@ const Navbar = () => {
               {item.name}
               {item.arrow && (
                 <svg
-                  className={`w-3 h-3 hover:text-purple-400 transition-transform duration-200 ${openMenu === item.name ? "rotate-180" : ""
-                    }`}
+                  className={`w-3 h-3 hover:text-purple-400 transition-transform duration-200 ${
+                    openMenu === item.name ? "rotate-180" : ""
+                  }`}
                   fill="none"
                   stroke="currentColor"
                   strokeWidth="2"
                   viewBox="0 0 24 24"
                 >
-                  <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M19 9l-7 7-7-7"
+                  />
                 </svg>
               )}
             </button>
@@ -291,7 +297,7 @@ const Navbar = () => {
                 href="/solution"
                 className="text-gray-300 font-medium flex items-center gap-1 hover:underline"
               >
-                How it work <span className="text-gray-300">→</span>
+                How it work's <span className="text-gray-300">→</span>
               </Link>
               <Link
                 href="/solution"

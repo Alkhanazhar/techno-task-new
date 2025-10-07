@@ -59,7 +59,7 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-8 sm:mx-auto">
         {trustData.map((item, idx) => (
           <div
             key={idx}
@@ -79,9 +79,9 @@ export default function WhyTrustUs() {
             {/* Content */}
             <div className="relative p-2 h-full flex flex-col justify-end min-h-[400px]">
               {/* Heart Icon */}
-              <div className="absolute top-6 right-6 bg-pink-500 rounded-full p-2 shadow-lg">
+              {/* <div className="absolute top-6 right-6 bg-pink-500 rounded-full p-2 shadow-lg">
                 <Heart className="w-4 h-4 text-white fill-white" />
-              </div>
+              </div> */}
 
               {/* Stats */}
               <div className=" relative rounded-3xl px-4 py-2 overflow-hidden">

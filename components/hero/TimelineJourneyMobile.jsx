@@ -19,25 +19,25 @@ const TimelineJourneyMobile = () => {
 
   const data = [
     {
-      stepLabel: "2022 – Manual Quality Auditing Systems",
+      year: 2022,
+      stepLabel: "Manual Quality Auditing Systems",
       content: [
         "Manual QA tools used to review conversations",
         "Experienced inefficiencies in traditional call center QA",
-        // "No automation or transcription - audits were not uniform",
-        // "Realized the need for scalable QA automation and better call quality monitoring"
       ],
     },
     {
-      stepLabel: "2023 – Quality Management System",
+      year: 2023,
+      stepLabel: "Quality Management System",
       content: [
         "Built a simple multilingual QA system allowing sound uploads",
         "Could review only 2-5% of support conversations manually",
-        // "Did not provide real-time tracking and benchmarking of agents",
         "It emphasized the importance of AI-powered call review tools",
       ],
     },
     {
-      stepLabel: "2024 – Convoze Speech Analytics",
+      year: 2024,
+      stepLabel: "Convoze Speech Analytics",
       content: [
         "Integrated real-time speech-to-text and emotion detection",
         "Added call summaries, silence indicators, and talk ratio",
@@ -45,13 +45,12 @@ const TimelineJourneyMobile = () => {
       ],
     },
     {
-      stepLabel: "2025 – Convoze Conversational Analytics",
+      year: 2025,
+      stepLabel: "Convoze Conversational Analytics",
       content: [
         "Automatic call-reviewing increased to 100%",
         "AI coaching reports are customized and provided to agents",
-        // "CX and compliance – real-time alerts",
         "Grew to be a complete conversation analytics platform",
-        // "Fully replaced manual QA with AI-powered call QA software",
         "Extended support to emails and chats for full omnichannel quality monitoring",
       ],
     },
@@ -229,9 +228,7 @@ const TimelineJourneyMobile = () => {
       >
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center ">
-            <h2 className="text-2xl font-bold text-gray-800 ">
-              Our Journey
-            </h2>
+            <h2 className="text-2xl font-bold text-gray-800 ">Our Journey</h2>
           </div>
           <div ref={containerRef} className="relative  ">
             {/* Main timeline container */}
@@ -385,9 +382,10 @@ const TimelineJourneyMobile = () => {
                       <motion.div
                         className={`
                           bg-white rounded-lg p-4 shadow-xl border-2 transition-all duration-200
-                          ${isPast
-                            ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
-                            : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
+                          ${
+                            isPast
+                              ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
+                              : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
                           }
                         `}
                         animate={{
@@ -397,11 +395,13 @@ const TimelineJourneyMobile = () => {
                         transition={{ duration: 0.15 }}
                       >
                         <div className="font-semibold mb-2 text-purple-100">
+                          <span className="text-xl font-bold">{step.year}</span>
+                          {" - "}
                           {step.stepLabel}
                         </div>
                         <p className="text-xs leading-relaxed transition-1 text-white">
                           {step.content.map((point, idx) => (
-                            <span key={idx} >{point}</span>
+                            <span key={idx}>{point}</span>
                           ))}
                         </p>
 

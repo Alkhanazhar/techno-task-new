@@ -102,8 +102,8 @@ const Hero4 = () => {
           </h1>
 
           <p className="text-gray-200/90 text-[11px] md:text-[16px] mt-6 font-normal max-w-[650px] leading-relaxed">
-            Convoze AI audits 100% of conversations, flags compliance risks,
-            and delivers actionable insights to CX, QA, and compliance teams
+            Convoze AI audits 100% of conversations, flags compliance risks, and
+            delivers actionable insights to CX, QA, and compliance teams
             reducing churn, cutting review & driving smarter decisions in real
             time.
           </p>

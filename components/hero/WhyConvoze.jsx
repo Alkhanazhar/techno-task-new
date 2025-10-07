@@ -46,7 +46,7 @@ const WhyConvoze = () => {
     },
     {
       percentage: "<5%",
-      label: "conversations Reviewed",
+      label: "conversations Audited",
       description: "Through manual QA coverage",
       icon: Phone,
     },
