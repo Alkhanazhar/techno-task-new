@@ -115,7 +115,7 @@ const HealthcareInsurance = () => {
           <div className="flex flex-col lg:flex-row items-center justify-center lg:justify-between gap-8 xs:gap-10 sm:gap-12 md:gap-14 lg:gap-16 xl:gap-10 min-h-screen py-12 lg:py-0">
             <div className="w-full lg:w-1/2 text-center lg:text-left space-y-2 sm:space-y-2">
               <div className="space-y-2 sm:space-y-3 md:space-y-2">
-                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-5xl lg:text-5xl xl:text-5xl font-bold text-white leading-tight">
+                <h1 className="text-3xl xs:text-4xl sm:text-5xl md:text-4xl lg:text-4xl xl:text-4xl font-bold text-white leading-tight">
                   Convoze for
                 </h1>
                 <h2 className="text-2xl xs:text-3xl sm:text-4xl md:text-4xl lg:text-4xl xl:text-6xl font-bold bg-gradient-to-r from-[#C068D1] to-[#3224AF]  bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')] leading-tight">
@@ -159,52 +159,61 @@ const HealthcareInsurance = () => {
       </motion.div>
 
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16"
+        className="w-full md:min-h-screen bg-slate-200 py-8 xs:py-10 sm:py-12 md:py-12 mb-8 xs:mb-10 sm:mb-12 md:mb-16 flex justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
-        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2 flex justify-center">
+        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center justify-center gap-8">
+
+          {/* Left Section - Image */}
+          <div className="w-full md:w-1/2 flex justify-center items-center">
             <img
               src="/medical.png"
               alt="E-Commerce and D2C"
-              className="w-full h-auto max-w-md rounded-xl shadow-lg"
+              className="w-full h-auto max-w-md rounded-xl shadow-lg object-contain"
             />
           </div>
 
-          <div className="w-full md:w-1/2">
-            <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-black text-center mb-4 xs:mb-6 sm:mb-8">
+          {/* Right Section - Text */}
+          <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start text-center md:text-left">
+            <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-3xl font-semibold text-center text-black mb-4 xs:mb-6 sm:mb-8">
               Transforming Risk Management into <br />
               <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
                 Relationship Building
               </span>
             </h3>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
+
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
               In healthcare and insurance, every interaction carries high stakes — from patient
-              well-being to sensitive financial data
+              well-being to sensitive financial data.
             </p>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
-              Convoze helps your teams offer caring, compliant, and efficient services. It protects every call, chat, and support ticket.
+
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
+              Convoze helps your teams offer caring, compliant, and efficient services. It protects every
+              call, chat, and support ticket.
             </p>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3  md:text-left">
+
+            <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
               Instead of catching errors after the damage is done, your teams get real-time alerts
-              for potential risks, policy breaches, or signs of distress — enabling
-              faster claims resolution, reduced escalations, and improved patient/member trust.
+              for potential risks, policy breaches, or signs of distress — enabling faster claims
+              resolution, reduced escalations, and improved patient/member trust.
             </p>
-            <p className="text-gray-800 text-sm sm:text-base md:text-md md:text-left font-semibold">
+
+            <p className="text-gray-800 text-sm sm:text-base md:text-md font-semibold">
               With Convoze, you don’t just monitor conversations — you protect lives, secure data,
-              and earn lasting trust
+              and earn lasting trust.
             </p>
           </div>
         </div>
       </motion.div>
 
+
       {/* Proven Measurable Impact Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-8 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
+        className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e] py-6 xs:py-10 sm:py-12 md:py-8 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -248,7 +257,7 @@ const HealthcareInsurance = () => {
 
       {/* What You Get Inside Convoze Section - Light */}
       <motion.div
-        className="w-full bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
+        className="w-full md:min-h-screen bg-slate-200 shadow-xl py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 flex justify-center items-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -496,7 +505,7 @@ const HealthcareInsurance = () => {
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
-        className="w-full bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
+        className="w-full md:min-h-screen  bg-gradient-to-tl to-[#21082b] md:-mt-12 flex-col from-[#27022e] shadow-xl py-6 xs:py-10 sm:py-12 md:py-16 text-center flex items-center justify-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
@@ -507,14 +516,14 @@ const HealthcareInsurance = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
             {/* Left Section */}
             <div>
-              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
+              <h3 className="text-xl xs:text-2xl text-center md:text-left sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
                 Where Convoze{" "}
                 <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
                   Makes
                 </span>{" "}
                 the Difference
               </h3>
-              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
+              <p className="text-white text-base text-center md:text-left  xs:text-base sm:text-lg md:text-md !font-light">
                 With Convoze, healthcare and insurance providers don’t just handle interactions — they
                 protect lives, secure sensitive data, and earn lasting trust.
                 Every conversation becomes an opportunity to care better, resolve faster,
@@ -524,14 +533,14 @@ const HealthcareInsurance = () => {
 
             {/* Right Section */}
             <div>
-              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
+              <h3 className="text-xl xs:text-2xl text-center md:text-left sm:text-3xl md:text-3.5xl lg:text-4xl font-semibold text-white mb-3">
                 Why{" "}
                 <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] bg-clip-text [-webkit-background-clip:text] [color:theme('colors.purple.400')]">
                   Convoze
                 </span>{" "}
                 Stands Out
               </h3>
-              <p className="text-white text-base xs:text-base sm:text-lg md:text-md !font-light">
+              <p className="text-white text-base text-center md:text-left  xs:text-base sm:text-lg md:text-md !font-light">
                 Most QA tools still work in isolation or rely on a handful of
                 conversation samples. Being different, Convoze audits every
                 single solitary conversation in one unified platform. That gives
