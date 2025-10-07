@@ -97,7 +97,7 @@ const Hero4 = () => {
             97% of customer conversations are lost.
             <br className="block " />
             <span className="bg-gradient-to-r from-[#B462CE] via-[#c893d8] to-[#6D5DD3] text-transparent bg-clip-text">
-              Only 3% get audited.
+              Only 3% get audited
             </span>
           </h1>
 
