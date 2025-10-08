@@ -1,10 +1,62 @@
 "use client";
-import React from "react";
-import { Phone, Mail, MapPin } from "lucide-react";
+import React, { useEffect, useState } from "react";
+import { Phone, Mail, MapPin, Loader2 } from "lucide-react";
 import { motion } from "framer-motion";
-import Script from "next/script";
 
 const ContactUs = ({ isCards = true, bg }) => {
+  const [isLoading, setIsLoading] = useState(true);
+  const [scriptLoaded, setScriptLoaded] = useState(false);
+
+  useEffect(() => {
+    setIsLoading(true);
+    setScriptLoaded(false);
+
+    // Clean up existing form container
+    const container = document.getElementById("kl__form-container");
+    if (container) {
+      container.innerHTML = "";
+    }
+
+    // Remove existing script if present
+    const existingScript = document.querySelector(
+      'script[src="https://assets.kylas.io/lead-capture-forms/lcf.min.js"]'
+    );
+    if (existingScript) {
+      existingScript.remove();
+    }
+
+    // Load the script
+    const script = document.createElement("script");
+    script.src = "https://assets.kylas.io/lead-capture-forms/lcf.min.js";
+    script.setAttribute("form-id", "36a6e74c-b840-4b37-b993-6a89cdcb75fc");
+    script.async = true;
+
+    script.onload = () => {
+      setScriptLoaded(true);
+      // Wait a bit for the form to render
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+    };
+
+    script.onerror = () => {
+      console.error("Failed to load Kylas form script");
+      setIsLoading(false);
+    };
+
+    document.body.appendChild(script);
+
+    return () => {
+      // Cleanup on unmount
+      if (script.parentNode) {
+        script.remove();
+      }
+      if (container) {
+        container.innerHTML = "";
+      }
+    };
+  }, []);
+
   return (
     <div
       className={`${
@@ -14,17 +66,6 @@ const ContactUs = ({ isCards = true, bg }) => {
       } py-12 md:py-24 -mt-16 relative`}
       id="contact-us"
     >
-      {/* Background Pattern */}
-      {bg !== "dark" && (
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/bgPattern.png"
-            alt="Background Pattern"
-            className="w-full h-full rotate-180 object-cover opacity-20"
-          />
-        </div>
-      )}
-
       {/* Form Label Style Override */}
       <style jsx global>{`
         .form-label[for="kl-11-input"],
@@ -56,17 +97,29 @@ const ContactUs = ({ isCards = true, bg }) => {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="relative w-full max-w-7xl"
           >
-            <div className="flex justify-center bg-transparent p-8">
+            <div
+              className={`flex justify-center bg-transparent ${
+                !isCards && "p-8"
+              } relative min-h-[400px]`}
+            >
+              {/* Loader */}
+              {isLoading && (
+                <div className="absolute inset-0 flex items-center justify-center z-30">
+                  <div className="flex flex-col items-center gap-4">
+                    <Loader2 className="w-12 h-12 text-[#C068D1] animate-spin" />
+                    <p className="text-white text-sm">Loading form...</p>
+                  </div>
+                </div>
+              )}
+
+              {/* Form Container */}
               <div
                 id="kl__form-container"
-                className="mx-auto w-full relative z-20 mt-8 !bg-transparent"
+                className={`mx-auto w-full relative z-20 !bg-transparent transition-opacity duration-300 ${
+                  isLoading ? "opacity-0" : "opacity-100"
+                }`}
               ></div>
             </div>
-            <Script
-              src="https://assets.kylas.io/lead-capture-forms/lcf.min.js"
-              strategy="afterInteractive"
-              form-id="36a6e74c-b840-4b37-b993-6a89cdcb75fc"
-            />
           </motion.div>
         </div>
 

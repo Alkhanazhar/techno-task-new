@@ -103,7 +103,7 @@
   border: 0px none #ffffff !important;
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 1rem !important;
+  gap: 0.6rem !important;
 }
 .card-spotlight {
   position: relative;
