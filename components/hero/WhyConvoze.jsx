@@ -1,70 +1,87 @@
-import { AlertCircle, Users, Shield, TrendingDown } from "lucide-react";
+import {
+  AlertCircle,
+  Users,
+  Shield,
+  TrendingDown,
+  DollarSign,
+  Brain,
+  BarChart3,
+  Frown,
+} from "lucide-react";
 
 const Index = () => {
   const statsData = [
     {
+      icon: TrendingDown,
+      text: "95% of Conversations Are Wasted.",
+    },
+    {
       icon: AlertCircle,
-      text: "Less than 5% of customer calls are reviewed",
+      text: "Less than 5% of customer conversations are audited.",
     },
     {
       icon: Users,
-      text: "Most agent coaching is delayed by days",
+      text: "Most agent coaching is delayed by days.",
     },
     {
       icon: Shield,
-      text: "Compliance risks go unnoticed until escalation",
+      text: "Compliance risks go unnoticed until escalation.",
     },
     {
-      icon: TrendingDown,
-      text: "Customer sentiment is misunderstood or ignored",
+      icon: Frown,
+      text: "Customer sentiment is misunderstood or ignored.",
     },
   ];
 
-  const problems = [
-    "Poor QA leads to churn",
-    "Delayed feedback kills team growth",
-    "Missed compliance breaches cost millions",
+  const bottomCards = [
+    {
+      icon: DollarSign,
+      text: "Poor QA leads to customer churn.",
+    },
+    {
+      icon: Brain,
+      text: "Delayed feedback kills team growth.",
+    },
+    {
+      icon: BarChart3,
+      text: "Missed compliance breaches cost millions.",
+    },
   ];
 
   return (
-    <div className="min-h-screen relative w-full sm:py-20 py-4  px-4 bg-slate-200">
-      {/* Rainbow gradient overlay */}
-      {/* <div
-        className="absolute inset-0 opacity-30"
-        style={{
-          background:
-            "repeating-linear-gradient(45deg, hsl(0, 70%, 85%) 0px, hsl(60, 70%, 85%) 20px, hsl(120, 70%, 85%) 40px, hsl(180, 70%, 85%) 60px, hsl(240, 70%, 85%) 80px, hsl(300, 70%, 85%) 100px, hsl(0, 70%, 85%) 120px)",
-          backgroundSize: "200% 200%",
-        }}
-      /> */}
+    <div className="md:min-h-screen w-full relative bg-slate-200 py-16 px-4">
+      {/* Background Pattern */}
+      <div className="absolute inset-0 z-0 overflow-hidden">
+        <img
+          src="/bgPattern.png"
+          alt="Background Pattern"
+          className="w-screen h-full object-cover opacity-15 !z-0"
+        />
+      </div>
 
-      <div className="relative z-10 max-w-7xl mx-auto">
-        {/* Header */}
-        <div className="text-center mb-12 space-y-4">
-          <h1 className="text-3xl text-center lg:text-4xl font-medium mb-6 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-            Why
-            <span className="font-normal text-black"> Convoze?</span>
+      <div className="max-w-6xl mx-auto relative">
+        {/* Header Section */}
+        <div className="text-center mb-6 space-y-3">
+          <h1 className="text-2xl md:text-3xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500">
+            Why <span className="text-gray-800 dark:text-white">Convoze?</span>
           </h1>
-          <h1 className="text-2xl md:text-2xl font-light text-foreground">
-            In traditional contact center setups,
-          </h1>
-          <h2 className="text-3xl md:text-3xl font-bold ">
-            95% of Conversations Are Wasted
-          </h2>
+          <p className="text-lg text-gray-700 dark:text-gray-300">
+            In traditional contact center setups —
+          </p>
         </div>
 
-        {/* Stats Cards Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+        {/* Top Stats Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16 zoom-out">
           {statsData.map((stat, index) => (
             <div
               key={index}
-              className="glass-card p-6 rounded-2xl transition-all duration-300 hover:scale-105 hover:shadow-xl"
+              className="p-6 rounded-2xl bg-white/90 backdrop-blur-sm dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
-              <div className="flex flex-col items-center text-center space-y-4">
-                <div className="w-16 h-16 rounded-full bg-primary/10 flex items-center justify-center">
-                  <stat.icon className="w-8 h-8 text-primary" />
+              <div className="flex flex-col items-center text-center space-y-3">
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md">
+                  <stat.icon className="w-8 h-8" />
                 </div>
-                <p className="text-sm font-medium text-foreground leading-relaxed">
+                <p className="text-base font-medium text-gray-600 dark:text-gray-200">
                   {stat.text}
                 </p>
               </div>
@@ -72,30 +89,42 @@ const Index = () => {
           ))}
         </div>
 
-        {/* Bottom Info Card */}
-        <div className="gradient-border max-w-3xl mx-auto">
-          <div className="gradient-border-inner p-8 md:p-10">
-            <h3 className="text-2xl md:text-3xl font-semibold mb-6 text-foreground">
-              This isn't just inefficient — it's expensive.
-            </h3>
+        {/* Bottom Section Header */}
+        <h3 className="text-center text-2xl font-semibold mb-6 text-gray-900 dark:text-white">
+          This isn't just inefficient — it's expensive.
+        </h3>
 
-            <ul className="space-y-3 mb-3">
-              {problems.map((problem, index) => (
-                <li key={index} className="flex items-start space-x-3">
-                  <span className="w-2 h-2 rounded-full bg-destructive mt-2 flex-shrink-0" />
-                  <span className="text-foreground text-lg">{problem}</span>
-                </li>
-              ))}
-            </ul>
+        {/* Bottom Cards */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-6 zoom-out">
+          {bottomCards.map((card, index) => (
+            <div
+              key={index}
+              className="p-6 rounded-2xl bg-white/90 backdrop-blur-sm dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+            >
+              <div className="flex flex-col items-center text-center space-y-3">
+                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-md">
+                  <card.icon className="w-8 h-8" />
+                </div>
+                <p className="text-base font-medium text-gray-600 dark:text-gray-200">
+                  {card.text}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
 
-            <p className="text-lg text-muted-foreground mb-4">
-              You're spending on conversations, but not learning from them.
-            </p>
-
-            <p className="text-xl font-semibold text-foreground">
-              That's where <span className="">Convoze</span> steps in.
-            </p>
-          </div>
+        {/* Final Message */}
+        <div className="text-center max-w-2xl mx-auto">
+          <p className="text-lg text-gray-600 dark:text-gray-300 mb-6">
+            You're investing in conversations — but not learning from them.
+          </p>
+          <p className="text-xl font-semibold text-gray-900 dark:text-white">
+            That’s where{" "}
+            <span className="text-transparent bg-clip-text bg-gradient-to-r from-indigo-600 to-purple-500 font-bold">
+              Convoze
+            </span>{" "}
+            steps in.
+          </p>
         </div>
       </div>
     </div>

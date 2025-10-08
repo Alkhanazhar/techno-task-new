@@ -63,12 +63,10 @@ const Faq = () => {
           {faqs.map((faq, index) => (
             <div
               key={index}
+              onClick={() => toggleFAQ(index)}
               className="bg-gradient-to-br  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
-              <button
-                className="flex items-center justify-between w-full text-left text-white font-light"
-                onClick={() => toggleFAQ(index)}
-              >
+              <button className="flex items-center justify-between w-full text-left text-white font-light">
                 <span className="text-sm ">{faq.question}</span>
                 {openIndex === index ? (
                   <ChevronUp className="w-5 h-5" />
