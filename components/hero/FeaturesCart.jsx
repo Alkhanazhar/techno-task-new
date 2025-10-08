@@ -95,7 +95,7 @@ const FeaturesCart = () => {
           </motion.div>
         ))}
       </div>
-      <p className="text-gray-300 text-center sm:py-2 pb-12   font-light text-xs sm:text-sm md:text-base md:max-w-6xl max-w-7xl mx-auto">
+      <p className="text-gray-300 text-center sm:py-2 pb-12 font-light text-xs sm:text-sm md:text-base md:max-w-6xl max-w-7xl mx-auto">
         Convoze brings together nearly a century of combined industry
         experience, shaped by experts who have spent decades understanding
         conversations, people and data.
