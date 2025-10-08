@@ -90,7 +90,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         </h1>
 
         {/* Form */}
-        <div className="flex justify-center items-center !rounded-xl overflow-hidden relative md:px-2">
+        <div className="flex justify-center items-center  overflow-hidden relative md:px-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
