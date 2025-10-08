@@ -313,7 +313,7 @@ const Navbar = () => {
               <div className="border-l border-gray-500 pl-2">
                 <ul className="space-y-1">
                   <Link href="/bpo-contact-centers">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         BPO & Contact Centers
                       </h4>
@@ -325,7 +325,7 @@ const Navbar = () => {
                     </li>
                   </Link>
                   <Link href="/banking-finance">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                    <li className="transition duration-300 ease-in-out  hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         Banking & Finance
                       </h4>
@@ -336,7 +336,7 @@ const Navbar = () => {
                     </li>
                   </Link>
                   <Link href="/ecommerce-d2c">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         E-commerce and D2C
                       </h4>
@@ -353,7 +353,7 @@ const Navbar = () => {
               <div>
                 <ul className="space-y-1">
                   <Link href="/saas-tech">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
                       <h4 className="font-medium text-[14px] text-white">
                         Saas & Tech
                       </h4>
@@ -364,7 +364,7 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                  <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
                     <h4 className="font-medium text-[14px] text-white">
                       Healthcare and Insurance
                     </h4>
