@@ -60,21 +60,23 @@ const Footer = () => {
           </div>
 
           {/* Location */}
-          <main className="text-xs text-neutral-200 justify-center flex items-center gap-2">
+          <div>
             <h4 className="font-semibold mb-2 text-sm md:text-base">
               Locations
             </h4>
-            <img
-              src="https://flagcdn.com/in.svg"
-              alt="India Flag"
-              className="w-9  shadow-xl"
-            />
-            <img
-              src="https://flagcdn.com/ae.svg"
-              alt="UAE Flag"
-              className="w-12 shadow-xl"
-            />
-          </main>
+            <main className="text-xs text-neutral-200 justify-start flex items-center gap-2">
+              <img
+                src="https://flagcdn.com/in.svg"
+                alt="India Flag"
+                className="w-9  shadow-xl"
+              />
+              <img
+                src="https://flagcdn.com/ae.svg"
+                alt="UAE Flag"
+                className="w-12 shadow-xl"
+              />
+            </main>
+          </div>
         </div>
 
         {/* Copyright */}
