@@ -72,7 +72,7 @@ export default function WhyTrustUs() {
             />
 
             {/* Dark Overlay */}
-            <div className="absolute inset-0 bg-black/15" />
+            <div className="absolute inset-0 bg-black/10" />
 
             {/* Glassmorphism Effect */}
 
