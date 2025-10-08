@@ -187,8 +187,8 @@ const Pricing = () => {
                   className={cn(
                     "w-full font-medium transition-all rounded-2xl flex items-center gap-2 justify-center p-4 duration-300",
                     plan.popular
-                      ? "bg-primary hover:bg-primary/90 hover:shadow-primary/20 hover:shadow-md"
-                      : "hover:border-primary/30 border hover:bg-primary/5 hover:text-primary"
+                      ? "bg-slate-200 hover:bg-slate-200/90 hover:shadow-slate-200/20 hover:shadow-md hover:text-slate-800 text-slate-900"
+                      : "hover:border-slate-200/30 border hover:bg-slate-200/5 hover:text-slate-200"
                   )}
                 >
                   Get Started

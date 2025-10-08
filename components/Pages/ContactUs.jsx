@@ -149,11 +149,18 @@ const ContactUs = ({ isCards = true, bg }) => {
                 <MapPin className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <p className="text-xs text-neutral-200">
-                123 Ayodhya Bypass Road
-                <br />
-                Bhopal, India
-              </p>
+              <main className="text-xs text-neutral-200 justify-center flex items-center gap-2">
+                <img
+                  src="https://flagcdn.com/in.svg"
+                  alt="India Flag"
+                  className="w-9  shadow-xl"
+                />
+                <img
+                  src="https://flagcdn.com/ae.svg"
+                  alt="UAE Flag"
+                  className="w-12 shadow-xl"
+                />
+              </main>
             </div>
           </div>
         )}
