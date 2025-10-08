@@ -82,7 +82,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         }
       `}</style>
 
-      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-4">
+      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-8">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
           <span className="bg-gradient-to-r relative from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
             Need a custom Solution?
@@ -90,7 +90,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         </h1>
 
         {/* Form */}
-        <div className="flex justify-center items-center !rounded-3xl overflow-hidden relative px-2">
+        <div className="flex justify-center items-center !rounded-xl overflow-hidden relative px-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -115,7 +115,7 @@ const ContactUs = ({ isCards = true, bg }) => {
               {/* Form Container */}
               <div
                 id="kl__form-container"
-                className={`mx-auto w-full relative z-20 !bg-transparent transition-opacity duration-300 ${
+                className={`mx-auto w-full relative z-20 !bg-transparent  transition-opacity duration-300 ${
                   isLoading ? "opacity-0" : "opacity-100"
                 }`}
               ></div>

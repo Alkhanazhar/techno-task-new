@@ -61,6 +61,9 @@ const Footer = () => {
 
           {/* Location */}
           <main className="text-xs text-neutral-200 justify-center flex items-center gap-2">
+            <h4 className="font-semibold mb-2 text-sm md:text-base">
+              Locations
+            </h4>
             <img
               src="https://flagcdn.com/in.svg"
               alt="India Flag"
