@@ -90,7 +90,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         </h1>
 
         {/* Form */}
-        <div className="flex justify-center items-center !rounded-xl overflow-hidden relative px-2">
+        <div className="flex justify-center items-center !rounded-xl overflow-hidden relative md:px-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -99,7 +99,7 @@ const ContactUs = ({ isCards = true, bg }) => {
           >
             <div
               className={`flex justify-center bg-transparent ${
-                !isCards && "p-8"
+                !isCards && "sm:p-8"
               } relative min-h-[400px]`}
             >
               {/* Loader */}
