@@ -99,13 +99,13 @@ export default function WhatCustomerSays() {
             <div className="flex gap-10">
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
-                  200+
+                  500+
                 </h4>
                 <p className="text-xs text-white mt-1">Businesses Empowered</p>
               </div>
               <div>
                 <h4 className="text-purple-500 md:text-2xl text-xl font-bold">
-                  1M+
+                  10M+
                 </h4>
                 <p className="text-xs text-white mt-1">Conversations Audited</p>
               </div>

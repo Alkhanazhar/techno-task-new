@@ -4,8 +4,17 @@ import { motion } from "framer-motion";
 import Link from "next/link";
 import { useRouter } from "next/navigation";
 import { useState, useEffect } from "react";
-import { Repeat, Gauge, TrendingUp, MessageSquare, UserCheck, DollarSign } from "lucide-react";
+import {
+  Repeat,
+  Gauge,
+  TrendingUp,
+  MessageSquare,
+  UserCheck,
+  DollarSign,
+  GitGraphIcon,
+} from "lucide-react";
 import HeroSaas from "./HeroSaas";
+import { IconGraph } from "@tabler/icons-react";
 
 const SaasTech = () => {
   const router = useRouter();
@@ -33,35 +42,34 @@ const SaasTech = () => {
     {
       icon: <Repeat className="w-8 h-8 text-white" />,
       stat: "40–60% — Faster onboarding",
-      desc: "for new support engineers through automated QA-based training insights ."
+      desc: "for new support engineers through automated QA-based training insights .",
     },
     {
       icon: <Gauge className="w-8 h-8 text-white" />,
       stat: "Up to 30% — Fewer escalations",
-      desc: "by detecting unresolved issues early in customer conversations ."
+      desc: "by detecting unresolved issues early in customer conversations .",
     },
     {
       icon: <TrendingUp className="w-8 h-8 text-white" />,
       stat: "25% — Faster issue detection",
-      desc: "as recurring product feedback is automatically flagged from conversations."
+      desc: "as recurring product feedback is automatically flagged from conversations.",
     },
     {
       icon: <MessageSquare className="w-8 h-8 text-white" />,
       stat: "100% — Full conversation coverage",
-      desc: "<5% manual auditing — ensuring no customer interaction goes unheard ."
+      desc: "<5% manual auditing — ensuring no customer interaction goes unheard .",
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-white" />,
+      icon: <IconGraph className="w-8 h-8 text-white" />,
       stat: "10–15% — Higher CSAT scores",
-      desc: "improvement through better coaching and proactive issue resolution ."
+      desc: "improvement through better coaching and proactive issue resolution .",
     },
     {
       icon: <DollarSign className="w-8 h-8 text-white" />,
       stat: "20–25% — Lower QA costs",
-      desc: "reduction in QA costs by automating manual auditing at scale ."
-    }
+      desc: "reduction in QA costs by automating manual auditing at scale .",
+    },
   ];
-
 
   return (
     <div className="min-h-screen ">
@@ -78,7 +86,6 @@ const SaasTech = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
-
           {/* Image */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
@@ -97,16 +104,20 @@ const SaasTech = () => {
               </span>
             </h3>
             <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
-              In SaaS, every communication matters, from the very first onboarding call to ongoing support and upselling. Most teams can only review a fraction of these engagements thus leaving valuable insights and risks unheard.
+              In SaaS, every communication matters, from the very first
+              onboarding call to ongoing support and upselling. Most teams can
+              only review a fraction of these engagements thus leaving valuable
+              insights and risks unheard.
             </p>
             <p className="text-gray-800 text-sm sm:text-base md:text-md mb-3">
-              Convoze changes that. Our AI-powered platform captures and analyzes 100% of customer interactions, giving you instant visibility into customer sentiment, compliance, and agent performance that too in real time.
+              Convoze changes that. Our AI-powered platform captures and
+              analyzes 100% of customer interactions, giving you instant
+              visibility into customer sentiment, compliance, and agent
+              performance that too in real time.
             </p>
           </div>
-
         </div>
       </motion.div>
-
 
       <motion.div
         className="w-full bg-gradient-to-tl to-[#21082b] from-[#27022e]  py-8 xs:py-10 sm:py-12 md:py-6 mb-10 xs:mb-12 sm:mb-16 md:mb-20"
@@ -120,7 +131,7 @@ const SaasTech = () => {
             Convoze Integration Framework for <br />
             <span className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text [-webkit-background-clip:text]">
               SaaS & Tech
-            </span> {" "}
+            </span>{" "}
             Teams
           </h3>
 
@@ -147,7 +158,6 @@ const SaasTech = () => {
                     "Agent assist suggests the right KB articles or responses live, increasing first-call resolution rates.",
                   ],
                 },
-
               ].map((feature, index) => (
                 <div key={index} className="space-y-1 mb-2">
                   <div className="flex items-center space-x-2">
@@ -188,7 +198,6 @@ const SaasTech = () => {
                     "Enables product teams to act faster and prioritize what matters most to users.",
                   ],
                 },
-
               ].map((feature, index) => (
                 <div key={index} className="space-y-1 mb-2">
                   <div className="flex items-center space-x-2">
@@ -248,7 +257,9 @@ const SaasTech = () => {
                     <div className="p-1.5 bg-white/20 rounded-xl text-left group-hover:bg-white/30 transition">
                       {item.icon}
                     </div>
-                    <p className="text-md font-bold text-white text-left">{item.stat}</p>
+                    <p className="text-md font-bold text-white text-left">
+                      {item.stat}
+                    </p>
                   </div>
                   <p className="text-white text-xs sm:text-base leading-relaxed">
                     {item.desc}
@@ -257,20 +268,18 @@ const SaasTech = () => {
               </div>
             ))}
           </div>
-
         </section>
-
       </motion.div>
 
       <motion.div
-        className="w-full flex md:min-h-screen flex-col md:flex-row bg-gradient-to-tl to-[#21082b] from-[#27022e] py-8 md:py-12   justify-center items-center" initial="hidden"
+        className="w-full flex md:min-h-screen flex-col md:flex-row bg-gradient-to-tl to-[#21082b] from-[#27022e] py-8 md:py-12   justify-center items-center"
+        initial="hidden"
         whileInView="visible"
         viewport={{ once: true }}
         variants={fadeIn}
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col md:flex-row items-center gap-8">
-
           {/* Left Section */}
           <div className="w-full md:w-1/2 max-w-xl px-4 md:px-6 flex flex-col items-center md:items-start">
             <h3 className="text-xl sm:text-xl md:text-4xl font-semibold text-center text-white md:text-center mb-3">
@@ -307,7 +316,6 @@ const SaasTech = () => {
         transition={{ duration: 0.6, delay: 0.4 }}
       >
         <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16 flex flex-col-reverse md:flex-row items-center gap-8">
-
           {/* Left Section (Image) */}
           <div className="w-full md:w-1/2 flex justify-center">
             <img
@@ -329,8 +337,8 @@ const SaasTech = () => {
             <p className="text-gray-800 text-sm sm:text-base md:text-base mb-3 text-center md:text-left md:px-6">
               Most QA tools give you fragments of the customer journey. Convoze
               delivers the full picture—from enabling product teams to identify
-              recurring feature requests, sales leaders to track objection patterns,
-              and support managers to recognize top-performing agents.
+              recurring feature requests, sales leaders to track objection
+              patterns, and support managers to recognize top-performing agents.
             </p>
 
             <p className="text-gray-800 text-sm sm:text-base mt-4 text-center md:text-left">
@@ -340,7 +348,6 @@ const SaasTech = () => {
           </div>
         </div>
       </motion.div>
-
 
       {/* Built for the Real World Section - Dark */}
       <motion.div
@@ -380,8 +387,6 @@ const SaasTech = () => {
           </Link>
         </div>
       </motion.div>
-
-
     </div>
   );
 };

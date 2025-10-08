@@ -2,6 +2,7 @@
 
 import { useState } from "react";
 import { ChevronDown, ChevronUp } from "lucide-react";
+import { AnimatePresence, motion } from "framer-motion";
 
 const faqs = [
   {
@@ -61,7 +62,7 @@ const Faq = () => {
         {/* Right Column: FAQ Accordion */}
         <div className="md:w-1/2 space-y-2 md:space-y-4 w-full relative z-10">
           {faqs.map((faq, index) => (
-            <div
+            <motion.div
               key={index}
               onClick={() => toggleFAQ(index)}
               className="bg-gradient-to-br  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
@@ -75,11 +76,17 @@ const Faq = () => {
                 )}
               </button>
               {openIndex === index && (
-                <p className="mt-3 text-xs md:text-sm font-light text-neutral-100 leading-relaxed">
+                <motion.p
+                  initial={{ opacity: 0, y: -10 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  exit={{ opacity: 0, y: -10 }}
+                  transition={{ duration: 0.3 }}
+                  className="mt-3 text-xs md:text-sm font-light text-neutral-100 leading-relaxed"
+                >
                   {faq.answer}
-                </p>
+                </motion.p>
               )}
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>

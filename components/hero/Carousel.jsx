@@ -236,7 +236,7 @@ const Slide = ({ slide, index, current }) => {
   return (
     <li
       ref={slideRef}
-      className="flex flex-1 flex-col overflow-hidden items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[48vmin] h-[60vmin] rounded-3xl mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
+      className="flex flex-1 flex-col overflow-hidden items-center justify-center relative text-center text-white opacity-100 transition-all duration-300 ease-in-out w-[52vmin] h-[60vmin] rounded-3xl mt-8 md:mt-12 mx-[4vmin] z-10 cursor-pointer"
       onMouseMove={handleMouseMove}
       onMouseLeave={handleMouseLeave}
       style={{

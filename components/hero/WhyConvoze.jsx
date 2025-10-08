@@ -7,6 +7,11 @@ import {
   Brain,
   BarChart3,
   Frown,
+  ThumbsDown,
+  Timer,
+  ShieldAlert,
+  TimerResetIcon,
+  TimerOff,
 } from "lucide-react";
 
 const Index = () => {
@@ -35,15 +40,15 @@ const Index = () => {
 
   const bottomCards = [
     {
-      icon: DollarSign,
+      icon: ThumbsDown,
       text: "Poor QA leads to customer churn.",
     },
     {
-      icon: Brain,
+      icon: TimerOff,
       text: "Delayed feedback kills team growth.",
     },
     {
-      icon: BarChart3,
+      icon: ShieldAlert,
       text: "Missed compliance breaches cost millions.",
     },
   ];

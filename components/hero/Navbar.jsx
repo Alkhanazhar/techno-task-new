@@ -202,7 +202,7 @@ const Navbar = () => {
     // { name: "E-commerce & Retail", route: "/" },
     { name: "Healthcare and Insurance", route: "/" },
     // { name: "Enterprise Operations", route: "/" },
-    { name: "E-commerce and D2C", route: "/" },
+    { name: "E-commerce and D2C", route: "/ecommerce-d2c" },
     // { name: "Telecommunications", route: "/" },
   ];
 
@@ -220,9 +220,9 @@ const Navbar = () => {
   return (
     <div className="py-3 relative">
       <nav
-        className={`w-full fixed top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+        className={`w-full fixed border-black/10 top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "!bg-black/30 !backdrop-blur-md shadow-sm"
+            ? "!bg-black/30 !backdrop-blur-md shadow-sm  border-b-[1px]"
             : "!bg-transparent"
         }`}
       >
@@ -303,12 +303,9 @@ const Navbar = () => {
               >
                 How it work's <span className="text-gray-300">→</span>
               </Link>
-              <Link
-                href="/solution"
-                className="text-purple-500 font-medium flex items-center gap-1 mb-3 hover:underline"
-              >
+              <li className="text-purple-500 font-medium flex items-center gap-1 mb-3">
                 Industry <span className="text-purple-500">→</span>
-              </Link>
+              </li>
             </div>
 
             {/* Right side: Grid */}
@@ -338,15 +335,17 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      E-commerce and D2C
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Analyze customer sentiment, address concerns proactively,
-                      and increase loyalty effectively.
-                    </p>
-                  </li>
+                  <Link href="/ecommerce-d2c">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700 hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">
+                        E-commerce and D2C
+                      </h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Analyze customer sentiment, address concerns
+                        proactively, and increase loyalty effectively.
+                      </p>
+                    </li>
+                  </Link>
                 </ul>
               </div>
 
@@ -424,12 +423,9 @@ const Navbar = () => {
                           >
                             How it work <span className="text-gray-300">→</span>
                           </Link>
-                          <Link
-                            href="/solution"
-                            className="text-purple-500 font-medium flex items-center gap-1 mb-3 hover:underline"
-                          >
+                          <li className="text-purple-500 font-medium flex items-center gap-1 mb-3 hover:underline">
                             Industry <span className="text-purple-500">→</span>
-                          </Link>
+                          </li>
                         </div>
                       )}
                     </>
