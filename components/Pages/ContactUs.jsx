@@ -82,7 +82,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         }
       `}</style>
 
-      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-12">
+      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-4">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
           <span className="bg-gradient-to-r relative from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
             Need a custom Solution?
