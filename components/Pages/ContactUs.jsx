@@ -63,7 +63,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         bg == "dark"
           ? "bg-gradient-to-tl to-[#21082b] from-[#27022e]"
           : "bg-slate-200"
-      } py-12 md:py-24 -mt-16 relative`}
+      } py-12 md:py-20 min-h-screen -mt-16 relative`}
       id="contact-us"
     >
       {/* Form Label Style Override */}

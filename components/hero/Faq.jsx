@@ -38,7 +38,7 @@ const Faq = () => {
   };
 
   return (
-    <section className=" md:py-24 py-12 relative px-4 md:px-8">
+    <section className=" md:py-24 -mt-24 py-12  relative px-4 md:px-8">
       {/* <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
@@ -65,7 +65,7 @@ const Faq = () => {
             <motion.div
               key={index}
               onClick={() => toggleFAQ(index)}
-              className="bg-gradient-to-br  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
+              className="bg-gradient-to-br shadow shadow-purple-900/80  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
               <button className="flex items-center justify-between w-full text-left text-white font-light">
                 <span className="text-sm ">{faq.question}</span>
