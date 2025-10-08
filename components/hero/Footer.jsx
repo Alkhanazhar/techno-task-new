@@ -69,7 +69,7 @@ const Footer = () => {
             <img
               src="https://flagcdn.com/ae.svg"
               alt="UAE Flag"
-              className="w-12 shadow-xl rounded-2xl"
+              className="w-12 shadow-xl"
             />
           </main>
         </div>
