@@ -82,7 +82,7 @@ const FeaturesCart = () => {
             <div className="absolute inset-0 bg-gradient-to-b from-black/10 via-black/20 to-black/60" />
 
             {/* Content */}
-            <div className="relative p-4 sm:p-4 flex flex-col justify-end h-[350px]">
+            <div className="relative p-3 sm:p-3 flex flex-col justify-end h-[350px]">
               <div className="relative backdrop-blur-md bg-black/30 rounded-2xl p-4">
                 <h3 className="text-white font-semibold text-base  mb-2">
                   {item.title}
