@@ -1238,424 +1238,432 @@ const EcommerceD2c = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-50 -mt-16">
+    <div className="min-h-screen relative  -mt-16">
       {/* Header Section */}
       <HeroSection />
+      <div className="relative bg-slate-50 ">
+        <div className="absolute inset-0 z-0">
+          <img
+            src="/bgPattern.png"
+            alt="Background Pattern"
+            className="w-full h-full rotate-180 object-cover opacity-10"
+          />
+        </div>
+        {/* Challenges Section */}
+        <motion.div
+          className="w-full  relative py-6 xs:py-10 sm:mb-16 md:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={staggerContainer}
+        >
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
+          <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 py-24 lg:px-12 xl:px-16 flex flex-col items-center gap-4">
+            <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 text-center mb-2 xs:mb-4 sm:mb-4">
+              Challenges{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Ecommerce & D2C
+              </span>{" "}
+              Brands Face
+            </h3>
 
-      {/* Challenges Section */}
-      <motion.div
-        className="w-full bg-gray-50 relative py-6 xs:py-10 sm:mb-16 md:mb-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={staggerContainer}
-      >
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
-        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 py-24 lg:px-12 xl:px-16 flex flex-col items-center gap-4">
-          <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 text-center mb-2 xs:mb-4 sm:mb-4">
-            Challenges{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              Ecommerce & D2C
-            </span>{" "}
-            Brands Face
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {[
-              {
-                icon: <IconGraph />,
-                title:
-                  "Slow or inconsistent support can lead to customer churn",
-              },
-              {
-                icon: <ShoppingBag />,
-                title:
-                  "Missed chances for upselling, cross-selling, and keeping clients",
-              },
-              {
-                icon: <Cloud />,
-                title:
-                  "Customer journeys can be scattered across chat, calls, email, and social media",
-              },
-              {
-                icon: <Clock />,
-                title:
-                  "Sales are lost because of unaddressed concerns and cart abandonment",
-              },
-              {
-                icon: <Save />,
-                title:
-                  "Data scattered across platforms delays product and marketing insights",
-              },
-              {
-                icon: <User />,
-                title:
-                  "Inconsistent brand experience results from varying responses from agents",
-              },
-              {
-                icon: <Shield />,
-                title:
-                  "High support volume, fraud, and policy abuse can go unnoticed",
-              },
-              {
-                icon: <Globe />,
-                title:
-                  "Language and regional diversity can create communication challenges",
-              },
-              {
-                icon: <ChartScatter />,
-                title: "There is limited visibility into agent performance",
-              },
-            ].map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200"
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.5, delay: idx * 0.1 }}
-                whileHover={{ y: -5, transition: { duration: 0.2 } }}
-              >
-                <div className="flex items-start gap-4">
-                  <div className="text-4xl bg-gradient-to-br from-purple-200 to-indigo-200 text-purple-700 rounded-xl p-3 flex-shrink-0">
-                    {item.icon}
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+              {[
+                {
+                  icon: <IconGraph />,
+                  title:
+                    "Slow or inconsistent support can lead to customer churn",
+                },
+                {
+                  icon: <ShoppingBag />,
+                  title:
+                    "Missed chances for upselling, cross-selling, and keeping clients",
+                },
+                {
+                  icon: <Cloud />,
+                  title:
+                    "Customer journeys can be scattered across chat, calls, email, and social media",
+                },
+                {
+                  icon: <Clock />,
+                  title:
+                    "Sales are lost because of unaddressed concerns and cart abandonment",
+                },
+                {
+                  icon: <Save />,
+                  title:
+                    "Data scattered across platforms delays product and marketing insights",
+                },
+                {
+                  icon: <User />,
+                  title:
+                    "Inconsistent brand experience results from varying responses from agents",
+                },
+                {
+                  icon: <Shield />,
+                  title:
+                    "High support volume, fraud, and policy abuse can go unnoticed",
+                },
+                {
+                  icon: <Globe />,
+                  title:
+                    "Language and regional diversity can create communication challenges",
+                },
+                {
+                  icon: <ChartScatter />,
+                  title: "There is limited visibility into agent performance",
+                },
+              ].map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="bg-white rounded-3xl p-6 shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 hover:border-purple-200"
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.5, delay: idx * 0.1 }}
+                  whileHover={{ y: -5, transition: { duration: 0.2 } }}
+                >
+                  <div className="flex items-start gap-4">
+                    <div className="text-4xl bg-gradient-to-br from-purple-200 to-indigo-200 text-purple-700 rounded-xl p-3 flex-shrink-0">
+                      {item.icon}
+                    </div>
+                    <p className="text-gray-700 text-base font-light">
+                      {item.title}
+                    </p>
                   </div>
-                  <p className="text-gray-700 text-base font-light">
-                    {item.title}
+                </motion.div>
+              ))}
+            </div>
+          </div>
+        </motion.div>
+
+        {/* How Convoze Helps Section */}
+        <motion.div
+          className="w-full  relative py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
+              How Convoze{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Helps
+              </span>
+            </h3>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Real-Time Customer Sentiment & Insights",
+                    description: [
+                      "Detects frustration, urgency, or buying signals instantly.",
+                      "Flags high-value or at-risk customers for immediate action driving proactive support and increasing repeat purchases.",
+                    ],
+                  },
+                  {
+                    title: "Automated Product Feedback Loops",
+                    description: [
+                      "Automatically captures recurring bug reports, feature requests, and product questions.",
+                      "Prioritizes improvements based on actual customer demand, this leads to quicker product updates and improved user satisfaction.",
+                    ],
+                  },
+                  {
+                    title: "More Informed Sales and Promotions",
+                    description: [
+                      "Finds possibilities for cross-selling and upselling during discussions.",
+                      "Suggests personalized offers in real time. This results in higher conversion and increased average order value.",
+                    ],
+                  },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                      <h4 className="text-lg font-semibold text-gray-900">
+                        {feature.title}
+                      </h4>
+                    </div>
+                    <div className="ml-5 space-y-2">
+                      {feature.description.map((desc, i) => (
+                        <div key={i} className="flex items-start space-x-2">
+                          <span className="font-[600] text-purple-600">-</span>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Quality Assurance & Training at Scale",
+                    description: [
+                      "AI audits every conversation, ensuring consistent service quality.",
+                      "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
+                    ],
+                  },
+                  {
+                    title: "Detection of Fraud and Risk",
+                    description: [
+                      "Spots unusual patterns in returns, complaints, or interactions.",
+                      "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
+                    ],
+                  },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                      <h4 className="text-lg font-semibold text-gray-900">
+                        {feature.title}
+                      </h4>
+                    </div>
+                    <div className="ml-5 space-y-2">
+                      {feature.description.map((desc, i) => (
+                        <div key={i} className="flex items-start space-x-2">
+                          <span className="font-[600] text-purple-600">-</span>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </motion.div>
+
+        {/* Measurable Impact Section */}
+        <motion.div
+          className="w-full  min-h-screen flex-col relative py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
+
+          <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
+              Measurable{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Impact
+              </span>
+            </h3>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 md:mb-0">
+              {stats.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className="group p-6 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
+                  whileHover={{ scale: 1.05 }}
+                >
+                  <div className="flex items-center gap-4 mb-4">
+                    <div className="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
+                      {item.icon}
+                    </div>
+                    <p className="text-2xl font-bold text-white">{item.stat}</p>
+                  </div>
+                  <p className="text-white text-sm sm:text-base leading-relaxed text-left">
+                    {item.desc}
                   </p>
-                </div>
-              </motion.div>
-            ))}
-          </div>
-        </div>
-      </motion.div>
-
-      {/* How Convoze Helps Section */}
-      <motion.div
-        className="w-full bg-gray-50 relative py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
-            How Convoze{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              Helps
-            </span>
-          </h3>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Real-Time Customer Sentiment & Insights",
-                  description: [
-                    "Detects frustration, urgency, or buying signals instantly.",
-                    "Flags high-value or at-risk customers for immediate action driving proactive support and increasing repeat purchases.",
-                  ],
-                },
-                {
-                  title: "Automated Product Feedback Loops",
-                  description: [
-                    "Automatically captures recurring bug reports, feature requests, and product questions.",
-                    "Prioritizes improvements based on actual customer demand, this leads to quicker product updates and improved user satisfaction.",
-                  ],
-                },
-                {
-                  title: "More Informed Sales and Promotions",
-                  description: [
-                    "Finds possibilities for cross-selling and upselling during discussions.",
-                    "Suggests personalized offers in real time. This results in higher conversion and increased average order value.",
-                  ],
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      {feature.title}
-                    </h4>
-                  </div>
-                  <div className="ml-5 space-y-2">
-                    {feature.description.map((desc, i) => (
-                      <div key={i} className="flex items-start space-x-2">
-                        <span className="font-[600] text-purple-600">-</span>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
                 </motion.div>
               ))}
             </div>
+          </section>
+        </motion.div>
 
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Quality Assurance & Training at Scale",
-                  description: [
-                    "AI audits every conversation, ensuring consistent service quality.",
-                    "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
-                  ],
-                },
-                {
-                  title: "Detection of Fraud and Risk",
-                  description: [
-                    "Spots unusual patterns in returns, complaints, or interactions.",
-                    "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
-                  ],
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center space-x-2 mb-3">
-                    <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
-                    <h4 className="text-lg font-semibold text-gray-900">
-                      {feature.title}
-                    </h4>
-                  </div>
-                  <div className="ml-5 space-y-2">
-                    {feature.description.map((desc, i) => (
-                      <div key={i} className="flex items-start space-x-2">
-                        <span className="font-[600] text-purple-600">-</span>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
+        {/* Boost Growth Section */}
+        <motion.div
+          className="w-full  relative min-h-[80vh] py-10 sm:py-14 md:py-20 mb-8 sm:mb-12 md:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-5">
+            <h3 className="text-center text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-6">
+              Boost your Ecommerce and D2C growth with <br />
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Convoze
+              </span>
+            </h3>
+
+            <p className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed mb-5">
+              Convoze transforms all discussions into valuable insights that
+              drive sales growth, enhance customer loyalty, and accelerate
+              product selection.
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-5">
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Actionable Insights in Real-Time",
+                    description:
+                      "Provides real-time insights enabling sales, support, and product teams to resolve customer issues quickly and engage effectively.",
+                  },
+                  {
+                    title: "Multilingual & Accent-Adaptive AI",
+                    description:
+                      "Ensures seamless communication across regions and languages, breaking barriers for global businesses.",
+                  },
+                  {
+                    title: "Seamless Integration",
+                    description:
+                      "Integrates smoothly with chat, email, CRM, and call systems—no disruption to business operations.",
+                  },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start gap-3 hover:bg-gray-100 p-4 rounded-xl transition-all duration-300"
+                    whileHover={{ y: -3 }}
+                  >
+                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                        {feature.title}
+                      </h4>
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
+
+              <div className="space-y-6">
+                {[
+                  {
+                    title: "Scalable Multi-Channel Operations",
+                    description:
+                      "Handles large data volumes and seasonal spikes without compromising performance.",
+                  },
+                  {
+                    title: "Customizable to Your Brand",
+                    description:
+                      "Adapts to your policies and workflows while preserving brand voice for consistency and compliance.",
+                  },
+                  {
+                    title: "Risk Reduction & Fraud Detection",
+                    description:
+                      "Detects unusual patterns in interactions to reduce fraud and financial losses.",
+                  },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="flex items-start gap-3 hover:bg-gray-100 p-4 rounded-xl transition-all duration-300"
+                    whileHover={{ y: -3 }}
+                  >
+                    <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
+                    <div>
+                      <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
+                        {feature.title}
+                      </h4>
+                      <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
+                        {feature.description}
+                      </p>
+                    </div>
+                  </motion.div>
+                ))}
+              </div>
             </div>
+
+            <p className="text-center max-w-4xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed">
+              Convoze uses every customer interaction to generate valuable
+              business intelligence which enables Ecommerce and D2C brands to
+              maintain customer loyalty and boost sales and make better business
+              choices.
+            </p>
           </div>
-        </div>
-      </motion.div>
+        </motion.div>
 
-      {/* Measurable Impact Section */}
-      <motion.div
-        className="w-full bg-gray-50 min-h-screen flex-col relative py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
-
-        <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
-            Measurable{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              Impact
-            </span>
-          </h3>
-
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-5 md:mb-0">
-            {stats.map((item, idx) => (
-              <motion.div
-                key={idx}
-                className="group p-6 bg-gradient-to-br from-purple-600 to-indigo-600 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300"
-                whileHover={{ scale: 1.05 }}
-              >
-                <div className="flex items-center gap-4 mb-4">
-                  <div className="p-3 bg-white/20 rounded-xl group-hover:bg-white/30 transition">
-                    {item.icon}
-                  </div>
-                  <p className="text-2xl font-bold text-white">{item.stat}</p>
-                </div>
-                <p className="text-white text-sm sm:text-base leading-relaxed text-left">
-                  {item.desc}
+        {/* Final CTA Section */}
+        <motion.div
+          className="w-full  flex-col relative min-h-[80vh] py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
+          <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
+              <div>
+                <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-3">
+                  Where Convoze{" "}
+                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    Makes
+                  </span>{" "}
+                  the Difference
+                </h3>
+                <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
+                  With Convoze, ecommerce and D2C brands don't just manage
+                  support — they build loyalty, grow revenue, and make smarter
+                  product decisions. Every interaction becomes a chance to
+                  engage customers better, reduce churn, and turn conversations
+                  into measurable business growth.
                 </p>
-              </motion.div>
-            ))}
-          </div>
-        </section>
-      </motion.div>
+                <p className="mt-4 max-w-4xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
+                  Convoze ensures brands deliver consistent, personalized, and
+                  efficient experiences at scale.
+                </p>
+              </div>
 
-      {/* Boost Growth Section */}
-      <motion.div
-        className="w-full bg-gray-50 relative min-h-[80vh] py-10 sm:py-14 md:py-20 mb-8 sm:mb-12 md:mb-0"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.4 }}
-      >
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 mb-5">
-          <h3 className="text-center text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-6">
-            Boost your Ecommerce and D2C growth with <br />
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              Convoze
-            </span>
-          </h3>
+              <div>
+                <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-3">
+                  Why{" "}
+                  <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
+                    Convoze
+                  </span>{" "}
+                  Stands Out
+                </h3>
+                <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
+                  Most QA tools still work in isolation or rely on a handful of
+                  conversation samples. Being different, Convoze audits every
+                  single solitary conversation in one unified platform. That
+                  gives reduced blind spots, more rapid decisions, and better
+                  outcomes for both your customers and your business.
+                </p>
+              </div>
+            </div>
 
-          <p className="text-center max-w-3xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed mb-5">
-            Convoze transforms all discussions into valuable insights that drive
-            sales growth, enhance customer loyalty, and accelerate product
-            selection.
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 mb-5">
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Actionable Insights in Real-Time",
-                  description:
-                    "Provides real-time insights enabling sales, support, and product teams to resolve customer issues quickly and engage effectively.",
-                },
-                {
-                  title: "Multilingual & Accent-Adaptive AI",
-                  description:
-                    "Ensures seamless communication across regions and languages, breaking barriers for global businesses.",
-                },
-                {
-                  title: "Seamless Integration",
-                  description:
-                    "Integrates smoothly with chat, email, CRM, and call systems—no disruption to business operations.",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-3 hover:bg-gray-100 p-4 rounded-xl transition-all duration-300"
-                  whileHover={{ y: -3 }}
+            <div className="mt-8 flex justify-center mb-4 md:mb-0">
+              <Link href={"/contact"}>
+                <motion.button
+                  className="group inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
+                  whileHover={{ scale: 1.05 }}
+                  whileTap={{ scale: 0.95 }}
                 >
-                  <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
-            </div>
-
-            <div className="space-y-6">
-              {[
-                {
-                  title: "Scalable Multi-Channel Operations",
-                  description:
-                    "Handles large data volumes and seasonal spikes without compromising performance.",
-                },
-                {
-                  title: "Customizable to Your Brand",
-                  description:
-                    "Adapts to your policies and workflows while preserving brand voice for consistency and compliance.",
-                },
-                {
-                  title: "Risk Reduction & Fraud Detection",
-                  description:
-                    "Detects unusual patterns in interactions to reduce fraud and financial losses.",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="flex items-start gap-3 hover:bg-gray-100 p-4 rounded-xl transition-all duration-300"
-                  whileHover={{ y: -3 }}
-                >
-                  <div className="w-2 h-2 bg-indigo-600 rounded-full mt-2 flex-shrink-0"></div>
-                  <div>
-                    <h4 className="text-base sm:text-lg font-semibold text-gray-900 mb-1">
-                      {feature.title}
-                    </h4>
-                    <p className="text-gray-700 text-sm sm:text-base leading-relaxed">
-                      {feature.description}
-                    </p>
-                  </div>
-                </motion.div>
-              ))}
+                  See Convoze in Action
+                  <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+                </motion.button>
+              </Link>
             </div>
           </div>
-
-          <p className="text-center max-w-4xl mx-auto text-gray-700 text-sm sm:text-base leading-relaxed">
-            Convoze uses every customer interaction to generate valuable
-            business intelligence which enables Ecommerce and D2C brands to
-            maintain customer loyalty and boost sales and make better business
-            choices.
-          </p>
-        </div>
-      </motion.div>
-
-      {/* Final CTA Section */}
-      <motion.div
-        className="w-full bg-gray-50 flex-col relative min-h-[80vh] py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true }}
-        variants={fadeIn}
-        transition={{ duration: 0.6, delay: 0.6 }}
-      >
-        <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
-        <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
-        <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
-            <div>
-              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-3">
-                Where Convoze{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Makes
-                </span>{" "}
-                the Difference
-              </h3>
-              <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
-                With Convoze, ecommerce and D2C brands don't just manage support
-                — they build loyalty, grow revenue, and make smarter product
-                decisions. Every interaction becomes a chance to engage
-                customers better, reduce churn, and turn conversations into
-                measurable business growth.
-              </p>
-              <p className="mt-4 max-w-4xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
-                Convoze ensures brands deliver consistent, personalized, and
-                efficient experiences at scale.
-              </p>
-            </div>
-
-            <div>
-              <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-3">
-                Why{" "}
-                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 bg-clip-text text-transparent">
-                  Convoze
-                </span>{" "}
-                Stands Out
-              </h3>
-              <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
-                Most QA tools still work in isolation or rely on a handful of
-                conversation samples. Being different, Convoze audits every
-                single solitary conversation in one unified platform. That gives
-                reduced blind spots, more rapid decisions, and better outcomes
-                for both your customers and your business.
-              </p>
-            </div>
-          </div>
-
-          <div className="mt-8 flex justify-center mb-4 md:mb-0">
-            <Link href={"/contact"}>
-              <motion.button
-                className="group inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-8 py-4 rounded-full text-lg transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105"
-                whileHover={{ scale: 1.05 }}
-                whileTap={{ scale: 0.95 }}
-              >
-                See Convoze in Action
-                <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
-              </motion.button>
-            </Link>
-          </div>
-        </div>
-      </motion.div>
+        </motion.div>
+      </div>
     </div>
   );
 };
@@ -1664,10 +1672,10 @@ export default EcommerceD2c;
 
 function HeroSection() {
   return (
-    <div className="relative min-h-screen flex items-center pb-10 pt-24 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex bg-slate-50 items-center  pb-10 pt-24 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
       {/* Decorative Blurred Elements */}
-      <div className="absolute  inset-0 z-[0] h-full w-full  bg-[radial-gradient(ellipse_50%_80%_at_50%_-20%,rgba(100,100,0,0.2),rgba(255,255,255,0))]"></div>
-      <div className="absolute  bottom-0 z-[0] h-full w-full  bg-[radial-gradient(ellipse_50%_80%_at_50%_-20%,rgba(0,0,200,0.2),rgba(255,255,255,0))]"></div>
+      <div className="absolute  inset-0 z-[0] h-full w-full  bg-[radial-gradient(ellipse_50%_80%_at_50%_-20%,rgba(100,100,0,0.15),rgba(255,255,255,0))]"></div>
+      <div className="absolute  bottom-0 z-[0] h-full w-full  bg-[radial-gradient(ellipse_50%_80%_at_50%_-20%,rgba(0,0,200,0.15),rgba(255,255,255,0))]"></div>
       <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-50 [perspective:200px]">
         <div className="absolute inset-0 [transform:rotateX(35deg)]">
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
@@ -1679,7 +1687,7 @@ function HeroSection() {
       {/* Content */}
       <div className="max-w-5xl mx-auto text-center space-y-4 py-24">
         <motion.h1
-          className="from-primary/10 via-foreground/85 to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-5xl lg:text-6xl"
+          className="from-primary/10 via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-center text-4xl tracking-tighter text-balance text-transparent sm:text-5xl md:text-5xl lg:text-6xl"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
@@ -1691,7 +1699,7 @@ function HeroSection() {
         </motion.h1>
 
         <motion.h2
-          className="text-xl sm:text-2xl md:text-2xl relative font-semibold text-gray-700 max-w-3xl mx-auto"
+          className="text-xl sm:text-2xl md:text-2xl mt-6 relative font-semibold text-gray-700 max-w-3xl mx-auto"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
@@ -1700,10 +1708,10 @@ function HeroSection() {
         </motion.h2>
 
         <motion.p
-          className="text-base sm:text-lg md:text-lg relative text-gray-700 max-w-4xl mx-auto leading-relaxed"
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.4 }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="text-muted-foreground mx-auto mt-6 max-w-2xl text-center text-lg"
         >
           In ecommerce and D2C, each customer interaction and support ticket is
           an opportunity to strengthen your brand, boost repeat purchases, and
@@ -1732,13 +1740,17 @@ function HeroSection() {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <Link href="/contact">
-            <button className="group relative inline-flex items-center gap-2 bg-gradient-to-r from-purple-600 to-indigo-600 hover:from-purple-700 hover:to-indigo-700 text-white font-semibold px-6 py-3 rounded-full transition-all duration-300 shadow-lg hover:shadow-xl transform hover:scale-105">
+            <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
               Request a Demo
-              <ArrowRight className="w-5 h-5 group-hover:translate-x-1 transition-transform" />
+              <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
             </button>
           </Link>
         </motion.div>
       </div>
+
+      <div className="absolute right-auto -bottom-40 left-1/2 h-96 w-20 -translate-x-1/2 -rotate-45 rounded-full bg-gray-200/30 blur-[80px] lg:right-96 lg:left-auto lg:translate-x-0"></div>
+      <div className="absolute right-auto -bottom-52 left-1/2 h-96 w-20 -translate-x-1/2 -rotate-45 rounded-full bg-gray-300/20 blur-[80px] lg:right-auto lg:left-auto lg:translate-x-0"></div>
+      <div className="absolute right-auto -bottom-60 left-1/2 h-96 w-10 -translate-x-20 -rotate-45 rounded-full bg-gray-300/20 blur-[80px] lg:right-96 lg:left-auto lg:-translate-x-40"></div>
 
       <div className="absolute top-0 z-10 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
       <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
