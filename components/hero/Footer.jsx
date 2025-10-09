@@ -60,7 +60,7 @@ const Footer = () => {
           </div>
 
           {/* Location */}
-          <div>
+          {/* <div>
             <h4 className="font-semibold mb-2 text-sm md:text-base">
               Locations
             </h4>
@@ -76,7 +76,7 @@ const Footer = () => {
                 className="w-12 shadow-xl"
               />
             </main>
-          </div>
+          </div> */}
         </div>
 
         {/* Copyright */}
