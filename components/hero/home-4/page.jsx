@@ -202,7 +202,7 @@ const Hero4 = () => {
             <motion.img
               src="/Customer analysis.png"
               alt="Customer Analysis"
-              className="w-[16rem] xs:w-[18rem] sm:w-[22rem] md:w-[28rem] lg:w-[34rem] xl:w-[36rem] brightness-95 rounded-xl object-contain custom-shadow"
+              className="w-[16rem] xs:w-[18rem] sm:w-[22rem] md:w-[28rem] lg:w-[34rem] xl:w-[36rem]  rounded-xl object-contain custom-shadow"
               variants={itemVariants}
               animate={{ y: [0, -15, 0] }}
               transition={{

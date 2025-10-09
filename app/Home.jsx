@@ -61,8 +61,9 @@ export default function Home() {
         <StatsCart />
       </Container> */}
       <WhyConvoze />
+      <FeaturesCart />
+
       {/* <Container className={" justify-between bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2]"}> */}
-      <WhatCustomerSays />
       {/* </Container> */}
       {/* <Timelinecomp /> */}
 
@@ -82,10 +83,10 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       <BookDemo />
+      <WhatCustomerSays />
 
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
-      <FeaturesCart />
       {/* <Testimonial /> */}
       <div className="relative bg-slate-200">
         <ContactUs isCards={false} disable={false} />

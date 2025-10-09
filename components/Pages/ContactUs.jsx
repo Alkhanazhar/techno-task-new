@@ -89,7 +89,7 @@ const ContactUs = ({ isCards = true, bg }) => {
           </span>
         </h1>
         {/* shallow copy and deep copy
-core react and next js hooks custom hook hof context api memory leakage next js unit test jest element data test roles test driven  */}
+          core react and next js hooks custom hook hof context api memory leakage next js unit test jest element data test roles test driven  */}
         {/* Form */}
         <div className="flex justify-center items-center  overflow-hidden relative md:px-2">
           <motion.div
