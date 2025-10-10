@@ -82,7 +82,8 @@
 
 "use client";
 
-import { Carousel } from "./Carousel";
+import { Carousel, Slide } from "./Carousel";
+import Carousel2 from "./Carousel2";
 
 export const Industries = () => {
   const slideData = [
@@ -139,6 +140,11 @@ export const Industries = () => {
 
       <div className="w-screen h-full  !-mb-20 pb-16 md:mb-0 sm:pb-12 overflow-hidden">
         <Carousel slides={slideData} />
+        {/* <Carousel2 visibleItemsCount={3} withIndicator isInfinite>
+          {[...slideData, ...slideData].map((slide, index) => (
+            <Slide key={index} slide={slide} />
+          ))}
+        </Carousel2> */}
       </div>
     </div>
   );
