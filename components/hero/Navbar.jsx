@@ -222,7 +222,7 @@ const Navbar = () => {
       <nav
         className={`w-full fixed border-black/10 top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "!bg-black/30 !backdrop-blur-md shadow-sm  border-b-[1px]"
+            ? "!bg-black/30 !backdrop-blur-xs shadow-sm  border-b-[1px]"
             : "!bg-transparent"
         }`}
       >
@@ -230,7 +230,7 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => router.push("/")}
         >
-          <img src="/logo.png" alt="logo" className="md:h-9 h-6" />
+          <img src="/logo.png" alt="logo" className="md:h-9 h-6 " />
         </div>
 
         {/* Desktop Menu */}
