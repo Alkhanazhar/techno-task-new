@@ -1212,31 +1212,31 @@ const EcommerceD2c = () => {
 
   const stats = [
     {
-      icon: <Repeat className="w-8 h-8 text-purple-100" />,
+      icon: <Repeat className="w-12 h-12 text-purple-100" />,
       stat: "30–40%",
       desc: "increase in repeat purchases by proactively identifying at-risk customers.",
       color: "from-rose-500 to-orange-500",
     },
     {
-      icon: <Gauge className="w-8 h-8 text-purple-100" />,
+      icon: <Gauge className="w-12 h-12 text-purple-100" />,
       stat: "25%",
       desc: "faster product improvement cycles through automated feedback capture.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <TrendingUp className="w-8 h-8 text-purple-100" />,
+      icon: <TrendingUp className="w-12 h-12 text-purple-100" />,
       stat: "20%",
       desc: "higher conversion on upsells using real-time recommendations.",
       color: "from-green-500 to-emerald-500",
     },
     {
-      icon: <MessageSquare className="w-8 h-8 text-purple-100" />,
+      icon: <MessageSquare className="w-12 h-12 text-purple-100" />,
       stat: "100%",
       desc: "conversation coverage vs. <5% manual auditing.",
       color: "from-purple-500 to-violet-500",
     },
     {
-      icon: <DollarSign className="w-8 h-8 text-purple-100" />,
+      icon: <DollarSign className="w-12 h-12 text-purple-100" />,
       stat: "15–20%",
       desc: "reduction in QA costs through automation.",
       color: "from-blue-500 to-cyan-500",
@@ -1341,228 +1341,6 @@ const EcommerceD2c = () => {
               ))}
             </div>
           </div>
-        </motion.div>
-
-        {/* How Convoze Helps Section */}
-        <motion.div
-          className="w-full  relative py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.6, delay: 0.4 }}
-        >
-          <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
-              How Convoze{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                Helps
-              </span>
-            </h3>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
-              {[
-                {
-                  title: "Real-Time Customer Sentiment & Insights",
-                  description: [
-                    "Detects frustration, urgency, or buying signals instantly.",
-                    "Flags high-value or at-risk customers for immediate action driving proactive support and increasing repeat purchases.",
-                  ],
-                  color: "from-purple-500 to-indigo-500",
-                },
-                {
-                  title: "Automated Product Feedback Loops",
-                  description: [
-                    "Automatically captures recurring bug reports, feature requests, and product questions.",
-                    "Prioritizes improvements based on actual customer demand, this leads to quicker product updates and improved user satisfaction.",
-                  ],
-                  color: "from-blue-500 to-indigo-500",
-                },
-                {
-                  title: "More Informed Sales and Promotions",
-                  description: [
-                    "Finds possibilities for cross-selling and upselling during discussions.",
-                    "Suggests personalized offers in real time. This results in higher conversion and increased average order value.",
-                  ],
-                  color: "from-red-500 to-indigo-500",
-                },
-                {
-                  title: "Quality Assurance & Training at Scale",
-                  description: [
-                    "AI audits every conversation, ensuring consistent service quality.",
-                    "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
-                  ],
-                  color: "from-pink-500 to-indigo-500",
-                },
-                {
-                  title: "Detection of Fraud and Risk",
-                  description: [
-                    "Spots unusual patterns in returns, complaints, or interactions.",
-                    "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
-                  ],
-                  color: "from-green-500 to-yellow-500",
-                },
-              ].map((feature, index) => (
-                <motion.div
-                  key={index}
-                  className="bg-white/80 backdrop-blur-xs overflow-hidden p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-                  whileHover={{ y: -5 }}
-                >
-                  <div className="flex items-center space-x-2 mb-3">
-                    <div
-                      className={cn(
-                        "absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br opacity-20 blur-2xl transition-all duration-500 group-hover:opacity-30 group-hover:blur-3xl",
-                        feature.color
-                      )}
-                    />
-                    <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
-                    <h4 className="text-lg font-semibold ">
-                      <ColorText>{feature.title}</ColorText>
-                    </h4>
-                  </div>
-                  <div className="ml-5 space-y-2">
-                    {feature.description.map((desc, i) => (
-                      <div key={i} className="flex items-start space-x-2">
-                        <span className="font-[600] text-purple-600">-</span>
-                        <p className="text-gray-700 text-sm leading-relaxed">
-                          {desc}
-                        </p>
-                      </div>
-                    ))}
-                  </div>
-                </motion.div>
-              ))}
-
-              {/* <div className="space-y-6">
-                {[
-                  {
-                    title: "Quality Assurance & Training at Scale",
-                    description: [
-                      "AI audits every conversation, ensuring consistent service quality.",
-                      "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
-                    ],
-                  },
-                  {
-                    title: "Detection of Fraud and Risk",
-                    description: [
-                      "Spots unusual patterns in returns, complaints, or interactions.",
-                      "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
-                    ],
-                  },
-                ].map((feature, index) => (
-                  <motion.div
-                    key={index}
-                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
-                    whileHover={{ y: -5 }}
-                  >
-                    <div className="flex items-center space-x-2 mb-3">
-                      <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
-                      <h4 className="text-lg font-semibold text-gray-900">
-                        <ColorText>{feature.title}</ColorText>
-                      </h4>
-                    </div>
-                    <div className="ml-5 space-y-2">
-                      {feature.description.map((desc, i) => (
-                        <div key={i} className="flex items-start space-x-2">
-                          <span className="font-[600] text-purple-600">-</span>
-                          <p className="text-gray-700 text-sm leading-relaxed">
-                            {desc}
-                          </p>
-                        </div>
-                      ))}
-                    </div>
-                  </motion.div>
-                ))}
-              </div> */}
-            </div>
-          </div>
-        </motion.div>
-
-        {/* Measurable Impact Section */}
-        <motion.div
-          className="w-full min-h-screen flex-col relative py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
-          initial="hidden"
-          whileInView="visible"
-          viewport={{ once: true }}
-          variants={fadeIn}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <div className="absolute inset-0 -z-10 opacity-[0.02] dark:opacity-[0.05]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
-          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
-
-          <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-8">
-              Measurable{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                Impact
-              </span>
-            </h3>
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
-              className="text-muted-foreground mb-5 md:mb-8"
-            >
-              By auditing 100% of conversations, Convoze uncovers hidden
-              insights that drive real business results for Ecommerce and D2C
-              brands:
-            </motion.p>
-
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-5 md:mb-8">
-              {stats.map((item, idx) => (
-                <motion.div
-                  key={idx}
-                  className={cn(
-                    "group border-border/90 bg-gradient-to-l rounded-3xl bg-white/80 backdrop-blur-xl relative overflow-hidden  border p-6 shadow-lg shadow-black-900/[0.3]"
-                  )}
-                >
-                  <div className="flex items-center gap-2 mb-4">
-                    <div
-                      className={cn(
-                        "flex h-12 w-12 shrink-0 items-center justify-center rounded-lg bg-gradient-to-br text-black",
-                        item.color
-                      )}
-                    >
-                      {item.icon}
-                    </div>
-                    <p className="text-2xl font-bold text-black/90">
-                      <ColorText>{item.stat}</ColorText>
-                    </p>
-                  </div>
-                  <p className="text-sm sm:text-base leading-relaxed text-black/80 text-left">
-                    {item.desc}
-                  </p>
-                  <div
-                    className={cn(
-                      "absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br opacity-20 blur-2xl transition-all duration-500 group-hover:opacity-30 group-hover:blur-3xl",
-                      item.color
-                    )}
-                  />
-                </motion.div>
-              ))}
-            </div>
-          </section>
         </motion.div>
 
         {/* Boost Growth Section */}
@@ -1671,6 +1449,233 @@ const EcommerceD2c = () => {
           </div>
         </motion.div>
 
+        {/* Measurable Impact Section */}
+        <motion.div
+          className="w-full min-h-screen flex-col relative py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <div className="absolute inset-0 -z-10 opacity-[0.02] dark:opacity-[0.05]">
+            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern
+                  id="grid"
+                  width="40"
+                  height="40"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 40 0 L 0 0 0 40"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1"
+                  />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+
+          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
+          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
+
+          <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-8">
+              Measurable{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Impact
+              </span>
+            </h3>
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="text-muted-foreground mb-5 md:mb-8"
+            >
+              By auditing 100% of conversations, Convoze uncovers hidden
+              insights that drive real business results for Ecommerce and D2C
+              brands:
+            </motion.p>
+
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8 mb-5 md:mb-8">
+              {stats.map((item, idx) => (
+                <motion.div
+                  key={idx}
+                  className={cn(
+                    "group border-border/90 bg-gradient-to-l rounded-3xl bg-white/80 backdrop-blur-xl relative overflow-hidden  border p-6 shadow-lg shadow-black-900/[0.3]"
+                  )}
+                >
+                  <div className="flex items-center gap-2 mb-4 overflow-hidden">
+                    <div
+                      className={cn(
+                        "flex h-24 w-24 shrink-0 rotate-45 scale-150 opacity-15 absolute -bottom-3 -right-3 items-center justify-center rounded-lg bg-gradient-to-br text-black",
+                        item.color
+                      )}
+                    >
+                      {item.icon}
+                    </div>
+                    <p className="text-4xl font-bold text-center text-black/80">
+                      <ColorText>{item.stat}</ColorText>
+                    </p>
+                  </div>
+                  <p className="text-sm sm:text-base relative leading-relaxed text-black/80 text-left">
+                    {item.desc}
+                  </p>
+                  <div
+                    className={cn(
+                      "absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br opacity-20 blur-2xl transition-all duration-500 group-hover:opacity-30 group-hover:blur-3xl",
+                      item.color
+                    )}
+                  />
+                </motion.div>
+              ))}
+            </div>
+          </section>
+        </motion.div>
+
+        {/* How Convoze Helps Section */}
+
+        <motion.div
+          className="w-full  relative py-8 xs:py-10 sm:py-12 md:py-20 mb-8 xs:mb-10 sm:mb-12 md:mb-0"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: true }}
+          variants={fadeIn}
+          transition={{ duration: 0.6, delay: 0.4 }}
+        >
+          <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-10">
+              How Convoze{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                Helps
+              </span>
+            </h3>
+
+            <motion.p
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2, ease: "easeOut" }}
+              className="text-muted-foreground mb-5 md:mb-8"
+            >
+              Convoze empowers your teams to act smarter, faster and more
+              effectively on every customer interaction.
+            </motion.p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-10">
+              {[
+                {
+                  title: "Real-Time Customer Sentiment & Insights",
+                  description: [
+                    "Detects frustration, urgency, or buying signals instantly.Flags high-value or at-risk customers for immediate action driving proactive support and increasing repeat purchases.",
+                  ],
+                  color: "from-purple-500 to-indigo-500",
+                },
+                {
+                  title: "Automated Product Feedback Loops",
+                  description: [
+                    "Automatically captures recurring bug reports, feature requests, and product questions and Prioritizes improvements based on actual customer demand, this leads to quicker product updates and improved user satisfaction.",
+                  ],
+                  color: "from-blue-500 to-indigo-500",
+                },
+                {
+                  title: "More Informed Sales and Promotions",
+                  description: [
+                    "Finds possibilities for cross-selling and upselling during discussions and Suggests personalized offers in real time. This results in higher conversion and increased average order value.",
+                  ],
+                  color: "from-red-500 to-indigo-500",
+                },
+                {
+                  title: "Quality Assurance & Training at Scale",
+                  description: [
+                    "AI audits every conversation to ensure consistent service quality, strengthen your brand voice, reduce mistakes, and accelerate onboarding, highlighting top-performing agents for coaching opportunities.",
+                  ],
+                  color: "from-pink-500 to-indigo-500",
+                },
+                {
+                  title: "Detection of Fraud and Risk",
+                  description: [
+                    "Spots unusual patterns in returns, complaints, or interactions and flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
+                  ],
+                  color: "from-green-500 to-yellow-500",
+                },
+              ].map((feature, index) => (
+                <motion.div
+                  key={index}
+                  className="bg-white/80 backdrop-blur-xs overflow-hidden p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+                  whileHover={{ y: -5 }}
+                >
+                  <div className="flex items-center space-x-2 mb-3">
+                    <div
+                      className={cn(
+                        "absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br opacity-20 blur-2xl transition-all duration-500 group-hover:opacity-30 group-hover:blur-3xl",
+                        feature.color
+                      )}
+                    />
+                    <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                    <h4 className="text-lg font-semibold ">
+                      <ColorText>{feature.title}</ColorText>
+                    </h4>
+                  </div>
+                  <div className="ml-5 space-y-2">
+                    {feature.description.map((desc, i) => (
+                      <div key={i} className="flex items-start space-x-2">
+                        <span className="font-[600] text-purple-600">-</span>
+                        <p className="text-gray-700 text-sm leading-relaxed">
+                          {desc}
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                </motion.div>
+              ))}
+
+              {/* <div className="space-y-6">
+                {[
+                  {
+                    title: "Quality Assurance & Training at Scale",
+                    description: [
+                      "AI audits every conversation, ensuring consistent service quality.",
+                      "A better brand voice, fewer mistakes, and quicker onboarding are all made possible by these initiatives, which highlight top-performing agents and coaching opportunities.",
+                    ],
+                  },
+                  {
+                    title: "Detection of Fraud and Risk",
+                    description: [
+                      "Spots unusual patterns in returns, complaints, or interactions.",
+                      "Flags high-risk issues before they escalate resulting in reduced financial losses and improved trust.",
+                    ],
+                  },
+                ].map((feature, index) => (
+                  <motion.div
+                    key={index}
+                    className="bg-white p-6 rounded-2xl shadow-md hover:shadow-lg transition-all duration-300"
+                    whileHover={{ y: -5 }}
+                  >
+                    <div className="flex items-center space-x-2 mb-3">
+                      <span className="w-3 h-3 bg-purple-500 rounded-full"></span>
+                      <h4 className="text-lg font-semibold text-gray-900">
+                        <ColorText>{feature.title}</ColorText>
+                      </h4>
+                    </div>
+                    <div className="ml-5 space-y-2">
+                      {feature.description.map((desc, i) => (
+                        <div key={i} className="flex items-start space-x-2">
+                          <span className="font-[600] text-purple-600">-</span>
+                          <p className="text-gray-700 text-sm leading-relaxed">
+                            {desc}
+                          </p>
+                        </div>
+                      ))}
+                    </div>
+                  </motion.div>
+                ))}
+              </div> */}
+            </div>
+          </div>
+        </motion.div>
         {/* Final CTA Section */}
         <motion.div
           className="w-full  flex-col relative min-h-[80vh] py-6 xs:py-10 sm:py-24 text-center flex items-center justify-center"
@@ -1700,8 +1705,11 @@ const EcommerceD2c = () => {
                   into measurable business growth.
                 </p>
                 <p className="mt-4 max-w-4xl mx-auto text-gray-600 text-sm sm:text-base leading-relaxed">
-                  Convoze ensures brands deliver consistent, personalized, and
-                  efficient experiences at scale.
+                  Convoze ensures brands deliver{" "}
+                  <strong>
+                    consistent, personalized, and efficient experiences at
+                    scale.
+                  </strong>
                 </p>
               </div>
 
@@ -1790,7 +1798,7 @@ function HeroSection() {
             Turn Every Customer Interaction into Loyalty and Revenue
           </motion.h2>
 
-          <motion.p
+          {/* <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
@@ -1801,7 +1809,7 @@ function HeroSection() {
             and gather insights about your products. Most teams only capture a
             small part of these interactions, missing vital signals that affect
             revenue and customer loyalty.
-          </motion.p>
+          </motion.p> */}
 
           <motion.p
             className="text-base  text-gray-700 relative max-w-4xl mt-6 mx-auto leading-relaxed"
@@ -1810,10 +1818,10 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.6 }}
           >
             <span className="font-bold relative text-gray-900">Convoze AI</span>{" "}
-            changes that. It audits 100% of conversations across all channels,
-            tracks key performance metrics (KPIs) for every interaction,
-            extracts actionable insights in real time, and helps your teams
-            respond instantly on what matters most.
+            audits 100% of conversations across all channels, tracks key
+            performance metrics (KPIs) for every interaction, extracts
+            actionable insights in real time, and helps your teams respond
+            instantly on what matters most.
           </motion.p>
 
           <motion.div
@@ -1890,6 +1898,7 @@ function HeroSection() {
 export const ColorText = ({ children }) => {
   return (
     <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-transparent bg-clip-text">
+      {" "}
       {children}
     </span>
   );

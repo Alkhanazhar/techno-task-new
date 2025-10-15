@@ -200,7 +200,7 @@ const Navbar = () => {
     { name: "Saas & Tech", route: "/saas-tech" },
     // { name: "Human Resources & Recruitment", route: "/" },
     // { name: "E-commerce & Retail", route: "/" },
-    { name: "Healthcare and Insurance", route: "/" },
+    { name: "Healthcare and Insurance", route: "/healthcare-insurance" },
     // { name: "Enterprise Operations", route: "/" },
     { name: "E-commerce and D2C", route: "/ecommerce-d2c" },
     // { name: "Telecommunications", route: "/" },
@@ -364,15 +364,17 @@ const Navbar = () => {
                       </p>
                     </li>
                   </Link>
-                  <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
-                    <h4 className="font-medium text-[14px] text-white">
-                      Healthcare and Insurance
-                    </h4>
-                    <p className="text-[11px] text-gray-400 mt-1">
-                      Detect patient emotions instantly and improve satisfaction
-                      through real-time sentiment analysis.
-                    </p>
-                  </li>
+                  <Link href="/healthcare-insurance">
+                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
+                      <h4 className="font-medium text-[14px] text-white">
+                        Healthcare and Insurance
+                      </h4>
+                      <p className="text-[11px] text-gray-400 mt-1">
+                        Detect patient emotions instantly and improve
+                        satisfaction through real-time sentiment analysis.
+                      </p>
+                    </li>
+                  </Link>
                 </ul>
               </div>
             </div>

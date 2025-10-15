@@ -1,4 +1,3 @@
-import CaseStudy from "@/components/Pages/CaseStudy";
 import EcommerceD2c from "./EcommerceD2c";
 
 const page = () => {
