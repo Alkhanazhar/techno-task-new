@@ -526,19 +526,17 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Glow effect behind image */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/10 to-blue-900/10 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
 
             {/* Animated border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-900/10 via-blue-900/10 to-purple-900/10 rounded-3xl opacity-50 group-hover:opacity-75 blur transition-all duration-500 animate-gradient-xy"></div>
 
             <img
-              src="/ecomm.png"
-              alt="E-Commerce and D2C"
-              className="relative w-full h-auto max-w-md aspect-square rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
+              src="/bpo.png"
+              alt="bpo center"
+              className="relative w-full h-auto object-cover max-w-md  transition-all duration-500 group-hover:scale-105"
             />
 
             {/* Floating badges */}
-            <motion.div
+            {/* <motion.div
               className="absolute -top-4 -left-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-purple-200"
               animate={{ y: [0, -5, 0] }}
               transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
@@ -567,7 +565,7 @@ function HeroSection() {
                 </span>
                 <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
               </div>
-            </motion.div>
+            </motion.div> */}
           </motion.div>
         </div>
       </div>
