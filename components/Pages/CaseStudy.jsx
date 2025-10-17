@@ -332,7 +332,7 @@ const BPOContactCenterPage = () => {
         </div>
 
         {/* Enhancing BPO Operations Section */}
-        <div className="relative md:min-h-[90vh]  -shadow-2xs flex items-center  ">
+        <div className="relative pb-12  ">
           <div className="absolute inset-0 -z-10 opacity-[0.02]">
             <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -532,7 +532,7 @@ function HeroSection() {
             <img
               src="/bpo.png"
               alt="bpo center"
-              className="relative w-full h-auto object-cover scale-105 max-w-md  transition-all duration-500 group-hover:scale-105"
+              className="relative w-full h-auto object-cover scale-110 max-w-md  transition-all duration-500 group-hover:scale-115"
             />
 
             {/* Floating badges */}
