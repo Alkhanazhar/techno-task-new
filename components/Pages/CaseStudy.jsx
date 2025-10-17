@@ -459,7 +459,7 @@ function HeroSection() {
       {/* Floating Particles */}
 
       {/* Content */}
-      <div className="w-full max-w-7xl mx-auto px-4 pt-12  flex flex-col md:flex-row items-center gap-8">
+      <div className="w-full max-w-7xl mx-auto px-4 pt-16  flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 w-fit bg-purple-100/80 backdrop-blur-sm text-purple-900 rounded-full text-xs md:text-sm font-medium border border-purple-200">
             <span className="relative flex h-2 w-2">
