@@ -148,6 +148,8 @@ const Navbar = () => {
 
   const pathname = usePathname();
 
+  console.log(pathname, "pathname");
+
   useEffect(() => {
     const handleResize = () => setIsMobile(window.innerWidth < 768);
     const handleScroll = () => setIsScrolled(window.scrollY > 10);
@@ -230,11 +232,24 @@ const Navbar = () => {
           className="flex items-center gap-2 cursor-pointer"
           onClick={() => router.push("/")}
         >
-          <img src="/logo.png" alt="logo" className="md:h-9 h-6 " />
+          <img
+            src={
+              pathname === "/" ||
+              pathname === "/contact" ||
+              pathname == "/features" ||
+              pathname === "pricing"
+                ? "/logo.png"
+                : isScrolled
+                ? "/logo.png"
+                : "/logo-black.svg"
+            }
+            alt="logo"
+            className="md:h-9 h-6 opacity-85 "
+          />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex bg-[#1a1a1a]/60 backdrop-blur-sm border border-gray-50/10 rounded-full px-12 py-3 space-x-8 text-sm relative overflow-visible">
+        <div className="hidden md:flex bg-[#1a1a1a]/50 backdrop-blur-sm border border-gray-100/10 rounded-full px-12 py-4 space-x-8 text-sm relative overflow-visible">
           {menuItems.map((item) => (
             <button
               key={item.name}

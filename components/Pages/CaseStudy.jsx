@@ -18,10 +18,14 @@ import {
   TrendingDown,
   UserX,
   AlertTriangle,
+  Star,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import ConvozeMetrics from "./ConvozeMetrics";
+import InfiniteCarousel from "../hero/InfiniteCarousel";
+import { Marquee } from "../ui/marquee";
+import { MarqueeCompanies } from "../marquee";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -40,58 +44,62 @@ const BPOContactCenterPage = () => {
 
   const challenges = [
     {
-      icon: <TrendingUp className="w-8 h-8" />,
+      image:
+        "https://images.unsplash.com/photo-1573164713988-8665fc963095?w=800&fit=max",
       title:
         "Scaling struggles when seasonal surges lead to long wait times and frustrated customers.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Target className="w-8 h-8" />,
+      image:
+        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&fit=max",
       title:
         "Inconsistent quality because only a handful of conversations get checked.",
       color: "from-purple-500 to-indigo-500",
     },
     {
-      icon: <UserX className="w-8 h-8" />,
+      image:
+        "https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=800&fit=max",
       title:
         "High staff turnover, which means never-ending recruiting and retraining.",
       color: "from-orange-500 to-red-500",
     },
     {
-      icon: <AlertTriangle className="w-8 h-8" />,
+      image:
+        "https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=800&fit=max",
       title:
         "Costly compliance slips that can damage your brand and trigger escalation & fines.",
       color: "from-red-500 to-pink-500",
     },
     {
-      icon: <Activity className="w-8 h-8" />,
+      image:
+        "https://images.unsplash.com/photo-1651565083373-20131cb89037?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=627",
       title:
         "Missed sentiment cues, like those subtle signs of dissatisfaction until it's too late.",
       color: "from-green-500 to-emerald-500",
     },
   ];
-
   const features = [
     {
-      icon: <MessageSquare className="w-8 h-8" />,
+      icon: <MessageSquare className="w-6 h-6" />,
       title: "Live transcription & speech-to-text",
       description: "Conversations are captured instantly.",
       color: "from-blue-500 to-cyan-500",
     },
     {
-      icon: <Activity className="w-8 h-8" />,
+      icon: <Activity className="w-6 h-6" />,
       title: "Emotion & intent detection",
       description: "Spots frustration, urgency, or satisfaction in real time.",
       color: "from-purple-500 to-indigo-500",
     },
     {
-      icon: <Bell className="w-8 h-8" />,
+      icon: <Bell className="w-6 h-6" />,
       title: "Compliance alerts",
       description: "Flags risky phrases or missed disclosures on the spot.",
       color: "from-orange-500 to-red-500",
     },
     {
-      icon: <BarChart3 className="w-8 h-8" />,
+      icon: <BarChart3 className="w-6 h-6" />,
       title: "Automated QA scoring",
       description: "Gives consistent, fair feedback for every interaction.",
       color: "from-green-500 to-emerald-500",
@@ -142,7 +150,7 @@ const BPOContactCenterPage = () => {
 
       {/* The Reality Section */}
 
-      <div className="relative bg-slate-100 py-20">
+      <div className="relative bg-slate-100 border-b">
         <div className="absolute inset-0 z-0">
           <img
             src="/bgPattern.png"
@@ -151,29 +159,29 @@ const BPOContactCenterPage = () => {
           />
         </div>
 
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
-          <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-            The Reality{" "}
-            <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-              on the Floor
-            </span>
-          </h3>
+        <div className="w-full bg-slate-50 py-12 md:py-32 mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+          <div className="max-w-7xl mx-auto">
+            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+              The Reality{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-blue-600 text-transparent  bg-clip-text">
+                on the Floor
+              </span>
+            </h3>
 
-          <p className="text-center text-gray-700 mb-6 max-w-3xl mx-auto text-base leading-relaxed">
-            The truth? Most centers still manage to audit only{" "}
-            <span className="font-bold text-gray-900">3–4%</span> of their
-            conversations. That means{" "}
-            <span className="font-bold text-gray-900">96%</span> valuable
-            insights – performance gaps, compliance risks, and customer
-            sentiment shifts – completely unseen.
-          </p>
+            <p className="text-center text-gray-600 mb-4 max-w-3xl mx-auto text-sm md:text-base leading-relaxed">
+              The truth? Most centers still manage to audit only{" "}
+              <span className="font-bold text-gray-800">3–4%</span> of their
+              conversations. That means{" "}
+              <span className="font-bold text-gray-800">96%</span> valuable
+              insights – performance gaps, compliance risks, and customer
+              sentiment shifts – completely unseen. <br />
+              And when those go unnoticed, it leads to
+            </p>
+          </div>
 
-          <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto font-semibold">
-            And when those go unnoticed, it leads to:
-          </p>
-
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {challenges.map((challenge, index) => (
+          {/* <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6"> */}
+          <InfiniteCarousel items={challenges} />
+          {/* {challenges.map((challenge, index) => (
               <div
                 key={index}
                 className="bg-white/80 backdrop-blur-sm p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden"
@@ -192,8 +200,8 @@ const BPOContactCenterPage = () => {
                   className={`absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br ${challenge.color} opacity-10 blur-2xl group-hover:opacity-20 transition-opacity`}
                 />
               </div>
-            ))}
-          </div>
+            ))} */}
+          {/* </div> */}
         </div>
 
         {/* How Convoze Changes the Game Section */}
@@ -220,22 +228,23 @@ const BPOContactCenterPage = () => {
           </div>
 
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               How Convoze{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
                 Changes the Game
               </span>
             </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-sm md:text-base text-gray-600 mb-6 max-w-3xl mx-auto">
               Think of Convoze as an expert QA and customer insight powerhouse
               that listens to every conversation – every single one – without
               missing a moment.
+              <br />
+              This is exactly what it brings to the table
             </p>
 
-            <p className="text-center text-gray-700 mb-8 max-w-2xl mx-auto font-semibold">
-              This is exactly what it brings to the table:
-            </p>
+            {/* <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto font-semibold">
+            </p> */}
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
               {features.map((feature, index) => (
@@ -245,12 +254,12 @@ const BPOContactCenterPage = () => {
                 >
                   <div className="flex items-start gap-4 relative z-10">
                     <div
-                      className={`p-3 rounded-xl bg-gradient-to-br ${feature.color} text-white group-hover:scale-110 transition-transform flex-shrink-0`}
+                      className={`p-3 rounded-xl  text-purple-700 bg-black/5 border backdrop-blur-xs group-hover:scale-110 transition-transform flex-shrink-0`}
                     >
                       {feature.icon}
                     </div>
                     <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">
+                      <h4 className="md:text-lg text-base font-semibold text-gray-700 mb-2">
                         {feature.title}
                       </h4>
                       <p className="text-gray-700 text-sm leading-relaxed">
@@ -265,7 +274,7 @@ const BPOContactCenterPage = () => {
               ))}
             </div>
 
-            <p className="text-center text-gray-700 max-w-3xl mx-auto text-base leading-relaxed">
+            <p className="text-center text-gray-700 max-w-3xl mb-6 mx-auto text-base leading-relaxed">
               With Convoze, managers don't have to wait for the end-of-week
               reports. They can act on insights{" "}
               <span className="font-bold text-gray-900">
@@ -273,7 +282,7 @@ const BPOContactCenterPage = () => {
               </span>
             </p>
 
-            <div className="flex justify-center mt-8">
+            <div className="flex justify-center   ">
               <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
                 Request a Demo
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -284,7 +293,7 @@ const BPOContactCenterPage = () => {
 
         {/* Proven Measurable Impact Section */}
 
-        <div className="w-full  max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+        <div className="w-full  max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16   pb-8 relative">
           <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Proven Measurable <ColorText>Impact</ColorText>
           </h3>
@@ -293,7 +302,7 @@ const BPOContactCenterPage = () => {
             BPOs and contact centers using Convoze are experiencing:
           </p>
 
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 md:mb-12">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-8 md:mb-12">
             {stats.map((item, idx) => (
               <div
                 key={idx}
@@ -323,7 +332,7 @@ const BPOContactCenterPage = () => {
         </div>
 
         {/* Enhancing BPO Operations Section */}
-        <div className="relative  py-20">
+        <div className="relative md:min-h-[90vh]  -shadow-2xs flex items-center  ">
           <div className="absolute inset-0 -z-10 opacity-[0.02]">
             <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
               <defs>
@@ -345,39 +354,47 @@ const BPOContactCenterPage = () => {
             </svg>
           </div>
 
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Enhancing BPO Operations{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                with Convoze
-              </span>
-            </h3>
+          <div className="w-full  px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 pt-32">
+            <div className="max-w-7xl mx-auto">
+              <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
+                Enhancing BPO Operations{" "}
+                <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                  with Convoze
+                </span>
+              </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-              Optimize every process of your contact center workflow with
-              real-time actionable insights and AI-powered intelligence.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {enhancementFeatures.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-gradient-to-br from-purple-50 to-indigo-50 p-6 rounded-2xl border border-purple-100 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
-                >
-                  <div className="flex items-start gap-3">
-                    <div className="w-2 h-2 bg-purple-600 rounded-full mt-2 flex-shrink-0"></div>
-                    <p className="text-gray-700 text-sm leading-relaxed">
-                      {feature}
-                    </p>
+              <p className="text-center md:text-base text-sm text-gray-600 mb-8 max-w-3xl mx-auto">
+                Optimize every process of your contact center workflow with
+                real-time actionable insights and AI-powered intelligence.
+              </p>
+            </div>
+            {/* <MarqueeCompanies /> */}
+            <div className="relative flex w-full  bg-transparent flex-col items-center justify-center overflow-hidden">
+              <Marquee className={"py-4"} pauseOnHover>
+                {enhancementFeatures.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="bg-gradient-to-br relative w-64 flex  from-purple-50/10 to-indigo-50/10 backdrop-blur-sm  rounded-2xl border border-black/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                  >
+                    <div className="flex items-start gap-3 p-6">
+                      {/* <div className="p-2 text-purple-100 rounded-full mt-2 absolute top-4 left-4  bg-primary ">
+                        <Star />
+                      </div> */}
+                      <p className="text-gray-700 text-sm md:text-base font-medium leading-relaxed">
+                        <ColorText>{feature}</ColorText>
+                      </p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </Marquee>
+              <div className="from-slate-100 pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
+              <div className="from-slate-100 pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
             </div>
           </div>
         </div>
 
         {/* Built for Real World Section */}
-        <div className="relative  py-20">
+        <div className="relative  py-12 md:py-44">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
               <div className=" p-2">
@@ -387,7 +404,7 @@ const BPOContactCenterPage = () => {
                     Real World
                   </span>
                 </h3>
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-700 md:text-base text-sm leading-relaxed">
                   Whether you're managing telecom support, handling travel
                   bookings, or assisting utility customers, Convoze fits
                   seamlessly into your workflow. It is built for high-volume
@@ -397,14 +414,14 @@ const BPOContactCenterPage = () => {
               </div>
 
               <div className=" p-2 ">
-                <h3 className="text-2xl md:text-3xl font-bold text-gray-900 mb-4">
+                <h3 className="text-2xl md:text-3xl font-bold  text-gray-900 mb-4">
                   Why{" "}
                   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
                     Convoze
                   </span>{" "}
                   Stands Out
                 </h3>
-                <p className="text-gray-700 text-base leading-relaxed">
+                <p className="text-gray-700 md:text-base text-sm leading-relaxed">
                   Most QA tools still work in isolation or rely on a handful of
                   conversation samples. Being different, Convoze audits every
                   single conversation in one unified platform. That gives
@@ -431,11 +448,11 @@ export default BPOContactCenterPage;
 
 function HeroSection() {
   return (
-    <div className="relative min-h-screen flex bg-slate-50 items-center  pb-10 pt-24 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen  flex bg-slate-50   items-center  pb-10 py-24 md:py-36 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
       {/* Decorative Blurred Elements */}
-      <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-30 [perspective:300px]">
-        <div className="absolute inset-0 [transform:rotateX(35deg)]">
-          <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
+      <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-20 [perspective:900px]">
+        <div className="absolute inset-0 [transform:rotateX(10deg)] ">
+          <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:1000vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,.6)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
       </div>
 
@@ -446,10 +463,10 @@ function HeroSection() {
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 w-fit bg-purple-100/80 backdrop-blur-sm text-purple-900 rounded-full text-xs md:text-sm font-medium border border-purple-200">
             <span className="relative flex h-2 w-2">
-              <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
+              {/* <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
+              <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span> */}
             </span>
-            AI-Powered Customer Intelligence
+            Convoze for BPO & Contact Centers
           </span>
           <motion.h1
             className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
@@ -457,20 +474,12 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
           >
-            Convoze for <br />
+            Turning Every Conversation
+            <br />
             <span className="bg-gradient-to-tr relative from-purple-600/50 via-purple-700/85  to-indigo-600 text-transparent bg-clip-text">
-              BPO & Contact Centers
+              into Actionable Insight
             </span>
           </motion.h1>
-
-          <motion.h2
-            className="text-xl mt-6 relative font-semibold text-gray-700 max-w-3xl "
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.2 }}
-          >
-            Turning Every Conversation into Actionable Insight
-          </motion.h2>
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -480,7 +489,13 @@ function HeroSection() {
           >
             Running a contact center is a constant balancing act. Peaks in
             demand, customers who expect instant answers, and the pressure to
-            hit service targets can stretch even the best teams to their limits.
+            hit service targets can stretch even the best teams to their limits.{" "}
+            <br />
+            <span className="font-bold relative text-gray-900">
+              Convoze
+            </span>{" "}
+            Audits 100% of conversations, giving teams real-time insights into
+            customer sentiment, agent performance and compliance
           </motion.p>
 
           <motion.p
@@ -488,27 +503,22 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <span className="font-bold relative text-gray-900">Convoze</span>{" "}
-            Audits 100% of conversations, giving teams real-time insights into
-            customer sentiment, agent performance and compliance
-          </motion.p>
+          ></motion.p>
 
           <motion.div
-            className="pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
+              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors text-xs hover:bg-transparent/90 sm:w-auto">
                 Unlock Full Conversation Intelligence
                 <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
           </motion.div>
         </div>
-        <div className="w-full md:w-1/2 relative flex justify-end">
+        <div className="w-full md:w-1/2 relative flex justify-center">
           <motion.div
             className="relative group"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -516,15 +526,15 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Glow effect behind image */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/10 to-blue-900/10 rounded-3xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
 
             {/* Animated border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 rounded-xl opacity-50 group-hover:opacity-75 blur transition-all duration-500 animate-gradient-xy"></div>
+            <div className="absolute -inset-1 bg-gradient-to-r from-purple-900/10 via-blue-900/10 to-purple-900/10 rounded-3xl opacity-50 group-hover:opacity-75 blur transition-all duration-500 animate-gradient-xy"></div>
 
             <img
               src="/ecomm.png"
               alt="E-Commerce and D2C"
-              className="relative w-full h-auto max-w-md aspect-square rounded-xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
+              className="relative w-full h-auto max-w-md aspect-square rounded-3xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
             />
 
             {/* Floating badges */}

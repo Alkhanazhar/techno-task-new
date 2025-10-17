@@ -2,6 +2,8 @@ import localFont from "next/font/local";
 import "./globals.css";
 import Navbar from "@/components/hero/Navbar";
 import Footer from "@/components/hero/Footer";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 const sora = localFont({
   src: "../fonts/sora.ttf",

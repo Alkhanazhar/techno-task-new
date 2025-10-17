@@ -565,10 +565,10 @@ export default HealthcareInsurance;
 
 function HeroSection() {
   return (
-    <div className="relative min-h-screen flex bg-slate-50 items-center pb-10 pt-24 justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex bg-slate-50 items-center pb-10 py-40 justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Decorative Grid */}
       <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-30 [perspective:300px]">
-        <div className="absolute inset-0 [transform:rotateX(35deg)]">
+        <div className="absolute inset-0 [transform:rotateX(0deg)]">
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
       </div>

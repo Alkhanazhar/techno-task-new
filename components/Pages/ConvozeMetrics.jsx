@@ -69,22 +69,20 @@ export default function ConvozeMetrics() {
   ];
 
   return (
-    <div className="my-5 md:my-8 flex items-center justify-center">
+    <div className="my-5 md:my-8 md:flex items-center hidden  justify-center">
       <div className="w-full max-w-6xl">
         {/* Metrics Table */}
-        <div className="bg-white/10 backdrop-blur-xs rounded-3xl overflow-hidden shadow-2xl border border-white/20">
+        <div className="bg-white/5 backdrop-blur-xs rounded-3xl overflow-hidden shadow-xl border border-black/10">
           {/* Table Header */}
-          <div className="grid grid-cols-3 gap-px bg-gradient-to-r from-purple-800 to-pink-600 p-px">
+          <div className="grid grid-cols-3 gap-px bg-gradient-to-r from-purple-700/90 to-blue-800/90 p-px">
             <div className="bg-slate-900/10  p-6">
-              <h2 className="text-lg font-bold text-white/90">Metric</h2>
+              <h2 className="text-lg  text-white">Metric</h2>
             </div>
             <div className="bg-slate-900/10  p-6">
-              <h2 className="text-lg font-bold text-red-300">Before Convoze</h2>
+              <h2 className="text-lg text-white ">Before Convoze</h2>
             </div>
             <div className="bg-slate-900/10 p-6">
-              <h2 className="text-lg font-bold text-emerald-100">
-                After Convoze
-              </h2>
+              <h2 className="text-lg  text-white">After Convoze</h2>
             </div>
           </div>
 
@@ -93,7 +91,7 @@ export default function ConvozeMetrics() {
             {metrics.map((item, index) => (
               <div
                 key={index}
-                className={`grid grid-cols-3 gap-px bg-white/5 hover:bg-white/10 transition-all duration-500 ${
+                className={`grid grid-cols-3 gap-px bg-white/5transition-all duration-500 ${
                   isVisible
                     ? "opacity-100 translate-x-0"
                     : "opacity-0 -translate-x-10"
@@ -101,22 +99,22 @@ export default function ConvozeMetrics() {
                 style={{ transitionDelay: `${index * 100}ms` }}
               >
                 {/* Metric Column */}
-                <div className="p-6 flex items-center gap-3">
+                <div className="p-4 flex items-center gap-3">
                   <div className="text-purple-700">{item.icon}</div>
                   <span className=" text-black/70">{item.metric}</span>
                 </div>
 
                 {/* Before Column */}
-                <div className="p-6 bg-red-400/10 border-l border-white/10">
+                <div className="p-4 bg-purple-400/10 border-l border-white/10">
                   <div className="flex items-center h-full">
-                    <p className="text-red-700">{item.before}</p>
+                    <p className="text-purple-900">{item.before}</p>
                   </div>
                 </div>
 
                 {/* After Column */}
-                <div className="p-6 bg-emerald-500/10 border-l border-white/10">
+                <div className="p-4 bg-blue-500/10 border-l border-white/10">
                   <div className="flex items-center h-full">
-                    <p className="text-emerald-800 ">{item.after}</p>
+                    <p className="text-blue-900 ">{item.after}</p>
                   </div>
                 </div>
               </div>
