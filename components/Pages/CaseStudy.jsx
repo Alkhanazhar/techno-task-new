@@ -246,7 +246,7 @@ const BPOContactCenterPage = () => {
             {/* <p className="text-center text-gray-600 mb-6 max-w-2xl mx-auto font-semibold">
             </p> */}
 
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 my-12">
               {features.map((feature, index) => (
                 <div
                   key={index}
@@ -282,7 +282,7 @@ const BPOContactCenterPage = () => {
               </span>
             </p>
 
-            <div className="flex justify-center   ">
+            <div className="flex justify-center  pb-12 py-2">
               <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
                 Request a Demo
                 <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
@@ -369,12 +369,12 @@ const BPOContactCenterPage = () => {
               </p>
             </div>
             {/* <MarqueeCompanies /> */}
-            <div className="relative flex w-full  bg-transparent flex-col items-center justify-center overflow-hidden">
+            <div className="relative flex w-full  bg-transparent flex-col md:mt-12  items-center justify-center overflow-hidden">
               <Marquee className={"py-4"} pauseOnHover>
                 {enhancementFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br relative w-64 flex  from-purple-50/10 to-indigo-50/10 backdrop-blur-sm  rounded-2xl border border-black/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="bg-gradient-to-br relative w-64 flex  from-white/70 to-indigo-10/10 backdrop-blur-sm  rounded-2xl border border-black/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
                   >
                     <div className="flex items-start gap-3 p-6">
                       {/* <div className="p-2 text-purple-100 rounded-full mt-2 absolute top-4 left-4  bg-primary ">
@@ -511,7 +511,7 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors text-xs hover:bg-transparent/90 sm:w-auto">
+              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center md:text-base rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors text-xs hover:bg-transparent/90 sm:w-auto">
                 Unlock Full Conversation Intelligence
                 <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </button>

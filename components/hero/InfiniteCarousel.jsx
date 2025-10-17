@@ -50,10 +50,10 @@ const InfiniteCarousel = ({ items }) => {
       <Slider {...settings}>
         {items.map((item, index) => (
           <div key={index} className="p-3">
-            <div className="group relative  rounded-3xl overflow-hidden hover:scale-105 transform transition-all duration-300">
+            <div className="group relative !z-20 rounded-3xl overflow-hidden hover:scale-105 transform transition-all duration-300">
               {/* Background Image */}
               <div
-                className="absolute inset-0 bg-cover bg-center"
+                className="absolute inset-0   bg-cover bg-center"
                 style={{ backgroundImage: `url(${item.image})` }}
               />
 
