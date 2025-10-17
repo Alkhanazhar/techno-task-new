@@ -1,4 +1,5 @@
 "use client";
+import { ColorText } from "@/app/ecommerce-d2c/EcommerceD2c";
 import { useRouter } from "next/navigation";
 import React from "react";
 
@@ -6,7 +7,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="bg-[#0A0A0A] border-t  border-white/10 text-white py-10 px-6 relative overflow-hidden">
+    <footer className="bg-[#0A0A0A] border-t   border-white/10 text-white py-10 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top CTA Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-white/10 pb-10 relative z-10">
@@ -17,7 +18,7 @@ const Footer = () => {
                 together!
               </span>
             </h2>
-            <p className="text-xs md:text-base text-white/80 max-w-xl">
+            <p className="text-xs md:text-base text-white/50 font-light max-w-xl">
               Partner with us to create intelligent, impactful, and future-ready
               AI solutions together.
             </p>
@@ -84,7 +85,9 @@ const Footer = () => {
           Copyright © 2025 All Rights Reserved.
         </div>
       </div>
-
+      <h1 className="text-[18vw] absolute left-1/2 -translate-x-1/2 -bottom-24  bg-gradient-to-r from-purple-600/5 to-blue-600/10 text-transparent bg-clip-text font-bold leading-none  text-center w-fit">
+        Convoze
+      </h1>
       {/* Background Gradients */}
       <div className="absolute top-0 left-0 w-[300px] h-[300px] bg-purple-900 opacity-30 !blur-2xl rounded-full  -z-0" />
       <div className="absolute bottom-0 right-0 w-[300px] h-[300px] bg-indigo-900 opacity-30 !blur-2xl rounded-full -z-0" />
