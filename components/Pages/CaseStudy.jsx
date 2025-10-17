@@ -532,7 +532,7 @@ function HeroSection() {
             <img
               src="/bpo.png"
               alt="bpo center"
-              className="relative w-full h-auto object-cover max-w-md  transition-all duration-500 group-hover:scale-105"
+              className="relative w-full h-auto object-cover scale-105 max-w-md  transition-all duration-500 group-hover:scale-105"
             />
 
             {/* Floating badges */}
