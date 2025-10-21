@@ -224,7 +224,7 @@ const Navbar = () => {
       <nav
         className={`w-full fixed border-black/10 top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "!bg-black/30 !backdrop-blur-xs shadow-sm  border-b-[1px]"
+            ? "!bg-black/30 !backdrop-blur-[12px] shadow-sm  border-b-[1px]"
             : "!bg-transparent"
         }`}
       >
@@ -244,12 +244,12 @@ const Navbar = () => {
                 : "/logo-black.svg"
             }
             alt="logo"
-            className="md:h-9 h-6 opacity-85 "
+            className="md:h-9 h-6  "
           />
         </div>
 
         {/* Desktop Menu */}
-        <div className="hidden md:flex bg-[#1a1a1a]/50 backdrop-blur-sm border border-gray-100/10 rounded-full px-12 py-4 space-x-8 text-sm relative overflow-visible">
+        <div className="hidden md:flex bg-[#1a1a1a]/50  backdrop-blur-[2px] border border-gray-100/10 rounded-full px-10 py-3 space-x-8 text-sm relative overflow-visible">
           {menuItems.map((item) => (
             <button
               key={item.name}

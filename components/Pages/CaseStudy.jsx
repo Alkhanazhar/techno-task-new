@@ -186,7 +186,7 @@ const BPOContactCenterPage = () => {
           />
         </div> */}
 
-        <div className="w-full  py-12 md:py-32 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+        <div className="w-full  py-12 md:py-24 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
           <div className="max-w-7xl mx-auto">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               The Reality{" "}
@@ -418,7 +418,7 @@ const BPOContactCenterPage = () => {
                       {/* Content */}
                       <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
                         <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                          <div className="absolute inset-0 backdrop-blur-2xl bg-gradient-to-b from-black/30 to-black/50 rounded" />
+                          <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/20 to-black/30 rounded" />
                           <div className="text-gray-50 text-sm  relative">
                             {feature.description}
                           </div>

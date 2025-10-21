@@ -22,6 +22,8 @@ import {
   UserCheck,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import InfiniteCarousel from "../hero/InfiniteCarousel";
+import { Marquee } from "../ui/marquee";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -43,36 +45,43 @@ const BankingFinance = () => {
       icon: <MessageSquare className="w-8 h-8" />,
       title: "Fragmented Customer Conversations",
       color: "from-blue-500 to-cyan-500",
+      image: "challenges-1.png",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Compliance & Regulatory Risks",
       color: "from-purple-500 to-indigo-500",
+      image: "challenges-2.png",
     },
     {
       icon: <AlertTriangle className="w-8 h-8" />,
       title: "Hidden Fraud Patterns",
       color: "from-red-500 to-orange-500",
+      image: "challenges-3.png",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Inconsistent Agent Performance",
       color: "from-green-500 to-emerald-500",
+      image: "challenges-4.png",
     },
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Slow Dispute Resolution & Escalations",
       color: "from-yellow-500 to-orange-500",
+      image: "challenges-5.png",
     },
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Difficulty Measuring Customer Sentiment",
       color: "from-pink-500 to-purple-500",
+      image: "challenges-6.png",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "High Volume & Peak Pressure",
       color: "from-indigo-500 to-blue-500",
+      image: "challenges-9.png",
     },
   ];
 
@@ -83,6 +92,7 @@ const BankingFinance = () => {
       description:
         "Every call, chat, or support ticket is automatically analyzed and audited — ensuring no customer interaction slips through the cracks and all regulatory obligations are met.",
       color: "from-blue-500 to-cyan-500",
+      image: "feat-bank-1.png",
     },
     {
       icon: <Activity className="w-8 h-8" />,
@@ -90,6 +100,7 @@ const BankingFinance = () => {
       description:
         "Detects stress, frustration, or confusion during financial conversations, helping teams proactively resolve disputes, reduce churn, and improve client satisfaction.",
       color: "from-purple-500 to-indigo-500",
+      image: "feat-bank-2.png",
     },
     {
       icon: <Globe className="w-8 h-8" />,
@@ -97,6 +108,7 @@ const BankingFinance = () => {
       description:
         "Supports multiple languages and accents, allowing banks and financial institutions to serve diverse customer bases seamlessly.",
       color: "from-green-500 to-emerald-500",
+      image: "feat-bank-3.png",
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
@@ -104,6 +116,7 @@ const BankingFinance = () => {
       description:
         "Combines automated insights with human oversight, ensuring accurate compliance monitoring, fraud detection, and quality assurance.",
       color: "from-orange-500 to-red-500",
+      image: "feat-bank-4.png",
     },
     {
       icon: <Bell className="w-8 h-8" />,
@@ -111,6 +124,7 @@ const BankingFinance = () => {
       description:
         "Flags fraud indicators, policy violations, or compliance breaches instantly, so corrective action can be taken before issues escalate.",
       color: "from-yellow-500 to-orange-500",
+      image: "feat-bank-3last.png",
     },
     {
       icon: <Lock className="w-8 h-8" />,
@@ -118,6 +132,7 @@ const BankingFinance = () => {
       description:
         "Sensitive financial data is protected with role-specific access, ensuring privacy, regulatory compliance, and secure audit trails.",
       color: "from-pink-500 to-purple-500",
+      image: "feat-bank-2last.png",
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
@@ -125,6 +140,7 @@ const BankingFinance = () => {
       description:
         "Managers and compliance teams get instant visibility into agent performance, risk hotspots, and recurring product/service issues, enabling smarter, faster decisions.",
       color: "from-indigo-500 to-blue-500",
+      image: "feat-bank-last.png",
     },
   ];
 
@@ -171,16 +187,16 @@ const BankingFinance = () => {
     <div className="min-h-screen -mt-16">
       {/* Hero Section */}
       <HeroSection />
-      <div className="relative bg-slate-100">
-        <div className="absolute inset-0 z-0">
+      <div className="relative bg-white">
+        {/* <div className="absolute inset-0 z-0">
           <img
             src="/bgPattern.png"
             alt="Background Pattern"
             className="w-full h-full rotate-180 object-cover opacity-10"
           />
-        </div>
+        </div> */}
         {/* Challenges Section */}
-        <div className="relative  py-20">
+        <div className="relative  py-20 max-w-7xl mx-auto">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Challenges Faced in{" "}
@@ -194,7 +210,7 @@ const BankingFinance = () => {
               staying compliant, and managing high volumes.
             </p>
 
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
+            {/* <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 relative">
               {challenges.map((challenge, index) => (
                 <div
                   key={index}
@@ -215,77 +231,9 @@ const BankingFinance = () => {
                   />
                 </div>
               ))}
-            </div>
+            </div> */}
           </div>
-        </div>
-
-        {/* Redefining Conversation Intelligence Section */}
-        <div className="relative py-20">
-          <div className="absolute inset-0 -z-10 opacity-[0.02]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
-          <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
-            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              Redefining Conversation Intelligence{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                with Convoze
-              </span>
-            </h3>
-
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
-              Most conversation intelligence tools only capture fragments of
-              customer interactions, leaving blind spots in compliance, fraud
-              detection and risk monitoring. Convoze audits every conversation
-              giving financial institutions full visibility and actionable
-              intelligence.
-            </p>
-
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-              {features.map((feature, index) => (
-                <div
-                  key={index}
-                  className="bg-white/80 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden"
-                >
-                  <div className="flex items-start gap-4 relative z-10">
-                    <div
-                      className={`p-3 rounded-xl bg-gradient-to-br ${feature.color} text-white group-hover:scale-110 transition-transform flex-shrink-0`}
-                    >
-                      {feature.icon}
-                    </div>
-                    <div className="flex-1">
-                      <h4 className="text-lg font-semibold text-gray-900 mb-2">
-                        {feature.title}
-                      </h4>
-                      <p className="text-gray-700 text-sm leading-relaxed">
-                        {feature.description}
-                      </p>
-                    </div>
-                  </div>
-                  <div
-                    className={`absolute -top-6 -right-6 h-24 w-24 rounded-full bg-gradient-to-br ${feature.color} opacity-10 blur-2xl group-hover:opacity-20 transition-opacity`}
-                  />
-                </div>
-              ))}
-            </div>
-          </div>
+          <InfiniteCarousel items={challenges} />
         </div>
 
         {/* How Convoze Helps Section */}
@@ -331,6 +279,83 @@ const BankingFinance = () => {
               With Convoze, every interaction becomes an opportunity to protect
               trust, reduce risk, and grow your business with confidence.
             </p>
+          </div>
+        </div>
+
+        {/* Redefining Conversation Intelligence Section */}
+        <div className="relative py-20">
+          <div className="absolute inset-0 -z-10 opacity-[0.02]">
+            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
+              <defs>
+                <pattern
+                  id="grid"
+                  width="40"
+                  height="40"
+                  patternUnits="userSpaceOnUse"
+                >
+                  <path
+                    d="M 40 0 L 0 0 0 40"
+                    fill="none"
+                    stroke="currentColor"
+                    strokeWidth="1"
+                  />
+                </pattern>
+              </defs>
+              <rect width="100%" height="100%" fill="url(#grid)" />
+            </svg>
+          </div>
+
+          <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+            <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              Redefining Conversation Intelligence{" "}
+              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
+                with Convoze
+              </span>
+            </h3>
+
+            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+              Most conversation intelligence tools only capture fragments of
+              customer interactions, leaving blind spots in compliance, fraud
+              detection and risk monitoring. Convoze audits every conversation
+              giving financial institutions full visibility and actionable
+              intelligence.
+            </p>
+
+            <div className="relative flex w-full rounded-3xl bg-transparent flex-col md:mt-4  items-center justify-center overflow-hidden">
+              <Marquee className={"py-4"} pauseOnHover>
+                {features.map((feature, index) => (
+                  <div
+                    key={index}
+                    className="p-2 border-black/10 hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white "
+                  >
+                    <div className="group relative !z-20  w-72 rounded-xl overflow-hidden transform ">
+                      {/* Background Image */}
+                      <div
+                        className="absolute inset-0 bg-cover w-84 bg-center"
+                        style={{
+                          backgroundImage: `url(${feature.image})`,
+                        }}
+                      />
+
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/10" />
+
+                      {/* Content */}
+                      <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
+                        <div className="relative rounded-b px-4 py-2 overflow-hidden">
+                          <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/30 to-black/50 rounded" />
+                          <div className="text-gray-50 text-sm  relative">
+                            {feature.description}
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </Marquee>
+              <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
+              <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
+            </div>
           </div>
         </div>
 
@@ -380,13 +405,13 @@ export default BankingFinance;
 
 function HeroSection() {
   return (
-    <div className="relative min-h-screen flex bg-slate-50 items-center pb-10 pt-24 justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen flex bg-white items-center pb-10 pt-24 justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
       {/* Decorative Grid */}
-      <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-30 [perspective:300px]">
+      {/* <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-30 [perspective:300px]">
         <div className="absolute inset-0 [transform:rotateX(35deg)]">
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 pt-12 flex flex-col md:flex-row items-center gap-8">
@@ -396,7 +421,7 @@ function HeroSection() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
             </span>
-            Safeguarding Every Interaction
+            Convoze for Banking and Finance.
           </span>
 
           <motion.h1
@@ -418,15 +443,7 @@ function HeroSection() {
             transition={{ duration: 0.5, delay: 0.2 }}
             className="text-muted-foreground mt-6 max-w-2xl text-start text-base text-gray-700"
           >
-            In the world of finance, trust is everything.
-          </motion.p>
-
-          <motion.p
-            className="text-base text-gray-700 relative max-w-4xl mt-4 mx-auto leading-relaxed"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
+            In the world of finance, trust is everything.{" "}
             <span className="font-bold relative text-gray-900">Convoze</span>{" "}
             does more than just audits – It safeguards every customer
             interaction, protects revenue and alerts your teams to
@@ -434,6 +451,13 @@ function HeroSection() {
             compliance issues, Convoze ensures your team acts with precision and
             confidence.
           </motion.p>
+
+          {/* <motion.p
+            className="text-base text-gray-700 relative max-w-4xl mt-4 mx-auto leading-relaxed"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.8, delay: 0.4 }}
+          ></motion.p> */}
 
           <motion.div
             className="pt-4"
@@ -448,7 +472,7 @@ function HeroSection() {
           </motion.div>
         </div>
 
-        <div className="w-full md:w-1/2 relative flex justify-end">
+        <div className="w-full md:w-1/2 relative flex justify-center">
           <motion.div
             className="relative group"
             initial={{ opacity: 0, scale: 0.9 }}
@@ -456,48 +480,46 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           >
             {/* Glow effect behind image */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
 
             {/* Animated border */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 rounded-xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
 
             <img
-              src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=800&auto=format&fit=crop"
-              alt="Banking & Finance"
-              className="relative w-full h-auto max-w-md aspect-square object-cover rounded-xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
+              src="/banking-finance.png"
+              alt="banking finance center"
+              className="relative w-full h-auto object-cover scale-110 max-w-md  transition-all duration-500 group-hover:scale-115"
             />
 
             {/* Floating badges */}
-            <motion.div
-              className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-purple-200"
-              animate={{ y: [0, -5, 0] }}
-              transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
-            >
-              <div className="flex items-center gap-2">
-                <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                <span className="text-sm font-semibold text-gray-700">
-                  Real-Time Alerts
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
-              className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-indigo-200"
-              animate={{ y: [0, 5, 0] }}
-              transition={{
-                duration: 3,
-                repeat: Infinity,
-                ease: "easeInOut",
-                delay: 1.5,
-              }}
-            >
-              <div className="flex items-center gap-2">
-                <span className="text-sm font-semibold text-gray-700">
-                  100% Compliance
-                </span>
-                <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-              </div>
-            </motion.div>
+            {/* <motion.div
+                    className="absolute -top-4 -left-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-purple-200"
+                    animate={{ y: [0, -5, 0] }}
+                    transition={{ duration: 3, repeat: Infinity, ease: "easeInOut" }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                      <span className="text-sm font-semibold text-gray-700">
+                        100% Coverage
+                      </span>
+                    </div>
+                  </motion.div>
+      
+                  <motion.div
+                    className="absolute -bottom-4 -right-4 bg-white/10 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-indigo-200"
+                    animate={{ y: [0, 5, 0] }}
+                    transition={{
+                      duration: 3,
+                      repeat: Infinity,
+                      ease: "easeInOut",
+                      delay: 1.5,
+                    }}
+                  >
+                    <div className="flex items-center gap-2">
+                      <span className="text-sm font-semibold text-gray-700">
+                        Real-Time AI
+                      </span>
+                      <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
+                    </div>
+                  </motion.div> */}
           </motion.div>
         </div>
       </div>
