@@ -76,7 +76,7 @@ const Index = () => {
   };
 
   return (
-    <div className="md:min-h-screen w-full relative bg-slate-200 py-16 px-4">
+    <div className="md:min-h-screen w-full relative bg-white py-16 px-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
@@ -86,7 +86,7 @@ const Index = () => {
         />
       </div>
 
-      <div className="max-w-6xl mx-auto relative">
+      <div className="max-w-7xl mx-auto relative">
         {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: -20 }}
@@ -120,19 +120,19 @@ const Index = () => {
           whileInView={{ opacity: 1, y: 0, filter: "blur(0px)" }}
           viewport={{ once: false }}
           transition={{ duration: 0.6 }}
-          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16 zoom-out"
+          className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-4 mb-16 "
         >
           {statsData.map((stat, index) => (
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-6 rounded-2xl bg-white/90 backdrop-blur-sm dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="p-4 rounded-2xl bg-white/90 border border-gray-100/50 backdrop-blur-sm dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center space-y-3">
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md">
-                  <stat.icon className="w-8 h-8" />
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-indigo-500 to-purple-500 text-white shadow-md">
+                  <stat.icon className="w-6 h-6" />
                 </div>
-                <p className="text-base font-medium text-gray-600 dark:text-gray-200">
+                <p className="text-sm md:text-base  text-gray-600 dark:text-gray-200">
                   {stat.text}
                 </p>
               </div>
@@ -166,10 +166,10 @@ const Index = () => {
               className="p-6 rounded-2xl bg-white/90 backdrop-blur-sm dark:bg-slate-800 shadow-md hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center space-y-3">
-                <div className="w-14 h-14 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-md">
-                  <card.icon className="w-8 h-8" />
+                <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-md">
+                  <card.icon className="w-6 h-6" />
                 </div>
-                <p className="text-base font-medium text-gray-600 dark:text-gray-200">
+                <p className="text-sm md:text-base  font-medium text-gray-600 dark:text-gray-200">
                   {card.text}
                 </p>
               </div>

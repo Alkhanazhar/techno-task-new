@@ -128,7 +128,7 @@ const TimelineJourney = () => {
   return (
     <motion.div
       ref={containerRef}
-      className="hidden md:block relative h-[400vh] py-12 bg-slate-200"
+      className="hidden md:block relative h-[400vh] py-12 bg-white"
     >
       <div className="absolute inset-0 z-0 overflow-hidden w-screen">
         <img

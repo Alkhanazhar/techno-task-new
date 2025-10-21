@@ -107,13 +107,47 @@ const BPOContactCenterPage = () => {
   ];
 
   const enhancementFeatures = [
-    "Instant transcription for quick reference and keyword searches.",
-    "Sentiment audit that recognizes not just the words, but the tone, emotion and intent.",
-    "Live compliance monitoring to keep conversations aligned with regulations.",
-    "Role-based dashboards showing trends, alerts, and performance heatmaps.",
-    "Multilingual capability for diverse customer bases.",
-    "Easy integration with your existing systems with no heavy lifting required.",
-    "100% customizable according to the business need, ensuring QA and insights adapt to your workflows.",
+    {
+      description:
+        "Instant transcription for quick reference and keyword searches.",
+      image:
+        "https://images.unsplash.com/photo-1674027001834-719c347d1eca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+    },
+    {
+      description:
+        "Sentiment audit that recognizes not just the words, but the tone, emotion and intent.",
+      image:
+        "https://images.unsplash.com/photo-1657727534668-4104c475b292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2072",
+    },
+    {
+      description:
+        "Live compliance monitoring to keep conversations aligned with regulations.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115",
+    },
+    {
+      description:
+        "Role-based dashboards showing trends, alerts, and performance heatmaps.",
+      image:
+        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115",
+    },
+    {
+      description: "Multilingual capability for diverse customer bases.",
+      image:
+        "https://images.unsplash.com/photo-1706403615881-d83dc2067c5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    },
+    {
+      description:
+        "Easy integration with your existing systems with no heavy lifting required.",
+      image:
+        "https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1087",
+    },
+    {
+      description:
+        "100% customizable according to the business need, ensuring QA and insights adapt to your workflows.",
+      image:
+        "https://images.unsplash.com/photo-1643236986356-b0f191c0b333?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+    },
   ];
 
   const stats = [
@@ -150,7 +184,7 @@ const BPOContactCenterPage = () => {
 
       {/* The Reality Section */}
 
-      <div className="relative bg-slate-100 border-b">
+      <div className="relative bg-white border-b">
         <div className="absolute inset-0 z-0">
           <img
             src="/bgPattern.png"
@@ -159,7 +193,7 @@ const BPOContactCenterPage = () => {
           />
         </div>
 
-        <div className="w-full bg-slate-50 py-12 md:py-32 mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+        <div className="w-full  py-12 md:py-32 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
           <div className="max-w-7xl mx-auto">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               The Reality{" "}
@@ -369,26 +403,40 @@ const BPOContactCenterPage = () => {
               </p>
             </div>
             {/* <MarqueeCompanies /> */}
-            <div className="relative flex w-full  bg-transparent flex-col md:mt-12  items-center justify-center overflow-hidden">
+            <div className="relative flex w-full rounded-3xl bg-transparent flex-col md:mt-4  items-center justify-center overflow-hidden">
               <Marquee className={"py-4"} pauseOnHover>
                 {enhancementFeatures.map((feature, index) => (
                   <div
                     key={index}
-                    className="bg-gradient-to-br relative w-64 flex  from-white/70 to-indigo-10/10 backdrop-blur-sm  rounded-2xl border border-black/10 hover:shadow-lg transition-all duration-300 hover:-translate-y-1"
+                    className="p-2 border-black/10 hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white "
                   >
-                    <div className="flex items-start gap-3 p-6">
-                      {/* <div className="p-2 text-purple-100 rounded-full mt-2 absolute top-4 left-4  bg-primary ">
-                        <Star />
-                      </div> */}
-                      <p className="text-gray-700 text-sm md:text-base font-medium leading-relaxed">
-                        <ColorText>{feature}</ColorText>
-                      </p>
+                    <div className="group relative !z-20  w-72 rounded-xl overflow-hidden transform ">
+                      {/* Background Image */}
+                      <div
+                        className="absolute inset-0 bg-cover w-84 bg-center"
+                        style={{
+                          backgroundImage: `url(${feature.image})`,
+                        }}
+                      />
+
+                      {/* Overlay */}
+                      <div className="absolute inset-0 bg-black/5" />
+
+                      {/* Content */}
+                      <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
+                        <div className="relative rounded-b px-4 py-2 overflow-hidden">
+                          <div className="absolute inset-0 backdrop-blur-2xl bg-gradient-to-b from-black/30 to-black/50 rounded" />
+                          <div className="text-gray-50 text-sm  relative">
+                            {feature.description}
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 ))}
               </Marquee>
-              <div className="from-slate-100 pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
-              <div className="from-slate-100 pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
+              <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
+              <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
             </div>
           </div>
         </div>
@@ -448,13 +496,13 @@ export default BPOContactCenterPage;
 
 function HeroSection() {
   return (
-    <div className="relative min-h-screen  flex bg-slate-50   items-center  pb-10 py-24 md:py-36 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
+    <div className="relative min-h-screen bg-white  flex    items-center  pb-10 py-24 md:py-36 justify-center overflow-hidden  px-4 sm:px-6 lg:px-8">
       {/* Decorative Blurred Elements */}
-      <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-20 [perspective:900px]">
+      {/* <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-20 [perspective:900px]">
         <div className="absolute inset-0 [transform:rotateX(10deg)] ">
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:1000vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,.6)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
-      </div>
+      </div> */}
 
       {/* Floating Particles */}
 

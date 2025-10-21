@@ -211,7 +211,7 @@ const TimelineJourneyMobile = () => {
   return (
     <motion.div
       ref={containerRef}
-      className=" md:hidden relative h-[420vh]   bg-slate-200"
+      className=" md:hidden relative h-[420vh]   bg-white"
     >
       {" "}
       {/* Sticky timeline */}

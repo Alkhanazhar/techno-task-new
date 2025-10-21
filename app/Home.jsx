@@ -88,8 +88,8 @@ export default function Home() {
       {/* </Container> */}
       {/* <Container className={" justify-between"}> */}
       {/* <Testimonial /> */}
-      <div className="relative bg-slate-200">
-        <ContactUs isCards={false} disable={false} />
+      <ContactUs isCards={false} disable={false} />
+      <div className="relative bg-white">
         <div className="absolute inset-0 z-0">
           <img
             src="/bgPattern.png"

@@ -41,7 +41,7 @@ const trustData = [
 ];
 export default function WhyTrustUs() {
   return (
-    <section className="bg-slate-200 min-h-screen flex flex-col justify-center md:-mt-0  md:py-24  text-black  py-6 relative">
+    <section className="bg-white min-h-screen flex flex-col justify-center md:-mt-0  md:py-24  text-black  py-6 relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"

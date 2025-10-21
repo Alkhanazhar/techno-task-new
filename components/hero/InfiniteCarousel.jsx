@@ -31,11 +31,11 @@ const InfiniteCarousel = ({ items }) => {
     dots: false,
     infinite: true,
     autoplay: true,
-    autoplaySpeed: 1500,
-    slidesToShow: 4,
+    autoplaySpeed: 2000,
+    slidesToShow: 5,
     slidesToScroll: 1,
     pauseOnHover: true,
-    speed: 2500,
+    speed: 500,
     nextArrow: <NextArrow />,
     prevArrow: <PrevArrow />,
     responsive: [
@@ -48,7 +48,7 @@ const InfiniteCarousel = ({ items }) => {
   return (
     <div className="relative py-8 ">
       <Slider {...settings}>
-        {items.map((item, index) => (
+        {[...items, ...items].map((item, index) => (
           <div key={index} className="p-3">
             <div className="group relative !z-20 rounded-3xl overflow-hidden hover:scale-105 transform transition-all duration-300">
               {/* Background Image */}
@@ -79,8 +79,8 @@ const InfiniteCarousel = ({ items }) => {
           </div>
         ))}
       </Slider>
-      <div className="from-slate-50 pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
-      <div className="from-slate-50 pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
+      <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
+      <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
     </div>
   );
 };

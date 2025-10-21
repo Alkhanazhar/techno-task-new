@@ -1,6 +1,6 @@
 const BookDemo = () => {
   return (
-    <section className="bg-gray-200 md:py-24 sm:min-h-screen items-center flex py-16 mt-16 sm:mt-0 md:px-8 px-3 relative">
+    <section className="bg-white md:py-32 sm:min-h-screen  items-center flex py-16 border border-red-600 md:px-8 px-3 relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"

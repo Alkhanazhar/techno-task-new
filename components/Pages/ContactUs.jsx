@@ -61,9 +61,9 @@ const ContactUs = ({ isCards = true, bg }) => {
     <div
       className={`${
         bg == "dark"
-          ? "bg-gradient-to-tl to-[#21082b] from-[#27022e]"
-          : "bg-slate-200"
-      } py-12 md:py-20 min-h-screen -mt-16 relative`}
+          ? "bg-gradient-to-tl to-[#21082b] from-[#27022e] py-12 md:py-20"
+          : "bg-gradient-to-tl to-[#21082b] from-[#27022e]"
+      } min-h-screen  relative`}
       id="contact-us"
     >
       {/* Form Label Style Override */}
@@ -77,7 +77,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         .form-label[for="kl-71-input"],
         .form-label[for="kl-81-input"],
         .form-label[for="kl-91-input"] {
-          color: ${bg === "dark" ? "#fff !important" : "#000 !important"};
+          color: ${bg === "dark" ? "#fff !important" : "#fff !important"};
           font-weight: 400 !important;
         }
       `}</style>
