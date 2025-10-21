@@ -178,13 +178,13 @@ const BPOContactCenterPage = () => {
       {/* The Reality Section */}
 
       <div className="relative bg-white border-b">
-        <div className="absolute inset-0 z-0">
+        {/* <div className="absolute inset-0 z-0">
           <img
             src="/bgPattern.png"
             alt="Background Pattern"
             className="w-full h-full rotate-180 object-cover opacity-10"
           />
-        </div>
+        </div> */}
 
         <div className="w-full  py-12 md:py-32 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
           <div className="max-w-7xl mx-auto">
