@@ -32,7 +32,7 @@ const InfiniteCarousel = ({ items }) => {
     infinite: true,
     autoplay: true,
     autoplaySpeed: 2000,
-    slidesToShow: 5,
+    slidesToShow: 4,
     slidesToScroll: 1,
     pauseOnHover: true,
     speed: 500,
