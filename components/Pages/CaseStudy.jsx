@@ -110,43 +110,36 @@ const BPOContactCenterPage = () => {
     {
       description:
         "Instant transcription for quick reference and keyword searches.",
-      image:
-        "https://images.unsplash.com/photo-1674027001834-719c347d1eca?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+      image: "enhance-1.png",
     },
     {
       description:
         "Sentiment audit that recognizes not just the words, but the tone, emotion and intent.",
-      image:
-        "https://images.unsplash.com/photo-1657727534668-4104c475b292?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=2072",
+      image: "enhance-2.png",
     },
     {
       description:
         "Live compliance monitoring to keep conversations aligned with regulations.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115",
+      image: "enhance-3.png",
     },
     {
       description:
         "Role-based dashboards showing trends, alerts, and performance heatmaps.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1115",
+      image: "enhance-4.png",
     },
     {
       description: "Multilingual capability for diverse customer bases.",
-      image:
-        "https://images.unsplash.com/photo-1706403615881-d83dc2067c5d?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      image: "enhance-5.png",
     },
     {
       description:
         "Easy integration with your existing systems with no heavy lifting required.",
-      image:
-        "https://images.unsplash.com/photo-1455894127589-22f75500213a?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1087",
+      image: "enhance-6.png",
     },
     {
       description:
         "100% customizable according to the business need, ensuring QA and insights adapt to your workflows.",
-      image:
-        "https://images.unsplash.com/photo-1643236986356-b0f191c0b333?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1170",
+      image: "enhance-7.png",
     },
   ];
 
