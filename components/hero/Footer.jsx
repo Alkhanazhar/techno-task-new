@@ -85,7 +85,7 @@ const Footer = () => {
           Copyright © 2025 All Rights Reserved.
         </div>
       </div>
-      <h1 className="text-[15vw] absolute left-1/2 -translate-x-1/2 -bottom-24  bg-gradient-to-r from-purple-600/5 to-blue-600/10 text-transparent bg-clip-text font-bold leading-none  text-center w-fit">
+      <h1 className="text-[18vw] absolute left-1/2 -translate-x-1/2 top-1/2  bg-gradient-to-r from-purple-600/5 to-blue-600/5 text-transparent bg-clip-text font-bold leading-none  text-center w-fit">
         Convoze
       </h1>
       {/* Background Gradients */}

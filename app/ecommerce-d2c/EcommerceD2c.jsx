@@ -1189,6 +1189,7 @@ import { IconGraph } from "@tabler/icons-react";
 import { cn } from "@/lib/utils";
 import InfiniteCarousel from "@/components/hero/InfiniteCarousel";
 import { Marquee } from "@/components/ui/marquee";
+import BlurredSections from "@/components/hero/Background";
 
 const EcommerceD2c = () => {
   const router = useRouter();
@@ -1361,7 +1362,7 @@ const EcommerceD2c = () => {
           />
         </div> */}
         {/* Challenges Section */}
-
+        {/* <BlurredSections /> */}
         <div className="relative  py-20 max-w-7xl mx-auto">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
             <h3 className="text-xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 text-center mb-2 xs:mb-4 sm:mb-4">
@@ -1414,30 +1415,6 @@ const EcommerceD2c = () => {
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="absolute inset-0 -z-10 opacity-[0.02] dark:opacity-[0.05]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
-          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
-
           <section className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <h3 className="text-center text-2xl xs:text-2xl sm:text-3xl md:text-3.5xl lg:text-4xl font-bold text-gray-900 mb-5 md:mb-8">
               Measurable{" "}
@@ -1784,8 +1761,6 @@ const EcommerceD2c = () => {
           variants={fadeIn}
           transition={{ duration: 0.6, delay: 0.6 }}
         >
-          <div className="absolute top-0 left-0 right-0 h-40 bg-gradient-to-b from-indigo-100/20 to-transparent pointer-events-none" />
-          <div className="absolute bottom-0 left-0 right-0 h-40 bg-gradient-to-t from-indigo-100/20 to-transparent pointer-events-none" />
           <div className="w-full max-w-7xl mx-auto px-4 xs:px-6 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10 text-left">
               <div>

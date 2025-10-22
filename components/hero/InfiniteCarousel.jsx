@@ -79,8 +79,8 @@ const InfiniteCarousel = ({ items }) => {
           </div>
         ))}
       </Slider>
-      <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
-      <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
+      <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-[4%] bg-gradient-to-r"></div>
+      <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-[4%] bg-gradient-to-l"></div>
     </div>
   );
 };

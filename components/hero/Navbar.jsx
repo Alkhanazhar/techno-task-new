@@ -224,7 +224,7 @@ const Navbar = () => {
       <nav
         className={`w-full fixed border-black/10 top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
           isScrolled
-            ? "!bg-black/30 !backdrop-blur-[12px] shadow-sm  border-b-[1px]"
+            ? "!bg-black/30 !backdrop-blur-[12px] shadow-sm "
             : "!bg-transparent"
         }`}
       >
@@ -254,12 +254,12 @@ const Navbar = () => {
             <button
               key={item.name}
               onClick={() => handleClick(item)}
-              className="text-white cursor-pointer hover:text-purple-400 transition-all duration-200 relative flex items-center gap-1"
+              className="text-white cursor-pointer hover:text-purple-200 transition-all duration-200 relative flex items-center gap-1"
             >
               {item.name}
               {item.arrow && (
                 <svg
-                  className={`w-3 h-3 hover:text-purple-400 transition-transform duration-200 ${
+                  className={`w-3 h-3 hover:text-purple-300 transition-transform duration-200 ${
                     openMenu === item.name ? "rotate-180" : ""
                   }`}
                   fill="none"
@@ -291,7 +291,18 @@ const Navbar = () => {
           onClick={() => setIsOpen(true)}
           className="md:hidden text-white text-xl md:text-2xl"
         >
-          <Menu className="h-6 w-6 text-neutral-100" />
+          <Menu
+            className={`h-6 w-6 text-neutral-100 ${
+              pathname === "/" ||
+              pathname === "/contact" ||
+              pathname == "/features" ||
+              pathname === "pricing"
+                ? "text-neutral-100"
+                : isScrolled
+                ? "text-neutral-100"
+                : "text-neutral-900"
+            }`}
+          />
         </button>
       </nav>
 
