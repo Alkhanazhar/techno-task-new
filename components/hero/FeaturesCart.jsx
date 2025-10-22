@@ -26,7 +26,7 @@ const features = [
 ];
 const FeaturesCart = () => {
   return (
-    <section className="w-full sm:min-h-screen  text-white md:px-4 px-3 md:py-24 py-12 bg-gradient-to-tl to-[#060606] from-[#27022e]">
+    <section className="w-full sm:min-h-screen  text-white md:px-4 px-3 md:py-24 py-12 bg-gradient-to-t to-[#060606] from-[#27022e]">
       <div className="md:max-w-6xl max-w-7xl mx-auto text-center pb-6 md:mb-12 px-6">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-3 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           What is <span className=" font-normal text-white"> Convoze?</span>

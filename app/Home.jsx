@@ -89,18 +89,21 @@ export default function Home() {
       {/* <Container className={" justify-between"}> */}
       {/* <Testimonial /> */}
       <ContactUs isCards={false} disable={false} />
-      <div className="relative bg-white">
-        <div className="absolute inset-0 z-0">
-          <img
-            src="/bgPattern.png"
-            alt="Background Pattern"
-            className="w-full h-full rotate-180 object-cover opacity-20"
-          />
+      <div className="bg-[#0C0A0D]">
+        <div className="relative bg-white rounded-b-[64px]">
+          <div className="absolute inset-0 z-0">
+            <img
+              src="/bgPattern.png"
+              alt="Background Pattern"
+              className="w-full h-full rotate-180 object-cover opacity-20"
+            />
+          </div>
+          {/* </Container> */}
+          {/* <Container className={" justify-between"}> */}
+          <Faq />
         </div>
-        {/* </Container> */}
-        {/* <Container className={" justify-between"}> */}
-        <Faq />
       </div>
+
       {/* </Container> */}
     </motion.div>
   );

@@ -41,7 +41,7 @@ const SaaSTechPage = () => {
       description:
         "Live transcription instantly converts calls into searchable text. Emotion & intent detection pinpoints frustration, urgency, or buying signals as they happen.",
       color: "from-blue-500 to-cyan-500",
-      image: "enhance-2.png",
+      image: "saas-real.png",
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -49,7 +49,7 @@ const SaaSTechPage = () => {
       description:
         "Compliance alerts flag risky language in-the moment, preventing costly issues. Automated QA scoring delivers consistent, unbiased audits for every conversation.",
       color: "from-purple-500 to-indigo-500",
-      image: "enhance-2.png",
+      image: "saas-last.png",
     },
     {
       icon: <Headphones className="w-8 h-8" />,
@@ -57,7 +57,7 @@ const SaaSTechPage = () => {
       description:
         "Agent assist suggests the right KB articles or responses live, increasing first-call resolution rates.",
       color: "from-green-500 to-emerald-500",
-      image: "enhance-2.png",
+      image: "saas-agent.png",
     },
     {
       icon: <Activity className="w-8 h-8" />,
@@ -65,23 +65,23 @@ const SaaSTechPage = () => {
       description:
         "Convoze lists up live dashboards that show capability metrics, sentiment trends, and critical alerts so managers can act instantly.",
       color: "from-orange-500 to-red-500",
-      image: "enhance-2.png",
+      image: "saas-realtime.png",
     },
-    {
-      icon: <Lightbulb className="w-8 h-8" />,
-      title: "Faster Product Feedback Loops",
-      description:
-        "Surfaces recurring bug mentions, feature requests, and integration issues directly from customer conversations. Enables product teams to act faster and prioritize what matters most to users.",
-      color: "from-yellow-500 to-orange-500",
-      image: "enhance-2.png",
-    },
+    // {
+    //   icon: <Lightbulb className="w-8 h-8" />,
+    //   title: "Faster Product Feedback Loops",
+    //   description:
+    //     "Surfaces recurring bug mentions, feature requests, and integration issues directly from customer conversations. Enables product teams to act faster and prioritize what matters most to users.",
+    //   color: "from-yellow-500 to-orange-500",
+    //   image: ".png",
+    // },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Integrated Workflow and Insights",
       description:
         "All features work together to provide full visibility, actionable intelligence, and improved CX across the SaaS workflow.",
       color: "from-pink-500 to-purple-500",
-      image: "enhance-2.png",
+      image: "saas-integrated.png",
     },
   ];
 
@@ -306,7 +306,7 @@ const SaaSTechPage = () => {
 
         {/* Why It Fits Section */}
         <div className="relative  pb-20 mx-4 md:mx-16">
-          <div className="bg-white/80 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-xl">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
               Why It Fits Modern{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">

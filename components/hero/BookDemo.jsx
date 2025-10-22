@@ -1,6 +1,6 @@
 const BookDemo = () => {
   return (
-    <section className="bg-white md:py-32 sm:min-h-screen  items-center flex py-16 border border-red-600 md:px-8 px-3 relative">
+    <section className="bg-white shadow-[inset_-12px_-8px_40px_#46464620] md:py-32 sm:min-h-screen  items-center flex py-16 border border-red-600 md:px-8 px-3 relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
@@ -8,7 +8,7 @@ const BookDemo = () => {
           className="w-full h-full object-cover opacity-20"
         />
       </div>
-      <div className="max-w-6xl w-full mx-auto border border-white/10 bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl text-center px-6 md:py-32 py-8 shadow-lg relative overflow-hidden">
+      <div className="max-w-6xl w-full shadow-[0_4px_12px_rgb(0,0,0,0.4)]  mx-auto border border-white/10 bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl text-center px-6 md:py-32 py-8  relative overflow-hidden">
         {/* Gradient Lighting Effects */}
         <div className="absolute top-0 left-0 w-60 h-60 bg-[#3F2AB2] blur-[120px] opacity-30 rounded-full -z-10"></div>
         <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-700 blur-[120px] opacity-30 rounded-full -z-10"></div>

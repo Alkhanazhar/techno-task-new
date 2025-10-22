@@ -37,8 +37,23 @@ const Faq = () => {
     setOpenIndex(openIndex === index ? null : index);
   };
 
+  const fadeInAnimationVariants = {
+    initial: {
+      opacity: 0,
+      y: 10,
+    },
+    animate: (index) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: 0.05 * index,
+        duration: 0.4,
+      },
+    }),
+  };
+
   return (
-    <section className=" md:py-24 py-12  relative px-4 md:px-8">
+    <section className=" md:min-h-[94vh] flex items-center   py-12  relative px-4 md:px-8">
       {/* <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
@@ -51,29 +66,46 @@ const Faq = () => {
 
         {/* Left Column */}
         <div className="md:w-1/2 md:space-y-6 space-y-2">
-          <h2 className="text-2xl md:text-4xl font-semibold text-black">
+          <h2 className="text-2xl md:text-4xl font-bold text-black/90 text-shadow-2xs">
             Your AI questions, expertly{" "}
-            <span className="bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text font-semibold">
+            <span className="bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text font-bold ">
               answered here
             </span>
           </h2>
         </div>
 
         {/* Right Column: FAQ Accordion */}
-        <div className="md:w-1/2 space-y-2 md:space-y-4 w-full relative z-10">
+        <motion.div
+          variants={fadeInAnimationVariants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          className="md:w-1/2 space-y-2 md:space-y-4 w-full relative z-10"
+        >
           {faqs.map((faq, index) => (
             <motion.div
               key={index}
+              custom={index}
+              variants={fadeInAnimationVariants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
               onClick={() => toggleFAQ(index)}
               className="bg-gradient-to-br shadow shadow-purple-900/80  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
-              <button className="flex items-center justify-between w-full text-left text-white font-light">
-                <span className="text-sm ">{faq.question}</span>
-                {openIndex === index ? (
+              <button className="flex items-center justify-between w-full text-left   font-light">
+                <span className="text-base text-white">{faq.question}</span>
+                {/* {openIndex === index ? (
                   <ChevronUp className="w-5 h-5" />
                 ) : (
                   <ChevronDown className="w-5 h-5" />
-                )}
+                )} */}
+                <motion.div
+                  animate={{ rotate: openIndex === index ? 180 : 0 }}
+                  transition={{ duration: 0.2, ease: "easeInOut" }}
+                >
+                  <ChevronUp className="w-5 h-5 text-white" />
+                </motion.div>
               </button>
               {openIndex === index && (
                 <motion.p
@@ -81,14 +113,14 @@ const Faq = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-3 text-xs md:text-sm font-light text-neutral-100 leading-relaxed"
+                  className="mt-3 text-sm font-light text-neutral-100/90 leading-relaxed"
                 >
                   {faq.answer}
                 </motion.p>
               )}
             </motion.div>
           ))}
-        </div>
+        </motion.div>
       </div>
     </section>
   );

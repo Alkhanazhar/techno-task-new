@@ -7,7 +7,7 @@ const Footer = () => {
   const router = useRouter();
 
   return (
-    <footer className="bg-[#0A0A0A] border-t   border-white/10 text-white py-10 px-6 relative overflow-hidden">
+    <footer className="bg-[#0A0A0A]  text-white py-12 px-6 relative overflow-hidden">
       <div className="max-w-7xl mx-auto">
         {/* Top CTA Section */}
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 border-b border-white/10 pb-10 relative z-10">

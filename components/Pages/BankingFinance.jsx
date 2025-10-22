@@ -243,7 +243,7 @@ const BankingFinance = () => {
               How <ColorText>Convoze Helps</ColorText>
             </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-sm md:text-base text-gray-600 mb-12 max-w-3xl mx-auto">
               Discover the measurable impact Convoze delivers in banking &
               finance — from faster compliance and reduced risks to higher
               customer trust and improved agent performance.
@@ -275,7 +275,7 @@ const BankingFinance = () => {
               ))}
             </div>
 
-            <p className="text-center text-gray-700 mt-12 text-lg font-medium">
+            <p className="text-center  text-sm md:text-base text-gray-600 mt-12  font-medium">
               With Convoze, every interaction becomes an opportunity to protect
               trust, reduce risk, and grow your business with confidence.
             </p>
@@ -284,27 +284,6 @@ const BankingFinance = () => {
 
         {/* Redefining Conversation Intelligence Section */}
         <div className="relative py-20">
-          <div className="absolute inset-0 -z-10 opacity-[0.02]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
           <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Redefining Conversation Intelligence{" "}
@@ -313,7 +292,7 @@ const BankingFinance = () => {
               </span>
             </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-center  text-sm md:text-base text-gray-700 mb-8 max-w-3xl mx-auto">
               Most conversation intelligence tools only capture fragments of
               customer interactions, leaving blind spots in compliance, fraud
               detection and risk monitoring. Convoze audits every conversation
@@ -344,7 +323,7 @@ const BankingFinance = () => {
                       <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
                         <div className="relative rounded-b px-4 py-2 overflow-hidden">
                           <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/30 to-black/50 rounded" />
-                          <div className="text-gray-50 text-sm  relative">
+                          <div className="text-gray-50 text-sm   relative">
                             {feature.description}
                           </div>
                         </div>
