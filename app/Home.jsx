@@ -90,7 +90,7 @@ export default function Home() {
       {/* <Testimonial /> */}
       <ContactUs isCards={false} disable={false} />
       <div className="bg-[#0C0A0D]">
-        <div className="relative bg-white rounded-b-[64px]">
+        <div className="relative bg-white rounded-b-[24px] md:rounded-b-[64px] overflow-hidden">
           <div className="absolute inset-0 z-0">
             <img
               src="/bgPattern.png"

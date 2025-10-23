@@ -222,10 +222,10 @@ const Navbar = () => {
   return (
     <div className="py-3 relative">
       <nav
-        className={`w-full fixed border-black/10 top-0 py-3 px-4 z-50 md:px-10 flex items-center justify-between transition-all duration-300 ${
+        className={`w-full fixed border-black/10 top-0 py-4 px-4 z-50 md:px-10 flex items-center justify-between ${
           isScrolled
-            ? "!bg-black/30 !backdrop-blur-[12px] shadow-sm "
-            : "!bg-transparent"
+            ? "bg-gradient-to-b !from-black/60 to-black/0 !backdrop-blur-[12px] transition-all duration-300  "
+            : "!bg-transparent transition-all duration-300 "
         }`}
       >
         <div

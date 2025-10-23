@@ -1733,7 +1733,7 @@ const EcommerceD2c = () => {
                   </span>{" "}
                   the Difference
                 </h3>
-                <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
+                <p className="text-gray-700 text-sm xs:text-base sm:text-lg md:text-md !font-light">
                   With Convoze, ecommerce and D2C brands don't just manage
                   support — they build loyalty, grow revenue, and make smarter
                   product decisions. Every interaction becomes a chance to
@@ -1757,7 +1757,7 @@ const EcommerceD2c = () => {
                   </span>{" "}
                   Stands Out
                 </h3>
-                <p className="text-gray-700 text-base xs:text-base sm:text-lg md:text-md !font-light">
+                <p className="text-gray-700 text-sm xs:text-base sm:text-lg md:text-md !font-light">
                   Most QA tools still work in isolation or rely on a handful of
                   conversation samples. Being different, Convoze audits every
                   single solitary conversation in one unified platform. That
@@ -1810,7 +1810,7 @@ function HeroSection() {
             Convoze for E-Commerce and D2C
           </span>
           <motion.h1
-            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
+            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start  text-3xl md:text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -1837,7 +1837,7 @@ function HeroSection() {
           </motion.p> */}
 
           <motion.p
-            className="text-base  text-gray-700 relative max-w-4xl mt-6 mx-auto leading-relaxed"
+            className="text-sm md:text-base  text-gray-700 relative max-w-4xl mt-6 mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
@@ -1856,7 +1856,7 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
+              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
                 Request a Demo
                 <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </button>

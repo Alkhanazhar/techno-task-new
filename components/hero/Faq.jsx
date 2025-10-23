@@ -91,10 +91,12 @@ const Faq = () => {
               whileInView="animate"
               viewport={{ once: true }}
               onClick={() => toggleFAQ(index)}
-              className="bg-gradient-to-br shadow shadow-purple-900/80  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
+              className="bg-gradient-to-br shadow shadow-zinc-900/80  to-[#23062C] from-[#23062C] backdrop-blur border border-white/10 rounded-lg p-4 transition-all duration-300"
             >
               <button className="flex items-center justify-between w-full text-left   font-light">
-                <span className="text-base text-white">{faq.question}</span>
+                <span className="text-sm md:text-base text-white">
+                  {faq.question}
+                </span>
                 {/* {openIndex === index ? (
                   <ChevronUp className="w-5 h-5" />
                 ) : (
@@ -113,7 +115,7 @@ const Faq = () => {
                   animate={{ opacity: 1, y: 0 }}
                   exit={{ opacity: 0, y: -10 }}
                   transition={{ duration: 0.3 }}
-                  className="mt-3 text-sm font-light text-neutral-100/90 leading-relaxed"
+                  className="mt-3 md:text-sm font-light text-neutral-100/90 leading-relaxed"
                 >
                   {faq.answer}
                 </motion.p>

@@ -228,7 +228,9 @@ const TimelineJourneyMobile = () => {
       >
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center ">
-            <h2 className="text-2xl font-bold text-gray-800 ">Our Journey</h2>
+            <h2 className="text-2xl font-bold text-gray-800 mt-4">
+              Our Journey
+            </h2>
           </div>
           <div ref={containerRef} className="relative  ">
             {/* Main timeline container */}

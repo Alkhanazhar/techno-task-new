@@ -416,7 +416,7 @@ function HeroSection() {
             Convoze for SAAS Technology
           </span>
           <motion.h1
-            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
+            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start  text-3xl md:text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -442,7 +442,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground mx-auto mt-6 max-w-2xl text-start text-base"
+            className="text-muted-foreground mx-auto mt-6 max-w-2xl text-start  text-sm md:text-base"
           >
             In SaaS, every communication matters, from the very first onboarding
             call to ongoing support and upselling. Most teams can only review a
@@ -451,9 +451,9 @@ function HeroSection() {
             <span className="font-bold relative text-gray-900">
               Convoze
             </span>{" "}
-            changes that. Our AI-powered platform captures and Audits 100% of
-            customer interactions, giving you instant visibility into customer
-            sentiment, compliance, and agent performance too in real time.
+            AI-powered platform captures and Audits 100% of customer
+            interactions, giving you instant visibility into customer sentiment,
+            compliance, and agent performance too in real time.
           </motion.p>
 
           <motion.div
@@ -463,7 +463,7 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.8 }}
           >
             <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
+              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors text-sm md:text-base hover:bg-transparent/90 sm:w-auto">
                 Experience Real-Time Insights
                 <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </button>

@@ -58,12 +58,12 @@ const InfiniteCarousel = ({ items }) => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 from-black/20 to-black/60 bg-gradient-to-b" />
+              <div className="absolute inset-0 from-black/0 to-black/40 bg-gradient-to-b" />
 
               {/* Content */}
               <div className="relative p-2 h-full flex flex-col justify-end min-h-[360px] md:min-h-[360px]">
-                <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                  <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded-3xl" />
+                <div className="relative rounded-b px-4 py-3 overflow-hidden">
+                  <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded-3xl !border-[.1px] border-white/5" />
                   <div className="text-white/80 text-center relative text-sm md:text-[15px] mb-1">
                     {item.title}
                   </div>

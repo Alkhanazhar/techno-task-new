@@ -454,7 +454,7 @@ function HeroSection() {
             Convoze for BPO & Contact Centers
           </span>
           <motion.h1
-            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-4xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
+            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50   md:text-4xl bg-gradient-to-tl bg-clip-text text-start text-3xl tracking-normal text-balance text-transparent lg:text-[40px] md:whitespace-nowrap "
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}

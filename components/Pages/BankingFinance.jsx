@@ -370,7 +370,7 @@ function HeroSection() {
           </span>
 
           <motion.h1
-            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-4xl tracking-normal text-balance text-transparent lg:text-[40px]"
+            className="from-primary/30 mt-6 items-start via-foreground/85 font-semibold to-foreground/50 bg-gradient-to-tl bg-clip-text text-start text-3xl md:text-4xl tracking-normal text-balance text-transparent lg:text-[40px]"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8 }}
@@ -386,12 +386,11 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground mt-6 max-w-2xl text-start text-base text-gray-700"
+            className="text-muted-foreground mt-6 max-w-2xl text-start text-sm md:text-base text-gray-700"
           >
             In the world of finance, trust is everything.{" "}
             <span className="font-bold relative text-gray-900">Convoze</span>{" "}
-            does more than just audits – It safeguards every customer
-            interaction, protects revenue and alerts your teams to
+            safeguards every customer interaction and alerts your teams to
             irregularities before they escalate. From minor fraud trends to
             compliance issues, Convoze ensures your team acts with precision and
             confidence.
@@ -410,7 +409,7 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           >
-            <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
+            <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] text-sm md:text-base relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
               Request a Demo
               <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
             </button>

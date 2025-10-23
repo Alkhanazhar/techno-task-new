@@ -76,7 +76,7 @@ const Index = () => {
   };
 
   return (
-    <div className="md:min-h-screen  relative rounded-t-[64px] overflow-hidden  bg-white py-16 px-4">
+    <div className="md:min-h-screen  relative  overflow-hidden  bg-white py-16 px-4">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 overflow-hidden">
         <img
