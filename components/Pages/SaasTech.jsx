@@ -148,105 +148,10 @@ const SaaSTechPage = () => {
   ];
   return (
     <div className="min-h-screen  -mt-16">
-      {/* Hero Section */}
-      {/* <div className="relative min-h-screen flex bg-slate-50 items-center pb-10 pt-24 justify-center overflow-hidden px-4 sm:px-6 lg:px-8">
-        <div className="pointer-events-none absolute h-full w-full overflow-hidden opacity-30">
-          <div className="absolute inset-0">
-            <div className="animate-grid h-full w-full [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px]"></div>
-          </div>
-        </div>
-
-        <div className="w-full max-w-7xl mx-auto px-4 pt-12 flex flex-col md:flex-row items-center gap-8">
-          <div className="w-full md:w-1/2 flex flex-col justify-center">
-            <span className="inline-flex items-center gap-2 px-4 py-2 w-fit bg-purple-100/80 backdrop-blur-sm text-purple-900 rounded-full text-xs md:text-sm font-medium border border-purple-200">
-              <span className="relative flex h-2 w-2">
-                <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-purple-400 opacity-75"></span>
-                <span className="relative inline-flex rounded-full h-2 w-2 bg-purple-500"></span>
-              </span>
-              Complete Conversation Intelligence
-            </span>
-
-            <h1 className="mt-6 text-4xl lg:text-5xl font-bold text-gray-900">
-              Convoze for{" "}
-              <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
-                SaaS & Tech
-              </span>
-            </h1>
-
-            <h2 className="text-xl mt-6 font-semibold text-gray-700 max-w-3xl">
-              Boost Onboarding, Retention & Support with Complete Conversation
-              Intelligence
-            </h2>
-
-            <p className="text-base text-gray-700 max-w-4xl mt-6 leading-relaxed">
-              In SaaS, every communication matters, from the very first
-              onboarding call to ongoing support and upselling. Most teams can
-              only review a fraction of these engagements thus leaving valuable
-              insights and risks unheard.
-            </p>
-
-            <p className="text-base text-gray-700 max-w-4xl mt-4 leading-relaxed">
-              <span className="font-bold text-gray-900">
-                Convoze changes that.
-              </span>{" "}
-              Our AI-powered platform captures and audits 100% of customer
-              interactions, giving you instant visibility into customer
-              sentiment, compliance, and agent performance too in real time.
-            </p>
-
-            <div className="pt-4 mt-4">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-6 py-4 text-white transition-all hover:shadow-lg">
-                Experience Real-Time Insights
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
-          </div>
-
-          <div className="w-full md:w-1/2 relative flex justify-end">
-            <div className="relative group">
-              <div className="absolute -inset-4 bg-gradient-to-r from-purple-900/20 to-blue-900/20 rounded-xl opacity-20 group-hover:opacity-30 blur-2xl transition-opacity duration-500"></div>
-              <div className="absolute -inset-1 bg-gradient-to-r from-purple-900/20 via-blue-900/20 to-purple-900/20 rounded-xl opacity-50 group-hover:opacity-75 blur transition-all duration-500"></div>
-
-              <img
-                src="https://images.unsplash.com/photo-1551434678-e076c223a692?w=800&auto=format&fit=crop"
-                alt="SaaS Team Collaboration"
-                className="relative w-full h-auto max-w-md aspect-square object-cover rounded-xl shadow-2xl group-hover:shadow-3xl transition-all duration-500 group-hover:scale-105"
-              />
-
-              <div className="absolute -top-4 -left-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-purple-200">
-                <div className="flex items-center gap-2">
-                  <div className="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
-                  <span className="text-sm font-semibold text-gray-700">
-                    Real-Time AI
-                  </span>
-                </div>
-              </div>
-
-              <div className="absolute -bottom-4 -right-4 bg-white/90 backdrop-blur-sm px-4 py-2 rounded-full shadow-lg border border-indigo-200">
-                <div className="flex items-center gap-2">
-                  <span className="text-sm font-semibold text-gray-700">
-                    100% Coverage
-                  </span>
-                  <div className="w-3 h-3 bg-blue-500 rounded-full animate-pulse"></div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-
       <HeroSection />
 
       {/* Integration Framework Section */}
       <div className="relative bg-white py-20">
-        {/* <div className="absolute inset-0 z-0">
-          <img
-            src="/bgPattern.png"
-            alt="Background Pattern"
-            className="w-full h-full rotate-180 object-cover opacity-10"
-          />
-        </div> */}
-
         <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 relative">
           <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Convoze Integration{" "}
@@ -255,7 +160,7 @@ const SaaSTechPage = () => {
             </span>
           </h3>
 
-          <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+          <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto  text-sm md:text-base">
             Fuel Retention and CX with Real-Time Customer Intelligence. Convoze
             captures and audits every interaction, giving teams instant
             visibility into sentiment, compliance, and performance.
@@ -265,27 +170,6 @@ const SaaSTechPage = () => {
 
         {/* Measurable Impact Section */}
         <div className="relative  py-20">
-          <div className="absolute inset-0 -z-10 opacity-[0.02]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Measurable{" "}
@@ -327,15 +211,15 @@ const SaaSTechPage = () => {
         </div>
 
         {/* Why It Fits Section */}
-        <div className="relative max-w-[88rem]  pb-20 mx-4 md:mx-16">
-          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
+        <div className="relative max-w-[88rem]  pb-20 mx-2 sm:mx-4 md:mx-16">
+          <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-6 sm:p-8 md:p-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
               Why It Fits Modern{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
                 SaaS Workflows
               </span>
             </h3>
-            <p className="text-gray-600 text-base leading-relaxed text-center">
+            <p className="text-gray-600  text-sm md:text-base leading-relaxed text-center">
               Contact center and CRM systems are easily integrated with Convoze.
               It supports multiple languages, adapts to regulatory requirements,
               and is 100% customizable according to your business needs, whether
@@ -354,7 +238,7 @@ const SaaSTechPage = () => {
                 The <ColorText>Convoze Advantage</ColorText>
               </h3>
 
-              <p className="text-gray-700 text-base leading-relaxed">
+              <p className="text-gray-700 text-sm md:text-base leading-relaxed">
                 Most QA tools give you fragments of the customer journey.
                 Convoze delivers the full picture from enabling product teams to
                 identify recurring feature requests, sales leaders to track
@@ -362,18 +246,13 @@ const SaaSTechPage = () => {
                 top-performing agents.
               </p>
 
-              <p className="text-gray-700 text-base leading-relaxed">
+              <p className="text-gray-700  text-sm md:text-base leading-relaxed">
                 With Convoze, every interaction becomes an opportunity to
                 improve your product, retain your customers, and grow your
                 revenue.
               </p>
 
-              <div className="flex justify-center pt-6">
-                <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
-                  See Convoze in Action
-                  <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                </button>
-              </div>
+              <ButtonHover text={"See Convoze in Action"} />
             </div>
           </div>
         </div>
@@ -406,7 +285,7 @@ function HeroSection() {
       {/* Floating Particles */}
 
       {/* Content */}
-      <div className="w-full max-w-7xl mx-auto px-4 pt-12  flex flex-col md:flex-row items-center gap-8">
+      <div className="w-full max-w-7xl mx-auto md:px-4 pt-12  flex flex-col md:flex-row items-center gap-8">
         <div className="w-full md:w-1/2 flex flex-col justify-center">
           <span className="inline-flex items-center gap-2 px-4 py-2 w-fit bg-purple-100/80 backdrop-blur-sm text-purple-900 rounded-full text-xs md:text-sm font-medium border border-purple-200">
             {/* <span className="relative flex h-2 w-2">
@@ -455,20 +334,7 @@ function HeroSection() {
             interactions, giving you instant visibility into customer sentiment,
             compliance, and agent performance too in real time.
           </motion.p>
-
-          <motion.div
-            className="pt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors text-sm md:text-base hover:bg-transparent/90 sm:w-auto">
-                Experience Real-Time Insights
-                <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-          </motion.div>
+          <ButtonHover text={"Experience Real-Time Insights"}> </ButtonHover>
         </div>
         <div className="w-full md:w-1/2 relative flex justify-center">
           <motion.div
@@ -524,3 +390,21 @@ function HeroSection() {
     </div>
   );
 }
+
+export const ButtonHover = ({ text }) => {
+  return (
+    <motion.div
+      className="pt-6"
+      initial={{ opacity: 0, y: 20 }}
+      animate={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.8, delay: 0.8 }}
+    >
+      <Link href="/contact">
+        <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors text-xs md:text-base hover:bg-transparent/90 sm:w-auto">
+          {text}
+          <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
+        </button>
+      </Link>
+    </motion.div>
+  );
+};
