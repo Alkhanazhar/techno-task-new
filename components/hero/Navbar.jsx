@@ -237,7 +237,8 @@ const Navbar = () => {
               pathname === "/" ||
               pathname === "/contact" ||
               pathname == "/features" ||
-              pathname === "pricing"
+              pathname === "/pricing" ||
+              pathname === "/solution"
                 ? "/logo.png"
                 : isScrolled
                 ? "/logo.png"
@@ -296,7 +297,8 @@ const Navbar = () => {
               pathname === "/" ||
               pathname === "/contact" ||
               pathname == "/features" ||
-              pathname === "pricing"
+              pathname === "/pricing" ||
+              pathname === "/solution"
                 ? "text-neutral-100"
                 : isScrolled
                 ? "text-neutral-100"

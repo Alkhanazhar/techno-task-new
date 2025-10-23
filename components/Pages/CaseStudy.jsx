@@ -27,6 +27,7 @@ import InfiniteCarousel from "../hero/InfiniteCarousel";
 import { Marquee } from "../ui/marquee";
 import { MarqueeCompanies } from "../marquee";
 import FeatureMarquee from "../FeatureMarquee";
+import { ButtonHover } from "./SaasTech";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -232,27 +233,6 @@ const BPOContactCenterPage = () => {
 
         {/* How Convoze Changes the Game Section */}
         <div className="relative  py-20">
-          <div className="absolute inset-0 -z-10 opacity-[0.02]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid)" />
-            </svg>
-          </div>
-
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               How Convoze{" "}
@@ -300,7 +280,7 @@ const BPOContactCenterPage = () => {
               ))}
             </div>
 
-            <p className="text-center text-gray-700 max-w-3xl mb-6 mx-auto text-base leading-relaxed">
+            <p className="text-center text-gray-700 max-w-3xl mb-6 mx-auto text-sm md:text-base leading-relaxed">
               With Convoze, managers don't have to wait for the end-of-week
               reports. They can act on insights{" "}
               <span className="font-bold text-gray-900">
@@ -308,12 +288,7 @@ const BPOContactCenterPage = () => {
               </span>
             </p>
 
-            <div className="flex justify-center  pb-12 py-2">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
-                Request a Demo
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            <ButtonHover text={"Request a Demo"} />
           </div>
         </div>
 
@@ -324,7 +299,7 @@ const BPOContactCenterPage = () => {
             Proven Measurable <ColorText>Impact</ColorText>
           </h3>
 
-          <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+          <p className="text-center text-sm md:text-base text-gray-700 mb-12 max-w-3xl mx-auto">
             BPOs and contact centers using Convoze are experiencing:
           </p>
 
@@ -416,12 +391,7 @@ const BPOContactCenterPage = () => {
               </div>
             </div>
 
-            <div className="flex justify-center mt-12">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
-                See Convoze in Action
-                <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </div>
+            <ButtonHover text={" See Convoze in Action"} />
           </div>
         </div>
       </div>
@@ -470,7 +440,7 @@ function HeroSection() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.5, delay: 0.2 }}
-            className="text-muted-foreground mx-auto mt-6 max-w-2xl text-start text-base"
+            className="text-muted-foreground mx-auto mt-6 max-w-2xl text-start text-sm md:text-base"
           >
             Running a contact center is a constant balancing act. Peaks in
             demand, customers who expect instant answers, and the pressure to
@@ -484,24 +454,13 @@ function HeroSection() {
           </motion.p>
 
           <motion.p
-            className="text-base  text-gray-700 relative max-w-4xl mt-6 mx-auto leading-relaxed"
+            className="text-sm md:text-base  text-gray-700 relative max-w-4xl mt-6 mx-auto leading-relaxed"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.6 }}
           ></motion.p>
 
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.8 }}
-          >
-            <Link href="/contact">
-              <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center md:text-base rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors text-xs hover:bg-transparent/90 sm:w-auto">
-                Unlock Full Conversation Intelligence
-                <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-              </button>
-            </Link>
-          </motion.div>
+          <ButtonHover text={"Unlock Full Conversation Intelligence"} />
         </div>
         <div className="w-full md:w-1/2 relative flex justify-center">
           <motion.div

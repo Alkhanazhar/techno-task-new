@@ -41,7 +41,7 @@ const trustData = [
 ];
 export default function WhyTrustUs() {
   return (
-    <section className="bg-white min-h-screen flex flex-col justify-center md:-mt-0  md:py-24  text-black  py-6 relative">
+    <section className="bg-white min-h-screen flex flex-col px-2 justify-center md:-mt-0  md:py-24  text-black  py-6 relative">
       <div className="absolute inset-0 z-0">
         <img
           src="/bgPattern.png"
@@ -59,7 +59,7 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-8 sm:mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-2 max-w-7xl sm:mx-8 md:mx-auto">
         {trustData.map((item, idx) => (
           <div
             key={idx}

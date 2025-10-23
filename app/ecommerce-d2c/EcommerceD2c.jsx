@@ -1191,6 +1191,7 @@ import InfiniteCarousel from "@/components/hero/InfiniteCarousel";
 import { Marquee } from "@/components/ui/marquee";
 import BlurredSections from "@/components/hero/Background";
 import FeatureMarquee from "@/components/FeatureMarquee";
+import { ButtonHover } from "@/components/Pages/SaasTech";
 
 const EcommerceD2c = () => {
   const router = useRouter();
@@ -1768,7 +1769,7 @@ const EcommerceD2c = () => {
             </div>
 
             <div className="mt-8 flex justify-center mb-4 md:mb-0">
-              <motion.div
+              {/* <motion.div
                 className="pt-4"
                 initial={{ opacity: 0, y: 20 }}
                 animate={{ opacity: 1, y: 0 }}
@@ -1776,11 +1777,12 @@ const EcommerceD2c = () => {
               >
                 <Link href="/contact">
                   <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-6 py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
-                    See Convoze in Action
+                    
                     <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
                   </button>
                 </Link>
-              </motion.div>
+              </motion.div> */}
+              <ButtonHover text={"See Convoze in Action"} />
             </div>
           </div>
         </motion.div>
@@ -1849,7 +1851,7 @@ function HeroSection() {
             instantly on what matters most.
           </motion.p>
 
-          <motion.div
+          {/* <motion.div
             className="pt-4"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -1857,11 +1859,12 @@ function HeroSection() {
           >
             <Link href="/contact">
               <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
-                Request a Demo
+               
                 <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
               </button>
             </Link>
-          </motion.div>
+          </motion.div> */}
+          <ButtonHover text={" Request a Demo"} />
         </div>
         <div className="w-full md:w-1/2 relative flex justify-center">
           <motion.div

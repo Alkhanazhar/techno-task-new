@@ -251,7 +251,7 @@ const Solutions = () => {
                       onClick={() => setExpandedItem(isExpanded ? null : index)}
                     >
                       <div className="relative">
-                        <div className="flex items-center justify-between mb-6">
+                        <div className="flex flex-col md:flex-row items-center justify-between mb-6">
                           <div className="flex items-center gap-4">
                             <div className="w-11 h-10 rounded-xl bg-gradient-to-br from-[#3F2AB2] to-[#B462CE] p-3 shadow-xl">
                               <SolutionIcon className="w-5 h-5 text-white" />
@@ -266,7 +266,7 @@ const Solutions = () => {
                             </div>
                           </div>
                           <div className="text-right">
-                            <div className="text-2xl font-bold bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] bg-clip-text text-transparent">
+                            <div className="text-xl font-bold bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] bg-clip-text text-transparent">
                               {item.stats}
                             </div>
                             <div className="text-sm text-white font-medium">

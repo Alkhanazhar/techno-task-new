@@ -29,7 +29,7 @@ const FeatureMarquee = ({ features }) => {
                 <div className="relative rounded-b px-4 py-2 overflow-hidden">
                   <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/10 to-black/20 rounded" />
                   <div className="text-white text-sm relative">
-                    <h2 className="mb-1.5 text-xl text-start">
+                    <h2 className="mb-1.5 text-base md:text-xl text-start">
                       {feature?.title}
                     </h2>
                     <p className="text-gray-50 text-sm font-[200] text-pretty">

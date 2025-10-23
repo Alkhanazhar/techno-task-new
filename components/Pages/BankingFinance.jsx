@@ -25,6 +25,7 @@ import { motion } from "framer-motion";
 import InfiniteCarousel from "../hero/InfiniteCarousel";
 import { Marquee } from "../ui/marquee";
 import FeatureMarquee from "../FeatureMarquee";
+import { ButtonHover } from "./SaasTech";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -206,7 +207,7 @@ const BankingFinance = () => {
               </span>
             </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-center  text-sm md:text-base text-gray-700 mb-12 max-w-3xl mx-auto">
               Key challenges financial institutions face in serving customers,
               staying compliant, and managing high volumes.
             </p>
@@ -316,7 +317,7 @@ const BankingFinance = () => {
               </h3>
 
               <div className="space-y-6 max-w-4xl mx-auto">
-                <p className="text-gray-700 text-base leading-relaxed text-center">
+                <p className="text-gray-700  text-sm md:text-base leading-relaxed text-center">
                   Whether you're managing retail banking, wealth management, or
                   high-value financial support, Convoze fits seamlessly into
                   your operations. It is built for high-volume financial
@@ -324,19 +325,14 @@ const BankingFinance = () => {
                   trust, accuracy, and regulatory compliance are critical.
                 </p>
 
-                <p className="text-gray-700 text-base leading-relaxed text-center">
+                <p className="text-gray-700  text-sm md:text-base leading-relaxed text-center">
                   From monitoring every conversation to providing real-time
                   insights, Convoze ensures your teams can act with confidence
                   while safeguarding your customers, your brand, and your
                   revenue.
                 </p>
 
-                <div className="flex justify-center pt-6">
-                  <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] relative bg-gradient-to-r from-purple-600 to-indigo-600 inline-flex items-center justify-center rounded-full px-8 py-4 text-white font-semibold transition-all hover:shadow-lg hover:scale-105">
-                    See Convoze in Action
-                    <ArrowRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" />
-                  </button>
-                </div>
+                <ButtonHover text={" See Convoze in Action"} />
               </div>
             </div>
           </div>
@@ -403,17 +399,7 @@ function HeroSection() {
             transition={{ duration: 0.8, delay: 0.4 }}
           ></motion.p> */}
 
-          <motion.div
-            className="pt-4"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8, delay: 0.6 }}
-          >
-            <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset] text-sm md:text-base relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors hover:bg-transparent/90 sm:w-auto">
-              Request a Demo
-              <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-            </button>
-          </motion.div>
+          <ButtonHover text={" Request a Demo"} />
         </div>
 
         <div className="w-full md:w-1/2 relative flex justify-center">

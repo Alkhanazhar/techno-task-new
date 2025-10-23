@@ -155,6 +155,25 @@ body {
     zoom: 90%;
     transform: scale(0.9);
   }
+  .picklist {
+    background: #fff !important;
+    border: none !important;
+    color: #000 !important;
+    font-size: 0.5rem;
+  }
+  .form-label[for="kl-11-input"],
+  .form-label[for="kl-21-input"],
+  .form-label[for="kl-31-input"],
+  .form-label[for="kl-41-input"],
+  .form-label[for="kl-51-input"],
+  .form-label[for="kl-61-input"],
+  .form-label[for="kl-71-input"],
+  .form-label[for="kl-81-input"],
+  .form-label[for="kl-91-input"] {
+    color: #000 !important;
+    font-weight: 300 !important;
+    font-size: 0.75rem !important;
+  }
 }
 
 .kl-form__submit-button {
@@ -290,6 +309,7 @@ html::-webkit-scrollbar {
 /* For small screens (mobile) */
 @media screen and (max-width: 640px) {
   .kl-form__submit-button {
+    font-size: 0.8rem !important;
     position: absolute;
     bottom: -2.8rem !important;
     width: 100% !important;
