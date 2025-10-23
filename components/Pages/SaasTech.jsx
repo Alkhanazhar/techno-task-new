@@ -24,6 +24,7 @@ import Link from "next/link";
 import { ColorText } from "@/app/ecommerce-d2c/EcommerceD2c";
 import { Marquee } from "../ui/marquee";
 import InfiniteCarousel from "../hero/InfiniteCarousel";
+import FeatureMarquee from "../FeatureMarquee";
 
 const SaaSTechPage = () => {
   const [mounted, setMounted] = useState(false);
@@ -41,7 +42,7 @@ const SaaSTechPage = () => {
       description:
         "Live transcription instantly converts calls into searchable text. Emotion & intent detection pinpoints frustration, urgency, or buying signals as they happen.",
       color: "from-blue-500 to-cyan-500",
-      image: "saas-real.png",
+      image: "saas-realtime.png",
     },
     {
       icon: <Shield className="w-8 h-8" />,
@@ -123,7 +124,28 @@ const SaaSTechPage = () => {
       color: "from-yellow-500 to-orange-500",
     },
   ];
-
+  const featuresMarquee = [
+    {
+      title: "Fintech",
+      image:
+        "https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+    }, // Financial dashboard
+    {
+      title: "Healthtech",
+      image:
+        "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600",
+    }, // Medical technology
+    {
+      title: "E-Commerce",
+      image:
+        "https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
+    }, // Online shopping
+    {
+      title: "Developer Tools",
+      image:
+        "https://images.unsplash.com/photo-1759661990336-51bd4b951fea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
+    }, // Coding environment
+  ];
   return (
     <div className="min-h-screen  -mt-16">
       {/* Hero Section */}
@@ -225,7 +247,7 @@ const SaaSTechPage = () => {
           />
         </div> */}
 
-        <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 relative">
+        <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 relative">
           <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
             Convoze Integration{" "}
             <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -272,7 +294,7 @@ const SaaSTechPage = () => {
               </span>
             </h3>
 
-            <p className="text-center text-gray-700 mb-12 max-w-3xl mx-auto">
+            <p className="text-center text-gray-700 mb-8 max-w-3xl mx-auto">
               Teams using Convoze typically gain
             </p>
 
@@ -305,7 +327,7 @@ const SaaSTechPage = () => {
         </div>
 
         {/* Why It Fits Section */}
-        <div className="relative  pb-20 mx-4 md:mx-16">
+        <div className="relative max-w-[88rem]  pb-20 mx-4 md:mx-16">
           <div className="bg-white/10 backdrop-blur-sm rounded-3xl p-8 md:p-12 shadow-[0_3px_10px_rgb(0,0,0,0.2)]">
             <h3 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6 text-center">
               Why It Fits Modern{" "}
@@ -320,63 +342,7 @@ const SaaSTechPage = () => {
               you're in fintech, healthtech, e-commerce, or developer tools.
             </p>
 
-            <div className="relative mt-8   mx-auto">
-              <Marquee>
-                {[
-                  {
-                    industry: "Fintech",
-                    image:
-                      "https://images.unsplash.com/photo-1579226905180-636b76d96082?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
-                  }, // Financial dashboard
-                  {
-                    industry: "Healthtech",
-                    image:
-                      "https://images.unsplash.com/photo-1579684385127-1ef15d508118?q=80&w=600",
-                  }, // Medical technology
-                  {
-                    industry: "E-Commerce",
-                    image:
-                      "https://images.unsplash.com/photo-1586880244406-556ebe35f282?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=687",
-                  }, // Online shopping
-                  {
-                    industry: "Developer Tools",
-                    image:
-                      "https://images.unsplash.com/photo-1759661990336-51bd4b951fea?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1332",
-                  }, // Coding environment
-                ].map((item, idx) => (
-                  <div
-                    key={idx}
-                    className="group relative w-60 md:w-72 rounded-3xl overflow-hidden hover:scale-105 transform transition-all duration-300"
-                  >
-                    {/* Background Image */}
-                    <div
-                      className="absolute inset-0 bg-cover bg-center"
-                      style={{ backgroundImage: `url(${item.image})` }}
-                    />
-
-                    {/* Dark Overlay */}
-                    <div className="absolute inset-0 bg-black/10" />
-
-                    {/* Content */}
-                    <div className="relative p-2 h-full flex flex-col justify-end min-h-[400px]">
-                      {/* Stats */}
-                      <div className="relative rounded-3xl px-4 py-2 overflow-hidden">
-                        <div className="absolute inset-0 backdrop-blur-sm bg-gradient-to-b rounded-3xl from-black/20 to-black/50" />
-
-                        <div className="flex items-center gap-2 justify-center py-2">
-                          {/* <CheckCircle className="w-4 h-4 text-white relative" /> */}
-                          <span className="text-white relative font-semibold text-sm md:text-[15px]">
-                            {item.industry}
-                          </span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Marquee>
-              <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-[4%]  backdrop-blur-[1px] bg-gradient-to-r"></div>
-              <div className="from-white  pointer-events-none absolute inset-y-0 right-0 w-[4%] backdrop-blur-[1px] bg-gradient-to-l"></div>
-            </div>
+            <FeatureMarquee features={featuresMarquee} />
           </div>
         </div>
 
@@ -427,6 +393,15 @@ function HeroSection() {
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
       </div> */}
+
+      <div
+        id="mouse-gradient"
+        // ref={gradientRef}
+        className="pointer-events-none fixed h-96 w-96 rounded-full opacity-0 blur-3xl transition-all duration-500 ease-out"
+        style={{
+          background: `radial-gradient(circle, #6b5545 0%, transparent 100%)`,
+        }}
+      ></div>
 
       {/* Floating Particles */}
 

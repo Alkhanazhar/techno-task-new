@@ -77,10 +77,10 @@ export default function SolutionCarts() {
                   : "border-zinc-700 bg-gradient-to-br to-[#371d3e] from-[#3F2AB2]"
               }`}
             >
-              <div className="relative z-10 flex  justify-between md:justify-start gap-2 md:gap-4">
+              <div className="relative z-10 flex  justify-between md:justify-center gap-2 md:gap-4">
                 {/* Icon for Desktop */}
-                <div className="bg-gradient-to-r hidden to-[#B462CE] from-[#3F2AB2] md:w-10 w-6 md:h-7 h-5 rounded-full md:flex items-center justify-center text-white">
-                  <step.icon className="md:w-4 w-3 md:h-4 h-3" />
+                <div className="bg-gradient-to-r hidden to-[#B462CE] from-[#3F2AB2] my-auto md:w-10 w-6 md:h-10 h-5 rounded-full md:flex items-center justify-center text-white">
+                  <step.icon className="md:w-5 w-4 md:h-5 h-4" />
                 </div>
 
                 <div className="flex-1 md:text-left">

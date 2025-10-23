@@ -163,7 +163,7 @@ const Index = () => {
             <motion.div
               key={index}
               variants={itemVariants}
-              className="p-6 rounded-2xl bg-white/90  border-gray-500/10 border shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-sm dark:bg-slate-800  hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
+              className="py-10 rounded-2xl bg-white/90  border-gray-500/10 border shadow-[0_3px_10px_rgb(0,0,0,0.2)] backdrop-blur-sm dark:bg-slate-800  hover:shadow-xl hover:-translate-y-1 transition-all duration-300"
             >
               <div className="flex flex-col items-center text-center space-y-3">
                 <div className="w-12 h-12 flex items-center justify-center rounded-full bg-gradient-to-r from-red-500 to-pink-500 text-white shadow-md">

@@ -26,6 +26,7 @@ import ConvozeMetrics from "./ConvozeMetrics";
 import InfiniteCarousel from "../hero/InfiniteCarousel";
 import { Marquee } from "../ui/marquee";
 import { MarqueeCompanies } from "../marquee";
+import FeatureMarquee from "../FeatureMarquee";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -51,8 +52,7 @@ const BPOContactCenterPage = () => {
       color: "from-blue-500 to-cyan-500",
     },
     {
-      image:
-        "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&fit=max",
+      image: "enhance-1.png",
       title:
         "Inconsistent quality because only a handful of conversations get checked.",
       color: "from-purple-500 to-indigo-500",
@@ -176,7 +176,6 @@ const BPOContactCenterPage = () => {
       <HeroSection />
 
       {/* The Reality Section */}
-
       <div className="relative bg-white border-b">
         {/* <div className="absolute inset-0 z-0">
           <img
@@ -186,7 +185,7 @@ const BPOContactCenterPage = () => {
           />
         </div> */}
 
-        <div className="w-full  py-12 md:py-24 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+        <div className="w-full max-w-[88rem] py-12 md:py-24 bg-white mx-auto min-h-screen px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
           <div className="max-w-7xl mx-auto">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
               The Reality{" "}
@@ -359,28 +358,7 @@ const BPOContactCenterPage = () => {
         </div>
 
         {/* Enhancing BPO Operations Section */}
-        <div className="relative pb-12  ">
-          <div className="absolute inset-0 -z-10 opacity-[0.02]">
-            <svg className="h-full w-full" xmlns="http://www.w3.org/2000/svg">
-              <defs>
-                <pattern
-                  id="grid2"
-                  width="40"
-                  height="40"
-                  patternUnits="userSpaceOnUse"
-                >
-                  <path
-                    d="M 40 0 L 0 0 0 40"
-                    fill="none"
-                    stroke="currentColor"
-                    strokeWidth="1"
-                  />
-                </pattern>
-              </defs>
-              <rect width="100%" height="100%" fill="url(#grid2)" />
-            </svg>
-          </div>
-
+        <div className="relative pb-12 max-w-[88rem] mx-auto  ">
           <div className="w-full  px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 pt-32">
             <div className="max-w-7xl mx-auto">
               <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-8">
@@ -396,41 +374,7 @@ const BPOContactCenterPage = () => {
               </p>
             </div>
             {/* <MarqueeCompanies /> */}
-            <div className="relative flex w-full rounded-3xl bg-transparent flex-col md:mt-4  items-center justify-center overflow-hidden">
-              <Marquee className={"py-4"} pauseOnHover>
-                {enhancementFeatures.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="p-2 border-black/10 hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white "
-                  >
-                    <div className="group relative !z-20  w-72 rounded-xl overflow-hidden transform ">
-                      {/* Background Image */}
-                      <div
-                        className="absolute inset-0 bg-cover w-84 bg-center"
-                        style={{
-                          backgroundImage: `url(${feature.image})`,
-                        }}
-                      />
-
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/5" />
-
-                      {/* Content */}
-                      <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
-                        <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                          <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/20 to-black/30 rounded" />
-                          <div className="text-gray-50 text-sm  relative">
-                            {feature.description}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Marquee>
-              <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
-              <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
-            </div>
+            <FeatureMarquee features={enhancementFeatures} />
           </div>
         </div>
 

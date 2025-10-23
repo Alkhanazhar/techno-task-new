@@ -49,36 +49,43 @@ const HealthcareInsurance = () => {
       icon: <MessageSquare className="w-8 h-8" />,
       title: "Fragmented communication channels.",
       color: "from-blue-500 to-cyan-500",
+      image: "fragmented.png",
     },
     {
       icon: <Shield className="w-8 h-8" />,
       title: "Strict regulatory & compliance burden.",
       color: "from-purple-500 to-indigo-500",
+      image: "strict-regulatory.png",
     },
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Emotionally charged high-stakes interactions.",
       color: "from-red-500 to-pink-500",
+      image: "healthcare-emotional.png",
     },
     {
       icon: <AlertTriangle className="w-8 h-8" />,
       title: "Hidden fraud risks & claim irregularities.",
       color: "from-orange-500 to-red-500",
+      image: "hidden-feature.png",
     },
     {
       icon: <Users className="w-8 h-8" />,
       title: "Inconsistent service & agent performance.",
       color: "from-green-500 to-emerald-500",
+      image: "inconsistent-agent.png",
     },
     {
       icon: <Clock className="w-8 h-8" />,
       title: "Slow claims resolution & escalations.",
       color: "from-yellow-500 to-orange-500",
+      image: "show-claim.png",
     },
     {
       icon: <TrendingUp className="w-8 h-8" />,
       title: "High volume & seasonal pressure.",
       color: "from-indigo-500 to-blue-500",
+      image: "high-volume.png",
     },
   ];
 
@@ -88,49 +95,49 @@ const HealthcareInsurance = () => {
       title: "100% Conversation & Ticket Auditing",
       description:
         "Every call, chat and support ticket is automatically analyzed and audited with KPI-linked QA metrics, ensuring no interaction is ever missed.",
-      color: "from-blue-500 to-cyan-500",
+      color: "from-blue-500 to-purple-500",
     },
     {
       icon: <Activity className="w-8 h-8" />,
       title: "Sentiment & Emotion Detection in Real Time",
       description:
         "Helps teams detect and address frustration, stress or confusion instantly improving outcome and member/patient satisfaction.",
-      color: "from-purple-500 to-indigo-500",
+      color: "from-purple-500 to-blue-500",
     },
     {
       icon: <Globe className="w-8 h-8" />,
       title: "Multilingual Support & Accent Adaptability",
       description:
         "Supports multiple languages and accents. This allows seamless care and service to diverse populations.",
-      color: "from-green-500 to-emerald-500",
+      color: "from-purple-500 to-blue-500",
     },
     {
       icon: <Lock className="w-8 h-8" />,
       title: "Protecting Sensitive Data",
       description:
         "Safeguards confidential information while making compliance and auditing effortless for your team.",
-      color: "from-orange-500 to-red-500",
+      color: "from-blue-500 to-purple-500",
     },
     {
       icon: <BarChart3 className="w-8 h-8" />,
       title: "Actionable Insights & Dashboards",
       description:
         "Turns conversation data into actionable insights, giving managers and compliance teams visibility into trends, risks and recurring gaps.",
-      color: "from-pink-500 to-purple-500",
+      color: "from-blue-500 to-purple-500",
     },
     {
       icon: <UserCheck className="w-8 h-8" />,
       title: "AI + Human QA Integration",
       description:
         "Combines automated insights with human oversight for accurate compliance monitoring, fraud and performance monitoring.",
-      color: "from-yellow-500 to-orange-500",
+      color: "from-blue-500 to-purple-500",
     },
     {
       icon: <Bell className="w-8 h-8" />,
       title: "Immediate Risk Detection",
       description:
         "Detect policy violations or potential fraud in real time hence enabling your team to act swiftly and prevent larger issues.",
-      color: "from-indigo-500 to-blue-500",
+      color: "from-blue-500 to-purple-500",
     },
   ];
 
@@ -140,30 +147,35 @@ const HealthcareInsurance = () => {
       description:
         "Automate appointment reminders, policy queries, claims updates, and FAQs with a personal touch.",
       bullet: "purple",
+      image: "24-7.png",
     },
     {
       title: "Safe and Compliant",
       description:
         "Compliant with HIPAA and other regulatory standards thus ensuring sensitive health and insurance data remains secure within the system.",
       bullet: "purple",
+      image: "safe-complaint.png",
     },
     {
       title: "Data Driven Insights",
       description:
         "Easily audits discussions to identify patterns, enhance customer service, and inform wise choices for data driven insights.",
       bullet: "purple",
+      image: "data-driven.png",
     },
     {
       title: "Operational Efficiency",
       description:
         "Reduce administrative burden on staff, enabling quicker responses and smoother operations.",
       bullet: "indigo",
+      image: "operational.png",
     },
     {
       title: "Unified Customer Communication",
       description:
         "Keep all customer conversations in one place making service faster and more efficient.",
       bullet: "indigo",
+      image: "unified.png",
     },
   ];
 
@@ -276,7 +288,7 @@ const HealthcareInsurance = () => {
 
         {/* Challenges Section */}
         <div className="relative  py-20">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 ">
+          <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 ">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Challenges{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -336,11 +348,11 @@ const HealthcareInsurance = () => {
               {howConvozeHelps.map((feature, index) => (
                 <div
                   key={index}
-                  className="bg-white/80 backdrop-blur-sm border border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden"
+                  className="bg-white/80  backdrop-blur-sm border border-gray-200 p-6 rounded-2xl shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 group relative overflow-hidden"
                 >
                   <div className="flex items-start gap-4 relative z-10">
                     <div
-                      className={`p-3 rounded-xl bg-gradient-to-br ${feature.color} text-white group-hover:scale-110 transition-transform flex-shrink-0`}
+                      className={`p-3 rounded-xl bg-gradient-to-br  text-white ${feature.color} border group-hover:scale-110 transition-transform flex-shrink-0`}
                     >
                       {feature.icon}
                     </div>
@@ -425,7 +437,7 @@ const HealthcareInsurance = () => {
 
         {/* Redefining Care Section */}
         <div className="relative py-20">
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
+          <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-6">
               Redefining Care and Service with{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -433,7 +445,7 @@ const HealthcareInsurance = () => {
               </span>
             </h3>
 
-            <p className="text-center max-w-4xl mx-auto text-gray-700 text-base leading-relaxed mb-8 text-sm md:text-base">
+            <p className="text-center max-w-4xl mx-auto text-gray-700 text-base leading-relaxed mb-8 md:text-base">
               Timely and accurate communication makes all the difference.
               Convoze helps providers, clinics, hospitals, and insurance
               companies enhance patient and client experiences while ensuring
@@ -446,9 +458,9 @@ const HealthcareInsurance = () => {
                 {redefiningCare.map((feature, index) => (
                   <div
                     key={index}
-                    className="p-2 border-black/10 hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white "
+                    className="p-2 border-black/5 relative hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white/10 "
                   >
-                    <div className="group relative !z-20  w-72 rounded-xl overflow-hidden transform ">
+                    <div className="group relative !z-20  w-72 rounded overflow-hidden transform ">
                       {/* Background Image */}
                       <div
                         className="absolute inset-0 bg-cover w-84 bg-center"
@@ -458,22 +470,29 @@ const HealthcareInsurance = () => {
                       />
 
                       {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/10" />
+                      <div className="absolute inset-0 bg-gradient-to-b from-black/10 to-black/50" />
 
                       {/* Content */}
                       <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
+                        {/* <div className="text-primary mb-3 text-[2rem]">
+                          {feature.bullet}
+                        </div> */}
+                        <span className="from-primary/0 via-primary to-primary/0 absolute -bottom-px left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r opacity-60"></span>
+                        <span className="absolute inset-0 bg-[radial-gradient(30%_5%_at_50%_100%,hsl(var(--primary)/0.15)_0%,transparent_100%)] opacity-60"></span>
+
                         <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                          <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/30 to-black/50 rounded" />
-                          <div className="text-gray-50 text-sm  relative">
-                            <h1 className="relative text-base  text-white font-medium leading-5 ">
-                              <>{feature.title}</>
-                            </h1>
-                            <br />
-                            {feature.description}
+                          <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/10 to-black/20 rounded" />
+                          <div className="text-white text-sm relative">
+                            <h2 className="mb-1.5 text-xl">{feature.title}</h2>
+                            <p className="text-gray-100 text-base font-[300] text-pretty">
+                              {feature.description}
+                            </p>
                           </div>
                         </div>
                       </div>
                     </div>
+                    <span className="from-blue-500/10 via-purple-600 to-blue-600/10 absolute -bottom-px left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r opacity-60"></span>
+                    <span className="absolute inset-0 bg-[radial-gradient(30%_5%_at_50%_100%,hsl(240,100%,50%/0.15)_0%,transparent_100%)] opacity-60"></span>
                   </div>
                 ))}
               </Marquee>
@@ -512,8 +531,8 @@ const HealthcareInsurance = () => {
             </svg>
           </div> */}
 
-          <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 ">
-            <div className="grid grid-cols-1 md:grid-cols-2 ">
+          <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 ">
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="py-8 ">
                 <h3 className="text-2xl md:text-3xl md:whitespace-nowrap font-bold text-gray-900 mb-4">
                   Where Convoze{" "}
@@ -573,6 +592,8 @@ function HeroSection() {
           <div className="animate-grid [inset:0%_0px] [margin-left:-50%] [height:300vh] [width:600vw] [transform-origin:100%_0_0] [background-image:linear-gradient(to_right,rgba(0,0,0,0.5)_1px,transparent_0),linear-gradient(to_bottom,rgba(40,40,40,0.2)_1px,transparent_0)] [background-size:120px_120px] [background-repeat:repeat]"></div>
         </div>
       </div> */}
+
+      {/* <HeroBackgroundGeadientAnimation /> */}
 
       {/* Content */}
       <div className="w-full max-w-7xl mx-auto px-4 pt-12 md:pt-28 flex flex-col  md:flex-row items-center gap-8">
@@ -675,5 +696,109 @@ function HeroSection() {
         </div>
       </div>
     </div>
+  );
+}
+
+export function HeroBackgroundGeadientAnimation() {
+  return (
+    <svg
+      className="absolute inset-0 h-full w-full"
+      xmlns="http://www.w3.org/2000/svg"
+    >
+      <defs>
+        <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse">
+          <path
+            d="M 60 0 L 0 0 0 60"
+            fill="none"
+            stroke="rgba(200,180,160,0.8)"
+            strokeWidth="0.5"
+          />
+        </pattern>
+      </defs>
+      <rect width="100%" height="100%" fill="url(#grid)" />
+      <line
+        x1="0"
+        y1="20%"
+        x2="100%"
+        y2="20%"
+        className="grid-line"
+        style={{ animationDelay: "0.5s" }}
+      />
+      <line
+        x1="0"
+        y1="80%"
+        x2="100%"
+        y2="80%"
+        className="grid-line"
+        style={{ animationDelay: "1s" }}
+      />
+      <line
+        x1="20%"
+        y1="0"
+        x2="20%"
+        y2="100%"
+        className="grid-line"
+        style={{ animationDelay: "1.5s" }}
+      />
+      <line
+        x1="80%"
+        y1="0"
+        x2="80%"
+        y2="100%"
+        className="grid-line"
+        style={{ animationDelay: "2s" }}
+      />
+      <line
+        x1="50%"
+        y1="0"
+        x2="50%"
+        y2="100%"
+        className="grid-line"
+        style={{ animationDelay: "2.5s", opacity: 0.05 }}
+      />
+      <line
+        x1="0"
+        y1="50%"
+        x2="100%"
+        y2="50%"
+        className="grid-line"
+        style={{ animationDelay: "3s", opacity: 0.05 }}
+      />
+      {/* <circle
+        cx="20%"
+        cy="20%"
+        r="2"
+        className="detail-dot"
+        style={{ animationDelay: "3s" }}
+      />
+      <circle
+        cx="80%"
+        cy="20%"
+        r="2"
+        className="detail-dot"
+        style={{ animationDelay: "3.2s" }}
+      />
+      <circle
+        cx="20%"
+        cy="80%"
+        r="2"
+        className="detail-dot"
+        style={{ animationDelay: "3.4s" }}
+      />
+      <circle
+        cx="80%"
+        cy="80%"
+        r="2"
+        className="detail-dot"
+        style={{ animationDelay: "3.6s" }}
+      />
+      <circle
+        cx="50%"
+        cy="50%"
+        r="1.5"
+        className="detail-dot"
+        style={{ animationDelay: "4s" }}
+      /> */}
+    </svg>
   );
 }

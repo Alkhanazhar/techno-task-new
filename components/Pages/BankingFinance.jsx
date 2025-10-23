@@ -24,6 +24,7 @@ import {
 import { motion } from "framer-motion";
 import InfiniteCarousel from "../hero/InfiniteCarousel";
 import { Marquee } from "../ui/marquee";
+import FeatureMarquee from "../FeatureMarquee";
 
 const ColorText = ({ children }) => (
   <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -196,7 +197,7 @@ const BankingFinance = () => {
           />
         </div> */}
         {/* Challenges Section */}
-        <div className="relative  py-20 max-w-7xl mx-auto">
+        <div className="relative  py-20 max-w-[88rem] mx-auto">
           <div className="w-full max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16 relative">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Challenges Faced in{" "}
@@ -283,8 +284,8 @@ const BankingFinance = () => {
         </div>
 
         {/* Redefining Conversation Intelligence Section */}
-        <div className="relative py-20">
-          <div className="w-full relative max-w-7xl mx-auto px-4 sm:px-8 md:px-10 lg:px-12 xl:px-16">
+        <div className="relative py-20 max-w-[88rem] mx-auto">
+          <div className="w-full relative  mx-auto px-4 sm:px-8 ">
             <h3 className="text-center text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               Redefining Conversation Intelligence{" "}
               <span className="bg-gradient-to-r from-purple-600 to-indigo-600 text-transparent bg-clip-text">
@@ -299,42 +300,7 @@ const BankingFinance = () => {
               giving financial institutions full visibility and actionable
               intelligence.
             </p>
-
-            <div className="relative flex w-full rounded-3xl bg-transparent flex-col md:mt-4  items-center justify-center overflow-hidden">
-              <Marquee className={"py-4"} pauseOnHover>
-                {features.map((feature, index) => (
-                  <div
-                    key={index}
-                    className="p-2 border-black/10 hover:scale-105 transition-all duration-300 -mx-1  shadow rounded border bg-white "
-                  >
-                    <div className="group relative !z-20  w-72 rounded-xl overflow-hidden transform ">
-                      {/* Background Image */}
-                      <div
-                        className="absolute inset-0 bg-cover w-84 bg-center"
-                        style={{
-                          backgroundImage: `url(${feature.image})`,
-                        }}
-                      />
-
-                      {/* Overlay */}
-                      <div className="absolute inset-0 bg-black/10" />
-
-                      {/* Content */}
-                      <div className="relative p-2 h-full flex flex-col justify-end min-h-[300px] md:min-h-[360px]">
-                        <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                          <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/30 to-black/50 rounded" />
-                          <div className="text-gray-50 text-sm   relative">
-                            {feature.description}
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                ))}
-              </Marquee>
-              <div className="from-white pointer-events-none absolute inset-y-0 left-0 w-1/12 bg-gradient-to-r"></div>
-              <div className="from-white pointer-events-none absolute inset-y-0 right-0 w-1/12 bg-gradient-to-l"></div>
-            </div>
+            <FeatureMarquee features={features} />
           </div>
         </div>
 

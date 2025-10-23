@@ -7,7 +7,7 @@ const NextArrow = (props) => {
   return (
     <button
       onClick={onClick}
-      className="!absolute !right-6 !top-1/2 -translate-y-1/2 z-10 bg-purple-700 text-white p-2 rounded-full hover:bg-purple-800 transition-all duration-300"
+      className="!absolute !right-8 shadow-2xl !top-1/2 -translate-y-1/2 z-10 bg-gradient-to-l from-purple-600 to-blue-600 text-white p-2 rounded-full hover:bg-purple-800 transition-all duration-300"
     >
       <ChevronRight className="w-6 h-6" />
     </button>
@@ -19,7 +19,7 @@ const PrevArrow = (props) => {
   return (
     <button
       onClick={onClick}
-      className="!absolute !left-6 !top-1/2 -translate-y-1/2 z-10 bg-purple-700 text-white p-2 rounded-full hover:bg-purple-800 transition-all duration-300"
+      className="!absolute !left-8 !top-1/2 shadow-2xl  -translate-y-1/2 z-10 bg-gradient-to-r from-purple-600 to-blue-600 text-white p-2 rounded-full hover:bg-purple-800 transition-all duration-300"
     >
       <ChevronLeft className="w-6 h-6" />
     </button>
@@ -58,7 +58,7 @@ const InfiniteCarousel = ({ items }) => {
               />
 
               {/* Overlay */}
-              <div className="absolute inset-0 bg-black/20" />
+              <div className="absolute inset-0 from-black/20 to-black/60 bg-gradient-to-b" />
 
               {/* Content */}
               <div className="relative p-2 h-full flex flex-col justify-end min-h-[360px] md:min-h-[360px]">
