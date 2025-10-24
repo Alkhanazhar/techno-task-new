@@ -1782,7 +1782,7 @@ const EcommerceD2c = () => {
                   </button>
                 </Link>
               </motion.div> */}
-              <ButtonHover text={"See Convoze in Action"} />
+              <ButtonHover text={"See Convoze in Action"} center={true} />
             </div>
           </div>
         </motion.div>

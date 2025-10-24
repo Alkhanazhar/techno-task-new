@@ -332,7 +332,7 @@ const BankingFinance = () => {
                   revenue.
                 </p>
 
-                <ButtonHover text={" See Convoze in Action"} />
+                <ButtonHover text={" See Convoze in Action"} center={true} />
               </div>
             </div>
           </div>

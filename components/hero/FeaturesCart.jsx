@@ -27,7 +27,7 @@ const features = [
 const FeaturesCart = () => {
   return (
     <section className="w-full sm:min-h-screen  text-white md:px-4 px-2 md:py-24 py-12 bg-gradient-to-t to-[#060606] from-[#27022e]">
-      <div className="md:max-w-6xl max-w-7xl mx-auto text-center pb-6 md:mb-12 px-6">
+      <div className="md:max-w-6xl max-w-7xl !mx-auto text-center pb-6 md:mb-12 px-6">
         <h2 className="text-2xl md:text-4xl font-medium md:mb-3 mb-2 text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           What is <span className=" font-normal text-white"> Convoze?</span>
         </h2>
@@ -64,7 +64,7 @@ const FeaturesCart = () => {
         </motion.div> */}
 
       {/* Features Grid */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 pb-16 sm:pb-8 lg:grid-cols-4 gap-6 max-w-7xl md:mx-8 sm:mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 pb-16 sm:pb-8 lg:grid-cols-4 gap-6 max-w-7xl md:mx-8 !mx-auto">
         {features.map((item, idx) => (
           <motion.div
             key={idx}

@@ -26,8 +26,8 @@ const FeatureMarquee = ({ features }) => {
                 <span className="from-primary/0 via-primary to-primary/0 absolute -bottom-px left-1/2 h-px w-1/2 -translate-x-1/2 bg-gradient-to-r opacity-60"></span>
                 <span className="absolute inset-0 bg-[radial-gradient(30%_5%_at_50%_100%,hsl(var(--primary)/0.15)_0%,transparent_100%)] opacity-60"></span>
 
-                <div className="relative rounded-b px-4 py-2 overflow-hidden">
-                  <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/10 to-black/20 rounded" />
+                <div className="relative rounded-b px-4 py-2 overflow-hidden backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded">
+                  {/* <div className="absolute inset-0 backdrop-blur-[4px] bg-gradient-to-b from-black/10 to-black/20 rounded" /> */}
                   <div className="text-white text-sm relative">
                     <h2 className="mb-1.5 text-base md:text-xl text-start">
                       {feature?.title}

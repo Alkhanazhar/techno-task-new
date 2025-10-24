@@ -252,7 +252,7 @@ const SaaSTechPage = () => {
                 revenue.
               </p>
 
-              <ButtonHover text={"See Convoze in Action"} />
+              <ButtonHover text={"See Convoze in Action"} center={true} />
             </div>
           </div>
         </div>
@@ -391,10 +391,10 @@ function HeroSection() {
   );
 }
 
-export const ButtonHover = ({ text }) => {
+export const ButtonHover = ({ text, center = false }) => {
   return (
     <motion.div
-      className="pt-6"
+      className={`pt-6 w-fit ${!center ? "mx-0" : "mx-auto"}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, delay: 0.8 }}

@@ -207,9 +207,9 @@ const InfiniteCarousel = ({ items }) => {
               <div className="absolute inset-0 from-black/0 to-black/40 bg-gradient-to-b" />
 
               {/* Content */}
-              <div className="relative p-3 sm:p-3 h-full flex flex-col justify-end min-h-[320px] sm:min-h-[320px] md:min-h-[360px]">
-                <div className="relative rounded-b sm:rounded-b-xl px-3 sm:px-4 py-2 sm:py-3 overflow-hidden">
-                  <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded-2xl sm:rounded-3xl !border-[.1px] border-white/5" />
+              <div className="relative p-3 sm:p-3 h-full flex flex-col justify-end min-h-[360px] sm:min-h-[380px] ">
+                <div className="relative rounded-b sm:rounded-b-xl px-3 sm:px-4 py-2 sm:py-3 backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded-2xl sm:rounded-3xl overflow-hidden">
+                  {/* <div className="absolute inset-0 backdrop-blur-[2px] bg-gradient-to-b from-black/30 to-black/60 rounded-2xl sm:rounded-3xl !border-[.1px] border-white/5" /> */}
                   <div className="text-white/80 text-center relative text-xs sm:text-sm md:text-[15px] mb-1">
                     {item.title}
                   </div>
