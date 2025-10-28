@@ -396,13 +396,21 @@ export const ButtonHover = ({ text, center = false }) => {
       className={`pt-6 w-fit ${!center ? "mx-0" : "mx-auto"}`}
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.8, delay: 0.8 }}
+      whileHover={{ scale: 1.02, shadow: "rgba(2,2,2,0.5)" }}
+      transition={{
+        type: "spring",
+        stiffness: 300,
+        damping: 100,
+
+        duration: 0.3,
+        mass: 100,
+      }}
     >
       <Link href="/contact">
-        <button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.2)_inset]  relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors text-xs md:text-base hover:bg-transparent/90 sm:w-auto">
+        <motion.button className="group shadow-[0px_2px_0px_0px_rgba(255,255,255,0.1)_inset]   relative bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-input inline-flex w-full items-center justify-center rounded-full border-[1px] px-4 py-3 md:px-6 md:py-4 text-center text-white transition-colors text-xs md:text-base hover:bg-transparent/90 sm:w-auto">
           {text}
           <ArrowRight className="w-5 h-5 ml-1 group-hover:translate-x-1 transition-transform" />
-        </button>
+        </motion.button>
       </Link>
     </motion.div>
   );

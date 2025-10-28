@@ -398,7 +398,6 @@ function HeroSection() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 0.4 }}
           ></motion.p> */}
-
           <ButtonHover text={" Request a Demo"} />
         </div>
 

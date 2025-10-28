@@ -8,10 +8,12 @@ const BookDemo = () => {
           className="w-full h-full object-cover opacity-20"
         />
       </div>
-      <div className="max-w-6xl w-full shadow-[0_4px_12px_rgb(0,0,0,0.4)]  mx-auto border border-white/10 bg-gradient-to-br  to-[#371d3e] from-[#3F2AB2] rounded-2xl text-center px-6 md:py-32 py-8  relative overflow-hidden">
+      <div className="max-w-6xl w-full  shadow-[0_4px_12px_rgb(0,0,0,0.8)]  mx-auto  bg-gradient-to-br  to-[#371d3e] group from-[#3F2AB2] rounded-2xl text-center px-6 md:py-32 py-8  relative overflow-hidden">
         {/* Gradient Lighting Effects */}
-        <div className="absolute top-0 left-0 w-60 h-60 bg-[#3F2AB2] blur-[120px] opacity-30 rounded-full -z-10"></div>
-        <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-700 blur-[120px] opacity-30 rounded-full -z-10"></div>
+        {/* <div className="absolute top-0 left-0 w-60 h-60 bg-[#3F2AB2] blur-[120px] opacity-30 rounded-full -z-10"></div>
+        <div className="absolute bottom-0 right-0 w-60 h-60 bg-purple-700 blur-[120px] opacity-30 rounded-full -z-10"></div> */}
+        <span className="absolute bottom-0 inset-x-0 w-full mx-auto bg-linear-to-l from-transparent via-purple-100 to-transparent h-[1px]"></span>
+        <span className="absolute bottom-1  w-full inset-0 transition-all duration-300 mx-auto bg-linear-to-l from-transparent group-hover:opacity-100 opacity-0 via-blue-300 to-transparent h-[20px] blur-3xl"></span>
 
         {/* Heading */}
         <h2 className="text-neutral-200 text-xl md:text-4xl font-light md:leading-snug">

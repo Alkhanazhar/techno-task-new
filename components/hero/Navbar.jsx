@@ -137,6 +137,7 @@ import React, { useState, useEffect } from "react";
 import { useRouter, usePathname } from "next/navigation";
 import { X, Menu } from "lucide-react";
 import Link from "next/link";
+import { AnimatePresence, motion, scale } from "framer-motion";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -307,108 +308,121 @@ const Navbar = () => {
           />
         </button>
       </nav>
-
       {/* Desktop Mega Menu */}
-      {showMegaMenu && (
-        <div className="mega-menu fixed top-[64px] left-1/2 transform -translate-x-1/2 w-[900px] max-h-[90vh] overflow-y-auto bg-black/70 backdrop-blur-lg text-gray-900 p-10 rounded-xl shadow-2xl z-40">
-          <div className="flex items-start gap-5">
-            {/* Left side */}
-            <div className="min-w-[120px]">
-              <img
-                src="/logo.png"
-                alt="icon"
-                className="h-8 w-30 object-contain rounded-full"
-              />
-              <p className="text-sm text-white font-sm mt-2">Why Convoze?</p>
-              <p className="text-[11px] text-gray-300 mt-2 mb-5">
-                See how we help you <br />
-                translate customer <br />
-                insights into business value.
-              </p>
-              <Link
-                href="/solution"
-                className="text-gray-300 font-medium flex items-center gap-1 hover:underline"
-              >
-                How it work's <span className="text-gray-300">→</span>
-              </Link>
-              <li className="text-purple-500 font-medium flex items-center gap-1 mb-3">
-                Industry <span className="text-purple-500">→</span>
-              </li>
-            </div>
-
-            {/* Right side: Grid */}
-            <div className="grid grid-cols-2 gap-6 flex-1">
-              <div className="border-l border-gray-500 pl-2">
-                <ul className="space-y-1">
-                  <Link href="/bpo-contact-centers">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">
-                        BPO & Contact Centers
-                      </h4>
-                      <p className="text-[11px] text-gray-400 mt-1">
-                        Transform conversations into insights, improving
-                        efficiency, agent performance, and overall customer
-                        experiences.
-                      </p>
-                    </li>
-                  </Link>
-                  <Link href="/banking-finance">
-                    <li className="transition duration-300 ease-in-out  hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">
-                        Banking & Finance
-                      </h4>
-                      <p className="text-[11px] text-gray-400 mt-1">
-                        Identify compliance risks quickly, strengthen processes,
-                        and ensure secure customer interactions with Convoze.
-                      </p>
-                    </li>
-                  </Link>
-                  <Link href="/ecommerce-d2c">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">
-                        E-commerce and D2C
-                      </h4>
-                      <p className="text-[11px] text-gray-400 mt-1">
-                        Analyze customer sentiment, address concerns
-                        proactively, and increase loyalty effectively.
-                      </p>
-                    </li>
-                  </Link>
-                </ul>
+      <AnimatePresence>
+        {showMegaMenu && (
+          <motion.div
+            exit={{
+              opacity: 0,
+              transition: { duration: 0.3 },
+              y: -10,
+              filter: "blur(10px)",
+            }}
+            initial={{ opacity: 0, y: -10, filter: "blur(10px)" }}
+            animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+            transition={{ duration: 0.3 }}
+            className="mega-menu  fixed top-[64px] left-1/2 transform -translate-x-1/2 w-[900px] max-h-[90vh] overflow-y-auto bg-black/70 backdrop-blur-lg text-gray-900 p-10 mt-3 rounded-xl shadow-2xl z-40"
+          >
+            <div className="flex items-start gap-5 relative">
+              {/* Left side */}
+              <div className="min-w-[120px]">
+                <img
+                  src="/logo.png"
+                  alt="icon"
+                  className="h-8 w-30 object-contain rounded-full"
+                />
+                <p className="text-sm text-white font-sm mt-2">Why Convoze?</p>
+                <p className="text-[11px] text-gray-300 mt-2 mb-5">
+                  See how we help you <br />
+                  translate customer <br />
+                  insights into business value.
+                </p>
+                <Link
+                  href="/solution"
+                  className="text-gray-300 font-medium flex items-center gap-1 hover:underline"
+                >
+                  How it work's <span className="text-gray-300">→</span>
+                </Link>
+                <li className="text-purple-500 font-medium flex items-center gap-1 mb-3">
+                  Industry <span className="text-purple-500">→</span>
+                </li>
               </div>
 
-              {/* Column 2 */}
-              <div>
-                <ul className="space-y-1">
-                  <Link href="/saas-tech">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">
-                        Saas & Tech
-                      </h4>
-                      <p className="text-[11px] text-gray-400 mt-1">
-                        Drive product adoption, reduce churn, and strengthen
-                        customer retention with real-time intelligence and
-                        seamless onboarding insights.
-                      </p>
-                    </li>
-                  </Link>
-                  <Link href="/healthcare-insurance">
-                    <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
-                      <h4 className="font-medium text-[14px] text-white">
-                        Healthcare and Insurance
-                      </h4>
-                      <p className="text-[11px] text-gray-400 mt-1">
-                        Detect patient emotions instantly and improve
-                        satisfaction through real-time sentiment analysis.
-                      </p>
-                    </li>
-                  </Link>
-                </ul>
+              {/* Right side: Grid */}
+              <div className="grid grid-cols-2 gap-6 flex-1">
+                <div className="border-l border-gray-500 pl-2">
+                  <ul className="space-y-1">
+                    <Link href="/bpo-contact-centers">
+                      <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
+                        <h4 className="font-medium text-[14px] text-white">
+                          BPO & Contact Centers
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-1">
+                          Transform conversations into insights, improving
+                          efficiency, agent performance, and overall customer
+                          experiences.
+                        </p>
+                      </li>
+                    </Link>
+                    <Link href="/banking-finance">
+                      <li className="transition duration-300 ease-in-out  hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
+                        <h4 className="font-medium text-[14px] text-white">
+                          Banking & Finance
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-1">
+                          Identify compliance risks quickly, strengthen
+                          processes, and ensure secure customer interactions
+                          with Convoze.
+                        </p>
+                      </li>
+                    </Link>
+                    <Link href="/ecommerce-d2c">
+                      <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
+                        <h4 className="font-medium text-[14px] text-white">
+                          E-commerce and D2C
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-1">
+                          Analyze customer sentiment, address concerns
+                          proactively, and increase loyalty effectively.
+                        </p>
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
+
+                {/* Column 2 */}
+                <div>
+                  <ul className="space-y-1">
+                    <Link href="/saas-tech">
+                      <li className="transition duration-300 ease-in-out hover:bg-gray-700/30 hover:scale-[1.02] rounded-lg p-2">
+                        <h4 className="font-medium text-[14px] text-white">
+                          Saas & Tech
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-1">
+                          Drive product adoption, reduce churn, and strengthen
+                          customer retention with real-time intelligence and
+                          seamless onboarding insights.
+                        </p>
+                      </li>
+                    </Link>
+                    <Link href="/healthcare-insurance">
+                      <li className="transition duration-300 ease-in-out hover:bg-gray-700/30  hover:scale-[1.02] rounded-lg p-2">
+                        <h4 className="font-medium text-[14px] text-white">
+                          Healthcare and Insurance
+                        </h4>
+                        <p className="text-[11px] text-gray-400 mt-1">
+                          Detect patient emotions instantly and improve
+                          satisfaction through real-time sentiment analysis.
+                        </p>
+                      </li>
+                    </Link>
+                  </ul>
+                </div>
               </div>
             </div>
-          </div>
-        </div>
-      )}
+          </motion.div>
+        )}
+      </AnimatePresence>
 
       {/* Mobile Menu */}
       {isOpen && (

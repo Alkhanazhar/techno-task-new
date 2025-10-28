@@ -150,7 +150,7 @@ const Pricing = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: 0.1 + index * 0.1 }}
               whileHover={{ y: -15 }}
-              className={`relative bg-white/10 backdrop-blur-lg rounded-2xl md:p-7 p-4 border border-white/20 
+              className={`relative bg-white/10 group backdrop-blur-lg rounded-2xl border-[1px] border-white/20 
                  hover:ring-2 hover:ring-purple-400 hover:shadow-2xl hover:shadow-purple-500/25
               `}
             >
@@ -163,7 +163,10 @@ const Pricing = () => {
                 </div>
               )}
 
-              <div className="text-center !space-y-8">
+              <span className="absolute bottom-0  w-full mx-auto bg-linear-to-l from-transparent via-purple-500 to-transparent h-[1px]"></span>
+              <span className="absolute bottom-1  w-full mx-auto bg-linear-to-l from-transparent group-hover:opacity-100 opacity-0 via-blue-500 to-transparent h-[1px] blur"></span>
+
+              <div className="text-center !space-y-8 relative p-8 pt-12">
                 <div
                   className={`inline-flex items-center justify-center w-16 h-16 rounded-full bg-gradient-to-r ${plan.color} mb-4`}
                 >
@@ -185,14 +188,16 @@ const Pricing = () => {
                 <button
                   variant={plan.popular ? "default" : "outline"}
                   className={cn(
-                    "w-full font-medium transition-all rounded-2xl flex items-center gap-2 justify-center p-4 duration-300",
+                    "w-full font-medium transition-all  relative rounded-2xl flex items-center gap-2 justify-center p-4 duration-300",
                     plan.popular
-                      ? "bg-slate-200 hover:bg-slate-200/90 hover:shadow-slate-200/20 hover:shadow-md hover:text-slate-800 text-slate-900"
-                      : "hover:border-slate-200/30 border hover:bg-slate-200/5 hover:text-slate-200"
+                      ? "bg-slate-100 hover:bg-slate-100/90 hover:shadow-slate-100/20 hover:shadow-md hover:text-slate-800 text-slate-900"
+                      : "hover:border-slate-200/30 border hover:bg-slate-200/5 hover:text-slate-100"
                   )}
                 >
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4 transition-transform duration-300 group-hover:translate-x-1" />
+                  <span className="absolute bottom-0  w-full mx-auto bg-linear-to-l from-transparent via-purple-900 to-transparent h-[1px]"></span>
+                  <span className="absolute bottom-1  w-full mx-auto bg-linear-to-l from-transparent group-hover:opacity-100 opacity-0 via-blue-900 to-transparent h-[1px] blur"></span>
                 </button>
               </div>
             </motion.div>

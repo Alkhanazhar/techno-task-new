@@ -288,7 +288,7 @@ const BPOContactCenterPage = () => {
               </span>
             </p>
 
-            <ButtonHover text={"Request a Demo"} />
+            <ButtonHover text={"Request a Demo"} center={true} />
           </div>
         </div>
 
