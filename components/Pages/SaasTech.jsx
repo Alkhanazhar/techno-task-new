@@ -149,7 +149,6 @@ const SaaSTechPage = () => {
   return (
     <div className="min-h-screen  -mt-16">
       <HeroSection />
-
       {/* Integration Framework Section */}
       <div className="relative bg-white py-20">
         <div className="w-full max-w-[88rem] mx-auto px-4 sm:px-8 relative">
@@ -226,7 +225,7 @@ const SaaSTechPage = () => {
               you're in fintech, healthtech, e-commerce, or developer tools.
             </p>
 
-            <FeatureMarquee features={featuresMarquee} />
+            <InfiniteCarousel items={featuresMarquee} autoscroll={false} />
           </div>
         </div>
 

@@ -117,7 +117,7 @@ const PrevArrow = (props) => {
   );
 };
 
-const InfiniteCarousel = ({ items }) => {
+const InfiniteCarousel = ({ items, autoscroll = true }) => {
   const [screenWidth, setScreenWidth] = useState(
     typeof window !== "undefined" ? window.innerWidth : 1024
   );
@@ -163,7 +163,7 @@ const InfiniteCarousel = ({ items }) => {
   const settings = {
     dots: false,
     infinite: true,
-    autoplay: true,
+    autoplay: autoscroll,
     autoplaySpeed: 2000,
     pauseOnHover: true,
     speed: 500,
