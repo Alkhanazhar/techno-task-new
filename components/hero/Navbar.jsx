@@ -349,7 +349,7 @@ const Navbar = () => {
               </div>
 
               {/* Right side: Grid */}
-              <div className="grid grid-cols-2 gap-6 flex-1">
+              <div className="grid  grid-cols-2 gap-6 flex-1">
                 <div className="border-l border-gray-500 pl-2">
                   <ul className="space-y-1">
                     <Link href="/bpo-contact-centers">
