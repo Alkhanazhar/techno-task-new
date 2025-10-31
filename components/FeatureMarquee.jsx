@@ -6,7 +6,9 @@ import { ArrowRight } from "lucide-react";
 import InfiniteCarousel from "./hero/InfiniteCarousel";
 
 const FeatureMarquee = ({ features }) => {
-  return <InfiniteCarousel items={features} autoscroll={false} />;
+  return (
+    <InfiniteCarousel items={features} autoscroll={false} infinite={false} />
+  );
 };
 
 export default FeatureMarquee;
