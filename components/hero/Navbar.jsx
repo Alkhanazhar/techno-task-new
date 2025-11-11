@@ -239,6 +239,7 @@ const Navbar = () => {
               pathname === "/contact" ||
               pathname == "/features" ||
               pathname === "/pricing" ||
+              pathname === "/privacy" ||
               pathname === "/solution"
                 ? "/logo.png"
                 : isScrolled
