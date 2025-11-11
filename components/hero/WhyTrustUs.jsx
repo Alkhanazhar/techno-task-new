@@ -50,7 +50,7 @@ export default function WhyTrustUs() {
         />
       </div>
       <div className="max-w-6xl mx-auto text-center mb-6 md:mb-12">
-        <h2 className="text-2xl md:text-4xl font-light">
+        <h2 className="text-2xl md:text-4xl font-medium">
           Engineered for{" "}
           <span className="font-semibold bg-gradient-to-r to-[#B462CE] from-[#3F2AB2] text-transparent bg-clip-text">
             Impact
@@ -59,7 +59,7 @@ export default function WhyTrustUs() {
       </div>
 
       {/* Cards */}
-      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-2 max-w-7xl sm:mx-8 md:mx-auto">
+      <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 mx-2 max-w-7xl px-4 sm:mx-8 md:mx-auto">
         {trustData.map((item, idx) => (
           <div
             key={idx}
@@ -77,7 +77,7 @@ export default function WhyTrustUs() {
             {/* Glassmorphism Effect */}
 
             {/* Content */}
-            <div className="relative p-2 h-full flex flex-col justify-end min-h-[400px]">
+            <div className="relative p-4 h-full flex flex-col justify-end min-h-[420px] md:min-h-[400px]">
               {/* Heart Icon */}
               {/* <div className="absolute top-6 right-6 bg-pink-500 rounded-full p-2 shadow-lg">
                 <Heart className="w-4 h-4 text-white fill-white" />

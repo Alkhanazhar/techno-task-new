@@ -235,12 +235,12 @@ const Navbar = () => {
         >
           <img
             src={
-              pathname === "/" ||
-              pathname === "/contact" ||
+              pathname == "/" ||
+              pathname == "/contact" ||
               pathname == "/features" ||
-              pathname === "/pricing" ||
-              pathname === "/privacy" ||
-              pathname === "/solution"
+              pathname == "/pricing" ||
+              pathname == "/privacy" ||
+              pathname == "/solution"
                 ? "/logo.png"
                 : isScrolled
                 ? "/logo.png"

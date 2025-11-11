@@ -68,11 +68,6 @@ const Footer = () => {
             <p className="text-xs text-white/60 mt-3">
               AI-powered solutions for the future of business automation.
             </p>
-            <p className="text-xs md:text-xs   text-white/70 mt-1 tracking-wider leading-4 font-light">
-              <strong className="mr-1">Address:</strong> Technotask Business
-              Solutions, Ganesh Galaxy City, Ayodhya Bypass Road, near Ayodhya
-              Square, Bhopal, Madhya Pradesh 462041
-            </p>
           </div>
 
           {/* Menu Items */}
@@ -110,17 +105,27 @@ const Footer = () => {
           </div>
 
           {/* Get In Touch */}
-          <div className="font-light tracking-wide">
+          <div className="font-light space-y-4">
             <h4 className="font-semibold mb-2 text-sm md:text-base">
               Get In Touch
             </h4>
-            <p className="text-xs md:text-sm text-white/80">
+            <p className="text-xs md:text-xs text-white/80">
               {" "}
               <strong className="mr-1">Mobile:</strong> (+971) 507861178
             </p>
-            <p className="text-xs md:text-sm text-white/80 mt-1">
+            <p className="text-xs md:text-xs text-white/80 mt-1">
               <strong className="mr-1">Email:</strong>{" "}
               sales@technotaskglobal.com
+            </p>
+            <p className="text-xs md:text-xs   text-white/70 mt-1 tracking-wider leading-4 font-light">
+              <strong className="mr-1">India Office:</strong> Technotask
+              Business Solutions, Ganesh Galaxy City, Ayodhya Bypass Road, near
+              Ayodhya Square, Bhopal, Madhya Pradesh 462041
+            </p>
+            <p className="text-xs md:text-xs   text-white/70 mt-1 tracking-wider leading-4 font-light">
+              <strong className="mr-1">UAE Office:</strong>
+              4th Floor, Unit 40 Al Fahidi Heights – Office Tower, Bur Dubai,
+              Dubai, UAE P.O. Box – 624699
             </p>
           </div>
         </div>

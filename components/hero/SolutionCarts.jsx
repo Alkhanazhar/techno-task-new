@@ -53,13 +53,16 @@ export default function SolutionCarts() {
     >
       <div className="text-center space-y-4 md:space-y-8">
         <h2 className="text-2xl md:text-4xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
-          How{" "}
+          <span className=" !font-light md:text-4xl text-xl text-neutral-50">
+            What Sets{" "}
+          </span>
+          Convoze
           <span className=" !font-light md:text-4xl text-xl text-neutral-50">
             {" "}
-            Convoze Works
+            Apart from Other Solutions
           </span>
         </h2>
-        <p className="text-gray-200 font-light text-sm md:text-xl max-w-4xl mx-auto">
+        <p className="text-gray-200 !font-light text-sm md:text-xl max-w-4xl mx-auto">
           Convoze doesn’t just “listen” — it understands, evaluates, and guides
           your team at every moment, without interrupting their workflow.
         </p>
@@ -72,14 +75,14 @@ export default function SolutionCarts() {
         </div> */}
       </div>
 
-      <div className="max-w-7xl mx-auto  h-full flex flex-col !mt-12 md:flex-row md:gap-12 gap-4  items-start">
+      <div className="max-w-7xl mx-auto  h-full flex flex-col !mt-12 md:flex-row md:gap-12 gap-6 items-start">
         {/* Left Side - scrollable on mobile */}
-        <div className="gap-4 md:flex md:flex-col grid grid-cols-2  mx-auto h-full  w-full md:w-[19%]">
+        <div className="gap-6 md:flex md:flex-col grid grid-cols-2  mx-auto h-full  w-full md:w-[19%]">
           {steps.map((step) => (
             <motion.div
               key={step.id}
               onClick={() => setActiveStep(step)}
-              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)]  transition-all duration-300 hover:scale-95 rounded-3xl md:px-4 px-3 md:py-3 py-3 cursor-pointer group ${
+              className={`shadow-[0_3px_10px_rgb(0,0,0,0.2)]  transition-all duration-300 hover:scale-95 rounded-3xl md:px-4 px-4 md:py-3 py-4 cursor-pointer group ${
                 activeStep.id === step.id
                   ? "border-purple-600 shadow-2xl bg-gradient-to-tl to-[#B462CE] from-[#3F2AB2]"
                   : "border-zinc-700 bg-gradient-to-br to-[#371d3e] from-[#3F2AB2]"
@@ -127,7 +130,7 @@ export default function SolutionCarts() {
         </div>
 
         {/* Right Side for Desktop Only */}
-        <div className="relative w-full flex-1 md:h-[480px] flex items-center mt-3 hidden  md:block">
+        <div className="relative w-full flex-1 md:h-[480px] flex items-center mt-4 hidden  md:block">
           {steps.map((step) => {
             const isActive = step.id === activeStep.id;
             return (
@@ -150,7 +153,7 @@ export default function SolutionCarts() {
       </div>
 
       {/* Right Side Image on Mobile Only */}
-      <div className="relative  flex-1 h-[240px] -mt-4  md:hidden  rounded-3xl !overflow-hidden ">
+      <div className="relative  flex-1 h-[240px] -mt-2  md:hidden  rounded-3xl !overflow-hidden ">
         {steps.map((step) => {
           const isActive = step.id === activeStep.id;
           return (
