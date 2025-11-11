@@ -65,8 +65,13 @@ const Footer = () => {
             >
               <img src="/logo.png" alt="logo" className="md:h-9 h-6" />
             </div>
-            <p className="text-xs text-white/50 mt-3">
+            <p className="text-xs text-white/60 mt-3">
               AI-powered solutions for the future of business automation.
+            </p>
+            <p className="text-xs md:text-xs   text-white/70 mt-1 tracking-wider leading-4 font-light">
+              <strong className="mr-1">Address:</strong> Technotask Business
+              Solutions, Ganesh Galaxy City, Ayodhya Bypass Road, near Ayodhya
+              Square, Bhopal, Madhya Pradesh 462041
             </p>
           </div>
 
@@ -105,12 +110,16 @@ const Footer = () => {
           </div>
 
           {/* Get In Touch */}
-          <div>
+          <div className="font-light tracking-wide">
             <h4 className="font-semibold mb-2 text-sm md:text-base">
               Get In Touch
             </h4>
-            <p className="text-xs md:text-sm text-white/70">(+971) 507861178</p>
-            <p className="text-xs md:text-sm text-white/70">
+            <p className="text-xs md:text-sm text-white/80">
+              {" "}
+              <strong className="mr-1">Mobile:</strong> (+971) 507861178
+            </p>
+            <p className="text-xs md:text-sm text-white/80 mt-1">
+              <strong className="mr-1">Email:</strong>{" "}
               sales@technotaskglobal.com
             </p>
           </div>
