@@ -103,7 +103,10 @@
   border: 0px none #ffffff !important;
   display: grid !important;
   grid-template-columns: repeat(2, 1fr) !important;
-  gap: 0.6rem !important;
+  gap: 0.2rem 2rem !important;
+}
+.validate {
+  background: transparent !important;
 }
 .card-spotlight {
   position: relative;
@@ -192,7 +195,7 @@ body {
   color: #c068d1 !important;
 }
 .kl-form {
-  border: 0px none #ffffff !important;
+  /* border: 0px none #ffffff !important; */
 }
 :root {
   font-family: var(--font-sora), sans-serif;
@@ -324,7 +327,7 @@ html::-webkit-scrollbar {
     border: 0px none #ffffff !important;
     display: grid !important;
     grid-template-columns: repeat(1, 1fr) !important;
-    gap: 0.4rem !important;
+    gap: 0.3rem !important;
   }
 }
 

@@ -39,7 +39,7 @@ const Faq = () => {
 
   const fadeInAnimationVariants = {
     initial: {
-      opacity: 0,
+      opacity: 0.5,
       y: 10,
     },
     animate: (index) => ({
@@ -77,9 +77,9 @@ const Faq = () => {
         {/* Right Column: FAQ Accordion */}
         <motion.div
           // variants={fadeInAnimationVariants}
-          initial="initial"
-          whileInView="animate"
-          viewport={{ once: false }}
+          // initial="initial"
+          // whileInView="animate"
+          // viewport={{ once: false }}
           className="md:w-1/2 space-y-2 md:space-y-4 w-full relative z-10"
         >
           {faqs.map((faq, index) => (
@@ -89,9 +89,9 @@ const Faq = () => {
               variants={fadeInAnimationVariants}
               initial="initial"
               whileInView="animate"
-              viewport={{ once: true }}
+              viewport={{ once: false }}
               onClick={() => toggleFAQ(index)}
-              className="bg-gradient-to-br shadow shadow-black/60  to-[#23062C] from-[#23062C] backdrop-blur  rounded-lg p-4 transition-all duration-300"
+              className="bg-gradient-to-br shadow shadow-gray-600/60  to-[#23062C] from-[#23062C] backdrop-blur  rounded-lg p-4 transition-all duration-300"
             >
               <button className="flex items-center justify-between w-full text-left   font-light">
                 <span className="text-sm md:text-base text-white">
