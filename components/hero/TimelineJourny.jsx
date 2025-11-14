@@ -143,8 +143,8 @@ const TimelineJourney = () => {
       >
         <div className="max-w-6xl mx-auto relative zoom-out py-16">
           <div className="text-center md:-mt-4">
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-b pb-16 pt-10">
-              Our Journey
+            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-b pb-16 pt-9">
+              What Sets Convoze Apart from Other Solutions
             </h2>
           </div>
           <div ref={containerRef} className="relative my-32">
