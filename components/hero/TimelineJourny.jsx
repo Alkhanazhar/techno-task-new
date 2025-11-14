@@ -143,9 +143,23 @@ const TimelineJourney = () => {
       >
         <div className="max-w-6xl mx-auto relative zoom-out py-16">
           <div className="text-center md:-mt-4">
-            <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-b pb-16 pt-9">
+            {/* <h2 className="text-2xl md:text-4xl font-bold text-gray-800 mb-b pb-16 pt-9">
               What Sets Convoze Apart from Other Solutions
+            </h2> */}
+            <h2 className="text-2xl md:text-4xl font-bold pb-16 pt-10 text-gray-800">
+              <span className="font-medium md:text-4xl text-xl">
+                What Sets
+              </span>
+
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] px-1">
+                Convoze
+              </span>
+
+              <span className="font-medium md:text-4xl text-xl">
+                {" "}Apart from Other Solutions
+              </span>
             </h2>
+
           </div>
           <div ref={containerRef} className="relative my-32">
             <div className="relative h-[320px]">
@@ -258,23 +272,22 @@ const TimelineJourney = () => {
                     }}
                   >
                     <motion.div
-                      className={`w-4 h-4 rounded-full border-2 z-30 ${
-                        isPast
-                          ? "bg-purple-500 border-purple-500"
-                          : isActive
+                      className={`w-4 h-4 rounded-full border-2 z-30 ${isPast
+                        ? "bg-purple-500 border-purple-500"
+                        : isActive
                           ? "bg-purple-500 border-purple-500"
                           : "bg-gray-200 border-gray-300"
-                      }`}
+                        }`}
                       animate={{
                         scale: isActive ? [1, 1.2, 1] : 1,
                       }}
                       transition={{
                         scale: isActive
                           ? {
-                              duration: 0.8,
-                              repeat: Infinity,
-                              ease: "easeInOut",
-                            }
+                            duration: 0.8,
+                            repeat: Infinity,
+                            ease: "easeInOut",
+                          }
                           : { duration: 0.1 },
                       }}
                     />
@@ -296,8 +309,8 @@ const TimelineJourney = () => {
                         filter: isPast
                           ? "blur(0px)"
                           : isActive
-                          ? "blur(0px)"
-                          : "blur(6px)",
+                            ? "blur(0px)"
+                            : "blur(6px)",
                       }}
                       transition={{
                         duration: 0.2,
@@ -308,10 +321,9 @@ const TimelineJourney = () => {
                       <motion.div
                         className={`
                           bg-white rounded-lg p-4 shadow-xl border-2 transition-all duration-200
-                          ${
-                            isActive
-                              ? "bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600 scale-100"
-                              : isPast
+                          ${isActive
+                            ? "bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600 scale-100"
+                            : isPast
                               ? "border-green-400 bg-green-50"
                               : "border-gray-300 bg-gray-50"
                           }
@@ -321,28 +333,26 @@ const TimelineJourney = () => {
                           borderColor: isActive
                             ? "#9333ea"
                             : isPast
-                            ? "#C068D1"
-                            : "#d1d5db",
+                              ? "#C068D1"
+                              : "#d1d5db",
                         }}
                         transition={{ duration: 0.15 }}
                       >
                         <div
-                          className={`text-sm font-semibold mb-2 ${
-                            isActive
-                              ? "text-purple-100"
-                              : isPast
+                          className={`text-sm font-semibold mb-2 ${isActive
+                            ? "text-purple-100"
+                            : isPast
                               ? "text-[#9333ea]"
                               : "text-gray-600"
-                          }`}
+                            }`}
                         >
                           <span className="text-xl font-bold">{step.year}</span>
                           {" - "}
                           {step.stepLabel}
                         </div>
                         <ul
-                          className={`text-xs leading-relaxed transition-all list-none ${
-                            isActive ? "text-white" : "text-gray-700"
-                          }`}
+                          className={`text-xs leading-relaxed transition-all list-none ${isActive ? "text-white" : "text-gray-700"
+                            }`}
                         >
                           {step.content.map((point, idx) => (
                             <li key={idx} className="mb-1">

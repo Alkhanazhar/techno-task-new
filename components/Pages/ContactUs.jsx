@@ -59,11 +59,10 @@ const ContactUs = ({ isCards = true, bg }) => {
 
   return (
     <div
-      className={`${
-        bg == "dark"
-          ? "bg-gradient-to-tl to-[#21082b] from-[#27022e] py-12 md:py-20"
-          : "bg-gradient-to-tl to-[#21082b] from-[#27022e]"
-      } min-h-screen  relative`}
+      className={`${bg == "dark"
+        ? "bg-gradient-to-tl to-[#21082b] from-[#27022e] py-12 md:py-20"
+        : "bg-gradient-to-tl to-[#21082b] from-[#27022e]"
+        } min-h-screen  relative`}
       id="contact-us"
     >
       {/* Form Label Style Override */}
@@ -82,7 +81,7 @@ const ContactUs = ({ isCards = true, bg }) => {
         }
       `}</style>
 
-      <div className="text-white max-w-7xl mx-auto px-4 pt-12 space-y-8">
+      <div className="text-white max-w-7xl mx-auto pt-12 space-y-8 md:px-0 px-4">
         <h1 className="text-2xl md:text-4xl font-bold text-center text-white">
           <span className="bg-gradient-to-r relative from-[#C068D1] to-[#3224AF] text-transparent bg-clip-text">
             Need a custom Solution?
@@ -99,9 +98,8 @@ const ContactUs = ({ isCards = true, bg }) => {
             className="relative w-full max-w-7xl pb-12 md:pb-0"
           >
             <div
-              className={`flex justify-center bg-transparent ${
-                !isCards && "sm:p-8"
-              } relative min-h-[400px]`}
+              className={`flex justify-center bg-transparent ${!isCards && "sm:p-8"
+                } relative min-h-[400px]`}
             >
               {/* Loader */}
               {isLoading && (
@@ -116,9 +114,8 @@ const ContactUs = ({ isCards = true, bg }) => {
               {/* Form Container */}
               <div
                 id="kl__form-container"
-                className={`mx-auto w-full relative z-20 !bg-transparent  transition-opacity duration-300 ${
-                  isLoading ? "opacity-0" : "opacity-100"
-                }`}
+                className={`mx-auto w-full relative z-20 !bg-transparent  transition-opacity duration-300 ${isLoading ? "opacity-0" : "opacity-100"
+                  }`}
               ></div>
             </div>
           </motion.div>
@@ -126,8 +123,8 @@ const ContactUs = ({ isCards = true, bg }) => {
 
         {/* Bottom Cards */}
         {isCards && (
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 text-center mb-6">
-            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 text-center mb-6">
+            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a] flex flex-col items-center justify-center text-center">
               <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
                 <Phone className="text-white w-6 h-6" />
               </div>
@@ -135,7 +132,7 @@ const ContactUs = ({ isCards = true, bg }) => {
               <p className="text-xs text-neutral-200">( +971 ) 507861178</p>
             </div>
 
-            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
+            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a] flex flex-col items-center justify-center text-center">
               <div className="bg-gradient-to-r from-[#C068D1] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
                 <Mail className="text-white w-6 h-6" />
               </div>
@@ -145,22 +142,32 @@ const ContactUs = ({ isCards = true, bg }) => {
               </p>
             </div>
 
-            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a]">
+            <div className="bg-gradient-to-br to-[#371d3e] from-[#3F2AB2] rounded-2xl p-4 border border-[#2a2a2a] flex flex-col items-center justify-center text-center">
               <div className="bg-gradient-to-r from-[#c068d1d2] to-[#3224AF] w-12 h-12 mx-auto mb-4 flex items-center justify-center rounded-full text-xl">
                 <MapPin className="text-white w-6 h-6" />
               </div>
               <h3 className="text-lg font-semibold mb-2">Location</h3>
-              <main className="text-xs text-neutral-200 justify-center flex items-center gap-2">
-                <img
-                  src="https://flagcdn.com/in.svg"
-                  alt="India Flag"
-                  className="w-9  shadow-xl"
-                />
-                <img
-                  src="https://flagcdn.com/ae.svg"
-                  alt="UAE Flag"
-                  className="w-12 shadow-xl"
-                />
+              <main className="text-xs text-neutral-200 justify-center gap-2">
+                <p className="text-xs md:text-xs text-white/70 tracking-wider leading-4 font-light flex items-start mt-1 px-6">
+                  <img
+                    src="https://flagcdn.com/in.svg"
+                    alt="India Flag"
+                    className="w-6 shadow-xl mr-1"
+                  />
+                  Technotask Business Solutions, Ganesh Galaxy City, Ayodhya Bypass Road,
+                  near Ayodhya Square, Bhopal, Madhya Pradesh 462041
+                </p>
+
+                <p className="text-xs md:text-xs text-white/70 tracking-wider leading-4 font-light flex items-start mt-4 px-6">
+                  <img
+                    src="https://flagcdn.com/ae.svg"
+                    alt="UAE Flag"
+                    className="w-7 shadow-xl"
+                  />
+                  4th Floor, Unit 40 Al Fahidi Heights – Office Tower, Bur Dubai, Dubai, UAE
+                  P.O. Box – 624699
+                </p>
+
               </main>
             </div>
           </div>

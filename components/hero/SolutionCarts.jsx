@@ -54,12 +54,11 @@ export default function SolutionCarts() {
       <div className="text-center space-y-4 md:space-y-8">
         <h2 className="text-2xl md:text-4xl font-semibold  text-transparent bg-clip-text bg-gradient-to-r to-[#B462CE] from-[#3F2AB2]">
           <span className=" !font-light md:text-4xl text-xl text-neutral-50">
-            What Sets{" "}
           </span>
-          Convoze
+          How 
           <span className=" !font-light md:text-4xl text-xl text-neutral-50">
             {" "}
-            Apart from Other Solutions
+            Convoze Works
           </span>
         </h2>
         <p className="text-gray-200 !font-light text-sm md:text-xl max-w-4xl mx-auto">

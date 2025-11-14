@@ -228,8 +228,18 @@ const TimelineJourneyMobile = () => {
       >
         <div className="max-w-6xl mx-auto relative">
           <div className="text-center ">
-            <h2 className="text-2xl font-bold text-gray-800 mt-4">
-              What Sets Convoze Apart from Other Solutions
+            <h2 className="text-2xl md:text-4xl font-bold pb-16 pt-8 text-gray-800">
+              <span className="font-medium md:text-4xl text-xl">
+                What Sets
+              </span>
+
+              <span className="bg-clip-text text-transparent bg-gradient-to-r from-[#3F2AB2] to-[#B462CE] px-1">
+                Convoze
+              </span>
+
+              <span className="font-medium md:text-4xl text-xl">
+                {" "}Apart from Other Solutions
+              </span>
             </h2>
           </div>
           <div ref={containerRef} className="relative  ">
@@ -384,10 +394,9 @@ const TimelineJourneyMobile = () => {
                       <motion.div
                         className={`
                           bg-white rounded-lg p-4 shadow-xl border-2 transition-all duration-200
-                          ${
-                            isPast
-                              ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
-                              : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
+                          ${isPast
+                            ? " bg-gradient-to-r from-[#C068D1] to-[#3224AF] border-purple-600"
+                            : "border-purple-600 bg-gradient-to-r from-[#C068D1] to-[#3224AF]"
                           }
                         `}
                         animate={{
